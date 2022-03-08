@@ -1,0 +1,98 @@
+{
+    "jutro": "5.3",
+    "claim.vehicle.view": {
+        "id": "claimVehicle",
+        "type": "page",
+        "contentLayout": {
+            "component": "Grid",
+            "componentProps": {
+                "hgap": "large",
+                "vgap": "large"
+            }
+        },
+        "content": [
+            {
+                "id": "licensePlate",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "maxLength": 255,
+                    "path": "vehicle.licensePlate",
+                    "label": {
+                        "id": "vehicle.licensePlate.label",
+                        "defaultMessage": "License Plate"
+                    }
+                }
+            },
+            {
+                "id": "make",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "maxLength": 255,
+                    "path": "vehicle.make",
+                    "required": true,
+                    "label": {
+                        "id": "vehicle.make.label",
+                        "defaultMessage": "Make"
+                    }
+                }
+            },
+            {
+                "id": "model",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "maxLength": 255,
+                    "path": "vehicle.model",
+                    "required": true,
+                    "label": {
+                        "id": "vehicle.model.label",
+                        "defaultMessage": "Model"
+                    }
+                }
+            },
+            {
+                "id": "vin",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "maxLength": 255,
+                    "path": "vehicle.vin",
+                    "required": true,
+                    "label": {
+                        "id": "vehicle.vin.label",
+                        "defaultMessage": "VIN"
+                    }
+                }
+            },
+            {
+                "id": "year",
+                "type": "field",
+                "component": "InputNumber",
+                "componentProps": {
+                    "path": "vehicle.year",
+                    "required": true,
+                    "label": {
+                        "id": "vehicle.year.label",
+                        "defaultMessage": "Year"
+                    }
+                }
+            },
+            {
+                "id": "policyVehicle",
+                "type": "field",
+                "component": "Toggle",
+                "componentProps": {
+                    "readOnly": true,
+                    "path": "vehicle.policyVehicle",
+                    "label": {
+                        "id": "vehicle.policyVehicle.label",
+                        "defaultMessage": "Policy Vehicle"
+                    },
+                    "controlClassName": "horizontalGrid"
+                }
+            }
+        ]
+    }
+}

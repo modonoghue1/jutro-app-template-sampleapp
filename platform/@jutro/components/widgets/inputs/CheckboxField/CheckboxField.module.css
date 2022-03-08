@@ -1,0 +1,59 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.checkbox {
+  background-color: transparent;
+  display: flex; }
+  .checkbox:global(.disabled) .checkboxElement,
+  .checkbox:global(.disabled) .checkboxIcon {
+    opacity: var(--GW-OPACITY-DISABLED);
+    cursor: not-allowed;
+    box-shadow: initial;
+    pointer-events: none; }
+  .checkbox:not(:global(.disabled)) .checkboxElement:hover {
+    background-color: var(--GW-SELECTOR-BACKGROUND-COLOR-HOVER); }
+  .checkbox:not(:global(.disabled)) .checkboxElement:active {
+    background-color: var(--GW-SELECTOR-BACKGROUND-COLOR-ACTIVE); }
+  .checkbox:not(:global(.disabled)) .input:checked + .checkboxElement:hover {
+    background-color: var(--GW-SELECTOR-SELECTED-BACKGROUND-COLOR-HOVER); }
+  .checkbox:not(:global(.disabled)) .input:checked + .checkboxElement:active {
+    background-color: var(--GW-SELECTOR-SELECTED-BACKGROUND-COLOR-ACTIVE); }
+
+.input {
+  display: none; }
+  .input:checked + .checkboxElement {
+    background: var(--GW-SELECTOR-SELECTED-BACKGROUND-COLOR);
+    border-color: var(--GW-SELECTOR-SELECTED-BACKGROUND-COLOR); }
+    .input:checked + .checkboxElement:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+
+.checkboxElement {
+  transition: background var(--GW-ANIMATION-DURATION);
+  color: var(--GW-SELECTOR-SELECTED-COLOR);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid var(--GW-BORDER-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  background: var(--GW-SELECTOR-BACKGROUND-COLOR);
+  width: var(--GW-CHECKBOX-SIZE);
+  height: var(--GW-CHECKBOX-SIZE);
+  flex-shrink: 0; }
+  .checkboxElement:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+    border-color: var(--GW-SELECTOR-COLOR-FOCUS); }
+
+.checkboxElementWrapper {
+  padding-left: var(--GW-SPACING-2); }
+  .checkboxElementWrapper .inlineLabel {
+    display: flex;
+    line-height: 1.2; }
+
+.detailVisible {
+  padding-top: 0; }
+
+/*# sourceMappingURL=CheckboxField.module.css.map */

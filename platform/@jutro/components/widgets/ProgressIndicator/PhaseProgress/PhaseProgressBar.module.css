@@ -1,0 +1,13 @@
+.phaseProgressBar {
+  display: flex;
+  width: 100%;
+  counter-reset: step;
+  margin-bottom: var(--GW-SPACING-4);
+  flex-direction: column; }
+
+.phases {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%; }
+
+/*# sourceMappingURL=PhaseProgressBar.module.css.map */

@@ -1,0 +1,13 @@
+.additionalQuestionSwitch {
+  & :global(.jut__SwitchField__switch) {
+    justify-content: space-between;
+  }
+
+  & :global(.jut__SwitchField__labelSection) {
+    flex: unset;
+  }
+
+  & :global(.jut__SwitchField__controlSection) {
+    flex: unset;
+  }
+}

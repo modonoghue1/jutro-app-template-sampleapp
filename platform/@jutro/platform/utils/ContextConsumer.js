@@ -1,0 +1,1 @@
+import{useContext}from"react";export default({contexts:contexts,children:renderProp,args:args=[]})=>renderProp(...contexts.map((context=>useContext(context))),...args);

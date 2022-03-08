@@ -1,0 +1,37 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.dropdownMenuAvatarHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--GW-SPACING-2) var(--GW-SPACING-6) var(--GW-SPACING-1); }
+
+.headerText {
+  overflow: hidden;
+  padding-left: var(--GW-SPACING-3); }
+
+.headerTitle {
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  color: var(--GW-DROPDOWN-MENU-AVATAR-TITLE-COLOR);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: var(--GW-FONT-SIZE-H4);
+  line-height: var(--GW-LINE-HEIGHT-H4); }
+
+.headerSubtitle {
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  color: var(--GW-DROPDOWN-MENU-AVATAR-SUBTITLE-COLOR);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.dropdownMenuAvatarMenu {
+  min-width: var(--GW-DROPDOWN-MENU-AVATAR-WIDTH);
+  max-width: var(--GW-DROPDOWN-MENU-AVATAR-WIDTH);
+  padding-top: var(--GW-SPACING-4);
+  padding-bottom: var(--GW-SPACING-4); }
+
+/*# sourceMappingURL=DropdownMenuAvatar.module.css.map */

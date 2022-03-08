@@ -1,0 +1,1 @@
+import{GenericSelectComponents as components}from"../../GenericSelectControl/GenericSelectControl";import{withClassName}from"../helper";export const LookupPlaceholder=withClassName(components.Placeholder,"placeholder");

@@ -1,0 +1,1 @@
+export const combineRefs=(...refs)=>node=>{refs.forEach((ref=>{ref&&("function"!=typeof ref?ref.current=node:ref(node))}))};

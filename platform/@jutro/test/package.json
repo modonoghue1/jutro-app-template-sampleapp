@@ -1,0 +1,59 @@
+{
+  "_from": "@jutro/test@6.5.0",
+  "_id": "@jutro/test@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-lzLY6ewj4sAHRO4tF7K5BxyyiPc=",
+  "_location": "/@jutro/test",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/test@6.5.0",
+    "name": "@jutro/test",
+    "escapedName": "@jutro%2ftest",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "/@jutro/floorplan",
+    "/@jutro/router",
+    "/@jutro/theme"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/test/-/@jutro/test-6.5.0.tgz",
+  "_shasum": "9732d8e9ec23e2c00744ee2d17b2b9071cb288f7",
+  "_spec": "@jutro/test@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/locale": "6.5.0",
+    "@jutro/prop-types": "6.5.0",
+    "date-fns": "2.19.0",
+    "lodash": "4.17.21",
+    "prop-types": "15.7.2",
+    "react-intl": "5.15.5"
+  },
+  "deprecated": false,
+  "description": "Provides utility functionality for testing",
+  "devDependencies": {
+    "react": "17.0.2"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/test",
+  "peerDependencies": {
+    "core-js": "3.10.0",
+    "enzyme": "^3.11.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "5.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "version": "6.5.0"
+}

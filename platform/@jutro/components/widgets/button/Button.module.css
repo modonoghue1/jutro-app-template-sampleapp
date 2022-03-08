@@ -1,0 +1,116 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  padding: 0 var(--GW-SPACING-6);
+  height: var(--GW-BUTTON-HEIGHT);
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--GW-BORDER-RADIUS);
+  border: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--GW-ANIMATION-DURATION);
+  z-index: auto;
+  box-shadow: var(--GW-SHADOW-2);
+  outline: none;
+  font-size: var(--GW-FONT-SIZE-BUTTON);
+  line-height: var(--GW-LINE-HEIGHT-BUTTON); }
+  .button[disabled], .button.disabled {
+    opacity: var(--GW-OPACITY-DISABLED);
+    cursor: not-allowed; }
+
+.iconButton {
+  padding: 0;
+  width: var(--GW-BUTTON-HEIGHT); }
+
+.filled {
+  color: var(--GW-BUTTON-FILLED-COLOR);
+  background: var(--GW-BUTTON-FILLED-BACKGROUND-COLOR); }
+  .filled:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .filled[disabled] {
+    color: var(--GW-BUTTON-FILLED-COLOR);
+    background: var(--GW-BUTTON-FILLED-BACKGROUND-COLOR); }
+    .filled[disabled]:hover {
+      color: var(--GW-BUTTON-FILLED-COLOR);
+      background: var(--GW-BUTTON-FILLED-BACKGROUND-COLOR); }
+  .filled:hover {
+    background: var(--GW-BUTTON-FILLED-BACKGROUND-COLOR-HOVER); }
+  .filled:active, .filled:active:focus, .filled:active:focus:hover, .filled.activeKeypress, .filled.activeKeypress:focus {
+    background: var(--GW-BUTTON-FILLED-BACKGROUND-COLOR-ACTIVE); }
+
+.outlined {
+  color: var(--GW-BUTTON-OUTLINED-COLOR);
+  background: var(--GW-BUTTON-OUTLINED-BACKGROUND-COLOR);
+  border: var(--GW-BUTTON-OUTLINED-BORDER-WIDTH) solid var(--GW-BUTTON-OUTLINED-BORDER-COLOR); }
+  .outlined:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .outlined[disabled] {
+    color: var(--GW-BUTTON-OUTLINED-COLOR);
+    background: var(--GW-BUTTON-OUTLINED-BACKGROUND-COLOR); }
+    .outlined[disabled]:hover {
+      color: var(--GW-BUTTON-OUTLINED-COLOR);
+      background: var(--GW-BUTTON-OUTLINED-BACKGROUND-COLOR); }
+  .outlined:hover {
+    color: var(--GW-BUTTON-OUTLINED-COLOR-HOVER);
+    background: var(--GW-BUTTON-OUTLINED-BACKGROUND-COLOR-HOVER); }
+  .outlined:active, .outlined:active:focus, .outlined:active:focus:hover, .outlined.activeKeypress, .outlined.activeKeypress:focus {
+    color: var(--GW-BUTTON-OUTLINED-COLOR-HOVER);
+    background: var(--GW-BUTTON-OUTLINED-BACKGROUND-COLOR-ACTIVE); }
+
+.text {
+  color: var(--GW-BUTTON-TEXT-COLOR);
+  background: var(--GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR);
+  box-shadow: none;
+  border: none; }
+  .text:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .text[disabled] {
+    color: var(--GW-BUTTON-TEXT-COLOR);
+    background: var(--GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR); }
+    .text[disabled]:hover {
+      color: var(--GW-BUTTON-TEXT-COLOR);
+      background: var(--GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR); }
+  .text:hover {
+    background: var(--GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR-HOVER); }
+  .text:active, .text:active:focus, .text:active:focus:hover, .text.activeKeypress, .text.activeKeypress:focus {
+    background: var(--GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR-ACTIVE); }
+
+.fullWidth {
+  width: 100%; }
+
+.materialIcon {
+  line-height: 1.25; }
+
+.icon,
+svg.icon {
+  font-size: var(--GW-ICON-FONT-SIZE-2);
+  line-height: var(--GW-ICON-LINE-HEIGHT);
+  margin: 0; }
+  .icon.leftIcon,
+  svg.icon.leftIcon {
+    margin-right: 0.5rem; }
+  .icon.rightIcon,
+  svg.icon.rightIcon {
+    margin-left: 0.5rem; }
+
+.small {
+  height: var(--GW-BUTTON-HEIGHT-SMALL); }
+  .small.iconButton {
+    width: var(--GW-BUTTON-HEIGHT-SMALL); }
+  .small .icon.leftIcon {
+    margin-right: var(--GW-SPACING-2); }
+  .small .icon.rightIcon {
+    margin-left: var(--GW-SPACING-2); }
+
+/*# sourceMappingURL=Button.module.css.map */

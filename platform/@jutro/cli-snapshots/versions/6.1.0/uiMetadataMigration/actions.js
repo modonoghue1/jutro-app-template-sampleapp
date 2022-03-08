@@ -1,0 +1,11 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DATE_TIME_ZONE_RENAME_PROPS = exports.CHEVRON_REMOVE_ALIGN_PROP = void 0;
+const CHEVRON_REMOVE_ALIGN_PROP = 'CHEVRON_REMOVE_ALIGN_PROP';
+exports.CHEVRON_REMOVE_ALIGN_PROP = CHEVRON_REMOVE_ALIGN_PROP;
+const DATE_TIME_ZONE_RENAME_PROPS = 'DATE_TIME_ZONE_RENAME_PROPS';
+exports.DATE_TIME_ZONE_RENAME_PROPS = DATE_TIME_ZONE_RENAME_PROPS;
+//# sourceMappingURL=actions.js.map

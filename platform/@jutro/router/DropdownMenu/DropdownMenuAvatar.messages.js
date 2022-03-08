@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({logout:{id:"jutro-router.DropdownMenu.Logout",defaultMessage:"Logout"},profileMenu:{id:"jutro-router.DropdownMenu.ProfileMenu",defaultMessage:"Profile menu"}});

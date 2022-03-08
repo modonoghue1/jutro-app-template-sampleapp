@@ -1,0 +1,56 @@
+{
+  "_from": "@jutro/e2e-tests@6.5.0",
+  "_id": "@jutro/e2e-tests@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-/ONxYq4+/R7fb82TifLYqk5ZAIA=",
+  "_location": "/@jutro/e2e-tests",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/e2e-tests@6.5.0",
+    "name": "@jutro/e2e-tests",
+    "escapedName": "@jutro%2fe2e-tests",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/e2e-tests/-/@jutro/e2e-tests-6.5.0.tgz",
+  "_shasum": "fce37162ae3efd1edf6fcd9389f2d8aa4e590080",
+  "_spec": "@jutro/e2e-tests@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bin": {
+    "prepare-visual-artifact": "scripts/prepareVisualReportArtifact.js",
+    "prepare-bdd-artifact": "scripts/prepareBDDReportArtifact.js",
+    "test-lighthouse": "scripts/lighthouseRunner.js"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@lhci/cli": "0.7.0",
+    "backstopjs": "5.3.0",
+    "dotenv": "8.2.0",
+    "fs-extra": "9.1.0",
+    "lodash": "4.17.21",
+    "minimist": "1.2.5",
+    "multiple-cucumber-html-reporter": "1.18.0",
+    "resemblejs": "3.2.5"
+  },
+  "deprecated": false,
+  "description": "Provides visual testing functionality for Jutro",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "index.js",
+  "name": "@jutro/e2e-tests",
+  "peerDependencies": {},
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

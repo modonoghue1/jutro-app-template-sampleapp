@@ -1,0 +1,1 @@
+import{useEffect}from"react";import{PageLoader}from"@jutro/components";export const InitLoading=()=>(useEffect((()=>(PageLoader.startPageLoading(),()=>{PageLoader.stopPageLoading()})),[]),PageLoader({}));

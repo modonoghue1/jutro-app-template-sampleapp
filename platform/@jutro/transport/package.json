@@ -1,0 +1,56 @@
+{
+  "_from": "@jutro/transport@6.5.0",
+  "_id": "@jutro/transport@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-AGIzajZeZclr+3UaeZoF0M/4GPw=",
+  "_location": "/@jutro/transport",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/transport@6.5.0",
+    "name": "@jutro/transport",
+    "escapedName": "@jutro%2ftransport",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/app"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/transport/-/@jutro/transport-6.5.0.tgz",
+  "_shasum": "0062336a365e65c96bfb751a799a05d0cff818fc",
+  "_spec": "@jutro/transport@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/auth": "6.5.0",
+    "@jutro/config": "6.5.0",
+    "@jutro/events": "6.5.0",
+    "@jutro/locale": "6.5.0",
+    "@jutro/logger": "6.5.0",
+    "zipkin": "0.22.0",
+    "zipkin-instrumentation-fetch": "0.22.0",
+    "zipkin-transport-http": "0.22.0"
+  },
+  "deprecated": false,
+  "description": "Provides transport services for Jutro",
+  "devDependencies": {
+    "jest-fetch-mock": "^3.0.3"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/transport",
+  "peerDependencies": {
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

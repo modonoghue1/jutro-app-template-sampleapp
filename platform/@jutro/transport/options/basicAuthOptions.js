@@ -1,0 +1,1 @@
+export function basicAuthOptions(userName,password){return{headers:{Authorization:`Basic ${btoa(`${userName||""}:${password||""}`)}`}}}

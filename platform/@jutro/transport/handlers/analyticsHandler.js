@@ -1,0 +1,1 @@
+import{publish}from"@jutro/events";import{REQUEST_HANDLER_TYPE}from"../HttpRequestBuilder";import{eventTopicMap}from"../common";export const analyticsHandler={[REQUEST_HANDLER_TYPE.TRACE]:(event,payload)=>{publish(eventTopicMap[event],payload)}};

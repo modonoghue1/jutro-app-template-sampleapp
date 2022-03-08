@@ -1,0 +1,17 @@
+{
+    "jutro": "5.3",
+    "claim.location.view": {
+        "id": "claimLocation",
+        "type": "page",
+        "content": [
+            {
+                "id": "address",
+                "type": "field",
+                "component": "AddressComponent",
+                "componentProps": {
+                    "path": "address",
+                }
+            },
+        ]
+    }
+}

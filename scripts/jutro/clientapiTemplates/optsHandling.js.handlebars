@@ -1,0 +1,45 @@
+{{#if optsParams}}
+const { {{#each optsParams}}{{#if @first}}{{this.name}}{{else}}, {{this.name}}{{/if}}{{/each}} } = opts || {};
+let search = '';
+
+{{#each optsParams}}
+{{#if_equals this.name 'filter'}}
+if (filter) {
+    search += buildSearchString({ filter: filter }, !!search);
+}
+{{/if_equals}}
+{{#if_equals this.name 'include'}}
+if (include) {
+    search += buildSearchString({ include: include }, !!search);
+}
+{{/if_equals}}
+{{#if_equals this.name 'fields'}}
+if (fields) {
+    search += buildSearchString({ fields: fields }, !!search);
+}
+{{/if_equals}}
+{{#if_equals this.name 'sort'}}
+if (sort) {
+    search += buildSearchString({ sort: sort }, !!search);
+}
+{{/if_equals}}
+{{#if_equals this.name 'pageSize'}}
+if (pageSize) {
+    search += buildSearchString({ pageSize: pageSize }, !!search);
+    search += buildSearchString({ includeTotal: true }, !!search);
+}
+{{/if_equals}}
+{{#if_equals this.name 'pageOffset'}}
+if (pageOffset) {
+    search += buildSearchString({ pageOffset: pageOffset }, !!search);
+}
+{{/if_equals}}
+{{#if_equals this.name 'includeTotal'}}
+if (includeTotal !== undefined) {
+    search += buildSearchString({ includeTotal: (includeTotal) ? 'true' : 'false' }, !!search);
+}
+{{/if_equals}}
+{{/each}}
+{{else}}
+    const search = '';
+{{/if}}

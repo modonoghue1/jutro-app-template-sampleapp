@@ -1,0 +1,129 @@
+{
+    "$schema": "../../../../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json",
+    "jutro": "6.0.0-next-20210407102798",
+    "patterns.vehicle.loss": {
+        "id": "patterns.vehicle.loss",
+        "type": "container",
+        "contentLayout": {
+            "component": "Grid"
+        },
+        "content": [
+            {
+                "id": "damageType",
+                "type": "field",
+                "component": "Toggle",
+                "componentProps": {
+                    "path": "damageType",
+                    "availableValues": [
+                        {
+                            "code": "External damage",
+                            "name": "External damage"
+                        },
+                        {
+                            "code": "Internal damage",
+                            "name": "Internal damage"
+                        }
+                    ],
+                    "defaultValue": "External damage"
+                }
+            },
+            {
+                "id": "externalDamages",
+                "type": "element",
+                "component": "SelectableImageCards",
+                "componentProps": {
+                    "onUpdateSelected": "updateExternalDamages"
+                }
+            },
+            {
+                "id": "internalDamages",
+                "type": "element",
+                "component": "SelectableImageCards",
+                "componentProps": {
+                    "onUpdateSelected": "updateInternalDamages"
+                }
+            },
+            {
+                "id": "selectedDamagesTitle",
+                "type": "element",
+                "component": "h4",
+                "content": "Selected damages"
+            },
+            {
+                "id": "selectedExternalDamagesTitle",
+                "type": "element",
+                "component": "h5",
+                "content": "External damages"
+            },
+            {
+                "id": "selectedExternalDamages",
+                "type": "element",
+                "component": "span",
+                "content": "No external damages selected."
+            },
+            {
+                "id": "selectedInternalDamagesTitle",
+                "type": "element",
+                "component": "h5",
+                "content": "Internal damages"
+            },
+            {
+                "id": "selectedInternalDamages",
+                "type": "element",
+                "component": "span",
+                "content": "No internal damages selected."
+            },
+            {
+                "id": "additionalQuestionsTitle",
+                "type": "element",
+                "component": "h4",
+                "content": "Additional questions"
+            },
+            {
+                "id": "windshieldDamaged",
+                "type": "field",
+                "component": "Switch",
+                "componentProps": {
+                    "label": "Was the windshield damaged?",
+                    "path": "windshieldDamaged",
+                    "className": "additionalQuestionSwitch",
+                    "defaultValue": false,
+                    "required": true
+                }
+            },
+            {
+                "id": "vehicleStationary",
+                "type": "field",
+                "component": "Switch",
+                "componentProps": {
+                    "label": "Was the vehicle stationary?",
+                    "path": "vehicleStationary",
+                    "className": "additionalQuestionSwitch",
+                    "defaultValue": false,
+                    "required": true
+                }
+            },
+            {
+                "id": "airbagsDeployed",
+                "type": "field",
+                "component": "Switch",
+                "componentProps": {
+                    "label": "Did the airbags deploy?",
+                    "path": "airbagsDeployed",
+                    "className": "additionalQuestionSwitch",
+                    "defaultValue": false,
+                    "required": true
+                }
+            },
+            {
+                "id": "additionalDetails",
+                "type": "field",
+                "component": "TextArea",
+                "componentProps": {
+                    "label": "Additional information",
+                    "path": "additionalDetails"
+                }
+            }
+        ]
+    }
+}

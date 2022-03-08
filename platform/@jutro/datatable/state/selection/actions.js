@@ -1,0 +1,1 @@
+import{SELECT,TOGGLE,SET_ALL,CLEAR_ALL}from"./types";export const select=rowId=>({type:SELECT,payload:rowId});export const toggle=rowId=>({type:TOGGLE,payload:rowId});export const setAll=newRows=>({type:SET_ALL,payload:newRows});export const clearAll=()=>({type:CLEAR_ALL});

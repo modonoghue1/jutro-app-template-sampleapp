@@ -1,0 +1,73 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.modalHeader {
+  min-height: 4.75rem;
+  border-radius: var(--GW-BORDER-RADIUS) var(--GW-BORDER-RADIUS) 0 0;
+  padding: 0 var(--GW-MODAL-HEADER-PADDING-HORIZONTAL); }
+  @media (max-width: 580px) {
+    .modalHeader {
+      min-height: 4.25rem; } }
+  .modalHeader .closeButton {
+    position: absolute;
+    right: var(--GW-SPACING-3);
+    margin-top: calc(-1 * var(--GW-MODAL-CLOSE-BUTTON-MARGIN-TOP));
+    width: 1.25rem;
+    height: 1.25rem; }
+
+.modalStatus {
+  position: relative;
+  top: -1px;
+  height: var(--GW-MODAL-HEADER-STATUS-LINE-HEIGHT);
+  border-radius: var(--GW-BORDER-RADIUS) var(--GW-BORDER-RADIUS) 0 0;
+  background: var(--GW-MODAL-HEADER-BACKGROUND-COLOR);
+  margin: 0 calc(-1 * var(--GW-MODAL-HEADER-PADDING-HORIZONTAL) - 1px); }
+
+.modalWarningStatus {
+  background: var(--GW-COLOR-WARNING); }
+
+.modalErrorStatus {
+  background: var(--GW-COLOR-ERROR); }
+
+.modalSuccessStatus {
+  background: var(--GW-COLOR-SUCCESS); }
+
+.modalInfoStatus {
+  background: var(--GW-COLOR-INFO); }
+
+.modalHeaderLayout {
+  height: 100%;
+  padding-top: var(--GW-MODAL-HEADER-PADDING-TOP);
+  padding-bottom: var(--GW-MODAL-HEADER-PADDING-BOTTOM); }
+  @media (max-width: 580px) {
+    .modalHeaderLayout {
+      padding-top: var(--GW-LAYOUT-5); } }
+
+svg.icon,
+i.icon {
+  font-size: var(--GW-MODAL-HEADER-ICON-SIZE); }
+
+.iconWarning {
+  color: var(--GW-COLOR-WARNING); }
+
+.iconError {
+  color: var(--GW-COLOR-ERROR); }
+
+.iconSuccess {
+  color: var(--GW-COLOR-SUCCESS); }
+
+.iconInfo {
+  color: var(--GW-COLOR-INFO); }
+
+.title {
+  font-size: var(--GW-FONT-SIZE-H3);
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  line-height: var(--GW-MODAL-HEADER-ICON-SIZE); }
+
+.subtitle {
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT);
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  color: var(--GW-MODAL-HEADER-SUBTITLE-COLOR); }
+
+/*# sourceMappingURL=ModalHeader.module.css.map */

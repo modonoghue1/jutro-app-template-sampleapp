@@ -1,0 +1,36 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.darkSearchContainer {
+  width: 100%;
+  max-width: var(--GW-HEADER-SEARCH-MAX-WIDTH); }
+  .darkSearchContainer .selectIcon {
+    color: var(--GW-HEADER-SEARCH-SELECT-ICON-COLOR); }
+  .darkSearchContainer .cancel {
+    color: var(--GW-HEADER-SEARCH-CANCEL-ICON-COLOR); }
+  .darkSearchContainer .placeholder {
+    color: var(--GW-HEADER-SEARCH-COLOR); }
+  .darkSearchContainer .control {
+    background-color: var(--GW-HEADER-SEARCH-BACKGROUND-COLOR);
+    color: var(--GW-HEADER-SEARCH-COLOR);
+    border-color: transparent;
+    min-height: var(--GW-HEADER-SEARCH-HEIGHT);
+    font-size: var(--GW-FONT-SIZE-INPUT);
+    line-height: var(--GW-LINE-HEIGHT-INPUT); }
+    .darkSearchContainer .control div {
+      color: inherit; }
+    .darkSearchContainer .control:hover {
+      background-color: var(--GW-HEADER-SEARCH-BACKGROUND-COLOR-HOVER); }
+  .darkSearchContainer .controlFocused {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-DARK);
+    background-color: var(--GW-HEADER-SEARCH-BACKGROUND-COLOR);
+    color: var(--GW-HEADER-SEARCH-COLOR);
+    border-color: var(--GW-HEADER-SEARCH-BORDER-COLOR-FOCUS); }
+  .darkSearchContainer .value .title {
+    color: var(--GW-HEADER-SEARCH-COLOR); }
+
+.searchContainer {
+  width: 100%; }
+
+/*# sourceMappingURL=SearchField.module.css.map */

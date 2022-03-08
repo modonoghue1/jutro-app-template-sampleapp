@@ -1,0 +1,26 @@
+---
+to: <%= path %>/<%= h.capitalize(name) %>/<%= h.capitalize(name) %>.js 
+---
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
+import { TranslatorContext } from '@jutro/locale';
+
+import styles from './<%= h.capitalize(name) %>.module.scss';
+import messages from './<%= h.capitalize(name) %>.messages';
+
+export const <%= h.capitalize(name) %> = ({ title }) => {
+    const translator = useContext(TranslatorContext);
+    return (
+        <div className={styles.<%= h.changeCase.lcFirst(name) %>} title={title}>
+            {translator(messages.label)}
+        </div>
+    );
+};
+
+<%= h.capitalize(name) %>.propTypes = {
+    title: PropTypes.string,
+};
+
+<%= h.capitalize(name) %>.defaultProps = {
+    title: 'sample',
+};

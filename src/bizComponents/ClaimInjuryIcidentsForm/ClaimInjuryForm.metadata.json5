@@ -1,0 +1,351 @@
+{
+    "jutro": "6.0",
+    "claim.injury.incident.view": {
+        "id": "claimVehicle",
+        "type": "page",
+        "contentLayout": {
+            "component": "Grid",
+            "componentProps": {
+                "hgap": "large",
+                "vgap": "large"
+            }
+        },
+        "content": [
+            {
+                "id": "severityType",
+                "type": "field",
+                "component": "Toggle",
+                "componentProps": {
+                    "dataType": "object",
+                    "availableValues": [
+                        {
+                            "code": "moderate-gen",
+                            "name": "Moderate"
+                        },
+                        {
+                            "code": "minor-gen",
+                            "name": "Minor"
+                        },
+                        {
+                            "code": "major-gen",
+                            "name": "Major"
+                        }
+                    ],
+                    "path": "severity",
+                    "label": {
+                        "id": "note.severityType.label",
+                        "defaultMessage": "Severity Type"
+                    },
+                    "controlClassName": "horizontalGrid"
+                }
+            },
+            {
+                "id": "ambulance",
+                "type": "field",
+                "component": "Toggle",
+                "componentProps": {
+                    "path": "ambulanceUsed",
+                    "label": {
+                        "id": "note.ambulanceUsed.label",
+                        "defaultMessage": "Ambulance Used"
+                    },
+                    "controlClassName": "horizontalGrid"
+                }
+            },
+            {
+                "id": "lostWages",
+                "type": "field",
+                "component": "Toggle",
+                "componentProps": {
+                    "path": "lostWages",
+                    "label": {
+                        "id": "note.lostWages.label",
+                        "defaultMessage": "Lost Wages"
+                    },
+                    "controlClassName": "horizontalGrid"
+                }
+            },
+            {
+                "id": "detailedInjuryType",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "dataType": "object",
+                    "availableValues": [
+                        {
+                            "code": "01",
+                            "name": "No Physical Injury"
+                        },
+                        {
+                            "code": "02",
+                            "name": "Amputation"
+                        },
+                        {
+                            "code": "03",
+                            "name": "Angina pectoris"
+                        },
+                        {
+                            "code": "04",
+                            "name": "Burn"
+                        },
+                        {
+                            "code": "07",
+                            "name": "Concussion"
+                        },
+                        {
+                            "code": "10",
+                            "name": "Contusion"
+                        },
+                        {
+                            "code": "13",
+                            "name": "Crushing"
+                        },
+                        {
+                            "code": "16",
+                            "name": "Dislocation"
+                        },
+                        {
+                            "code": "19",
+                            "name": "Electric shock"
+                        },
+                        {
+                            "code": "22",
+                            "name": "Enucleation"
+                        },
+                        {
+                            "code": "25",
+                            "name": "Foreign body"
+                        },
+                        {
+                            "code": "28",
+                            "name": "Fracture"
+                        },
+                        {
+                            "code": "30",
+                            "name": "Freezing"
+                        },
+                        {
+                            "code": "31",
+                            "name": "Hearing loss or impairment"
+                        },
+                        {
+                            "code": "32",
+                            "name": "Heat prostration"
+                        },
+                        {
+                            "code": "34",
+                            "name": "Hernia"
+                        },
+                        {
+                            "code": "36",
+                            "name": "Infection"
+                        },
+                        {
+                            "code": "37",
+                            "name": "Inflammation"
+                        },
+                        {
+                            "code": "40",
+                            "name": "Laceration"
+                        },
+                        {
+                            "code": "41",
+                            "name": "Myocardial infarction"
+                        },
+                        {
+                            "code": "42",
+                            "name": "Poisoning (not overdose or cumulative injury)"
+                        },
+                        {
+                            "code": "43",
+                            "name": "Puncture"
+                        },
+                        {
+                            "code": "46",
+                            "name": "Rupture"
+                        },
+                        {
+                            "code": "47",
+                            "name": "Severance"
+                        },
+                        {
+                            "code": "49",
+                            "name": "Sprain"
+                        },
+                        {
+                            "code": "52",
+                            "name": "Strain"
+                        },
+                        {
+                            "code": "53",
+                            "name": "Syncope"
+                        },
+                        {
+                            "code": "54",
+                            "name": "Asphyxiation"
+                        },
+                        {
+                            "code": "55",
+                            "name": "Vascular"
+                        },
+                        {
+                            "code": "58",
+                            "name": "Vision Loss"
+                        },
+                        {
+                            "code": "59",
+                            "name": "Other specific injury"
+                        },
+                        {
+                            "code": "60",
+                            "name": "Dust disease"
+                        },
+                        {
+                            "code": "61",
+                            "name": "Asbestosis"
+                        },
+                        {
+                            "code": "62",
+                            "name": "Black lung"
+                        },
+                        {
+                            "code": "63",
+                            "name": "Byssinosis"
+                        },
+                        {
+                            "code": "64",
+                            "name": "Silicosis"
+                        },
+                        {
+                            "code": "65",
+                            "name": "Respiratory disorders (gases, fumes, chemicals)"
+                        },
+                        {
+                            "code": "66",
+                            "name": "Poisoning (chemical)"
+                        },
+                        {
+                            "code": "67",
+                            "name": "Poisoning (metal)"
+                        },
+                        {
+                            "code": "68",
+                            "name": "Dermatitis"
+                        },
+                        {
+                            "code": "69",
+                            "name": "Mental disorder"
+                        },
+                        {
+                            "code": "70",
+                            "name": "Radiation"
+                        },
+                        {
+                            "code": "71",
+                            "name": "All other occupational disease injuries"
+                        },
+                        {
+                            "code": "72",
+                            "name": "Loss of hearing"
+                        },
+                        {
+                            "code": "73",
+                            "name": "Contagious disease"
+                        },
+                        {
+                            "code": "74",
+                            "name": "Cancer"
+                        },
+                        {
+                            "code": "75",
+                            "name": "AIDS"
+                        },
+                        {
+                            "code": "76",
+                            "name": "Video display terminal diseases"
+                        },
+                        {
+                            "code": "77",
+                            "name": "Mental stress"
+                        },
+                        {
+                            "code": "78",
+                            "name": "Carpal Tunnel Syndrome"
+                        },
+                        {
+                            "code": "79",
+                            "name": "Hepatitis C"
+                        },
+                        {
+                            "code": "80",
+                            "name": "All other cumulative injuries"
+                        },
+                        {
+                            "code": "90",
+                            "name": "Multiple physical injuries only"
+                        },
+                        {
+                            "code": "91",
+                            "name": "Multiple injuries including both physical and psychological"
+                        }
+                    ],
+                    "path": "detailedInjuryType",
+                    "label": {
+                        "id": "note.detailedInjuryType.label",
+                        "defaultMessage": "Detailed Injury Type"
+                    }
+                }
+            },
+            {
+                "id": "genInjuryType",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "dataType": "object",
+                    "availableValues": [
+                        {
+                            "code": "specific",
+                            "name": "Specific injury"
+                        },
+                        {
+                            "code": "occupational",
+                            "name": "Occupational disease or cumulative injury"
+                        },
+                        {
+                            "code": "multiple",
+                            "name": "Multiple injuries"
+                        }
+                    ],
+                    "path": "generalInjuryType",
+                    "label": {
+                        "id": "note.generalInjuryType.label",
+                        "defaultMessage": "General Injury Type"
+                    }
+                }
+            },
+            {
+                "id": "lossParty",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "dataType": "object",
+                    "availableValues": [
+                        {
+                            "code": "insured",
+                            "name": "Insured's loss"
+                        },
+                        {
+                            "code": "third_party",
+                            "name": "Third-party liability"
+                        }
+                    ],
+                    "path": "lossParty",
+                    "label": {
+                        "id": "note.lossParty.label",
+                        "defaultMessage": "Loss Party"
+                    }
+                }
+            }
+        ]
+    }
+}

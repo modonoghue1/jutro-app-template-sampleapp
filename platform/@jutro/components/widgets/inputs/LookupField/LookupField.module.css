@@ -1,0 +1,114 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.control {
+  padding: 0 var(--GW-SPACING-3);
+  min-height: var(--GW-FIELD-COMPONENT-HEIGHT); }
+  .control div {
+    flex-wrap: nowrap; }
+
+svg.selectIcon {
+  color: var(--GW-FIELD-COMPONENT-COLOR);
+  font-size: var(--GW-ICON-FONT-SIZE-3);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+
+.cancel {
+  pointer-events: initial;
+  display: inline-flex;
+  color: var(--GW-LOOKUP-FIELD-ICON-COLOR);
+  width: calc(1em);
+  height: calc(1em);
+  border-radius: var(--GW-SPACING-5);
+  padding: 0;
+  font-size: var(--GW-ICON-FONT-SIZE-3);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+
+.item {
+  min-width: 0; }
+
+.option,
+.value {
+  align-items: center; }
+  .option .title,
+  .option .subtitle,
+  .value .title,
+  .value .subtitle {
+    font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: var(--GW-FONT-SIZE-INPUT);
+    line-height: var(--GW-LINE-HEIGHT-INPUT); }
+
+.icon {
+  min-width: var(--GW-LOOKUP-FIELD-ICON-BACKGROUND-SIZE);
+  height: var(--GW-LOOKUP-FIELD-ICON-BACKGROUND-SIZE);
+  font-size: var(--GW-ICON-FONT-SIZE-1);
+  line-height: var(--GW-LOOKUP-FIELD-ICON-BACKGROUND-SIZE);
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--GW-LOOKUP-FIELD-ICON-COLOR);
+  color: var(--GW-FIELD-COMPONENT-BACKGROUND-COLOR); }
+
+.option {
+  display: flex;
+  padding: var(--GW-SPACING-2) var(--GW-SPACING-5);
+  color: var(--GW-DROPDOWN-OPTION-COLOR);
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+  text-align: left;
+  cursor: pointer; }
+  .option.focused {
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-HOVER); }
+  .option:active {
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-ACTIVE); }
+  .option.selected {
+    color: var(--GW-DROPDOWN-OPTION-SELECTED-COLOR);
+    background-color: var(--GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR); }
+    .option.selected .icon {
+      box-shadow: 0 0 0 1px var(--GW-DROPDOWN-OPTION-SELECTED-COLOR); }
+    .option.selected.focused {
+      background-color: var(--GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR-HOVER); }
+    .option.selected:active {
+      background-color: var(--GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR-ACTIVE); }
+  .option .icon {
+    margin: 0;
+    margin-right: var(--GW-SPACING-3); }
+
+.value {
+  display: flex;
+  min-width: 0; }
+  .value .icon {
+    border-radius: var(--GW-BORDER-RADIUS-FULL);
+    overflow: hidden;
+    margin: 0 var(--GW-SPACING-2) 0 0; }
+  .value .title {
+    color: var(--GW-FIELD-COMPONENT-COLOR);
+    margin: 0 0 0 var(--GW-SPACING-2); }
+
+.addLink {
+  padding-left: var(--GW-SPACING-5);
+  padding-right: var(--GW-SPACING-5);
+  display: flex;
+  align-items: center;
+  color: var(--GW-FIELD-COMPONENT-COLOR-SECONDARY);
+  background-color: transparent;
+  font-size: var(--GW-FONT-SIZE-INPUT);
+  line-height: var(--GW-LINE-HEIGHT-INPUT); }
+  .addLink > * {
+    margin-right: var(--GW-SPACING-3);
+    font-size: var(--GW-FONT-SIZE-INPUT);
+    line-height: var(--GW-LINE-HEIGHT-INPUT); }
+  .addLink:hover {
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-HOVER); }
+  .addLink:active {
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-ACTIVE); }
+
+.recentBar {
+  background-color: var(--GW-LOOKUP-FIELD-RECENT-BAR-BACKGROUND-COLOR);
+  padding: 0.25rem var(--GW-SPACING-4) 0.25rem;
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+/*# sourceMappingURL=LookupField.module.css.map */

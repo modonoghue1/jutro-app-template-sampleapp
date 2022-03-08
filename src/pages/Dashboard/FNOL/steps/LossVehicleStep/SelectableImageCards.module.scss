@@ -1,0 +1,46 @@
+.flexItem {
+  border-radius: var(--GW-BORDER-RADIUS);
+  margin-top: var(--GW-SPACING-4);
+
+  figure {
+    margin: 0;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+
+    .selectableCard {
+      border-radius: var(--GW-BORDER-RADIUS) var(--GW-BORDER-RADIUS) 0 0;
+      opacity: var(--GW-IMAGE-RADIO-BUTTON-IMAGE-OPACITY-HOVER);
+    }
+
+    figcaption {
+      border-radius: 0 0 var(--GW-BORDER-RADIUS) var(--GW-BORDER-RADIUS);
+    }
+  }
+}
+
+.iconImageContainer {
+  position: relative;
+}
+
+.selectableCard {
+  cursor: pointer;
+  width: 90px;
+  height: 70px;
+
+  &:hover {
+    opacity: var(--GW-IMAGE-RADIO-BUTTON-IMAGE-OPACITY-HOVER);
+  }
+}
+
+.icon {
+  position: absolute;
+  right: var(--GW-SPACING-1);
+  top: var(--GW-SPACING-1);
+  color: var(--GW-SELECTOR-SELECTED-COLOR);
+  background-color: var(--GW-SELECTOR-SELECTED-BACKGROUND-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS-FULL);
+  border: var(--GW-IMAGE-RADIO-BUTTON-ICON-BORDER-SELECTED);
+}

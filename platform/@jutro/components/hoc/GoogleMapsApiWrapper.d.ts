@@ -1,0 +1,1 @@
+export function GoogleMapsApiWrapper(ComponentToWrap: any): import("react").ComponentType<import("google-maps-react").Omit<import("google-maps-react").IProvidedProps, import("google-maps-react").IProvidedProps>>;

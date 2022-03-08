@@ -1,0 +1,52 @@
+{
+  "_from": "@jutro/cli-snapshots@6.5.0",
+  "_id": "@jutro/cli-snapshots@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-PdUIzrt/9n9sUhu2DHnTyRXe0lg=",
+  "_location": "/@jutro/cli-snapshots",
+  "_phantomChildren": {
+    "yallist": "4.0.0"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/cli-snapshots@6.5.0",
+    "name": "@jutro/cli-snapshots",
+    "escapedName": "@jutro%2fcli-snapshots",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/cli"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/cli-snapshots/-/@jutro/cli-snapshots-6.5.0.tgz",
+  "_shasum": "3dd508cebb7ff67f6c521bb60c79d3c915ded258",
+  "_spec": "@jutro/cli-snapshots@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/cli-snapshot-tools": "6.5.0",
+    "jscodeshift": "0.11.0",
+    "json5": "2.2.0",
+    "lodash": "4.17.21",
+    "semver": "7.3.5"
+  },
+  "deprecated": false,
+  "description": "Stores the version/feature migration snapshots for the cli",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/cli-snapshots",
+  "peerDependencies": {
+    "react": "17.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "version": "6.5.0"
+}

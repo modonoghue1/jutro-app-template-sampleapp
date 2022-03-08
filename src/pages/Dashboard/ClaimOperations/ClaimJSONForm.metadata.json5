@@ -1,0 +1,1599 @@
+// Presentation metadata file loaded and used in Metadata-driven Example in Storybook
+{
+    // ======================================================================
+    // Presentation metadata for the "metadata-driven.example" page (using metadata 3.0)
+    // ======================================================================
+    "jutro": "6.0.0",
+    "jutro-components.metadata-driven.jsonexample": {
+        "id": "jutro-components.metadata-driven.jsonexample",
+        "type": "page",
+        "content": [
+            {
+                "id": "form",
+                "type": "container", // intent
+                "component": "div",
+                "contentLayout": {
+                    "component": "Grid",
+                    "componentProps": {
+                        "gap": "large"
+                    }
+                },
+                "content": [
+                    {
+                        "id": "policyNumber",
+                        "type": "field",
+                        "component": "Input",
+                        "componentProps": {
+                            "maxLength": 40,
+                            "createOnly": true,
+                            "path": "policyNumber",
+                            "required": true,
+                            "label": {
+                                "id": "claim.policyNumber.label",
+                                "defaultMessage": "Policy Number"
+                            }
+                        }
+                    },
+                    {
+                        "id": "lossDate",
+                        "type": "field",
+                        "component": "Date",
+                        "componentProps": {
+                            "createOnly": true,
+                            "path": "lossDate",
+                            "dataType": "date-time",
+                            "required": true,
+                            "label": {
+                                "id": "claim.lossDate.label",
+                                "defaultMessage": "Loss Date"
+                            }
+                        }
+                    },
+                    {
+                        "id": "lobCode",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "BOPLine",
+                                    "name": "Businessowners Line"
+                                },
+                                {
+                                    "code": "BusinessAutoLine",
+                                    "name": "Commercial Auto Line"
+                                },
+                                {
+                                    "code": "CPLine",
+                                    "name": "Commercial Property Line"
+                                },
+                                {
+                                    "code": "GLLine",
+                                    "name": "General Liability Line"
+                                },
+                                {
+                                    "code": "HOPLine",
+                                    "name": "Homeowners Line"
+                                },
+                                {
+                                    "code": "IMLine",
+                                    "name": "Inland Marine Line"
+                                },
+                                {
+                                    "code": "other_liab",
+                                    "name": "Other Liability"
+                                },
+                                {
+                                    "code": "PersonalAutoLine",
+                                    "name": "Personal Auto Line"
+                                },
+                                {
+                                    "code": "PersonalUmbrellaLine_PUE",
+                                    "name": "Personal Umbrella Line"
+                                },
+                                {
+                                    "code": "travel",
+                                    "name": "Travel"
+                                },
+                                {
+                                    "code": "WorkersCompLine",
+                                    "name": "Workers' Comp Line"
+                                }
+                            ],
+                            "createOnly": true,
+                            "required": true,
+                            "dataType": "object",
+                            "path": "lobCode",
+                            "label": {
+                                "id": "claim.lobCode.label",
+                                "defaultMessage": "Lob Code"
+                            }
+                        }
+                    },
+                    {
+                        "id": "lossType",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "AUTO",
+                                    "name": "Auto"
+                                },
+                                {
+                                    "code": "GL",
+                                    "name": "Liability"
+                                },
+                                {
+                                    "code": "PR",
+                                    "name": "Property"
+                                },
+                                {
+                                    "code": "TRAV",
+                                    "name": "Travel"
+                                },
+                                {
+                                    "code": "WC",
+                                    "name": "Workers' Comp"
+                                }
+                            ],
+                            "readOnly": true,
+                            "dataType": "object",
+                            "path": "lossType",
+                            "label": {
+                                "id": "claim.lossType.label",
+                                "defaultMessage": "Loss Type"
+                            }
+                        }
+                    },
+                    {
+                        "id": "arson",
+                        "type": "field",
+                        "component": "Toggle",
+                        "componentProps": {
+                            "path": "arson",
+                            "label": {
+                                "id": "claim.arson.label",
+                                "defaultMessage": "Arson"
+                            }
+                        },
+                        "dynamicProps": [
+                            {
+                                "if": "lobCode:eq:BOPLine",
+                                "then": {
+                                    "visible": false
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "assignmentStatus",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "assigned",
+                                    "name": "Assigned"
+                                },
+                                {
+                                    "code": "manual",
+                                    "name": "Manual"
+                                },
+                                {
+                                    "code": "pendingassignment",
+                                    "name": "Pending assignment"
+                                },
+                                {
+                                    "code": "unassigned",
+                                    "name": "Unassigned"
+                                }
+                            ],
+                            "readOnly": true,
+                            "dataType": "object",
+                            "path": "assignmentStatus",
+                            "label": {
+                                "id": "claim.assignmentStatus.label",
+                                "defaultMessage": "Assignment Status"
+                            }
+                        }
+                    },
+                    {
+                        "id": "claimNumber",
+                        "type": "field",
+                        "component": "Input",
+                        "componentProps": {
+                            "maxLength": 40,
+                            "readOnly": true,
+                            "path": "claimNumber",
+                            "label": {
+                                "id": "claim.claimNumber.label",
+                                "defaultMessage": "Claim Number"
+                            }
+                        }
+                    },
+                    {
+                        "id": "closeDate",
+                        "type": "field",
+                        "component": "Date",
+                        "componentProps": {
+                            "readOnly": true,
+                            "path": "closeDate",
+                            "dataType": "string",
+                            "label": {
+                                "id": "claim.closeDate.label",
+                                "defaultMessage": "Close Date"
+                            }
+                        }
+                    },
+                    {
+                        "id": "closedOutcome",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "completed",
+                                    "name": "Completed"
+                                },
+                                {
+                                    "code": "duplicate",
+                                    "name": "Duplicate"
+                                },
+                                {
+                                    "code": "fraud",
+                                    "name": "Fraud"
+                                },
+                                {
+                                    "code": "mistake",
+                                    "name": "Mistake"
+                                },
+                                {
+                                    "code": "paymentscomplete",
+                                    "name": "Payments Complete"
+                                }
+                            ],
+                            "readOnly": true,
+                            "dataType": "object",
+                            "path": "closedOutcome",
+                            "label": {
+                                "id": "claim.closedOutcome.label",
+                                "defaultMessage": "Closed Outcome"
+                            }
+                        }
+                    },
+                    {
+                        "id": "description",
+                        "type": "field",
+                        "component": "TextArea",
+                        "componentProps": {
+                            "maxLength": 1333,
+                            "path": "description",
+                            "label": {
+                                "id": "claim.description.label",
+                                "defaultMessage": "Description"
+                            }
+                        },
+                        "dynamicProps": [
+                            {
+                                "if": "lobCode:eq:BusinessAutoLine",
+                                "then": {
+                                    "readOnly": true
+                                },
+                                "else": {
+                                    "required": true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "faultRating",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "thirdparty",
+                                    "name": "Other party at fault"
+                                },
+                                {
+                                    "code": "0",
+                                    "name": "Fault unknown"
+                                },
+                                {
+                                    "code": "1",
+                                    "name": "Insured at fault"
+                                },
+                                {
+                                    "code": "nofault",
+                                    "name": "No fault"
+                                }
+                            ],
+                            "dataType": "object",
+                            "path": "faultRating",
+                            "label": {
+                                "id": "claim.faultRating.label",
+                                "defaultMessage": "Fault Rating"
+                            }
+                        }
+                    },
+                    {
+                        "id": "filterPropertyRiskUnits",
+                        "type": "field",
+                        "component": "TypeaheadMultiSelect",
+                        "componentProps": {
+                            "createOnly": true,
+                            "path": "filterPropertyRiskUnits",
+                            "label": {
+                                "id": "claim.filterPropertyRiskUnits.label",
+                                "defaultMessage": "Filter Property Risk Units"
+                            }
+                        }
+                    },
+                    {
+                        "id": "filterVehicleRiskUnits",
+                        "type": "field",
+                        "component": "TypeaheadMultiSelect",
+                        "componentProps": {
+                            "createOnly": true,
+                            "path": "filterVehicleRiskUnits",
+                            "label": {
+                                "id": "claim.filterVehicleRiskUnits.label",
+                                "defaultMessage": "Filter Vehicle Risk Units"
+                            }
+                        }
+                    },
+                    {
+                        "id": "fireDepartmentResponded",
+                        "type": "field",
+                        "component": "Toggle",
+                        "componentProps": {
+                            "path": "fireDepartmentResponded",
+                            "label": {
+                                "id": "claim.fireDepartmentResponded.label",
+                                "defaultMessage": "Fire Department Responded"
+                            }
+                        }
+                    },
+                    {
+                        "id": "fireSource",
+                        "type": "field",
+                        "component": "TextArea",
+                        "componentProps": {
+                            "maxLength": 250,
+                            "path": "fireSource",
+                            "label": {
+                                "id": "claim.fireSource.label",
+                                "defaultMessage": "Fire Source"
+                            }
+                        }
+                    },
+                    {
+                        "id": "flagged",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "isflagged",
+                                    "name": "Is flagged"
+                                },
+                                {
+                                    "code": "wasflagged",
+                                    "name": "Was flagged"
+                                },
+                                {
+                                    "code": "neverflagged",
+                                    "name": "Never flagged"
+                                }
+                            ],
+                            "dataType": "object",
+                            "path": "flagged",
+                            "label": {
+                                "id": "claim.flagged.label",
+                                "defaultMessage": "Flagged"
+                            }
+                        }
+                    },
+                    {
+                        "id": "hasWaterBeenTurnedOff",
+                        "type": "field",
+                        "component": "Toggle",
+                        "componentProps": {
+                            "path": "hasWaterBeenTurnedOff",
+                            "label": {
+                                "id": "claim.hasWaterBeenTurnedOff.label",
+                                "defaultMessage": "Has Water Been Turned Off"
+                            }
+                        }
+                    },
+                    {
+                        "id": "howReported",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "mail",
+                                    "name": "Mail"
+                                },
+                                {
+                                    "code": "walkin",
+                                    "name": "Walk-in"
+                                },
+                                {
+                                    "code": "fax",
+                                    "name": "Fax"
+                                },
+                                {
+                                    "code": "internet",
+                                    "name": "Internet"
+                                },
+                                {
+                                    "code": "phone",
+                                    "name": "Phone"
+                                }
+                            ],
+                            "dataType": "object",
+                            "path": "howReported",
+                            "label": {
+                                "id": "claim.howReported.label",
+                                "defaultMessage": "How Reported"
+                            }
+                        }
+                    },
+                    {
+                        "id": "howWasFireDiscovered",
+                        "type": "field",
+                        "component": "TextArea",
+                        "componentProps": {
+                            "maxLength": 250,
+                            "path": "howWasFireDiscovered",
+                            "label": {
+                                "id": "claim.howWasFireDiscovered.label",
+                                "defaultMessage": "How Was Fire Discovered"
+                            }
+                        }
+                    },
+                    {
+                        "id": "id",
+                        "type": "field",
+                        "component": "Input",
+                        "componentProps": {
+                            "path": "id",
+                            "label": {
+                                "id": "claim.id.label",
+                                "defaultMessage": "Id"
+                            }
+                        }
+                    },
+                    {
+                        "id": "incidentOnly",
+                        "type": "field",
+                        "component": "Toggle",
+                        "componentProps": {
+                            "path": "incidentOnly",
+                            "label": {
+                                "id": "claim.incidentOnly.label",
+                                "defaultMessage": "Incident Only"
+                            }
+                        }
+                    },
+                    {
+                        "id": "isAnyoneInjured",
+                        "type": "field",
+                        "component": "Toggle",
+                        "componentProps": {
+                            "path": "isAnyoneInjured",
+                            "label": {
+                                "id": "claim.isAnyoneInjured.label",
+                                "defaultMessage": "Is Anyone Injured"
+                            }
+                        }
+                    },
+                    {
+                        "id": "isHomeHabitable",
+                        "type": "field",
+                        "component": "Toggle",
+                        "componentProps": {
+                            "path": "isHomeHabitable",
+                            "label": {
+                                "id": "claim.isHomeHabitable.label",
+                                "defaultMessage": "Is Home Habitable"
+                            }
+                        }
+                    },
+                    {
+                        "id": "isHomeSecure",
+                        "type": "field",
+                        "component": "Toggle",
+                        "componentProps": {
+                            "path": "isHomeSecure",
+                            "label": {
+                                "id": "claim.isHomeSecure.label",
+                                "defaultMessage": "Is Home Secure"
+                            }
+                        }
+                    },
+                    {
+                        "id": "isRoofProtected",
+                        "type": "field",
+                        "component": "Toggle",
+                        "componentProps": {
+                            "path": "isRoofProtected",
+                            "label": {
+                                "id": "claim.isRoofProtected.label",
+                                "defaultMessage": "Is Roof Protected"
+                            }
+                        }
+                    },
+                    {
+                        "id": "jurisdiction",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "AU_ACT",
+                                    "name": "A.C.T."
+                                },
+                                {
+                                    "code": "AL",
+                                    "name": "Alabama"
+                                },
+                                {
+                                    "code": "AK",
+                                    "name": "Alaska"
+                                },
+                                {
+                                    "code": "AB",
+                                    "name": "Alberta"
+                                },
+                                {
+                                    "code": "AZ",
+                                    "name": "Arizona"
+                                },
+                                {
+                                    "code": "AR",
+                                    "name": "Arkansas"
+                                },
+                                {
+                                    "code": "DE_BW",
+                                    "name": "Baden-Wuerttemberg"
+                                },
+                                {
+                                    "code": "DE_BY",
+                                    "name": "Bavaria"
+                                },
+                                {
+                                    "code": "DE_BE",
+                                    "name": "Berlin"
+                                },
+                                {
+                                    "code": "DE_BB",
+                                    "name": "Brandenburg"
+                                },
+                                {
+                                    "code": "DE_HB",
+                                    "name": "Bremen"
+                                },
+                                {
+                                    "code": "BC",
+                                    "name": "British Columbia"
+                                },
+                                {
+                                    "code": "CA",
+                                    "name": "California"
+                                },
+                                {
+                                    "code": "CO",
+                                    "name": "Colorado"
+                                },
+                                {
+                                    "code": "CT",
+                                    "name": "Connecticut"
+                                },
+                                {
+                                    "code": "DE",
+                                    "name": "Delaware"
+                                },
+                                {
+                                    "code": "DC",
+                                    "name": "District of Columbia"
+                                },
+                                {
+                                    "code": "FM",
+                                    "name": "Federated States of Micronesia"
+                                },
+                                {
+                                    "code": "FL",
+                                    "name": "Florida"
+                                },
+                                {
+                                    "code": "FR",
+                                    "name": "France"
+                                },
+                                {
+                                    "code": "GA",
+                                    "name": "Georgia"
+                                },
+                                {
+                                    "code": "GU",
+                                    "name": "Guam"
+                                },
+                                {
+                                    "code": "DE_HH",
+                                    "name": "Hamburg"
+                                },
+                                {
+                                    "code": "HI",
+                                    "name": "Hawaii"
+                                },
+                                {
+                                    "code": "DE_HE",
+                                    "name": "Hesse"
+                                },
+                                {
+                                    "code": "ID",
+                                    "name": "Idaho"
+                                },
+                                {
+                                    "code": "IL",
+                                    "name": "Illinois"
+                                },
+                                {
+                                    "code": "IN",
+                                    "name": "Indiana"
+                                },
+                                {
+                                    "code": "IA",
+                                    "name": "Iowa"
+                                },
+                                {
+                                    "code": "JP",
+                                    "name": "Japan"
+                                },
+                                {
+                                    "code": "KS",
+                                    "name": "Kansas"
+                                },
+                                {
+                                    "code": "KY",
+                                    "name": "Kentucky"
+                                },
+                                {
+                                    "code": "LA",
+                                    "name": "Louisiana"
+                                },
+                                {
+                                    "code": "DE_NI",
+                                    "name": "Lower Saxony"
+                                },
+                                {
+                                    "code": "ME",
+                                    "name": "Maine"
+                                },
+                                {
+                                    "code": "MB",
+                                    "name": "Manitoba"
+                                },
+                                {
+                                    "code": "MH",
+                                    "name": "Marshall Islands"
+                                },
+                                {
+                                    "code": "MD",
+                                    "name": "Maryland"
+                                },
+                                {
+                                    "code": "MA",
+                                    "name": "Massachusetts"
+                                },
+                                {
+                                    "code": "DE_MV",
+                                    "name": "Mecklenburg-Vorpommern"
+                                },
+                                {
+                                    "code": "MI",
+                                    "name": "Michigan"
+                                },
+                                {
+                                    "code": "MN",
+                                    "name": "Minnesota"
+                                },
+                                {
+                                    "code": "MS",
+                                    "name": "Mississippi"
+                                },
+                                {
+                                    "code": "MO",
+                                    "name": "Missouri"
+                                },
+                                {
+                                    "code": "MT",
+                                    "name": "Montana"
+                                },
+                                {
+                                    "code": "NE",
+                                    "name": "Nebraska"
+                                },
+                                {
+                                    "code": "NV",
+                                    "name": "Nevada"
+                                },
+                                {
+                                    "code": "NB",
+                                    "name": "New Brunswick"
+                                },
+                                {
+                                    "code": "NH",
+                                    "name": "New Hampshire"
+                                },
+                                {
+                                    "code": "NJ",
+                                    "name": "New Jersey"
+                                },
+                                {
+                                    "code": "NM",
+                                    "name": "New Mexico"
+                                },
+                                {
+                                    "code": "AU_NSW",
+                                    "name": "New South Wales"
+                                },
+                                {
+                                    "code": "NY",
+                                    "name": "New York"
+                                },
+                                {
+                                    "code": "NL",
+                                    "name": "Newfoundland and Labrador"
+                                },
+                                {
+                                    "code": "NC",
+                                    "name": "North Carolina"
+                                },
+                                {
+                                    "code": "ND",
+                                    "name": "North Dakota"
+                                },
+                                {
+                                    "code": "DE_NW",
+                                    "name": "North Rhine-Westphalia"
+                                },
+                                {
+                                    "code": "MP",
+                                    "name": "Northern Mariana Islands"
+                                },
+                                {
+                                    "code": "AU_NT",
+                                    "name": "Northern Territory"
+                                },
+                                {
+                                    "code": "NT",
+                                    "name": "Northwest Territories"
+                                },
+                                {
+                                    "code": "NS",
+                                    "name": "Nova Scotia"
+                                },
+                                {
+                                    "code": "NU",
+                                    "name": "Nunavut"
+                                },
+                                {
+                                    "code": "OH",
+                                    "name": "Ohio"
+                                },
+                                {
+                                    "code": "OK",
+                                    "name": "Oklahoma"
+                                },
+                                {
+                                    "code": "ON",
+                                    "name": "Ontario"
+                                },
+                                {
+                                    "code": "OR",
+                                    "name": "Oregon"
+                                },
+                                {
+                                    "code": "PA",
+                                    "name": "Pennsylvania"
+                                },
+                                {
+                                    "code": "PE",
+                                    "name": "Prince Edward Island"
+                                },
+                                {
+                                    "code": "PR",
+                                    "name": "Puerto Rico"
+                                },
+                                {
+                                    "code": "QC",
+                                    "name": "Quebec"
+                                },
+                                {
+                                    "code": "AU_QLD",
+                                    "name": "Queensland"
+                                },
+                                {
+                                    "code": "DE_RP",
+                                    "name": "Rhineland-Palatinate"
+                                },
+                                {
+                                    "code": "RI",
+                                    "name": "Rhode Island"
+                                },
+                                {
+                                    "code": "DE_SL",
+                                    "name": "Saarland"
+                                },
+                                {
+                                    "code": "SK",
+                                    "name": "Saskatchewan"
+                                },
+                                {
+                                    "code": "DE_SN",
+                                    "name": "Saxony"
+                                },
+                                {
+                                    "code": "DE_ST",
+                                    "name": "Saxony-Anhalt"
+                                },
+                                {
+                                    "code": "DE_SH",
+                                    "name": "Schleswig-Holstein"
+                                },
+                                {
+                                    "code": "AU_SA",
+                                    "name": "South Australia"
+                                },
+                                {
+                                    "code": "SC",
+                                    "name": "South Carolina"
+                                },
+                                {
+                                    "code": "SD",
+                                    "name": "South Dakota"
+                                },
+                                {
+                                    "code": "AU_TAS",
+                                    "name": "Tasmania"
+                                },
+                                {
+                                    "code": "TN",
+                                    "name": "Tennessee"
+                                },
+                                {
+                                    "code": "TX",
+                                    "name": "Texas"
+                                },
+                                {
+                                    "code": "DE_TH",
+                                    "name": "Thuringia"
+                                },
+                                {
+                                    "code": "GB",
+                                    "name": "United Kingdom"
+                                },
+                                {
+                                    "code": "UT",
+                                    "name": "Utah"
+                                },
+                                {
+                                    "code": "VT",
+                                    "name": "Vermont"
+                                },
+                                {
+                                    "code": "AU_VIC",
+                                    "name": "Victoria"
+                                },
+                                {
+                                    "code": "VI",
+                                    "name": "Virgin Islands"
+                                },
+                                {
+                                    "code": "VA",
+                                    "name": "Virginia"
+                                },
+                                {
+                                    "code": "WA",
+                                    "name": "Washington"
+                                },
+                                {
+                                    "code": "WV",
+                                    "name": "West Virginia"
+                                },
+                                {
+                                    "code": "AU_WA",
+                                    "name": "Western Australia"
+                                },
+                                {
+                                    "code": "WI",
+                                    "name": "Wisconsin"
+                                },
+                                {
+                                    "code": "WY",
+                                    "name": "Wyoming"
+                                },
+                                {
+                                    "code": "YT",
+                                    "name": "Yukon"
+                                }
+                            ],
+                            "dataType": "object",
+                            "path": "jurisdiction",
+                            "label": {
+                                "id": "claim.jurisdiction.label",
+                                "defaultMessage": "Jurisdiction"
+                            }
+                        }
+                    },
+                    {
+                        "id": "lossCause",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "abandonment",
+                                    "name": "Abandonment"
+                                },
+                                {
+                                    "code": "animal",
+                                    "name": "Animal"
+                                },
+                                {
+                                    "code": "animal_bite",
+                                    "name": "Animal/insect bite/scratch/sting"
+                                },
+                                {
+                                    "code": "assault",
+                                    "name": "Assault or battery"
+                                },
+                                {
+                                    "code": "breach",
+                                    "name": "Breach of contract"
+                                },
+                                {
+                                    "code": "broken_glass",
+                                    "name": "Broken glass"
+                                },
+                                {
+                                    "code": "burglary",
+                                    "name": "Burglary"
+                                },
+                                {
+                                    "code": "burn_scald",
+                                    "name": "Burn or scald - heat or cold exposures - contact with"
+                                },
+                                {
+                                    "code": "cancellation",
+                                    "name": "Cancellation"
+                                },
+                                {
+                                    "code": "caught_in",
+                                    "name": "Caught in, under, or between"
+                                },
+                                {
+                                    "code": "leftcollision",
+                                    "name": "Collision while turning left"
+                                },
+                                {
+                                    "code": "bikecollision",
+                                    "name": "Collision with bicycle"
+                                },
+                                {
+                                    "code": "fixedobjcoll",
+                                    "name": "Collision with fixed object"
+                                },
+                                {
+                                    "code": "vehcollision",
+                                    "name": "Collision with motor vehicle"
+                                },
+                                {
+                                    "code": "otherobjcoll",
+                                    "name": "Collision with other object"
+                                },
+                                {
+                                    "code": "pedcollision",
+                                    "name": "Collision with pedestrian"
+                                },
+                                {
+                                    "code": "trainbuscoll",
+                                    "name": "Collision with train or bus"
+                                },
+                                {
+                                    "code": "electrical_curr",
+                                    "name": "Contact with electric current"
+                                },
+                                {
+                                    "code": "air_crash",
+                                    "name": "Crash of airplane"
+                                },
+                                {
+                                    "code": "rail_crash",
+                                    "name": "Crash of rail vehicle"
+                                },
+                                {
+                                    "code": "water_veh_crash",
+                                    "name": "Crash of water vehicle"
+                                },
+                                {
+                                    "code": "cut",
+                                    "name": "Cut, puncture, scrape, injured by"
+                                },
+                                {
+                                    "code": "loadingdamage",
+                                    "name": "Damage in loading or unloading"
+                                },
+                                {
+                                    "code": "death",
+                                    "name": "Death"
+                                },
+                                {
+                                    "code": "delay",
+                                    "name": "Delay"
+                                },
+                                {
+                                    "code": "documents",
+                                    "name": "Documents"
+                                },
+                                {
+                                    "code": "earthquake",
+                                    "name": "Earthquake"
+                                },
+                                {
+                                    "code": "errors",
+                                    "name": "Errors and omissions"
+                                },
+                                {
+                                    "code": "excess",
+                                    "name": "Excess liability"
+                                },
+                                {
+                                    "code": "explosion",
+                                    "name": "Explosion"
+                                },
+                                {
+                                    "code": "fall",
+                                    "name": "Fall, slip, or trip injury"
+                                },
+                                {
+                                    "code": "FallingObject",
+                                    "name": "Falling or moving object"
+                                },
+                                {
+                                    "code": "construction",
+                                    "name": "Faulty construction"
+                                },
+                                {
+                                    "code": "fire",
+                                    "name": "Fire"
+                                },
+                                {
+                                    "code": "glassbreakage",
+                                    "name": "Glass breakage"
+                                },
+                                {
+                                    "code": "hail",
+                                    "name": "Hail"
+                                },
+                                {
+                                    "code": "hurricane",
+                                    "name": "Hurricane"
+                                },
+                                {
+                                    "code": "vandalism",
+                                    "name": "Malicious mischief and vandalism"
+                                },
+                                {
+                                    "code": "official_duty",
+                                    "name": "Mandatory official duty (military, jury etc)"
+                                },
+                                {
+                                    "code": "med_error",
+                                    "name": "Medical error"
+                                },
+                                {
+                                    "code": "miscellaneous",
+                                    "name": "Miscellaneous causes"
+                                },
+                                {
+                                    "code": "missed_departure",
+                                    "name": "Missed departure"
+                                },
+                                {
+                                    "code": "mold",
+                                    "name": "Mold"
+                                },
+                                {
+                                    "code": "motorvehicle",
+                                    "name": "Motor vehicle"
+                                },
+                                {
+                                    "code": "personal_misconduct",
+                                    "name": "Personal misconduct"
+                                },
+                                {
+                                    "code": "preex_med_condition",
+                                    "name": "Pre existing medical condition"
+                                },
+                                {
+                                    "code": "product",
+                                    "name": "Product failure"
+                                },
+                                {
+                                    "code": "professional_sports",
+                                    "name": "Professional or organized sports"
+                                },
+                                {
+                                    "code": "rearend",
+                                    "name": "Rear-end collision"
+                                },
+                                {
+                                    "code": "riotandcivil",
+                                    "name": "Riot and civil commotion"
+                                },
+                                {
+                                    "code": "rollover",
+                                    "name": "Rollover"
+                                },
+                                {
+                                    "code": "rubbed",
+                                    "name": "Rubbed or abraded by"
+                                },
+                                {
+                                    "code": "snowice",
+                                    "name": "Snow/ice"
+                                },
+                                {
+                                    "code": "strain",
+                                    "name": "Strain or injury by"
+                                },
+                                {
+                                    "code": "striking",
+                                    "name": "Striking against or stepping on"
+                                },
+                                {
+                                    "code": "struck",
+                                    "name": "Struck or injured by"
+                                },
+                                {
+                                    "code": "structfailure",
+                                    "name": "Structural failure"
+                                },
+                                {
+                                    "code": "terrorism_hijack",
+                                    "name": "Terrorism or Hijack"
+                                },
+                                {
+                                    "code": "theftparts",
+                                    "name": "Theft Audio or other parts"
+                                },
+                                {
+                                    "code": "theftentire",
+                                    "name": "Theft of entire vehicle"
+                                },
+                                {
+                                    "code": "waterdamage",
+                                    "name": "Water damage"
+                                },
+                                {
+                                    "code": "wind",
+                                    "name": "Wind"
+                                }
+                            ],
+                            "dataType": "object",
+                            "path": "lossCause",
+                            "label": {
+                                "id": "claim.lossCause.label",
+                                "defaultMessage": "Loss Cause"
+                            }
+                        }
+                    },
+                    {
+                        "id": "reportedByType",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "self",
+                                    "name": "Self/Insured"
+                                },
+                                {
+                                    "code": "relative",
+                                    "name": "Relative"
+                                },
+                                {
+                                    "code": "friend",
+                                    "name": "Friend"
+                                },
+                                {
+                                    "code": "injuredworker",
+                                    "name": "Injured Worker"
+                                },
+                                {
+                                    "code": "supervisor",
+                                    "name": "Supervisor"
+                                },
+                                {
+                                    "code": "riskmanager",
+                                    "name": "Risk Manager"
+                                },
+                                {
+                                    "code": "medicalprovider",
+                                    "name": "Medical Provider"
+                                },
+                                {
+                                    "code": "hrrep",
+                                    "name": "HR Representative"
+                                },
+                                {
+                                    "code": "agent",
+                                    "name": "Agent"
+                                },
+                                {
+                                    "code": "attorney",
+                                    "name": "Attorney"
+                                },
+                                {
+                                    "code": "employee",
+                                    "name": "Employee"
+                                },
+                                {
+                                    "code": "spouse",
+                                    "name": "Spouse"
+                                },
+                                {
+                                    "code": "child",
+                                    "name": "Child"
+                                },
+                                {
+                                    "code": "parent",
+                                    "name": "Parent"
+                                },
+                                {
+                                    "code": "grandparent",
+                                    "name": "Grandparent"
+                                },
+                                {
+                                    "code": "domesticpartner",
+                                    "name": "Domestic partner"
+                                },
+                                {
+                                    "code": "claimant",
+                                    "name": "Claimant"
+                                },
+                                {
+                                    "code": "claimantatty",
+                                    "name": "Claimant's attorney"
+                                },
+                                {
+                                    "code": "claimantinsco",
+                                    "name": "Claimant's insurance co."
+                                },
+                                {
+                                    "code": "rentalrep",
+                                    "name": "Rental representative"
+                                },
+                                {
+                                    "code": "repairshop",
+                                    "name": "Repair shop"
+                                },
+                                {
+                                    "code": "other",
+                                    "name": "Other"
+                                }
+                            ],
+                            "dataType": "object",
+                            "path": "reportedByType",
+                            "label": {
+                                "id": "claim.reportedByType.label",
+                                "defaultMessage": "Reported By Type"
+                            }
+                        }
+                    },
+                    {
+                        "id": "reportedDate",
+                        "type": "field",
+                        "component": "Date",
+                        "componentProps": {
+                            "dataType": "string",
+                            "path": "reportedDate",
+                            "label": {
+                                "id": "claim.reportedDate.label",
+                                "defaultMessage": "Reported Date"
+                            }
+                        }
+                    },
+                    {
+                        "id": "segment",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "auto_glass",
+                                    "name": "Auto - glass"
+                                },
+                                {
+                                    "code": "auto_high",
+                                    "name": "Auto - high complexity"
+                                },
+                                {
+                                    "code": "auto_low",
+                                    "name": "Auto - low complexity"
+                                },
+                                {
+                                    "code": "auto_mid",
+                                    "name": "Auto - mid complexity"
+                                },
+                                {
+                                    "code": "contents_high",
+                                    "name": "Contents - high complexity"
+                                },
+                                {
+                                    "code": "contents_low",
+                                    "name": "Contents - low complexity"
+                                },
+                                {
+                                    "code": "injury_high",
+                                    "name": "Injury - high complexity"
+                                },
+                                {
+                                    "code": "injury_low",
+                                    "name": "Injury - low complexity"
+                                },
+                                {
+                                    "code": "injury_mid",
+                                    "name": "Injury - mid complexity"
+                                },
+                                {
+                                    "code": "liab_high",
+                                    "name": "Liability - high complexity"
+                                },
+                                {
+                                    "code": "liab_low",
+                                    "name": "Liability - low complexity"
+                                },
+                                {
+                                    "code": "liab_mid",
+                                    "name": "Liability - mid complexity"
+                                },
+                                {
+                                    "code": "prop_high",
+                                    "name": "Property - high complexity"
+                                },
+                                {
+                                    "code": "prop_low",
+                                    "name": "Property - low complexity"
+                                },
+                                {
+                                    "code": "prop_mid",
+                                    "name": "Property - mid complexity"
+                                },
+                                {
+                                    "code": "travel_high",
+                                    "name": "Travel - high complexity"
+                                },
+                                {
+                                    "code": "travel_low",
+                                    "name": "Travel - low complexity"
+                                },
+                                {
+                                    "code": "travel_mid",
+                                    "name": "Travel - mid complexity"
+                                },
+                                {
+                                    "code": "unknown",
+                                    "name": "Unknown"
+                                },
+                                {
+                                    "code": "wc_liability",
+                                    "name": "Workers' Comp - employer's liability"
+                                },
+                                {
+                                    "code": "wc_lost_time",
+                                    "name": "Workers' Comp - indemnity"
+                                },
+                                {
+                                    "code": "wc_med_only",
+                                    "name": "Workers' Comp - med only"
+                                }
+                            ],
+                            "readOnly": true,
+                            "dataType": "object",
+                            "path": "segment",
+                            "label": {
+                                "id": "claim.segment.label",
+                                "defaultMessage": "Segment"
+                            }
+                        }
+                    },
+                    {
+                        "id": "smokeDamageOnly",
+                        "type": "field",
+                        "component": "Toggle",
+                        "componentProps": {
+                            "path": "smokeDamageOnly",
+                            "label": {
+                                "id": "claim.smokeDamageOnly.label",
+                                "defaultMessage": "Smoke Damage Only"
+                            }
+                        }
+                    },
+                    {
+                        "id": "state",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "draft",
+                                    "name": "Draft"
+                                },
+                                {
+                                    "code": "open",
+                                    "name": "Open"
+                                },
+                                {
+                                    "code": "closed",
+                                    "name": "Closed"
+                                },
+                                {
+                                    "code": "archived",
+                                    "name": "Archived"
+                                }
+                            ],
+                            "readOnly": true,
+                            "dataType": "object",
+                            "path": "state",
+                            "label": {
+                                "id": "claim.state.label",
+                                "defaultMessage": "State"
+                            }
+                        }
+                    },
+                    {
+                        "id": "strategy",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "auto_fast",
+                                    "name": "Auto - Fast Track"
+                                },
+                                {
+                                    "code": "auto_normal",
+                                    "name": "Auto - Investigate"
+                                },
+                                {
+                                    "code": "contents_fast",
+                                    "name": "Contents - Fast Track"
+                                },
+                                {
+                                    "code": "contents_normal",
+                                    "name": "Contents - Investigate"
+                                },
+                                {
+                                    "code": "injury_fast",
+                                    "name": "Injury - Fast Track"
+                                },
+                                {
+                                    "code": "injury_normal",
+                                    "name": "Injury - Investigate"
+                                },
+                                {
+                                    "code": "liab_fast",
+                                    "name": "Liability - Fast Track"
+                                },
+                                {
+                                    "code": "liab_normal",
+                                    "name": "Liability - Investigate"
+                                },
+                                {
+                                    "code": "prop_fast",
+                                    "name": "Property - Fast Track"
+                                },
+                                {
+                                    "code": "prop_normal",
+                                    "name": "Property - Investigate"
+                                },
+                                {
+                                    "code": "unknown",
+                                    "name": "Unknown"
+                                },
+                                {
+                                    "code": "wc_fast",
+                                    "name": "Workers' Comp - Fast Track"
+                                },
+                                {
+                                    "code": "wc_investigate",
+                                    "name": "Workers' Comp - Investigate"
+                                },
+                                {
+                                    "code": "wc_normal",
+                                    "name": "Workers' Comp - Manage Loss"
+                                }
+                            ],
+                            "readOnly": true,
+                            "dataType": "object",
+                            "path": "strategy",
+                            "label": {
+                                "id": "claim.strategy.label",
+                                "defaultMessage": "Strategy"
+                            }
+                        }
+                    },
+                    {
+                        "id": "validationLevel",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "payment",
+                                    "name": "Ability to pay"
+                                },
+                                {
+                                    "code": "external",
+                                    "name": "Send to external system"
+                                },
+                                {
+                                    "code": "iso",
+                                    "name": "Valid for ISO"
+                                },
+                                {
+                                    "code": "newloss",
+                                    "name": "New loss completion"
+                                },
+                                {
+                                    "code": "loadsave",
+                                    "name": "Load and save"
+                                }
+                            ],
+                            "readOnly": true,
+                            "dataType": "object",
+                            "path": "validationLevel",
+                            "label": {
+                                "id": "claim.validationLevel.label",
+                                "defaultMessage": "Validation Level"
+                            }
+                        }
+                    },
+                    {
+                        "id": "waterSource",
+                        "type": "field",
+                        "component": "DropdownSelect",
+                        "componentProps": {
+                            "availableValues": [
+                                {
+                                    "code": "plumbing_appliances",
+                                    "name": "Plumbing Or Appliances"
+                                },
+                                {
+                                    "code": "roof",
+                                    "name": "Roof"
+                                },
+                                {
+                                    "code": "other",
+                                    "name": "Other"
+                                }
+                            ],
+                            "dataType": "object",
+                            "path": "waterSource",
+                            "label": {
+                                "id": "claim.waterSource.label",
+                                "defaultMessage": "Water Source"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+// UI metadata file loaded and used in Dashboard Page
+{
+  // ======================================================================
+  // UI metadata for the "Dashboard" page
+  // ======================================================================
+  "jutro": "6.0.0",
+  "jutro-app.dashboard.agent": {
+    "id": "dashboard",
+    "type": "page",
+    "contentLayout": {
+      "component": "Flex",
+      "componentProps": {
+        "direction": "column",
+        "alignItems": "center"
+      }
+    },
+    "content": [
+      {
+        "id": "sfd",
+        "type": "element",
+        "component": "div",
+        "content": "i'm a dashboard"
+      }
+    ]
+  },
+  "$schema": "../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json"
+}

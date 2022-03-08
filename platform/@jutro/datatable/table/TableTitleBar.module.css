@@ -1,0 +1,31 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.tableTitleBar {
+  border-bottom: var(--GW-BORDER-WIDTH) solid var(--GW-BORDER-COLOR);
+  display: flex;
+  align-items: center;
+  padding: var(--GW-SPACING-2) 0;
+  background-color: var(--GW-BACKGROUND-COLOR); }
+
+.title {
+  color: var(--GW-TABLE-TITLE-BAR-COLOR);
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  flex: 1;
+  font-size: var(--GW-FONT-SIZE-H4);
+  line-height: var(--GW-LINE-HEIGHT-H4); }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.center {
+  text-align: center; }
+
+.titleAction {
+  flex: 0;
+  margin-left: var(--GW-SPACING-2); }
+
+/*# sourceMappingURL=TableTitleBar.module.css.map */

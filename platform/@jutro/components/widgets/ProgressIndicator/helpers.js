@@ -1,0 +1,1 @@
+import{ProgressPhase}from"./ProgressPhase";export const flattenPhases=children=>children.reduce(((flatChildren,child)=>{if(child.type===ProgressPhase){const phaseChildren=child.props.children;return phaseChildren?Array.isArray(phaseChildren)?[...flatChildren,...phaseChildren]:[...flatChildren,phaseChildren]:flatChildren}return[...flatChildren,child]}),[]);

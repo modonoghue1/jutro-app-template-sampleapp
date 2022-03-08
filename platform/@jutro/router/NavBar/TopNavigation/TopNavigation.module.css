@@ -1,0 +1,14 @@
+.topNavigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-wrap: wrap;
+  background-color: var(--GW-TOP-NAV-BACKGROUND-COLOR); }
+
+.noWrap {
+  flex-wrap: nowrap; }
+
+.contextSwitcher {
+  margin-right: var(--GW-SPACING-10); }
+
+/*# sourceMappingURL=TopNavigation.module.css.map */

@@ -1,0 +1,1 @@
+import{Flex,Grid}from"@jutro/layout";import isString from"lodash/isString";const layoutComponentMap={flex:Flex,grid:Grid,div:"div",Flex:Flex,Grid:Grid};export const getLayoutComponent=component=>isString(component)?layoutComponentMap[component]||layoutComponentMap.div:component;

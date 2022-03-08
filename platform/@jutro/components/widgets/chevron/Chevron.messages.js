@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({label:{id:"jutro-components.widgets.accordion.open",defaultMessage:"Label"}});

@@ -1,0 +1,68 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.tabBarContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background: var(--GW-TAB-BAR-BACKGROUND-COLOR);
+  height: var(--GW-TAB-BAR-HEIGHT);
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+  .tabBarContainer .prevIconButton {
+    margin: calc( (var(--GW-TAB-BAR-HEIGHT) - var(--GW-TAB-BAR-NAVIGATION-BUTTON-SIZE)) / 2) 0 0 calc( (var(--GW-TAB-BAR-HEIGHT) - var(--GW-TAB-BAR-NAVIGATION-BUTTON-SIZE)) / 2); }
+  .tabBarContainer .nextIconButton {
+    margin: calc( (var(--GW-TAB-BAR-HEIGHT) - var(--GW-TAB-BAR-NAVIGATION-BUTTON-SIZE)) / 2) calc( (var(--GW-TAB-BAR-HEIGHT) - var(--GW-TAB-BAR-NAVIGATION-BUTTON-SIZE)) / 2) 0 0; }
+  .tabBarContainer .prevIconButton,
+  .tabBarContainer .nextIconButton {
+    height: var(--GW-TAB-BAR-NAVIGATION-BUTTON-SIZE);
+    width: var(--GW-TAB-BAR-NAVIGATION-BUTTON-SIZE);
+    padding: 0; }
+    .tabBarContainer .prevIconButton i,
+    .tabBarContainer .nextIconButton i {
+      font-size: var(--GW-ICON-FONT-SIZE-2);
+      line-height: var(--GW-ICON-LINE-HEIGHT); }
+  .tabBarContainer .tabBar {
+    flex-grow: 1;
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; }
+    .tabBarContainer .tabBar::-webkit-scrollbar {
+      display: none; }
+    .tabBarContainer .tabBar button {
+      white-space: nowrap;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      display: inline-block; }
+  .tabBarContainer .heading {
+    padding: 0 var(--GW-SPACING-4);
+    display: inline-block;
+    background: none;
+    font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+    color: var(--GW-TAB-BAR-HEADING-COLOR);
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+    border: none;
+    font-size: var(--GW-FONT-SIZE-BODY);
+    line-height: var(--GW-LINE-HEIGHT-BODY); }
+    .tabBarContainer .heading:focus {
+      outline: none;
+      box-shadow: inset 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+    @media (pointer: fine) {
+      .tabBarContainer .heading:hover {
+        color: var(--GW-TAB-BAR-HEADING-COLOR-HOVER);
+        cursor: pointer; } }
+    .tabBarContainer .heading:global(.active) {
+      font-weight: var(--GW-FONT-WEIGHT-BOLD);
+      border-bottom: var(--GW-BORDER-WIDTH) solid var(--GW-TAB-BAR-HEADING-BORDER-COLOR-ACTIVE); }
+    .tabBarContainer .heading:disabled, .tabBarContainer .heading:global(.disabled) {
+      opacity: var(--GW-OPACITY-DISABLED);
+      color: var(--GW-TAB-BAR-HEADING-COLOR);
+      cursor: not-allowed; }
+    .tabBarContainer .heading .collapsedTrigger {
+      visibility: hidden; }
+
+/*# sourceMappingURL=TabBar.module.css.map */

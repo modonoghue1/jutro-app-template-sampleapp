@@ -1,0 +1,18 @@
+.card {
+  color: var(--GW-CARD-COLOR);
+  background-color: var(--GW-CARD-BACKGROUND-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  border: 1px solid var(--GW-BORDER-COLOR);
+  padding: var(--GW-CARD-PADDING); }
+
+.header {
+  margin-bottom: var(--GW-SPACING-3); }
+
+.headerText {
+  margin-right: var(--GW-SPACING-2);
+  margin-bottom: 0; }
+
+.subTitle {
+  color: var(--GW-TEXT-COLOR-2); }
+
+/*# sourceMappingURL=Card.module.css.map */

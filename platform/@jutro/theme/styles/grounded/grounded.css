@@ -1,0 +1,961 @@
+/* stylelint-disable block-no-empty */
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.themeRoot {
+  --GW-ANIMATION-DURATION: 0.25s;
+  --GW-BACKGROUND-COLOR: #fff;
+  --GW-BACKGROUND-COLOR-HOVER: #f2f2f2;
+  --GW-BACKGROUND-COLOR-BODY: #f8f9fa;
+  --GW-BACKGROUND-COLOR-ELEMENT: #f0f3f6;
+  --GW-BACKGROUND-COLOR-ELEMENT-HOVER: #e1e6ec;
+  --GW-BACKGROUND-COLOR-ELEMENT-ACTIVE: #d1d9e2;
+  --GW-TEXT-COLOR-1: #28333f;
+  --GW-TEXT-COLOR-2: #657580;
+  --GW-TEXT-COLOR-3: #fff;
+  --GW-HIGHLIGHT-COLOR-1: #e9f9ff;
+  --GW-HIGHLIGHT-COLOR-2: #ebf8f7;
+  --GW-BRAND-COLOR-1: #00739d;
+  --GW-BRAND-COLOR-1-HOVER: #006083;
+  --GW-BRAND-COLOR-1-ACTIVE: #004e6a;
+  --GW-BRAND-COLOR-2: #3c4c5e;
+  --GW-ACCENT-COLOR: #65c6c4;
+  --GW-COLOR-SUCCESS: #2a8440;
+  --GW-COLOR-SUCCESS-CONTRAST: #fff;
+  --GW-COLOR-ERROR: #c4221f;
+  --GW-COLOR-ERROR-CONTRAST: #fff;
+  --GW-COLOR-WARNING: #ff9d2e;
+  --GW-COLOR-WARNING-CONTRAST: #111;
+  --GW-COLOR-INFO: #4074ce;
+  --GW-COLOR-INFO-CONTRAST: #fff;
+  --GW-OPACITY-DISABLED: 0.4;
+  --GW-FOCUS-COLOR: #1e9acf;
+  --GW-FOCUS-COLOR-LIGHT: rgba(30, 154, 207, 0.4);
+  --GW-FOCUS-COLOR-DARK: rgba(255, 255, 255, 0.4);
+  --GW-FOCUS-ERROR-COLOR-LIGHT: rgba(196, 34, 31, 0.4);
+  --GW-FOCUS-ERROR-COLOR-DARK: rgba(230, 154, 207, 0.4);
+  --GW-FOCUS-WARNING-COLOR-LIGHT: rgba(255, 157, 46, 0.4);
+  --GW-SHADOW-1: 0 1px 1px 0 rgba(40, 51, 63, 0.24);
+  --GW-SHADOW-2: 0 2px 4px 0 rgba(40, 51, 63, 0.24);
+  --GW-SHADOW-3: 0 4px 8px 0 rgba(40, 51, 63, 0.24);
+  --GW-SHADOW-UP: 0 -2px 4px 0 rgba(40, 51, 63, 0.24);
+  --GW-SHADOW-SIDE: 0 1px 6px 2.5px rgba(40, 51, 63, 0.24);
+  --GW-SHADOW-INSET: inset 0 0 1px 1px rgba(40, 51, 63, 0.24);
+  --GW-SPACING-1: 0.125rem;
+  --GW-SPACING-2: 0.25rem;
+  --GW-SPACING-3: 0.5rem;
+  --GW-SPACING-4: 0.75rem;
+  --GW-SPACING-5: 1rem;
+  --GW-SPACING-6: 1.25rem;
+  --GW-SPACING-8: 1.75rem;
+  --GW-SPACING-10: 2rem;
+  --GW-LAYOUT-1: 0.25rem;
+  --GW-LAYOUT-2: 0.5rem;
+  --GW-LAYOUT-3: 0.75rem;
+  --GW-LAYOUT-4: 1rem;
+  --GW-LAYOUT-5: 1.25rem;
+  --GW-LAYOUT-6: 1.5rem;
+  --GW-LAYOUT-8: 2rem;
+  --GW-LAYOUT-10: 2.5rem;
+  --GW-LAYOUT-12: 3rem;
+  --GW-FONT-SIZE-H1: 2rem;
+  --GW-LINE-HEIGHT-H1: 1.25;
+  --GW-FONT-SIZE-H2: 1.5rem;
+  --GW-LINE-HEIGHT-H2: 1.25;
+  --GW-FONT-SIZE-H3: 1.25rem;
+  --GW-LINE-HEIGHT-H3: 1.25;
+  --GW-FONT-SIZE-H4: 1rem;
+  --GW-LINE-HEIGHT-H4: 1.25;
+  --GW-FONT-SIZE-H5: 0.875rem;
+  --GW-LINE-HEIGHT-H5: 1.5;
+  --GW-FONT-SIZE-BODY: 0.875rem;
+  --GW-LINE-HEIGHT-BODY: 1.5;
+  --GW-FONT-SIZE-SUBTEXT: 0.75rem;
+  --GW-LINE-HEIGHT-SUBTEXT: 1.5;
+  --GW-FONT-SIZE-LABEL: 0.875rem;
+  --GW-LINE-HEIGHT-LABEL: 1.5;
+  --GW-FONT-SIZE-SECONDARY-LABEL: 0.75rem;
+  --GW-LINE-HEIGHT-SECONDARY-LABEL: 1.5;
+  --GW-FONT-SIZE-INPUT: 0.875rem;
+  --GW-LINE-HEIGHT-INPUT: 1.5;
+  --GW-FONT-SIZE-BUTTON: 0.875rem;
+  --GW-LINE-HEIGHT-BUTTON: 1.5;
+  --GW-ICON-FONT-SIZE-1: 0.875rem;
+  --GW-ICON-FONT-SIZE-2: 1rem;
+  --GW-ICON-FONT-SIZE-3: 1.25rem;
+  --GW-ICON-LINE-HEIGHT: 1;
+  --GW-FONT-FAMILY: 'Source Sans Variable', 'Helvetica', 'Arial', sans-serif;
+  --GW-FONT-WEIGHT-THIN: 100;
+  --GW-FONT-WEIGHT-EXTRA-LIGHT: 200;
+  --GW-FONT-WEIGHT-LIGHT: 300;
+  --GW-FONT-WEIGHT-REGULAR: 400;
+  --GW-FONT-WEIGHT-MEDIUM: 500;
+  --GW-FONT-WEIGHT-SEMI-BOLD: 600;
+  --GW-FONT-WEIGHT-BOLD: 700;
+  --GW-FONT-WEIGHT-EXTRA-BOLD: 800;
+  --GW-FONT-WEIGHT-BLACK: 900;
+  --GW-TAB-BAR-HEIGHT: 2rem;
+  --GW-TAB-BAR-NAVIGATION-BUTTON-SIZE: 1.5rem;
+  --GW-TAB-BAR-BACKGROUND-COLOR: none;
+  --GW-TAB-BAR-HEADING-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-TAB-BAR-HEADING-COLOR-HOVER: var(--GW-BRAND-COLOR-1);
+  --GW-TAB-BAR-HEADING-OUTLINE-COLOR-FOCUS: rgba(30, 154, 207, 0.4);
+  --GW-TAB-BAR-HEADING-BORDER-COLOR-ACTIVE: var(--GW-ACCENT-COLOR);
+  --GW-FILTER-BAR-BADGE-BACKGROUND-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-FILTER-BAR-FILTERS-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-FILTER-BAR-INPUT-MIN-WIDTH: 14.5rem;
+  --GW-COLUMN-ENTRY-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-ELEMENT);
+  --GW-COLUMN-ENTRY-BACKGROUND-COLOR-HOVER: var(
+    --GW-BACKGROUND-COLOR-ELEMENT-HOVER
+  );
+  --GW-COLUMN-ENTRY-WIDTH: 29.5rem;
+  --GW-COLUMN-ENTRY-HEIGHT: 1.5rem;
+  --GW-PAGINATION-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-PAGINATION-BUTTON-BACKGROUND-COLOR: var(--GW-HIGHLIGHT-COLOR-1);
+  --GW-PAGINATION-BUTTON-BACKGROUND-COLOR-ACTIVE: #618290;
+  --GW-PAGINATION-DROPDOWN-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-ELEMENT);
+  --GW-PAGINATION-DROPDOWN-BACKGROUND-COLOR-HOVER: var(
+    --GW-BACKGROUND-COLOR-ELEMENT-HOVER
+  );
+  --GW-PAGINATION-DROPDOWN-BACKGROUND-COLOR-FOCUS: var(
+    --GW-PAGINATION-DROPDOWN-BACKGROUND-COLOR
+  );
+  --GW-PAGINATION-DROPDOWN-BACKGROUND-COLOR-ACTIVE: var(
+    --GW-BACKGROUND-COLOR-ELEMENT-ACTIVE
+  );
+  --GW-PAGINATION-DROPDOWN-MAX-HEIGHT: 10rem;
+  --GW-DATA-TABLE-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-DATA-TABLE-ROW-BACKGROUND-COLOR-HOVER: var(--GW-HIGHLIGHT-COLOR-1);
+  --GW-DATA-TABLE-ROW-ODD-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-DATA-TABLE-ROW-EVEN-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-BODY);
+  --GW-DATA-TABLE-SORT-CHEVRON-COLOR: #7d91ac;
+  --GW-DATA-TABLE-BORDER: solid 1px #acb9ca;
+  --GW-DATA-TABLE-NO-ROWS-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-DATA-TABLE-TABLE-BAR-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-BODY);
+  --GW-DATA-TABLE-COLUMN-HEADER-COLOR-SELECTED: var(--GW-BRAND-COLOR-1);
+  --GW-DATA-TABLE-CLICKABLE-ROW-BACKGROUND-COLOR-ACTIVE: #cff2ff;
+  --GW-DATA-TABLE-CLICKABLE-ROW-BACKGROUND-COLOR-SELECTED: var(
+    --GW-HIGHLIGHT-COLOR-1
+  );
+  --GW-DATA-TABLE-ROW-MIN-HEIGHT: 2rem;
+  --GW-DATA-TABLE-SEARCH-MAX-WIDTH: 20rem;
+  --GW-DATA-TABLE-EXPANDER-ICON-WIDTH: 1.125rem;
+  --GW-DATA-TABLE-BUTTON-SIZE: 1.25rem;
+  --GW-TABLE-TITLE-BAR-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-TABLE-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-TABLE-ROW-COLOR-HOVER: var(--GW-HIGHLIGHT-COLOR-1);
+  --GW-TABLE-NO-DATA-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-TABLE-CARD-ODD-ROW-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-BODY);
+  --GW-TABLE-CARD-EVEN-ROW-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-TABLE-VIEW-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-TABLE-VIEW-TITLE-BAR-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-TABLE-VIEW-ROW-HEIGHT: 2.5rem;
+  --GW-TABLE-VIEW-TABLE-SEPARATOR: solid 1px var(--GW-SEPARATOR-COLOR);
+  --GW-TABLE-VIEW-ROW-ODD-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-TABLE-VIEW-ROW-EVEN-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-BODY);
+  --GW-TABLE-VIEW-ROW-ODD-FONT-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-TABLE-VIEW-ROW-EVEN-FONT-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-DATA-VIEWS-PAGINATION-ICON-SIZE: 1.5rem;
+  --GW-DATA-VIEWS-COLUMN-ENTRY-BACKGROUND-COLOR: var(
+    --GW-BACKGROUND-COLOR-ELEMENT
+  );
+  --GW-DATA-VIEWS-COLUMN-ENTRY-BACKGROUND-COLOR-HOVER: var(
+    --GW-BACKGROUND-COLOR-ELEMENT-HOVER
+  );
+  --GW-DATA-VIEWS-COLUMN-ENTRY-WIDTH: 29.5rem;
+  --GW-DATA-VIEWS-COLUMN-ENTRY-HEIGHT: 1.5rem;
+  --GW-DATA-VIEWS-COLUMN-ENTRY-ORDER-CONTROL-COLOR-HOVER: var(
+    --GW-BRAND-COLOR-1-HOVER
+  );
+  --GW-FIELD-COMPONENT-HEIGHT: 2rem;
+  --GW-FIELD-COMPONENT-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-FIELD-COMPONENT-COLOR-SECONDARY: var(--GW-TEXT-COLOR-2);
+  --GW-FIELD-COMPONENT-COLOR-EMPTY: var(--GW-TEXT-COLOR-2);
+  --GW-FIELD-COMPONENT-PLACEHOLDER-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-FIELD-COMPONENT-REQUIRED-SYMBOL-COLOR: var(--GW-FIELD-COMPONENT-COLOR);
+  --GW-FIELD-COMPONENT-VALIDATION-ICON-COLOR: #fff;
+  --GW-FIELD-COMPONENT-VALID-COLOR: #1e9acf;
+  --GW-FIELD-COMPONENT-BORDER-COLOR-FOCUS: var(--GW-FOCUS-COLOR);
+  --GW-FIELD-COMPONENT-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-DROPDOWN-OPTION-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-DROPDOWN-OPTION-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-DROPDOWN-OPTION-BACKGROUND-COLOR-HOVER: #cff2ff;
+  --GW-DROPDOWN-OPTION-BACKGROUND-COLOR-ACTIVE: #b6ebff;
+  --GW-DROPDOWN-OPTION-SELECTED-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR-HOVER: var(
+    --GW-BRAND-COLOR-1-HOVER
+  );
+  --GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR-ACTIVE: var(
+    --GW-BRAND-COLOR-1-ACTIVE
+  );
+  --GW-LOOKUP-FIELD-ICON-COLOR: #7d91ac;
+  --GW-LOOKUP-FIELD-RECENT-BAR-BACKGROUND-COLOR: var(
+    --GW-BACKGROUND-COLOR-BODY
+  );
+  --GW-LOOKUP-FIELD-ICON-BACKGROUND-SIZE: 1.25rem;
+  --GW-PHONE-NUMBER-FLAG-CONTAINER-WIDTH: 5.75rem;
+  --GW-SELECTOR-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-SELECTOR-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-SELECTOR-BACKGROUND-COLOR-HOVER: #cff2ff;
+  --GW-SELECTOR-BACKGROUND-COLOR-ACTIVE: #b6ebff;
+  --GW-SELECTOR-SELECTED-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-SELECTOR-SELECTED-BACKGROUND-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-SELECTOR-SELECTED-BACKGROUND-COLOR-HOVER: var(--GW-BRAND-COLOR-1-HOVER);
+  --GW-SELECTOR-SELECTED-BACKGROUND-COLOR-ACTIVE: var(
+    --GW-BRAND-COLOR-1-ACTIVE
+  );
+  --GW-SELECTOR-COLOR-FOCUS: var(--GW-FOCUS-COLOR);
+  --GW-CHECKBOX-SIZE: 1rem;
+  --GW-CURRENCY-FIELD-SYMBOL-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-DATE-FIELD-POPOVER-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-DATE-FIELD-DAY-OUTSIDE-MONTH-COLOR: #7d91ac;
+  --GW-DATE-FIELD-MONTH-YEAR-CONTROLS-BACKGROUND-COLOR: var(
+    --GW-BACKGROUND-COLOR-ELEMENT
+  );
+  --GW-DATE-FIELD-MONTH-YEAR-CONTROLS-BACKGROUND-COLOR-HOVER: var(
+    --GW-BACKGROUND-COLOR
+  );
+  --GW-DATE-FIELD-MONTH-YEAR-CONTROLS-BACKGROUND-COLOR-FOCUS: var(
+    --GW-BACKGROUND-COLOR-ELEMENT
+  );
+  --GW-DATE-FIELD-TODAY-BUTTON-COLOR-OUTOFRANGE: #7d91ac;
+  --GW-DATE-FIELD-TODAY-BUTTON-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-DATE-FIELD-TODAY-BUTTON-BACKGROUND-COLOR-HOVER: var(
+    --GW-BACKGROUND-COLOR-ELEMENT-HOVER
+  );
+  --GW-DATE-FIELD-TODAY-BUTTON-BACKGROUND-COLOR-ACTIVE: var(
+    --GW-BACKGROUND-COLOR-ELEMENT-ACTIVE
+  );
+  --GW-DATE-FIELD-DAY-NAME-SIZE: 2rem;
+  --GW-DATE-FIELD-NAVIGATION-BUTTON-SIZE: 2rem;
+  --GW-DATE-FIELD-NAVIGATION-BUTTON-ICON-SIZE: 1.5rem;
+  --GW-MAP-AREA-ASPECT-RATIO: calc(100% * 13 / 24);
+  --GW-TEXTAREA-FIELD-MIN-HEIGHT: 1.5rem;
+  --GW-GENERIC-SELECT-MENU-MAX-HEIGHT: 300px;
+  --GW-GENERIC-SELECT-MAX-HEIGHT: 11.25rem;
+  --GW-IMAGE-RADIO-BUTTON-IMAGE-OPACITY-HOVER: 0.4;
+  --GW-IMAGE-RADIO-BUTTON-IMAGE-BACKGROUND-COLOR: var(
+    --GW-BACKGROUND-COLOR-ELEMENT
+  );
+  --GW-IMAGE-RADIO-BUTTON-ICON-BORDER-SELECTED: var(--GW-BORDER-WIDTH) solid
+    #fff;
+  --GW-FILE-UPLOAD-WRAPPER-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-BODY);
+  --GW-FILE-UPLOAD-FIELD-BORDER: var(--GW-BORDER-WIDTH) dashed
+    var(--GW-BORDER-COLOR);
+  --GW-FILE-UPLOAD-HEIGHT-THIN: 2.375rem;
+  --GW-FILE-UPLOAD-IMAGE-WIDTH: 5.5rem;
+  --GW-FILE-UPLOAD-IMAGE-HEIGHT: 4rem;
+  --GW-TOGGLE-FIELD-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-RADIO-BUTTON-PRIMARY-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-RADIO-BUTTON-SECONDARY-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-RADIO-BUTTON-SIZE: 1rem;
+  --GW-RADIO-BUTTON-CARD-PORTRAIT-ICON-SIZE: 4.5rem;
+  --GW-RADIO-BUTTON-CARD-LANDSCAPE-ICON-SIZE: 3rem;
+  --GW-RADIO-BUTTON-CARD-ICON-LINE-HEIGHT: 0.65rem;
+  --GW-RADIO-BUTTON-CARD-MONEY-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-RADIO-BUTTON-CARD-RADIO-BUTTON-SIZE: 1.25rem;
+  --GW-SWITCH-FIELD-HEIGHT: 1.25rem;
+  --GW-SWITCH-FIELD-WIDTH: 2.5rem;
+  --GW-SWITCH-FIELD-THUMB-COLOR: #fff;
+  --GW-SWITCH-FIELD-BACKGROUND-COLOR: #7d91ac;
+  --GW-SWITCH-FIELD-BACKGROUND-COLOR-CHECKED: var(--GW-BRAND-COLOR-1);
+  --GW-SWITCH-FIELD-BACKGROUND-COLOR-HOVER: #6d84a2;
+  --GW-SWITCH-FIELD-BACKGROUND-COLOR-HOVER-CHECKED: var(
+    --GW-BRAND-COLOR-1-HOVER
+  );
+  --GW-SLIDER-FIELD-HEIGHT: 2.625rem;
+  --GW-SLIDER-FIELD-RAIL-HEIGHT: 0.125rem;
+  --GW-SLIDER-FIELD-RAIL-BACKGROUND-COLOR: var(--GW-SEPARATOR-COLOR);
+  --GW-SLIDER-FIELD-TRACK-BACKGROUND-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-SLIDER-FIELD-TOOLTIP-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-SLIDER-FIELD-INDICATOR-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-SLIDER-FIELD-HANDLE-DIAMETER: 1.25rem;
+  --GW-SLIDER-FIELD-HANDLE-BOX-SHADOW-FOCUS: 0 0 0 1px #fff,
+    0 0 0 3px rgba(30, 154, 207, 0.4);
+  --GW-SLIDER-FIELD-HANDLE-BACKGROUND-COLOR-HOVER: var(
+    --GW-BRAND-COLOR-1-HOVER
+  );
+  --GW-SLIDER-FIELD-HANDLE-BORDER-COLOR-ACTIVE: #fff;
+  --GW-STEPPER-FIELD-WIDTH: 2rem;
+  --GW-BUTTON-HEIGHT: 2rem;
+  --GW-BUTTON-HEIGHT-SMALL: 1.75rem;
+  --GW-BUTTON-FILLED-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-BUTTON-FILLED-BACKGROUND-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-BUTTON-FILLED-BACKGROUND-COLOR-HOVER: var(--GW-BRAND-COLOR-1-HOVER);
+  --GW-BUTTON-FILLED-BACKGROUND-COLOR-ACTIVE: var(--GW-BRAND-COLOR-1-ACTIVE);
+  --GW-BUTTON-OUTLINED-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-BUTTON-OUTLINED-COLOR-HOVER: var(--GW-TEXT-COLOR-3);
+  --GW-BUTTON-OUTLINED-BORDER-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-BUTTON-OUTLINED-BORDER-WIDTH: var(--GW-BORDER-WIDTH);
+  --GW-BUTTON-OUTLINED-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-BUTTON-OUTLINED-BACKGROUND-COLOR-HOVER: var(--GW-BRAND-COLOR-1-HOVER);
+  --GW-BUTTON-OUTLINED-BACKGROUND-COLOR-ACTIVE: var(--GW-BRAND-COLOR-1-ACTIVE);
+  --GW-BUTTON-TEXT-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-CLICKABLE-ELEMENT-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR-HOVER: var(
+    --GW-BACKGROUND-COLOR-HOVER
+  );
+  --GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR-ACTIVE: #e6e6e6;
+  --GW-BUTTON-INVERSE-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-BUTTON-INVERSE-BACKGROUND-COLOR: transparent;
+  --GW-BUTTON-INVERSE-BACKGROUND-COLOR-HOVER: rgba(255, 255, 255, 0.1);
+  --GW-BUTTON-INVERSE-BACKGROUND-COLOR-ACTIVE: rgba(255, 255, 255, 0.2);
+  --GW-ICON-BUTTON-HEIGHT: 2rem;
+  --GW-ICON-BUTTON-WIDTH: 2rem;
+  --GW-ICON-BUTTON-NEUTRAL-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-MODAL-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-MODAL-OVERLAY-BACKGROUND-COLOR: rgba(40, 51, 63, 0.64);
+  --GW-MODAL-HEADER-BACKGROUND-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-MODAL-HEADER-SUBTITLE-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-MODAL-HEADER-ICON-SIZE: 1.875rem;
+  --GW-MODAL-HEADER-STATUS-LINE-HEIGHT: 0.125rem;
+  --GW-MODAL-HEADER-PADDING-HORIZONTAL: var(--GW-LAYOUT-5);
+  --GW-MODAL-HEADER-PADDING-TOP: var(--GW-LAYOUT-6);
+  --GW-MODAL-HEADER-PADDING-BOTTOM: var(--GW-LAYOUT-1);
+  --GW-MODAL-BODY-PADDING: var(--GW-LAYOUT-5) var(--GW-LAYOUT-5)
+    var(--GW-LAYOUT-6);
+  --GW-MODAL-FOOTER-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-BODY);
+  --GW-MODAL-FOOTER-PADDING: var(--GW-LAYOUT-4);
+  --GW-MODAL-CLOSE-BUTTON-MARGIN-TOP: var(--GW-SPACING-5);
+  --GW-ACCORDION-MIN-HEIGHT: 2rem;
+  --GW-ACCORDION-BORDER-FOCUS: 1px solid var(--GW-FOCUS-COLOR);
+  --GW-ACCORDION-BORDER-ERROR: 1px solid var(--GW-COLOR-ERROR);
+  --GW-CHEVRON-SIZE: 1.25rem;
+  --GW-INLINE-LOADER-SPINNER-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-CUBE-LOADER-COLOR: var(
+    --GW-BRAND-COLOR-1
+  );
+  --GW-BRANDED-LOADER-COLOR: var(--GW-CUBE-LOADER-COLOR);
+  --GW-BRANDED-LOADER-ANIMATION-DURATION: 2s;
+  --GW-BRANDED-LOADER-SIZE: calc(
+    3 * var(--GW-CUBE-LOADER-SIZE-ELEMENT, calc(64px / 3))
+  );
+  --GW-LOADER-Z-INDEX: 1000;
+  --GW-LOGO-TITLE-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-LOGO-TITLE-HEIGHT-DESKTOP: 2rem;
+  --GW-LOGO-TITLE-HEIGHT-TABLET: 2.5rem;
+  --GW-LOGO-TITLE-HEIGHT-PHONE: 3rem;
+  --GW-CONSUMER-HEADER-PHONE-HEIGHT: 3rem;
+  --GW-CONSUMER-HEADER-BORDER-BOTTOM-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-CONSUMER-HEADER-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-BREADCRUMB-DIVIDER-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-IMAGE-CAPTION-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-IMAGE-CAPTION-BACKGROUND-COLOR: #111;
+  --GW-INFO-LABEL-SIZE: 1.25rem;
+  --GW-INFO-LABEL-NEUTRAL-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-INFO-LABEL-NEUTRAL-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-ELEMENT);
+  --GW-INLINE-NOTIFICATION-MIN-HEIGHT: 2.5rem;
+  --GW-NOTIFICATION-DISMISS-BUTTON-SIZE: 1.25rem;
+  --GW-TOAST-TOP: var(--GW-HEADER-HEIGHT);
+  --GW-BADGE-NOTIFICATION-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-BADGE-NOTIFICATION-BACKGROUND-COLOR: #c4221f;
+  --GW-BADGE-NOTIFICATION-BORDER: #fff 1px solid;
+  --GW-BADGE-PRIMARY-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-BADGE-PRIMARY-BACKGROUND-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-BADGE-INVERSE-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-BADGE-INVERSE-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-GLOBALIZATION-CHOOSER-COLOR: var(--GW-FIELD-COMPONENT-COLOR);
+  --GW-GLOBALIZATION-CHOOSER-BACKGROUND-COLOR: var(
+    --GW-FIELD-COMPONENT-BACKGROUND-COLOR
+  );
+  --GW-GLOBALIZATION-CHOOSER-HEIGHT: var(--GW-FIELD-COMPONENT-HEIGHT);
+  --GW-GLOBALIZATION-CHOOSER-MIN-WIDTH: 7.5rem;
+  --GW-LINK-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-LINK-HEIGHT: 1.25rem;
+  --GW-LINK-COLOR-HOVER: var(--GW-BRAND-COLOR-1-HOVER);
+  --GW-LINK-COLOR-ACTIVE: var(--GW-BRAND-COLOR-1-ACTIVE);
+  --GW-ASYNC-BUTTON-LINK-MIN-WIDTH: calc(2 * var(--GW-SPACING-10));
+  --GW-TOOLTIP-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-TOOLTIP-BACKGROUND-COLOR: #28333f;
+  --GW-TOOLTIP-LINK-COLOR: #1dc3ff;
+  --GW-TOOLTIP-LINK-COLOR-HOVER: #03bcff;
+  --GW-TOOLTIP-LINK-COLOR-ACTIVE: #00abe9;
+  --GW-TOOLTIP-ICON-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-STICKY-FOOTER-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-COLOR-SWATCH-TITLE-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-COLOR-SWATCH-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-COLOR-SWATCH-WIDTH: 4.375rem;
+  --GW-COLOR-SWATCH-HEIGHT: 1.25rem;
+  --GW-AVATAR-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-AVATAR-BACKGROUND-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-AVATAR-BACKGROUND-COLOR-ACTIVE: var(--GW-BRAND-COLOR-1-ACTIVE);
+  --GW-AVATAR-BACKGROUND-COLOR-HOVER: var(--GW-BRAND-COLOR-1-HOVER);
+  --GW-AVATAR-BORDER-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-AVATAR-SIZE: 2rem;
+  --GW-DROPDOWN-MENU-MIN-WIDTH: 10rem;
+  --GW-DROPDOWN-MENU-MAX-WIDTH: 25rem;
+  --GW-DROPDOWN-MENU-SEPARATOR: solid 1px #7d91ac;
+  --GW-DROPDOWN-MENU-AVATAR-WIDTH: 18rem;
+  --GW-DROPDOWN-MENU-AVATAR-TITLE-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-DROPDOWN-MENU-AVATAR-SUBTITLE-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-CARD-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-CARD-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-CARD-PADDING: var(--GW-LAYOUT-4);
+  --GW-TAG-MIN-HEIGHT: 1.5rem;
+  --GW-TAG-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-ELEMENT);
+  --GW-TAG-BACKGROUND-COLOR-HOVER: var(--GW-BACKGROUND-COLOR-ELEMENT-HOVER);
+  --GW-TAG-BACKGROUND-COLOR-ACTIVE: var(--GW-BACKGROUND-COLOR-ELEMENT-ACTIVE);
+  --GW-TAG-BUTTON-SIZE: 0.875rem;
+  --GW-TAG-BUTTON-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-TAG-LABEL-MAX-WIDTH: 6.75rem;
+  --GW-PROGRESS-BARS-STATUS-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-PROGRESS-BARS-LEFT-BAR-COLOR: var(--GW-SEPARATOR-COLOR);
+  --GW-PROGRESS-BARS-LEFT-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-PROGRESS-BARS-LEFT-COLOR-HOVER: var(--GW-BRAND-COLOR-1);
+  --GW-PROGRESS-BARS-LEFT-COLOR-FOCUS: var(--GW-BRAND-COLOR-1-HOVER);
+  --GW-PROGRESS-BARS-COMPLETE-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-PROGRESS-BARS-COMPLETE-COLOR-HOVER: var(--GW-BRAND-COLOR-1-HOVER);
+  --GW-PROGRESS-BARS-COMPLETE-ICON-COLOR: #fff;
+  --GW-PHASE-BAR-WIDTH: 0.25rem;
+  --GW-PROGRESS-STEP-MARKER-SIZE: var(--GW-SPACING-6);
+  --GW-PROGRESS-STEP-CURRENT-MARKER-RING-WIDTH: 0.375rem;
+  --GW-SIMPLE-PROGRESS-BAR-MIN-HEIGHT: 0.25rem;
+  --GW-PANEL-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-PANEL-TITLE-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-PANEL-SUBTITLE-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-POPOVER-HEADER-PADDING: var(--GW-SPACING-4);
+  --GW-POPOVER-HEADER-SPACING: var(--GW-SPACING-4);
+  --GW-POPOVER-HEADER-HEIGHT: 2.5rem;
+  --GW-POPOVER-FOOTER-PADDING: var(--GW-SPACING-4);
+  --GW-POPOVER-FOOTER-SPACING: var(--GW-SPACING-4);
+  --GW-POPOVER-FOOTER-HEIGHT: 2rem;
+  --GW-POPOVER-CONTAINER-WIDTH: 20rem;
+  --GW-POPOVER-CONTAINER-HEIGHT: 20rem;
+  --GW-POPOVER-PANEL-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-BODY);
+  --GW-POPOVER-HEADER-LINK-COLOR: #5a6872;
+  --GW-POPOVER-BODY-MIN-HEIGHT: 5rem;
+  --GW-POPOVER-BODY-SPACING-Y: 0.875rem;
+  --GW-POPOVER-FOOTER-ICON-COLOR: var(--GW-TEXT-COLOR-2);
+  --GW-NOTIFICATION-ACTION-SIZE: 20rem;
+  --GW-HEADER-HEIGHT: 3.5rem;
+  --GW-HEADER-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-HEADER-LOGO-SIZE: 2.5rem;
+  --GW-HEADER-BACKGROUND-COLOR: var(--GW-BRAND-COLOR-2);
+  --GW-SUBHEADER-HEIGHT: 2.5rem;
+  --GW-CONTEXT-SWITCHER-WIDTH: 13rem;
+  --GW-CONTEXT-SWITCHER-HEIGHT: 1.75rem;
+  --GW-CONTEXT-SWITCHER-BACKGROUND-COLOR-ACTIVE: #cff2ff;
+  --GW-TOP-NAV-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-TOP-NAV-ITEM-FOCUS-OUTLINE-COLOR: var(--GW-FOCUS-COLOR-LIGHT);
+  --GW-TOP-NAV-ITEM-UNDERLINE-WIDTH: 0.25rem;
+  --GW-TOP-NAV-ITEM-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-TOP-NAV-ITEM-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-TOP-NAV-ITEM-BACKGROUND-COLOR-HOVER: var(--GW-HIGHLIGHT-COLOR-2);
+  --GW-TOP-NAV-ITEM-COLOR-ACTIVE: var(--GW-TEXT-COLOR-1);
+  --GW-TOP-NAV-ITEM-BACKGROUND-COLOR-ACTIVE: var(--GW-HIGHLIGHT-COLOR-2);
+  --GW-SIDE-NAV-WIDTH: 16.5rem;
+  --GW-SIDE-NAV-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-SIDE-NAV-COLOR-ACTIVE: var(--GW-TEXT-COLOR-1);
+  --GW-SIDE-NAV-COLOR-HOVER: var(--GW-TEXT-COLOR-1);
+  --GW-SIDE-NAV-BACKGROUND-COLOR-ACTIVE: var(--GW-HIGHLIGHT-COLOR-2);
+  --GW-SIDE-NAV-BORDER-COLOR: #7d91ac;
+  --GW-SIDE-NAV-BORDER-COLOR-SELECTED: var(--GW-FOCUS-COLOR-LIGHT);
+  --GW-SIDE-NAV-COLLAPSED-WIDTH: 3rem;
+  --GW-SIDE-NAV-CHEVRON-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-SIDE-NAV-CHEVRON-COLOR-ACTIVE: var(--GW-TEXT-COLOR-1);
+  --GW-SIDE-NAV-DOT-SIZE: 0.375rem;
+  --GW-SIDE-NAV-DOT-BORDER-COLOR: #fff;
+  --GW-SIDE-NAV-DOT-BACKGROUND-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-SIDE-NAV-ACCORDION-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-SIDE-NAV-SUB-ITEM-BACKGROUND-COLOR-HOVER: var(--GW-HIGHLIGHT-COLOR-2);
+  --GW-SIDE-NAV-CONTENT-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-SIDE-NAV-CHEVRON-SIZE: 1rem;
+  --GW-SIDE-NAV-CHEVRON-WRAPPER-WIDTH: 2rem;
+  --GW-SIDE-NAV-CHEVRON-WRAPPER-HEIGHT: 2rem;
+  --GW-SIDE-NAV-ITEM-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-SIDE-NAV-ITEM-COLOR-HOVER: var(--GW-TEXT-COLOR-1);
+  --GW-SIDE-NAV-ITEM-COLOR-ACTIVE: var(--GW-TEXT-COLOR-1);
+  --GW-SIDE-NAV-ITEM-BACKGROUND-COLOR: unset;
+  --GW-SIDE-NAV-ITEM-BACKGROUND-COLOR-HOVER: var(--GW-HIGHLIGHT-COLOR-2);
+  --GW-SIDE-NAV-ITEM-BACKGROUND-COLOR-ACTIVE: var(--GW-HIGHLIGHT-COLOR-2);
+  --GW-SIDE-NAV-ITEM-ICON-SIZE: 1.25rem;
+  --GW-SIDE-NAV-ITEM-PADDING: 0 0.875rem;
+  --GW-SIDE-NAV-ITEM-LABEL-PADDING-LEFT: 0.75rem;
+  --GW-SIDE-NAV-ITEM-BADGE-MARGIN-COLLAPSED: 1rem 0 0 0;
+  --GW-SIDE-NAV-SUB-ITEM-PADDING: 0 0.875rem 0 2.875rem;
+  --GW-HEADER-BUTTON-HEIGHT: 2rem;
+  --GW-HEADER-BUTTON-FOCUS-BORDER-COLOR: #fff;
+  --GW-HEADER-AVATAR-BORDER-COLOR-FOCUS: #fff;
+  --GW-HEADER-AVATAR-SIZE: 1.75rem;
+  --GW-HEADER-SEARCH-HEIGHT: var(--GW-FIELD-COMPONENT-HEIGHT);
+  --GW-HEADER-SEARCH-MAX-WIDTH: 22.5rem;
+  --GW-HEADER-SEARCH-BACKGROUND-COLOR: #46596e;
+  --GW-HEADER-SEARCH-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-HEADER-SEARCH-SELECT-ICON-COLOR: #fff;
+  --GW-HEADER-SEARCH-CANCEL-ICON-COLOR: #7d91ac;
+  --GW-HEADER-SEARCH-BORDER-COLOR-FOCUS: #fff;
+  --GW-HEADER-SEARCH-BACKGROUND-COLOR-HOVER: rgba(255, 255, 255, 0.1);
+  --GW-HELP-POPOVER-MAX-HEIGHT: 25.5rem;
+  --GW-HELP-POPOVER-WIDTH: 17rem;
+  --GW-HELP-POPOVER-FOOTER-HEIGHT: 2.5rem;
+  --GW-HELP-POPOVER-Z-INDEX: var(--GW-Z-INDEX-2);
+  --GW-HELP-POPOVER-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-HELP-POPOVER-LINK-COLOR: var(--GW-BRAND-COLOR-1);
+  --GW-APP-SWITCHER-POPOVER-MAX-HEIGHT: 36rem;
+  --GW-APP-SWITCHER-POPOVER-WIDTH: 17rem;
+  --GW-APP-SWITCHER-MODAL-WIDTH: 20rem;
+  --GW-APP-SWITCHER-LABEL-WIDTH: 12rem;
+  --GW-APP-SWITCHER-FOOTER-HEIGHT: var(--GW-HELP-POPOVER-FOOTER-HEIGHT);
+  --GW-APP-SWITCHER-FOOTER-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR-BODY);
+  --GW-APP-SWITCHER-GROUP-HEADING: var(--GW-TEXT-COLOR-1);
+  --GW-BURGER-MENU-BUTTON-SIZE: 2rem;
+  --GW-BURGER-SIDEBAR-HEIGHT: 100vh;
+  --GW-BURGER-SIDEBAR-WIDTH: 19.5rem;
+  --GW-BURGER-SIDEBAR-Z-INDEX: var(--GW-Z-INDEX-4);
+  --GW-BURGER-SIDEBAR-COLOR: var(--GW-TEXT-COLOR-1);
+  --GW-BURGER-SIDEBAR-BACKDROP-BACKGROUND-COLOR: rgba(0, 0, 0, 0.7);
+  --GW-BURGER-SIDEBAR-FOCUS: var(--GW-HIGHLIGHT-COLOR-1);
+  --GW-BURGER-SIDEBAR-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-BURGER-SIDEBAR-BACKGROUND-COLOR-HOVER: #d8f1ef;
+  --GW-BURGER-SIDEBAR-BACKGROUND-COLOR-ACTIVE: var(--GW-HIGHLIGHT-COLOR-2);
+  --GW-FOOTER-BACKGROUND-COLOR: var(--GW-BRAND-COLOR-2);
+  --GW-FOOTER-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-FOOTER-LINK-BORDER-COLOR-FOCUS: #fff;
+  --GW-RIGHT-SIDEBAR-SIDE-WIDTH: 20rem;
+  --GW-RIGHT-SIDEBAR-SIDE-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-RIGHT-SIDEBAR-BAR-BACKGROUND-COLOR: var(--GW-BACKGROUND-COLOR);
+  --GW-RIGHT-SIDEBAR-ITEM-BACKGROUND-COLOR-ACTIVE: var(
+    --GW-BACKGROUND-COLOR-ELEMENT-ACTIVE
+  );
+  --GW-RELEASE-BADGE-URL: unset;
+  --GW-RELEASE-BADGE-DATA: unset;
+  --GW-BORDER-WIDTH: 2px;
+  --GW-BORDER-RADIUS: 4px;
+  --GW-BORDER-RADIUS-FULL: 9999px;
+  --GW-BORDER-COLOR: #7d91ac;
+  --GW-SEPARATOR-COLOR: #d1d9e2;
+  --GW-Z-INDEX-1: 1;
+  --GW-Z-INDEX-2: 100;
+  --GW-Z-INDEX-3: 200;
+  --GW-Z-INDEX-4: 300;
+  --GW-BREAKPOINT-PHONE: 580px;
+  --GW-BREAKPOINT-PHONEWIDE: 768px;
+  --GW-BREAKPOINT-TABLET: 1024px; }
+
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* stylelint-disable sh-waqar/declaration-use-variable */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+/* ------------------------------------*\
+   Grounded 'content' styles
+\*------------------------------------ */
+/***************************************************************************************************
+* Resets (from shoelace)
+***************************************************************************************************/
+/* Box sizing reset */
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+/* Hidden property reset */
+[hidden] {
+  display: none !important; }
+
+/***************************************************************************************************
+* The basics (from shoelace)
+***************************************************************************************************/
+.themeRoot {
+  background: var(--GW-BACKGROUND-COLOR-BODY);
+  font-family: var(--GW-FONT-FAMILY);
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  color: var(--GW-TEXT-COLOR-1);
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY);
+  /***************************************************************************************************
+  * Lists (from shoelace)
+  ***************************************************************************************************/
+  /***************************************************************************************************
+  * Placeholders (from shoelace)
+  ***************************************************************************************************/
+  /***************************************************************************************************
+  * Selections (from shoelace)
+  ***************************************************************************************************/ }
+  .themeRoot abbr[title] {
+    text-decoration: none;
+    border-bottom: dashed 2px currentColor; }
+  .themeRoot b,
+  .themeRoot strong {
+    font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD); }
+  .themeRoot blockquote {
+    font-size: 120%;
+    border-left: solid 0.4rem var(--GW-BORDER-COLOR);
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0; }
+  .themeRoot blockquote :last-child {
+    margin-bottom: 0; }
+  .themeRoot del {
+    color: var(--GW-COLOR-ERROR); }
+  .themeRoot figure {
+    margin-top: 0;
+    margin-bottom: 1.5rem; }
+  .themeRoot h1,
+  .themeRoot h2,
+  .themeRoot h3,
+  .themeRoot h4,
+  .themeRoot h5 {
+    font-family: var(--GW-FONT-FAMILY);
+    font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+    color: var(--GW-TEXT-COLOR-1);
+    margin-top: 0;
+    margin-bottom: 0; }
+  .themeRoot h1 {
+    font-size: var(--GW-FONT-SIZE-H1);
+    line-height: var(--GW-LINE-HEIGHT-H1); }
+  .themeRoot h2 {
+    font-size: var(--GW-FONT-SIZE-H2);
+    line-height: var(--GW-LINE-HEIGHT-H2); }
+  .themeRoot h3 {
+    font-size: var(--GW-FONT-SIZE-H3);
+    line-height: var(--GW-LINE-HEIGHT-H3); }
+  .themeRoot h4 {
+    font-size: var(--GW-FONT-SIZE-H4);
+    line-height: var(--GW-LINE-HEIGHT-H4); }
+  .themeRoot h5 {
+    font-size: var(--GW-FONT-SIZE-H5);
+    line-height: var(--GW-LINE-HEIGHT-H5); }
+  .themeRoot hr {
+    border: none;
+    border-top: solid 1px var(--GW-BORDER-COLOR);
+    margin: var(--GW-LAYOUT-8) 0; }
+  .themeRoot img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle; }
+  .themeRoot ins {
+    color: var(--GW-COLOR-SUCCESS); }
+  .themeRoot p {
+    margin-top: 0;
+    margin-bottom: var(--GW-LAYOUT-6); }
+  .themeRoot small {
+    font-size: var(--GW-FONT-SIZE-SUBTEXT); }
+  .themeRoot dl {
+    margin-bottom: 1.5rem; }
+  .themeRoot dt {
+    font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD); }
+  .themeRoot dd {
+    margin-left: 0;
+    margin-bottom: 1.5rem; }
+  .themeRoot ol,
+  .themeRoot ul {
+    line-height: var(--GW-LINE-HEIGHT-BODY);
+    margin-top: 0;
+    margin-bottom: 1.5rem; }
+    .themeRoot ol ol,
+    .themeRoot ol ul,
+    .themeRoot ul ol,
+    .themeRoot ul ul {
+      margin-bottom: 0; }
+  .themeRoot ::placeholder {
+    color: var(--GW-FIELD-COMPONENT-PLACEHOLDER-COLOR); }
+  .themeRoot ::selection {
+    background-color: var(--GW-SELECTOR-SELECTED-BACKGROUND-COLOR);
+    color: var(--GW-SELECTOR-SELECTED-COLOR);
+    text-shadow: none !important; }
+
+/*# sourceMappingURL=grounded.css.map */

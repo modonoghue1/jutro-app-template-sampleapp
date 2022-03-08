@@ -1,0 +1,1 @@
+export const isSeparator=item=>Object.prototype.hasOwnProperty.call(item,"separator");export const isGroup=item=>Object.prototype.hasOwnProperty.call(item,"items");export const isApp=item=>!isGroup(item)&&!isSeparator(item);

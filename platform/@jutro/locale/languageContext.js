@@ -1,0 +1,1 @@
+import{createContext}from"react";const LanguageContext=createContext({language:"",languageOnChangeCallback:void 0});export const LanguageContextProvider=LanguageContext.Provider;export const LanguageContextConsumer=LanguageContext.Consumer;export default LanguageContext;

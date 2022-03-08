@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({googleMaps:{id:"jutro-components.widgets.MapArea.GoogleMaps",defaultMessage:"Google Maps"},mapMarker:{id:"jutro-components.widgets.MapArea.MapMarker",defaultMessage:"Map marker"}});

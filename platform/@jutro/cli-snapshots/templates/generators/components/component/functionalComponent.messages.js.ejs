@@ -1,0 +1,11 @@
+---
+to: <%= path %>/<%= h.capitalize(name) %>/<%= h.capitalize(name) %>.messages.js
+---
+import { defineMessages } from 'react-intl';
+
+export default defineMessages({
+    label: {
+        id: 'jutro-app.components.<%= h.capitalize(name) %>.label',
+        defaultMessage: '<%= h.changeCase.lower(name) %>Label',
+    },
+});

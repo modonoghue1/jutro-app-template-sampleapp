@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({title:{id:"jutro-router.HelpPopover.Title",defaultMessage:"Help and Support"},viewAll:{id:"jutro-router.HelpPopover.ViewAll",defaultMessage:"View all Help topics"}});

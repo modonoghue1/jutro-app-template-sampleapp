@@ -1,0 +1,14 @@
+.collection {
+  margin: 0;
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1; }
+  .collection.expanded {
+    flex-wrap: wrap; }
+
+.collectionTag {
+  margin-right: var(--GW-SPACING-3); }
+
+/*# sourceMappingURL=TagCollection.module.css.map */

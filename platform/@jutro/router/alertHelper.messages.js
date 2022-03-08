@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({actionWarning:{id:"jutro-router.alert.Action Warning",defaultMessage:"Action Warning"},ok:{id:"jutro-router.alert.OK",defaultMessage:"OK"}});

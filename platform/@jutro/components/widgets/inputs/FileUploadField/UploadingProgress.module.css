@@ -1,0 +1,37 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.card {
+  padding: var(--GW-SPACING-3) var(--GW-SPACING-4);
+  border: none;
+  background-color: var(--GW-BACKGROUND-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  box-shadow: var(--GW-SHADOW-2);
+  width: 100%; }
+
+.container {
+  display: flex; }
+
+.progressWrapper {
+  flex: 1;
+  margin-right: var(--GW-SPACING-3); }
+
+.error {
+  font-weight: var(--GW-FONT-WEIGHT-LIGHT);
+  color: var(--GW-COLOR-ERROR); }
+
+.actionButton {
+  width: var(--GW-BUTTON-HEIGHT-SMALL);
+  height: var(--GW-BUTTON-HEIGHT-SMALL);
+  margin-top: var(--GW-SPACING-3); }
+
+:global(.jut__SimpleProgressBar__progressBarSteps).cancelled {
+  background-color: var(--GW-COLOR-WARNING); }
+
+:global(.jut__SimpleProgressBar__progressBarSteps).failed {
+  background-color: var(--GW-COLOR-ERROR); }
+
+:global(.jut__SimpleProgressBar__progressBarSteps).done {
+  background-color: var(--GW-COLOR-SUCCESS); }
+
+/*# sourceMappingURL=UploadingProgress.module.css.map */

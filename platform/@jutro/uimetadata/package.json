@@ -1,0 +1,54 @@
+{
+  "_from": "@jutro/uimetadata@6.5.0",
+  "_id": "@jutro/uimetadata@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-WnczSvTE1YEzN+5TT+g2edCbPsY=",
+  "_location": "/@jutro/uimetadata",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/uimetadata@6.5.0",
+    "name": "@jutro/uimetadata",
+    "escapedName": "@jutro%2fuimetadata",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/components",
+    "/@jutro/datatable",
+    "/@jutro/router",
+    "/@jutro/uiconfig"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/uimetadata/-/@jutro/uimetadata-6.5.0.tgz",
+  "_shasum": "5a77334af4c4d5813337ee534fe83679d09b3ec6",
+  "_spec": "@jutro/uimetadata@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/locale": "6.5.0",
+    "@jutro/logger": "6.5.0",
+    "@jutro/prop-types": "6.5.0",
+    "ajv": "6.12.6",
+    "lodash": "4.17.21"
+  },
+  "deprecated": false,
+  "description": "Provides an API for handling common operations on UI metadata",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/uimetadata",
+  "peerDependencies": {
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

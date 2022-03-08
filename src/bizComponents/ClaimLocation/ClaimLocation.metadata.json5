@@ -1,0 +1,121 @@
+// UI metadata file loaded and used in ClaimLocation
+{
+    // ======================================================================
+    // UI metadata for the "ClaimLocation" component
+    // ======================================================================
+    "jutro": "6.0.0",
+    "jutro-app.claimlocation.agent": {
+        "id": "claimlocation",
+        "type": "page",
+        "content": [
+            {
+                "id": "location",
+                "type": "container",
+                "component": "Card",
+                "componentProps": {
+                    "title": "Location",
+                  "className": "locationCard"
+                },
+
+                "content": [
+                  {
+                    "id": "editButton",
+                    "type": "action",
+                    "component": "IconButton",
+                    "componentProps": {
+                      icon: "mi-edit",
+                      className: "editButton",
+                      onClick: "handleEditLocation"
+                    }
+                  },
+                    {
+                        "id": "addressAndBillingViewForm",
+                        "type": "container",
+                        "component": "div",
+                        "contentLayout": {
+                            "component": "Grid",
+                            "componentProps": {
+                                "hgap": "medium",
+                                "vgap": "large",
+                                "columns": [1, 1]
+                            }
+                        },
+                        "content": [
+                            {
+                                "id": "addressLine1",
+                                "type": "field",
+                                "component": "Input",
+                                "componentProps": {
+                                    "label": "Address Line 1",
+                                    "path": "addressLine1",
+                                    "readOnly": true
+                                }
+                            },
+                            {
+                                "id": "city",
+                                "type": "field",
+                                "component": "Input",
+                                "componentProps": {
+                                    "label": "City",
+                                    "path": "city",
+                                    "readOnly": true
+                                }
+                            },
+                            {
+                                "id": "country",
+                                "type": "field",
+                                "component": "Input",
+                                "componentProps": {
+                                    "label": "Country",
+                                    "path": "country",
+                                    "readOnly": true
+                                }
+                            },
+                            {
+                                "id": "displayName",
+                                "type": "field",
+                                "component": "Input",
+                                "componentProps": {
+                                    "label": "Display Name",
+                                    "path": "displayName",
+                                    "readOnly": true
+                                }
+                            },
+                            {
+                                "id": "id",
+                                "type": "field",
+                                "component": "Input",
+                                "componentProps": {
+                                    "label": "ID",
+                                    "path": "id",
+                                    "readOnly": true
+                                }
+                            },
+                            {
+                                "id": "policyAddress",
+                                "type": "field",
+                                "component": "Input",
+                                "componentProps": {
+                                    "label": "Policy Address",
+                                    "path": "policyAddress",
+                                    "readOnly": true
+                                }
+                            },
+                            {
+                                "id": "postalCode",
+                                "type": "field",
+                                "component": "Input",
+                                "componentProps": {
+                                    "label": "Postal Code",
+                                    "path": "postalCode",
+                                    "readOnly": true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "$schema": "../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json"
+}

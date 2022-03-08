@@ -1,0 +1,61 @@
+---
+to: '<%= `${path}/${h.capitalize(name)}/${h.capitalize(name)}.js` %>'
+---
+import { Wizard } from '@jutro/wizard-next';
+import React, { useCallback, useState } from 'react';
+import Proptypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import uiMetadata from './<%= h.capitalize(name) %>.metadata.json5';
+import { <%= h.capitalize(name) %>Context } from './<%= h.capitalize(name) %>Context';
+import { <%= h.capitalize(name) %>Page } from './<%= h.capitalize(name) %>Page';
+import styles from './<%= h.capitalize(name) %>.module.scss';
+
+const <%= h.capitalize(name) %>Internal = ({ match, location }) => {
+    const [formData, setFormData] = useState({});
+    const [valid, setValid] = useState(false);
+
+    const { flow, wizardProps } = uiMetadata['key.<%= h.changeCase.lowerCase(name)%>.wizard'];
+    const steps = flow.map(step => uiMetadata[step]);
+
+    const localComponentMap = {
+        <%= h.capitalize(name) %>Page,
+    };
+
+    const onValidationChange = useCallback(
+        isValid => {
+            setValid(isValid);
+        },
+        [setValid]
+    );
+
+    const callbackMap = {
+        onCancelWizard: () => console.log('canceling'),
+        onStartWizard: ({ message }) => console.log(message),
+        onFinishWizard: ({ message }) => console.log(message)
+    };
+
+    return (
+        <<%= h.capitalize(name) %>Context.Provider
+            value={{ formData, setFormData, valid, onValidationChange }}
+        >
+            <Wizard
+                baseRoute={match.path}
+                basePath={match.url}
+                callbackMap={callbackMap}
+                className={styles.wizard}
+                componentMap={localComponentMap}
+                location={location}
+                steps={steps}
+                {...wizardProps}
+            />
+        </<%= h.capitalize(name) %>Context.Provider>
+    );
+};
+
+export const <%= h.capitalize(name) %> = withRouter(<%= h.capitalize(name) %>Internal);
+
+
+<%= h.capitalize(name) %>.propTypes = {
+    match: Proptypes.any,
+    location: Proptypes.any,
+};

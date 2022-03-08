@@ -1,0 +1,84 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.progressPhase {
+  flex: 1;
+  width: 100%;
+  margin: 0 var(--GW-SPACING-1);
+  outline: none; }
+  .progressPhase:first-child {
+    margin-left: 0; }
+  .progressPhase:last-child {
+    margin-right: 0; }
+  .progressPhase.complete, .progressPhase.active {
+    cursor: pointer; }
+  .progressPhase.disabled {
+    cursor: not-allowed; }
+
+.bar {
+  height: var(--GW-PHASE-BAR-WIDTH);
+  background: var(--GW-PROGRESS-BARS-LEFT-BAR-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS-FULL); }
+
+.indicator {
+  height: 100%;
+  background: var(--GW-PROGRESS-BARS-COMPLETE-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS-FULL);
+  transition: width var(--GW-ANIMATION-DURATION); }
+
+.icon {
+  width: var(--GW-ICON-FONT-SIZE-2);
+  height: var(--GW-ICON-FONT-SIZE-2);
+  position: relative;
+  font-size: var(--GW-ICON-FONT-SIZE-2);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+  .icon:global(.gw) {
+    width: var(--GW-ICON-FONT-SIZE-2);
+    height: var(--GW-ICON-FONT-SIZE-2); }
+  .complete:not(.error) .icon {
+    background-color: var(--GW-PROGRESS-BARS-COMPLETE-COLOR);
+    color: var(--GW-PROGRESS-BARS-COMPLETE-ICON-COLOR);
+    border-radius: var(--GW-BORDER-RADIUS-FULL);
+    font-size: var(--GW-ICON-FONT-SIZE-1);
+    line-height: var(--GW-ICON-LINE-HEIGHT); }
+    .complete:not(.error) .icon::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .complete .icon:focus,
+  .active .icon:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .error .icon {
+    color: var(--GW-COLOR-ERROR); }
+
+.label {
+  margin-top: var(--GW-SPACING-2);
+  color: var(--GW-PROGRESS-BARS-COMPLETE-COLOR);
+  display: flex;
+  font-size: var(--GW-FONT-SIZE-SECONDARY-LABEL);
+  line-height: var(--GW-LINE-HEIGHT-SECONDARY-LABEL); }
+  .complete .label {
+    color: var(--GW-PROGRESS-BARS-COMPLETE-COLOR); }
+  .disabled .label {
+    color: var(--GW-PROGRESS-BARS-LEFT-COLOR); }
+  .label.error {
+    color: var(--GW-COLOR-ERROR); }
+
+.labelText {
+  margin-left: var(--GW-SPACING-2); }
+
+.title {
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  text-decoration: none;
+  box-shadow: none;
+  border-radius: var(--GW-BORDER-RADIUS); }
+  .active:hover .title,
+  .complete:hover .title {
+    text-decoration: underline; }
+
+.activeStep {
+  color: var(--GW-PROGRESS-BARS-LEFT-COLOR); }
+
+/*# sourceMappingURL=ProgressPhase.module.css.map */

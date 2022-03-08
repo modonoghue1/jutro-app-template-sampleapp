@@ -1,0 +1,10 @@
+.unresolvedComponent {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: var(--GW-COLOR-WARNING);
+  color: var(--GW-COLOR-WARNING-CONTRAST); }
+  .unresolvedComponent code {
+    padding: 0 var(--GW-SPACING-3); }
+
+/*# sourceMappingURL=UnresolvedComponent.module.css.map */

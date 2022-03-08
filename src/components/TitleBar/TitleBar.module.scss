@@ -1,0 +1,20 @@
+.titleBar {
+  background-color: var(--GW-COLOR-BACKGROUND-2);
+  padding: var(--GW-SPACING-3) 0;
+}
+
+.icon {
+  font-size: var(--GW-FONT-SIZE-H3);
+  line-height: var(--GW-LINE-HEIGHT-H3);
+}
+
+.title {
+  font-size: var(--GW-FONT-SIZE-H3);
+  line-height: var(--GW-LINE-HEIGHT-H3);
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+}
+
+.subTitle {
+  font-size: var(--GW-FONT-SIZE-H5);
+  line-height: var(--GW-LINE-HEIGHT-H5);
+}

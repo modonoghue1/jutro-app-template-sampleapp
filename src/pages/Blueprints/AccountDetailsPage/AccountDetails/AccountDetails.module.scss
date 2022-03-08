@@ -1,0 +1,50 @@
+@import '~@jutro/theme/assets/sass/helpers';
+
+.accountDetails {
+  :global(.jut__FieldLabel__top) {
+    margin-bottom: 0;
+  }
+
+  :global(.jut__FieldLabel__readOnly) {
+    font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  }
+
+  :global(.jut__FieldComponent__controlReadOnly) {
+    font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  }
+
+  hr {
+    margin-top: var(--GW-LAYOUT-3);
+    margin-bottom: var(--GW-LAYOUT-3);
+  }
+
+  & > div {
+    margin-top: var(--GW-SPACING-10);
+
+    &:first-child {
+      margin-top: -115px;
+    }
+  }
+
+  :global(.formButtonsContainer) {
+    margin-top: var(--GW-LAYOUT-12);
+  }
+
+  :global(.jut__Button__button) {
+    min-width: 160px;
+  }
+
+  @include gw-breakpoint-down(tablet) {
+    :global(.addressAndBillingEditFormRightColumn) {
+      order: -1;
+    }
+  }
+}
+
+.paymentPanel {
+  margin-top: var(--GW-SPACING-10);
+
+  &:first-child {
+    margin-top: -115px;
+  }
+}

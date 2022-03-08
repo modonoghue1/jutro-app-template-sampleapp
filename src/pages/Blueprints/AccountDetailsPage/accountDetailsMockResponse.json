@@ -1,0 +1,22 @@
+[
+  {
+    "id": "5adf69b3-a298-4da3-97bc-b136d5411c82",
+    "firstName": "John",
+    "lastName": "Doe",
+    "emailId": "johndoe@atmos.com",
+    "phoneNumber": "1112223333",
+    "addressLine1": "No. 1 Stemple Exchange, Blanchardstown Corporate Park",
+    "city": "Dublin",
+    "state": "Co. Dublin",
+    "postalCode": "D15 K66D",
+    "country": "Ireland",
+    "billingAddressLine1": "No. 1 Stemple Exchange, Blanchardstown Corporate Park",
+    "billingAddressCity": "Dublin",
+    "billingAddressState": "Co. Dublin",
+    "billingAddressPostalCode": "D15 K66D",
+    "billingAddressCountry": "Ireland",
+    "billingAddressSameAsPrimary": true,
+    "billDelivery": "EMAIL",
+    "billDeliveryEmailId": "johndoe@atmos.com"
+  }
+]

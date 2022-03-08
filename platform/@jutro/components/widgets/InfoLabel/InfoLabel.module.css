@@ -1,0 +1,54 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.infoLabel {
+  display: inline-block;
+  min-width: var(--GW-INFO-LABEL-SIZE);
+  max-width: 100%;
+  height: var(--GW-INFO-LABEL-SIZE);
+  padding: 0 var(--GW-SPACING-3);
+  border-radius: var(--GW-BORDER-RADIUS-FULL);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  font-size: var(--GW-FONT-SIZE-SECONDARY-LABEL);
+  line-height: var(--GW-LINE-HEIGHT-SECONDARY-LABEL); }
+  .infoLabel:empty {
+    display: none; }
+
+.icon {
+  margin-right: var(--GW-SPACING-2);
+  font-size: var(--GW-ICON-FONT-SIZE-1);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+  .icon.rightIcon {
+    margin-right: 0;
+    margin-left: var(--GW-SPACING-2); }
+
+.success {
+  color: var(--GW-COLOR-SUCCESS-CONTRAST);
+  background-color: var(--GW-COLOR-SUCCESS); }
+
+.error {
+  color: var(--GW-COLOR-ERROR-CONTRAST);
+  background-color: var(--GW-COLOR-ERROR); }
+
+.info {
+  color: var(--GW-COLOR-INFO-CONTRAST);
+  background-color: var(--GW-COLOR-INFO); }
+
+.warning {
+  color: var(--GW-COLOR-WARNING-CONTRAST);
+  background-color: var(--GW-COLOR-WARNING); }
+
+.neutral {
+  color: var(--GW-INFO-LABEL-NEUTRAL-COLOR);
+  background-color: var(--GW-INFO-LABEL-NEUTRAL-BACKGROUND-COLOR); }
+
+.simple {
+  padding: 0; }
+  .simple .icon {
+    margin: 0; }
+
+/*# sourceMappingURL=InfoLabel.module.css.map */

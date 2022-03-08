@@ -1,0 +1,1 @@
+export function toggleValue(array,value){const index=array.indexOf(value);return-1===index?array.concat([value]):array.slice(0,index).concat(array.slice(index+1))}

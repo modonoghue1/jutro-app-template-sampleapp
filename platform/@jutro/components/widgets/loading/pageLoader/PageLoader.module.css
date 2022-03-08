@@ -1,0 +1,13 @@
+.pageLoader {
+  height: 100%;
+  width: 100%;
+  z-index: var(--GW-Z-INDEX-4);
+  background-color: var(--GW-BACKGROUND-COLOR);
+  position: fixed; }
+  html:not(.appLoading) .pageLoader {
+    display: none; }
+
+.appLoading {
+  content: normal; }
+
+/*# sourceMappingURL=PageLoader.module.css.map */

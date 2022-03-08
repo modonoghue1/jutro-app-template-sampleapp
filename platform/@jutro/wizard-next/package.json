@@ -1,0 +1,62 @@
+{
+  "_from": "@jutro/wizard-next@6.5.0",
+  "_id": "@jutro/wizard-next@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-RWRzbdksRRnUz19PdMXnkNERQqg=",
+  "_location": "/@jutro/wizard-next",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/wizard-next@6.5.0",
+    "name": "@jutro/wizard-next",
+    "escapedName": "@jutro%2fwizard-next",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/wizard-next/-/@jutro/wizard-next-6.5.0.tgz",
+  "_shasum": "4564736dd92c4519d4cf5f4f74c5e790d11142a8",
+  "_spec": "@jutro/wizard-next@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/components": "6.5.0",
+    "@jutro/layout": "6.5.0",
+    "@jutro/platform": "6.5.0",
+    "@jutro/prop-types": "6.5.0",
+    "@jutro/router": "6.5.0",
+    "@jutro/theme": "6.5.0",
+    "@jutro/uiconfig": "6.5.0",
+    "classnames": "2.2.6",
+    "lodash": "4.17.21",
+    "prop-types": "15.7.2",
+    "react-intl": "5.15.5",
+    "uuid": "8.3.2"
+  },
+  "deprecated": false,
+  "description": "Provides wizard components for React",
+  "devDependencies": {
+    "@jutro/test": "6.5.0"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/wizard-next",
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "5.2.0",
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

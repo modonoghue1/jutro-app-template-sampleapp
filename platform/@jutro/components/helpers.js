@@ -1,0 +1,1 @@
+import{publish}from"@jutro/events";export const getFromArray=(array,value,defaultValue)=>array.includes(value)?value:defaultValue;export function trackMethod(callback,topic,payload){return(...args)=>{callback&&callback(...args),publish(topic,payload)}}

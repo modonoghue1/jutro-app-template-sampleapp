@@ -1,0 +1,57 @@
+{
+  "_from": "@jutro/lab-preview-components@6.5.0",
+  "_id": "@jutro/lab-preview-components@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-2Kd5yqALfEwPpXWfNMaWT+lv6/M=",
+  "_location": "/@jutro/lab-preview-components",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/lab-preview-components@6.5.0",
+    "name": "@jutro/lab-preview-components",
+    "escapedName": "@jutro%2flab-preview-components",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/lab-preview-components/-/@jutro/lab-preview-components-6.5.0.tgz",
+  "_shasum": "d8a779caa00b7c4c0fa5759f34c6964fe96febf3",
+  "_spec": "@jutro/lab-preview-components@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/components": "6.5.0",
+    "@jutro/layout": "6.5.0",
+    "@jutro/locale": "6.5.0",
+    "@jutro/prop-types": "6.5.0",
+    "@jutro/theme": "6.5.0",
+    "@jutro/theme-styles": "6.5.0",
+    "@jutro/uiconfig": "6.5.0",
+    "classnames": "2.2.6",
+    "lodash": "4.17.21",
+    "prop-types": "15.7.2",
+    "react-intl": "5.15.5"
+  },
+  "deprecated": false,
+  "description": "Provides common lab-preview React-based components",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/lab-preview-components",
+  "peerDependencies": {
+    "core-js": "3.10.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "version": "6.5.0"
+}

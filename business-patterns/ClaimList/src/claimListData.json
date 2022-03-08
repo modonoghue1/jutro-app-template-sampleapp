@@ -1,0 +1,68 @@
+{
+  "claimList": [
+    {
+      "id": "183736",
+      "flagged": "Action required",
+      "lossType": { "code": "AUTO" },
+      "description": "Accident on the highway",
+      "lossDate": "2020-01-01T00:00:00.000Z",
+      "claimType": "Accident",
+      "state": { "code": "open" }
+    },
+    {
+      "id": "937549",
+      "lossType": { "code": "AUTO" },
+      "lossDate": "2016-09-21T00:00:00.000Z",
+      "claimType": "Accident",
+      "state": { "code": "processing" }
+    },
+    {
+      "id": "109473",
+      "lossType": { "code": "HOME" },
+      "description": "Wall damaged and destroyed",
+      "lossDate": "2010-10-08T00:00:00.000Z",
+      "claimType": "Fire",
+      "state": { "code": "approved" }
+    },
+    {
+      "id": "052847",
+      "lossType": { "code": "AUTO" },
+      "description": "Pile-up on the freeway",
+      "lossDate": "2009-03-03T00:00:00.000Z",
+      "claimType": "Accident",
+      "state": { "code": "open" }
+    },
+    {
+      "id": "083647",
+      "lossType": { "code": "AUTO" },
+      "lossDate": "2009-06-23T00:00:00.000Z",
+      "claimType": "Accident",
+      "state": { "code": "open" }
+    },
+    {
+      "id": "162974",
+      "flagged": { "name": "Action required" },
+      "policyType": "Life",
+      "description": "Broken leg",
+      "lossDate": "2018-05-30T00:00:00.000Z",
+      "claimType": "Accident",
+      "state": { "code": "declined" }
+    },
+    {
+      "id": "093645",
+      "lossType": { "code": "LIFE" },
+      "lossDate": "2015-12-25T00:00:00.000Z",
+      "claimType": "Accident",
+      "state": { "code": "approved" }
+    },
+    {
+      "id": "874610",
+      "flagged": { "name": "Action required" },
+      "lossType": { "code": "HOME" },
+      "description": "Ground floor flooded",
+      "lossDate": "2015-01-01T00:00:00.000Z",
+      "claimType": "Flood",
+      "state": { "code": "declined" }
+    }
+  ]
+}

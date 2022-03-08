@@ -1,0 +1,52 @@
+{
+  "_from": "@jutro/translations@6.5.0",
+  "_id": "@jutro/translations@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-CfgMFp+WVxfCGdgRxCmwWVSTiog=",
+  "_location": "/@jutro/translations",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/translations@6.5.0",
+    "name": "@jutro/translations",
+    "escapedName": "@jutro%2ftranslations",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/app",
+    "/@jutro/lab-preview-storybook-preset"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/translations/-/@jutro/translations-6.5.0.tgz",
+  "_shasum": "09f80c169f965717c219d811c429b05954938a88",
+  "_spec": "@jutro/translations@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Provides display key translations",
+  "devDependencies": {
+    "@gwre-g11n/js-pseudolizer": "^1.0.0"
+  },
+  "license": "Guidewire proprietary",
+  "main": "index.js",
+  "name": "@jutro/translations",
+  "peerDependencies": {
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "scripts": {
+    "i18n": "npm run i18n:pseudo",
+    "i18n:pseudo": "js-pseudolizer --targetType \"FILES\" -p \"sherlock\" -o yy.json lang-data/en.json"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

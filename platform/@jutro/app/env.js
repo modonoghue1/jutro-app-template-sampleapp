@@ -1,0 +1,1 @@
+const env=process.env.NODE_ENV||"development";export function isTest(){return"test"===env}export function isProduction(){return"production"===env}export function isDevelopment(){return"development"===env}

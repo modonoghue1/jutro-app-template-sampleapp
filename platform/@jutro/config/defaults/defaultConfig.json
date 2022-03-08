@@ -1,0 +1,13 @@
+{
+  "launchWithTheme": "Business",
+  "submitToServer": false,
+  "generateUniqueId": true,
+  "localeSettings": {
+    "availableLocales": ["en-US"],
+    "availableLanguages": ["en"],
+    "preferredLocale": "en-US",
+    "preferredLanguage": "en",
+    "defaultCountryCode": "US",
+    "defaultCurrency": "USD"
+  }
+}

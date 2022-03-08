@@ -1,0 +1,1 @@
+import{SET_FOCUSED}from"./types";export const setFocused=focused=>({type:SET_FOCUSED,focused:focused});

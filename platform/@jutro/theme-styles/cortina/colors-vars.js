@@ -1,0 +1,1 @@
+export const cortinaColors={"--GW-BACKGROUND-COLOR-BODY":"#f0f1f5"};

@@ -1,0 +1,173 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.phoneNumber {
+  width: 100%;
+  height: var(--GW-FIELD-COMPONENT-HEIGHT);
+  font-weight: var(--GW-FIELD-COMPONENT-FONT-WEIGHT);
+  color: var(--GW-FIELD-COMPONENT-COLOR);
+  background-color: var(--GW-FIELD-COMPONENT-BACKGROUND-COLOR);
+  border: 1px solid var(--GW-BORDER-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  box-shadow: none;
+  display: block;
+  padding: var(--GW-SPACING-2) 0.75rem;
+  margin: 0;
+  transition: var(--GW-ANIMATION-SPEED) all;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  caret-color: currentColor;
+  text-align: inherit;
+  font-size: var(--GW-FONT-SIZE-INPUT);
+  line-height: var(--GW-LINE-HEIGHT-INPUT); }
+  .phoneNumber:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+    border-color: var(--GW-FIELD-COMPONENT-BORDER-COLOR-FOCUS); }
+  .phoneNumber[disabled], .phoneNumber:global(.disabled) {
+    opacity: var(--GW-OPACITY-DISABLED);
+    cursor: not-allowed; }
+  .phoneNumber:global(.invalid) {
+    color: var(--GW-COLOR-ERROR);
+    border-color: var(--GW-COLOR-ERROR); }
+    .phoneNumber:global(.invalid):focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-ERROR-COLOR-DARK); }
+
+:global(ul.iti__country-list) {
+  white-space: normal;
+  box-shadow: var(--GW-SHADOW-3);
+  border-radius: var(--GW-BORDER-RADIUS);
+  border: none;
+  margin-top: 0.125rem;
+  width: 100%;
+  z-index: var(--GW-Z-INDEX-3); }
+
+:global(.iti__country-list .iti__country) {
+  padding: var(--GW-SPACING-3) var(--GW-SPACING-3) var(--GW-SPACING-3) var(--GW-SPACING-5);
+  position: relative;
+  font-size: var(--GW-FONT-SIZE-INPUT);
+  line-height: var(--GW-LINE-HEIGHT-INPUT); }
+
+:global(.iti__dial-code) {
+  position: absolute;
+  right: var(--GW-SPACING-3);
+  top: var(--GW-SPACING-3);
+  color: var(--GW-FIELD-COMPONENT-COLOR); }
+
+:global(.iti--allow-dropdown .iti__flag-container) {
+  width: 100%; }
+
+:global(.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag) {
+  background-color: var(--GW-FIELD-COMPONENT-BACKGROUND-COLOR); }
+  :global(.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag):hover {
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-HOVER); }
+  :global(.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag):active {
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-ACTIVE); }
+
+.dropdownHidden :global(.iti__selected-flag) {
+  display: none; }
+
+.dropdownHidden :global(.iti--allow-dropdown input) {
+  padding-left: 0.75rem; }
+
+:global(.iti.iti--separate-dial-code .iti__selected-flag) {
+  width: var(--GW-PHONE-NUMBER-FLAG-CONTAINER-WIDTH);
+  background-color: transparent;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: var(--GW-BORDER-RADIUS) 0 0 var(--GW-BORDER-RADIUS);
+  padding: 0 var(--GW-SPACING-2) 0 var(--GW-SPACING-4);
+  justify-content: flex-end; }
+  :global(.iti.iti--separate-dial-code .iti__selected-flag):focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+    border-color: var(--GW-FIELD-COMPONENT-BORDER-COLOR-FOCUS); }
+
+:global(.iti) {
+  width: 100%; }
+
+:global(.iti__country-list .iti__country.iti__highlight) {
+  background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-HOVER); }
+  :global(.iti__country-list .iti__country.iti__highlight):active {
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-ACTIVE); }
+
+:global(.iti__country-list .iti__country.iti__active) {
+  background-color: var(--GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR);
+  color: var(--GW-DROPDOWN-OPTION-SELECTED-COLOR); }
+  :global(.iti__country-list .iti__country.iti__active):hover {
+    background-color: var(--GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR-HOVER); }
+  :global(.iti__country-list .iti__country.iti__active):active {
+    background-color: var(--GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR-ACTIVE); }
+
+:global(.iti__country.iti__active .iti__dial-code) {
+  color: var(--GW-DROPDOWN-OPTION-SELECTED-COLOR); }
+
+:global(.iti__country-name) {
+  padding-right: 1.875rem;
+  margin-right: 0; }
+
+:global(.iti__selected-flag .iti__arrow) {
+  font-family: 'Material Icons Round', serif;
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  font-style: normal;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+  width: unset;
+  height: unset;
+  border: none;
+  margin-left: var(--GW-SPACING-2); }
+  :global(.iti__selected-flag .iti__arrow)::before {
+    content: '\e5cf';
+    font-size: var(--GW-FONT-SIZE-INPUT);
+    line-height: var(--GW-LINE-HEIGHT-INPUT); }
+
+:global(.iti__selected-flag .iti__flag) {
+  position: absolute;
+  left: var(--GW-SPACING-4); }
+
+:global(.iti__arrow.iti__arrow--up)::before {
+  content: '\e5ce'; }
+
+:global(.iti--separate-dial-code .iti__selected-dial-code) {
+  margin-left: var(--GW-SPACING-2); }
+
+:global(.iti__country-list .iti__divider) {
+  margin: 0;
+  padding: 0; }
+
+:global(.iti.iti--separate-dial-code:not(.iti--allow-dropdown)
+.iti__selected-flag) {
+  cursor: not-allowed;
+  opacity: var(--GW-OPACITY-DISABLED); }
+  :global(.iti.iti--separate-dial-code:not(.iti--allow-dropdown)
+.iti__selected-flag)::after {
+    font-family: 'Material Icons Round', serif;
+    font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+    font-style: normal;
+    display: inline-block;
+    text-transform: none;
+    letter-spacing: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+    width: unset;
+    height: unset;
+    border: none;
+    margin-left: var(--GW-SPACING-2);
+    content: '\e5cf';
+    font-size: var(--GW-FONT-SIZE-INPUT);
+    line-height: var(--GW-LINE-HEIGHT-INPUT); }
+
+/*# sourceMappingURL=IntlPhoneNumberField.module.css.map */

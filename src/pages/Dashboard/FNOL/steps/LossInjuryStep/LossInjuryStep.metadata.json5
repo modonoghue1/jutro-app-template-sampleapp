@@ -1,0 +1,226 @@
+{
+  "jutro": "6.0.0",
+  "fnol.injured": {
+    "id": "fnol.injured",
+    "type": "page",
+    "contentLayout": {
+      "component": "Grid"
+    },
+    "content": [
+           {
+        "id": "injuredContent",
+        "type": "element",
+        "component": "div",
+        "content": [
+          {
+            "id": "accountPersonsHeading",
+            "type": "element",
+            "component": "h5",
+            "content": "Account persons"
+          },
+          {
+            "id": "accountPersonsList",
+            "type": "iterable",
+            "component": "div",
+            "componentProps": {
+              "className": "personsList"
+            },
+            "contentRepeat": {
+              "variableProps": ["content"],
+              "content": {
+                "id": "accountPersonEntry",
+                "type": "element",
+                "component": "div",
+                "componentProps": {
+                  "className": "accountPersonEntry",
+                  "onClick": "openEditInjuredForm",
+                },
+                "content": [
+                  {
+                    "id": "personData",
+                    "type": "element",
+                    "component": "div",
+                    "content": [
+                      {
+                        "id": "firstName",
+                        "type": "element",
+                        "component": "h4",
+                        "content": "{firstName} {lastName}"
+                      },
+                      {
+                        "id": "role",
+                        "type": "element",
+                        "component": "p",
+                        "content": "{role}"
+                      }
+                    ],
+                    "contentLayout": {
+                      "component": "Flex",
+                      "componentProps": {
+                        "direction": "column",
+                        "gap": "none"
+                      }
+                    }
+                  },
+                  {
+                    "type": "action",
+                    "component": "Button",
+                    "componentProps": {
+                      "onClick": "openEditInjuredForm",
+                      "type": "text",
+                      "icon": "add"
+                    }
+                  }
+                ],
+                "contentLayout": {
+                  "component": "Flex",
+                  "componentProps": {
+                    "justifyContent": "between",
+                    "alignItems": "center",
+                  }
+                }
+              }
+            },
+            "contentEmpty": []
+          },
+          {
+            "id": "injuredPersonsHeading",
+            "type": "element",
+            "component": "h5",
+            "content": "Injured persons"
+          },
+          {
+            "id": "injuredList",
+            "type": "iterable",
+            "component": "div",
+            "componentProps": {
+              "className": "personsList"
+            },
+            "contentRepeat": {
+              "variableProps": ["content"],
+              "content": {
+                "id": "injuredEntry",
+                "type": "element",
+                "component": "div",
+                "componentProps": {
+                  "className": "personEntry"
+                },
+                "content": [
+                  {
+                    "id": "injuredData",
+                    "type": "element",
+                    "component": "div",
+                    "content": [
+                      {
+                        "id": "firstName",
+                        "type": "element",
+                        "component": "h4",
+                        "content": "{firstName} {lastName}"
+                      },
+                      {
+                        "id": "role",
+                        "type": "element",
+                        "component": "p",
+                        "content": "{role}"
+                      }
+                    ],
+                    "contentLayout": {
+                      "component": "Flex",
+                      "componentProps": {
+                        "direction": "column",
+                        "gap": "none"
+                      }
+                    }
+                  },
+                  {
+                "id": "actionItems",
+                "type": "element",
+                "component": "div",
+                "componentProps": {
+                  "className": "actionItems"
+                },
+                "content": [
+                  {
+                    "id": "editInjured",
+                    "type": "action",
+                    "component": "Button",
+                    "componentProps": {
+                      "onClick": "onEditInjured",
+                      "type": "text",
+                      "icon": "edit"
+                    }
+                  },
+                  {
+                    "id": "removeInjured",
+                    "type": "action",
+                    "component": "Button",
+                    "componentProps": {
+                      "onClick": "onRemoveInjured",
+                      "type": "text",
+                      "icon": "delete"
+                    }
+                  }
+                ]}
+                ],
+                "contentLayout": {
+                  "component": "Flex",
+                  "componentProps": {
+                    "justifyContent": "between",
+                    "alignItems": "center"
+                  }
+                }
+              }
+            },
+            "contentEmpty": [
+              {
+                "id": "noInjuredPersonsMsg",
+                "type": "element",
+                "component": "p",
+                "content": "No injured persons specified yet. Please add some."
+              }
+            ]
+          },
+          {
+            id: "addInjuredContainer",
+           "component": "Flex",
+              "componentProps": {
+                "justifyContent": "right"
+              },
+            "content": [
+          {
+            "id": "addInjured",
+            "type": "action",
+            "component": "Button",
+            "componentProps": {
+              "onClick": "onAddInjured",
+              "icon": "add"
+            },
+            "content": {
+              "id": "injured.add",
+              "defaultMessage": "Add another person"
+            }
+          }
+            ]
+
+          },
+
+          {
+            "id": "validationMessage",
+            "type": "element",
+            "component": "p",
+            "content": "The list above should include at least one injured person.",
+            "componentProps": {
+              "className": "injuredValidationMessage"
+            }
+          },
+        ],
+        "contentLayout": {
+          "component": "Flex",
+          "componentProps": {
+            "direction": "column"
+          }
+        }
+      }
+    ]
+  }
+}

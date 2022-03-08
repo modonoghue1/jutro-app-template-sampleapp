@@ -1,0 +1,15 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.main:focus {
+  outline: none; }
+
+.container {
+  margin-top: var(--GW-LAYOUT-10);
+  margin-bottom: var(--GW-LAYOUT-10); }
+  @media (max-width: 580px) {
+    .container {
+      margin-top: 0;
+      margin-bottom: var(--GW-LAYOUT-2); } }
+
+/*# sourceMappingURL=Main.module.css.map */

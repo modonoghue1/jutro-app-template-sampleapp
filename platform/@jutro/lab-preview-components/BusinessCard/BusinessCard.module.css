@@ -1,0 +1,23 @@
+.business-card {
+  padding: var(--GW-SPACING-5);
+  margin: 0 auto;
+  background: var(--GW-BACKGROUND-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  border: 1px solid var(--GW-BORDER-COLOR);
+  width: 100%;
+  position: relative; }
+  .business-card .business-card-title {
+    letter-spacing: 0;
+    line-height: var(--GW-LINE-HEIGHT-H2);
+    font-size: var(--GW-FONT-SIZE-H2);
+    font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD); }
+  .business-card .business-card-line {
+    margin-top: var(--GW-LAYOUT-2);
+    margin-bottom: var(--GW-LAYOUT-4);
+    border-top-color: var(--GW-SEPARATOR-COLOR); }
+  .business-card .business-card-action {
+    position: absolute;
+    top: var(--GW-LAYOUT-4);
+    right: var(--GW-LAYOUT-4); }
+
+/*# sourceMappingURL=BusinessCard.module.css.map */

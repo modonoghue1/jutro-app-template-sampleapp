@@ -1,0 +1,16 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.modalFooter {
+  background-color: var(--GW-MODAL-FOOTER-BACKGROUND-COLOR);
+  padding: var(--GW-MODAL-FOOTER-PADDING); }
+
+.modalFooterFlexLayout {
+  height: 100%; }
+  .modalFooterFlexLayout > * {
+    white-space: pre-wrap; }
+    @media (max-width: 580px) {
+      .modalFooterFlexLayout > * {
+        flex-grow: 1; } }
+
+/*# sourceMappingURL=ModalFooter.module.css.map */

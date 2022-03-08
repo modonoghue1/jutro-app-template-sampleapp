@@ -1,0 +1,11 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    id="gw-info-outline"
+    viewBox="0 0 24 24"
+>
+    <title>Info Outline</title>
+    <g>
+        <path fill="none" d="M0 0h24v24H0Z" />
+        <path d="M11.99 2C17.52 2 22 6.48 22 12c0 5.52-4.48 10-10.01 10C6.47 22 2 17.52 2 12 2 6.48 6.47 2 11.99 2ZM12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8 -3.58-8-8-8Zm0 7c.55 0 1 .45 1 1v4c0 .55-.45 1-1 1s-1-.45-1-1v-4c0-.55.45-1 1-1Zm1-4v2h-2V7h2Z" />
+    </g>
+</svg>

@@ -1,0 +1,113 @@
+{
+    "jutro": "6.0",
+    "claim.property.incident.view": {
+        "id": "claimVehicle",
+        "type": "page",
+        "contentLayout": {
+            "component": "Grid",
+            "componentProps": {
+                "hgap": "large",
+                "vgap": "large"
+            }
+        },
+        "content": [
+            {
+                "id": "damageDescription",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "maxLength": 255,
+                    "path": "description",
+                    "label": {
+                        "id": "vehicle.damageDescription.label",
+                        "defaultMessage": "Damage Description"
+                    }
+                }
+            },
+            {
+                "id": "lossParty",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "dataType": "object",
+                    "path": "lossParty",
+                    "label": {
+                        "id": "vehicle.howReported.label",
+                        "defaultMessage": "Loss Party"
+                    },
+                    "availableValues": [
+                        {
+                            "code": "insured",
+                            "name": "Insured's loss"
+                        },
+                        {
+                            "code": "third_party",
+                            "name": "Third-party liability"
+                        }
+                    ],
+                    "controlClassName": "horizontalGrid"
+                }
+            },
+            {
+                "id": "occupancyType",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "dataType": "object",
+                    "path": "occupancyType",
+                    "label": {
+                        "id": "vehicle.occupancyType.label",
+                        "defaultMessage": "Occupancy Type"
+                    },
+                    "availableValues": [
+                        {
+                            "code": "occupied",
+                            "name": "Occupied"
+                        },
+                        {
+                            "code": "underConst",
+                            "name": "Under Construction"
+                        },
+                        {
+                            "code": "vacant",
+                            "description": "Vacant"
+                        }
+                    ],
+                    "controlClassName": "horizontalGrid"
+                }
+            },
+            {
+                "id": "severity",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "dataType": "object",
+                    "path": "severity",
+                    "label": {
+                        "id": "vehicle.occupancyType.label",
+                        "defaultMessage": "Severity Type"
+                    },
+                    "availableValues": [
+                        {
+                            "code": "minor",
+                            "name": "Minor"
+                        },
+                        {
+                            "code": "moderate-prop",
+                            "name": "Moderate (usable)"
+                        },
+                        {
+                            "code": "major-prop",
+                            "name": "Major (not usable)"
+                        },
+                        {
+                            "code": "severe-gen",
+                            "name": "Severe"
+                        }
+                    ],
+                    "controlClassName": "horizontalGrid"
+                }
+            }
+        ]
+    }
+}

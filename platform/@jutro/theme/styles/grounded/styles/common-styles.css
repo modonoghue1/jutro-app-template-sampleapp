@@ -1,0 +1,125 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+/* ------------------------------------*\
+   Grounded 'content' styles
+\*------------------------------------ */
+/***************************************************************************************************
+* Resets (from shoelace)
+***************************************************************************************************/
+/* Box sizing reset */
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+/* Hidden property reset */
+[hidden] {
+  display: none !important; }
+
+/***************************************************************************************************
+* The basics (from shoelace)
+***************************************************************************************************/
+.themeRoot {
+  background: var(--GW-BACKGROUND-COLOR-BODY);
+  font-family: var(--GW-FONT-FAMILY);
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  color: var(--GW-TEXT-COLOR-1);
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY);
+  /***************************************************************************************************
+  * Lists (from shoelace)
+  ***************************************************************************************************/
+  /***************************************************************************************************
+  * Placeholders (from shoelace)
+  ***************************************************************************************************/
+  /***************************************************************************************************
+  * Selections (from shoelace)
+  ***************************************************************************************************/ }
+  .themeRoot abbr[title] {
+    text-decoration: none;
+    border-bottom: dashed 2px currentColor; }
+  .themeRoot b,
+  .themeRoot strong {
+    font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD); }
+  .themeRoot blockquote {
+    font-size: 120%;
+    border-left: solid 0.4rem var(--GW-BORDER-COLOR);
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0; }
+  .themeRoot blockquote :last-child {
+    margin-bottom: 0; }
+  .themeRoot del {
+    color: var(--GW-COLOR-ERROR); }
+  .themeRoot figure {
+    margin-top: 0;
+    margin-bottom: 1.5rem; }
+  .themeRoot h1,
+  .themeRoot h2,
+  .themeRoot h3,
+  .themeRoot h4,
+  .themeRoot h5 {
+    font-family: var(--GW-FONT-FAMILY);
+    font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+    color: var(--GW-TEXT-COLOR-1);
+    margin-top: 0;
+    margin-bottom: 0; }
+  .themeRoot h1 {
+    font-size: var(--GW-FONT-SIZE-H1);
+    line-height: var(--GW-LINE-HEIGHT-H1); }
+  .themeRoot h2 {
+    font-size: var(--GW-FONT-SIZE-H2);
+    line-height: var(--GW-LINE-HEIGHT-H2); }
+  .themeRoot h3 {
+    font-size: var(--GW-FONT-SIZE-H3);
+    line-height: var(--GW-LINE-HEIGHT-H3); }
+  .themeRoot h4 {
+    font-size: var(--GW-FONT-SIZE-H4);
+    line-height: var(--GW-LINE-HEIGHT-H4); }
+  .themeRoot h5 {
+    font-size: var(--GW-FONT-SIZE-H5);
+    line-height: var(--GW-LINE-HEIGHT-H5); }
+  .themeRoot hr {
+    border: none;
+    border-top: solid 1px var(--GW-BORDER-COLOR);
+    margin: var(--GW-LAYOUT-8) 0; }
+  .themeRoot img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle; }
+  .themeRoot ins {
+    color: var(--GW-COLOR-SUCCESS); }
+  .themeRoot p {
+    margin-top: 0;
+    margin-bottom: var(--GW-LAYOUT-6); }
+  .themeRoot small {
+    font-size: var(--GW-FONT-SIZE-SUBTEXT); }
+  .themeRoot dl {
+    margin-bottom: 1.5rem; }
+  .themeRoot dt {
+    font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD); }
+  .themeRoot dd {
+    margin-left: 0;
+    margin-bottom: 1.5rem; }
+  .themeRoot ol,
+  .themeRoot ul {
+    line-height: var(--GW-LINE-HEIGHT-BODY);
+    margin-top: 0;
+    margin-bottom: 1.5rem; }
+    .themeRoot ol ol,
+    .themeRoot ol ul,
+    .themeRoot ul ol,
+    .themeRoot ul ul {
+      margin-bottom: 0; }
+  .themeRoot ::placeholder {
+    color: var(--GW-FIELD-COMPONENT-PLACEHOLDER-COLOR); }
+  .themeRoot ::selection {
+    background-color: var(--GW-SELECTOR-SELECTED-BACKGROUND-COLOR);
+    color: var(--GW-SELECTOR-SELECTED-COLOR);
+    text-shadow: none !important; }
+
+/*# sourceMappingURL=common-styles.css.map */

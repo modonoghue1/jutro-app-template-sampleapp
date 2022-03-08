@@ -1,0 +1,45 @@
+.appFloorPlan {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: 'header header header' 'subheader subheader subheader' 'nav content side' 'footer footer footer';
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
+  grid-gap: 0;
+  overflow: hidden; }
+  .appFloorPlan.scrollContent {
+    height: 100vh; }
+    .appFloorPlan.scrollContent .main {
+      overflow-y: auto; }
+
+.header {
+  grid-area: header;
+  color: var(--GW-HEADER-COLOR); }
+
+.subHeader {
+  grid-area: subheader;
+  z-index: var(--GW-Z-INDEX-2); }
+
+.leftSide {
+  grid-area: nav;
+  background-color: var(--GW-BACKGROUND-COLOR);
+  z-index: var(--GW-Z-INDEX-1); }
+
+.main {
+  grid-area: content;
+  padding: var(--GW-LAYOUT-6) var(--GW-LAYOUT-6); }
+  .main:focus {
+    outline: none; }
+
+.rightSide {
+  grid-area: side;
+  background-color: var(--GW-BACKGROUND-COLOR);
+  display: grid;
+  grid-gap: var(--GW-SPACING-4);
+  justify-items: end;
+  z-index: var(--GW-Z-INDEX-1); }
+
+.footer {
+  grid-area: footer;
+  background-color: var(--GW-FOOTER-BACKGROUND-COLOR); }
+
+/*# sourceMappingURL=AppFloorPlan.module.css.map */

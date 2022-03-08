@@ -1,0 +1,1 @@
+export default{create:config=>event=>Object.keys(event).reduce(((result,key)=>null!=config&&config.allowedProperties&&-1!==config.allowedProperties.indexOf(key)?(result[key]=event[key],result):(result[key]=config.obfuscationString,result)),{})};

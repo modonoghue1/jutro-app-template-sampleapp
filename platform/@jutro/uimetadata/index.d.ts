@@ -1,0 +1,14 @@
+export { isSupportedHTMLElement } from "./common/checkSupportedHTMLElements";
+export { isSupportedHTMLContainer } from "./common/checkSupportedHTMLContainers";
+export { default as SchemaValidator } from "./common/json-schema/SchemaValidator";
+export { default as metadataSchema } from "./common/json-schema/metadata.schema.json";
+export { default as basicMetadataSchema } from "./common/json-schema/basic.metadata.schema.json";
+export { default as htmlSchema } from "./common/html-schema/html.schema.json";
+export { default as htmlTypeahead } from "./common/html-schema/html.typeahead.json";
+export { iterateMetadata } from "./iterate/iterateMetadataHelper";
+export * from "./common/definitions";
+export * from "./common/guards";
+export { resolveContentReference, extendMetadata } from "./transform/helpers";
+export { refTypeMap, REF_PROPERTY, REF_PROPERTY_SHORTCUT } from "./common/refs";
+export { metadataTypes, getComponentMetadataType } from "./common/types";
+export { _ITEM_ID_, _ITEM_DATA_, _ITEM_VALUE_, _ITEM_INDEX_, _ITEM_PATH_, _ITEM_CHILDREN_, VARIABLE_FORMAT_REGEX } from "./common/templates";

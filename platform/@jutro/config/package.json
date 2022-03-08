@@ -1,0 +1,55 @@
+{
+  "_from": "@jutro/config@6.5.0",
+  "_id": "@jutro/config@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-PnrDD/lxfyPobH2uGkQb9T2K7e0=",
+  "_location": "/@jutro/config",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/config@6.5.0",
+    "name": "@jutro/config",
+    "escapedName": "@jutro%2fconfig",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/auth",
+    "/@jutro/components",
+    "/@jutro/events",
+    "/@jutro/lab-preview-micro-app",
+    "/@jutro/locale",
+    "/@jutro/logger",
+    "/@jutro/overrides",
+    "/@jutro/transport"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/config/-/@jutro/config-6.5.0.tgz",
+  "_shasum": "3e7ac30ff9717f23e86c7dae1a441bf53d8aeded",
+  "_spec": "@jutro/config@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "lodash": "4.17.21",
+    "mustache": "2.3.2"
+  },
+  "deprecated": false,
+  "description": "Provides environment configuration reader for Jutro",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/config",
+  "peerDependencies": {
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

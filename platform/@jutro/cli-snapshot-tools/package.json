@@ -1,0 +1,58 @@
+{
+  "_from": "@jutro/cli-snapshot-tools@6.5.0",
+  "_id": "@jutro/cli-snapshot-tools@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-3CGmeJXYV7fhhFnDxSmi6ej8T1Q=",
+  "_location": "/@jutro/cli-snapshot-tools",
+  "_phantomChildren": {
+    "rimraf": "3.0.2",
+    "yallist": "4.0.0"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/cli-snapshot-tools@6.5.0",
+    "name": "@jutro/cli-snapshot-tools",
+    "escapedName": "@jutro%2fcli-snapshot-tools",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/cli",
+    "/@jutro/cli-snapshots"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/cli-snapshot-tools/-/@jutro/cli-snapshot-tools-6.5.0.tgz",
+  "_shasum": "dc21a67895d857b7e18459c3c529a2e9e8fc4f54",
+  "_spec": "@jutro/cli-snapshot-tools@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "fs-extra": "9.1.0",
+    "jscodeshift": "0.11.0",
+    "json5": "2.2.0",
+    "lodash": "4.17.21",
+    "semver": "7.3.5",
+    "tmp": "0.2.1",
+    "to-ast": "1.0.0"
+  },
+  "deprecated": false,
+  "description": "Provides tools used by feature and version migration snapshots",
+  "devDependencies": {
+    "@babel/register": "^7.12.10"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/cli-snapshot-tools",
+  "peerDependencies": {
+    "react": "17.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "version": "6.5.0"
+}

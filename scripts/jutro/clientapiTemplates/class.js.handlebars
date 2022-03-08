@@ -1,0 +1,241 @@
+import { warning } from '@jutro/logger';
+import { camelCase } from 'lodash';
+
+function buildSearchString(params, append) {
+  if (!params) {
+    return '';
+  }
+
+  const fakeUrl = new URL('http://www.gw.com');
+  Object.keys(params).forEach(key => {
+    const param = params[key];
+    if (Array.isArray(param)) {
+      param.forEach(arrayValue => fakeUrl.searchParams.append(key, arrayValue));
+    } else {
+      fakeUrl.searchParams.append(key, param)
+    }
+  });
+  return (append) ? `&${fakeUrl.search.substr(1)}` : fakeUrl.search;
+}
+
+export const waitForClaims = async (request, shouldExit, data, retries = 4) => {
+    try {
+        const claims = await request();
+        if (retries > 0 && !shouldExit(claims)) {
+            waitForClaims(request, shouldExit, data, --retries);
+        } else {
+            return data
+        }
+    } catch (err) {
+        warning(err)
+        return data
+    }
+};
+
+const actionMap = {{actionMap}};
+
+function lookupAction(href, method) {
+  return actionMap?.[href]?.[method];
+}
+
+function makeGenericHref(href) {
+  const [ one, two ] = href?.substr(1)?.split('/') ?? [];
+  const baseLength = one?.length + two?.length + 2;
+  const base = href?.substr(baseLength);
+  const parts = base?.split('/');
+  const newParts = parts.map(part => {
+    if (part.includes(':')) {
+      return '*'
+    }
+    return part;
+  });
+  if (newParts.length) {
+    return newParts.join('/');
+  }
+  return href;
+}
+
+function unwrap(item, included) {
+  const { attributes, checksum, related, links } = item;
+
+  // look for links to update the allowed 'actions' for this item
+  let actions;
+  if (links) {
+    actions = Object.keys(links).reduce((list, link) => {
+      const test = links[link];
+      const genericHref = makeGenericHref(test.href);
+      if (link === 'self') {
+        test.methods.forEach(method => {
+          if (method === 'get') {
+            return;
+          }
+
+          list.push(lookupAction(genericHref, method) || method);
+        });
+      } else {
+        test.methods.forEach(method => {
+          if (method === 'get') {
+            return;
+          }
+
+          list.push(lookupAction(genericHref, method) || camelCase(`create ${link}`));
+        });
+      }
+      return list;
+    }, []);
+  }
+
+  const unwrappedItem = { ...attributes, _checksum: checksum, _actions: actions };
+
+  if (related && included) {
+    const relatedKeys = Object.keys(related);
+    relatedKeys.forEach(relatedKey => {
+      const relatedItem = related[relatedKey];
+      const { id: relatedId, type: relatedType } = relatedItem.data[0];
+      const unwrappedReference = included[relatedType].find(test2 => test2.id === relatedId)
+      if (unwrappedReference) {
+        unwrappedItem[relatedKey] = { ...unwrappedItem[relatedKey], _ref: unwrappedReference };
+      }
+    });
+  }
+  return unwrappedItem;
+}
+
+export default class {{name}} {
+    constructor(restService, baseUrl) {
+        this.restService = restService;
+        this.baseUrl = baseUrl;
+        this.commonUrl = baseUrl.replace('claim', 'common');
+        this.compositeUrl = baseUrl.replace('claim', 'composite');
+    }
+    {{methods}}
+
+    /**
+     * composite API
+     * @param {Object} payLoad The composite PayLoad for new FNOL
+     * @returns {Object} Results of FNOL submission
+     *
+     * @example
+     * "POST /composite"
+     */
+    compositeAPI(payLoad) {
+        const url = `${this.compositeUrl}/composite`;
+        return this.restService
+            .post(url, payLoad)
+            .then(result => result?.responses[0].body.data.attributes);
+    }
+
+    formatApiError(ex) {
+        const userMessage = ex?.userMessage || ex?.message;
+        const developerMessage = ex?.developerMessage;
+        const detailMessages = ex?.details
+            ?.map(part => part.message)
+            .join('\n');
+        const messages = [userMessage, developerMessage, detailMessages].filter(
+            a => a
+        );
+        return messages.join('\n');
+    }
+}
+
+{{!-- example handlebars --}}
+{{!-- {
+    "id": "{{id}}",
+    "name": "{{name}}",
+    "auto": true,
+    "contexts": [
+      {{#if inputContext}}
+        "{{inputContext}}"
+      {{/if}}
+    ],
+    "responses": [
+      {
+        "resetContexts": false,
+        "action": "",
+        "affectedContexts": [
+          {{#if outputContext}}
+          {
+            "name": "{{outputContext}}",
+            "lifespan": 1
+          }
+          {{/if}}
+        ],
+        "parameters": [
+          {{#each fields}}
+          {
+            "id": "{{this.id}}",
+            "name": "{{this.name}}",
+            "required": {{this.required}},
+            "dataType": "{{this.dataType}}",
+            "value": "{{this.value}}",
+            "defaultValue": "",
+            "isList": false,
+            "prompts": [],
+            "promptMessages": [],
+            "noMatchPromptMessages": [],
+            "noInputPromptMessages": [],
+            "outputDialogContexts": []
+          }{{#unless @last}},{{/unless}}
+          {{/each}}
+        ],
+        "messages": [
+          {{#if choices}}
+          {
+            "type": "4",
+            "title": "",
+            "payload": {
+              "richContent": [
+                [
+                  {
+                    "text": [
+                      "{{{questionLabel}}}"
+                    ],
+                    "type": "description"
+                  }
+                ],
+                [
+                  {
+                    "options": [
+                      {{#each choices}}
+                      {
+                        "text": "{{this}}",
+                        "image": {},
+                        "link": ""
+                      }{{#unless @last}},{{/unless}}
+                      {{/each}}
+                    ],
+                    "type": "chips"
+                  }
+                ]
+              ]
+            },
+            "textToSpeech": "",
+            "lang": "en",
+            "condition": ""
+          }
+          {{else}}
+          {
+            "type": "0",
+            "title": "",
+            "textToSpeech": "",
+            "lang": "en",
+            "speech": [
+              "{{{questionLabel}}}"
+            ],
+            "condition": ""
+          }
+          {{/if}}
+        ],
+        "speech": []
+      }
+    ],
+    "priority": 500000,
+    "webhookUsed": false,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": {{fallbackIntent}},
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": [],
+    "endInteraction": {{endInteraction}}
+  } --}}

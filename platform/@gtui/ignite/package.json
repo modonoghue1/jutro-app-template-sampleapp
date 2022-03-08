@@ -1,0 +1,51 @@
+{
+  "_from": "@gtui/ignite@2021.9.0",
+  "_id": "@gtui/ignite@2021.9.0",
+  "_inBundle": false,
+  "_integrity": "sha1-udaZeEiVW00ZrHxOdhxZuDxesB4=",
+  "_location": "/@gtui/ignite",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@gtui/ignite@2021.9.0",
+    "name": "@gtui/ignite",
+    "escapedName": "@gtui%2fignite",
+    "scope": "@gtui",
+    "rawSpec": "2021.9.0",
+    "saveSpec": null,
+    "fetchSpec": "2021.9.0"
+  },
+  "_requiredBy": [
+    "/@gtui/gt-ui-framework"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@gtui/ignite/-/@gtui/ignite-2021.9.0.tgz",
+  "_shasum": "b9d6997848955b4d19ac7c4e761c59b83c5eb01e",
+  "_spec": "@gtui/ignite@2021.9.0",
+    "author": "",
+  "bin": {
+    "ignite": "jdeploy-bundle/jdeploy.js"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "shelljs": "0.8.4"
+  },
+  "deprecated": false,
+  "description": "Ignite version 2021.9.0",
+  "files": [
+    "jdeploy-bundle",
+    "index.js"
+  ],
+  "jdeploy": {
+    "jar": "ignite-2021.9.0.jar"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "@gtui/ignite",
+  "preferGlobal": true,
+  "repository": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2021.9.0"
+}

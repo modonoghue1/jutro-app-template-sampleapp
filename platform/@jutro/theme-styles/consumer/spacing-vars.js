@@ -1,0 +1,1 @@
+export const consumerSpacing={"--GW-SPACING-1":"0.25rem","--GW-SPACING-2":"0.5rem","--GW-SPACING-3":"0.75rem","--GW-SPACING-4":"1rem","--GW-SPACING-5":"1.25rem","--GW-SPACING-6":"1.5rem","--GW-SPACING-8":"2rem","--GW-SPACING-10":"2.5rem"};

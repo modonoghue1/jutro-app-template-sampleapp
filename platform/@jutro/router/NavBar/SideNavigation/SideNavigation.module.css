@@ -1,0 +1,255 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.navBarItem {
+  position: relative;
+  padding: 0 0.5rem;
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+  .navBarItem:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .navBarItem:hover .titleWrapper, .navBarItem:focus .titleWrapper, .navBarItem:active .titleWrapper {
+    text-decoration: none; }
+  .navBarItem .titleWrapper {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none; }
+    .navBarItem .titleWrapper .title {
+      text-align: left;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+
+.topNavBarItem {
+  height: 2.25rem;
+  color: var(--GW-TOP-NAV-ITEM-COLOR);
+  background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR); }
+  .topNavBarItem:hover {
+    background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR-HOVER); }
+  .topNavBarItem:active {
+    background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR-ACTIVE);
+    color: var(--GW-TOP-NAV-ITEM-COLOR-ACTIVE); }
+  .topNavBarItem.activeTopNavBarItem {
+    background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR-ACTIVE);
+    color: var(--GW-TOP-NAV-ITEM-COLOR-ACTIVE); }
+
+.leftNavBarItem {
+  color: var(--GW-SIDE-NAV-ITEM-COLOR);
+  background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR);
+  justify-content: space-between;
+  height: 2.5rem;
+  width: 100%;
+  padding: var(--GW-SIDE-NAV-ITEM-PADDING); }
+  .leftNavBarItem:hover {
+    background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR-HOVER);
+    color: var(--GW-SIDE-NAV-ITEM-COLOR-HOVER); }
+  .leftNavBarItem[disabled], .leftNavBarItem:global(.disabled) {
+    background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR);
+    border-color: transparent;
+    box-shadow: none;
+    opacity: var(--GW-OPACITY-DISABLED);
+    font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+    cursor: not-allowed; }
+    .leftNavBarItem[disabled]:active:focus:hover, .leftNavBarItem:global(.disabled):active:focus:hover {
+      background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR);
+      font-weight: var(--GW-FONT-WEIGHT-REGULAR); }
+  .leftNavBarItem .titleContentWrapper {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .leftNavBarItem .titleContentWrapper:not(:first-child) {
+      padding-left: var(--GW-SIDE-NAV-ITEM-LABEL-PADDING-LEFT); }
+  .leftNavBarItem .navBarItemChevron {
+    font-size: var(--GW-ICON-FONT-SIZE-2);
+    line-height: var(--GW-ICON-LINE-HEIGHT); }
+  .leftNavBarItem.activeLeftNavBarItem {
+    color: var(--GW-SIDE-NAV-ITEM-COLOR-ACTIVE);
+    background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR-ACTIVE);
+    position: relative; }
+    .leftNavBarItem.activeLeftNavBarItem::after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 0.25rem;
+      height: 100%;
+      background-color: var(--GW-SIDE-NAV-BORDER-COLOR-SELECTED);
+      left: 0;
+      top: 0; }
+
+i.navBarItemChevron {
+  padding-left: 0.125rem;
+  font-size: var(--GW-ICON-FONT-SIZE-2);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+
+svg.navBarItemChevron {
+  margin-left: 0.125rem;
+  font-size: var(--GW-ICON-FONT-SIZE-2);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+
+.navBarItemIcon {
+  width: var(--GW-SIDE-NAV-ITEM-ICON-SIZE);
+  min-width: var(--GW-SIDE-NAV-ITEM-ICON-SIZE);
+  font-size: var(--GW-SIDE-NAV-ITEM-ICON-SIZE);
+  text-align: center; }
+
+.navBarDropdown {
+  align-self: stretch;
+  height: 100%; }
+
+.sideNavigation {
+  position: relative;
+  height: 100%;
+  transition: width var(--GW-ANIMATION-DURATION); }
+  .sideNavigation .collapseInnerWrapper {
+    box-shadow: var(--GW-SHADOW-SIDE); }
+  .sideNavigation .content {
+    width: var(--GW-SIDE-NAV-WIDTH);
+    height: 100%;
+    display: flex;
+    background-color: var(--GW-SIDE-NAV-CONTENT-BACKGROUND-COLOR); }
+  .sideNavigation .accordionCollapse {
+    background-color: var(--GW-SIDE-NAV-ACCORDION-BACKGROUND-COLOR); }
+  .sideNavigation .layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: var(--GW-LAYOUT-6); }
+  .sideNavigation .navigationContent {
+    transition: width var(--GW-ANIMATION-DURATION);
+    flex-wrap: wrap;
+    flex: 1;
+    padding: var(--GW-LAYOUT-8) 0 var(--GW-LAYOUT-8);
+    overflow-x: hidden;
+    overflow-y: auto; }
+  .sideNavigation .footer {
+    display: flex;
+    justify-content: flex-start;
+    border-top: 1px solid var(--GW-SIDE-NAV-BORDER-COLOR);
+    padding: var(--GW-LAYOUT-2); }
+  .sideNavigation .chevronIcon {
+    font-size: var(--GW-SIDE-NAV-CHEVRON-SIZE);
+    color: var(--GW-SIDE-NAV-CHEVRON-COLOR);
+    pointer-events: all; }
+  .sideNavigation .badgeWrapper {
+    margin-left: auto; }
+  .sideNavigation .notificationWrapper {
+    padding-left: 0.75rem; }
+  .sideNavigation .badgeDot {
+    position: absolute;
+    display: none;
+    height: var(--GW-SIDE-NAV-DOT-SIZE);
+    width: var(--GW-SIDE-NAV-DOT-SIZE);
+    border: 1px solid var(--GW-SIDE-NAV-DOT-BORDER-COLOR);
+    border-radius: 50%;
+    background-color: var(--GW-SIDE-NAV-DOT-BACKGROUND-COLOR);
+    right: 0.75rem;
+    top: 0.5rem; }
+
+.collapsed .navigationContent {
+  width: 100%;
+  overflow: hidden; }
+  .collapsed .navigationContent .navBarLink .chevron,
+  .collapsed .navigationContent .navBarLink [class$='title'] {
+    display: none; }
+  .collapsed .navigationContent .navBarLink .notificationWrapper {
+    margin: var(--GW-SIDE-NAV-ITEM-BADGE-MARGIN-COLLAPSED);
+    transform: scale(0.8);
+    padding-left: 0;
+    position: absolute;
+    left: 1.3rem; }
+  .collapsed .navigationContent .navBarLink .notifications {
+    max-width: 1.5rem; }
+  .collapsed .navigationContent .accordionCollapse {
+    display: none; }
+
+.sideNavAccordion .cardHeading:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+
+.sideNavAccordion .cardTitle {
+  height: auto;
+  border: none;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0; }
+
+.sideNavAccordion .cardBody {
+  margin: 0;
+  background-color: transparent; }
+
+.sideNavAccordion .openedAccordion {
+  transform: rotate(180deg); }
+
+.sideNavAccordion .chevron {
+  font-size: var(--GW-SIDE-NAV-CHEVRON-SIZE);
+  height: var(--GW-SIDE-NAV-CHEVRON-SIZE);
+  transition: var(--GW-ANIMATION-DURATION);
+  margin-left: 0.75rem; }
+
+.sideNavAccordion .rightAlignChevron {
+  margin-left: auto; }
+
+.sideNavAccordion .subItem {
+  color: var(--GW-SIDE-NAV-COLOR);
+  padding: var(--GW-SIDE-NAV-SUB-ITEM-PADDING); }
+  .sideNavAccordion .subItem .notifications {
+    font-size: var(--GW-FONT-SIZE-SUBTEXT);
+    line-height: var(--GW-LINE-HEIGHT-SUBTEXT);
+    height: auto;
+    background: none;
+    color: var(--GW-SIDE-NAV-COLOR);
+    font-weight: var(--GW-FONT-WEIGHT-REGULAR); }
+  .sideNavAccordion .subItem:not(:global(.isActiveSideNavItem)):hover {
+    color: var(--GW-SIDE-NAV-COLOR-HOVER);
+    background-color: var(--GW-SIDE-NAV-SUB-ITEM-BACKGROUND-COLOR-HOVER); }
+  .sideNavAccordion .subItem:not(:global(.isActiveSideNavItem)):hover .notifications {
+    color: var(--GW-SIDE-NAV-COLOR); }
+  .sideNavAccordion .subItem:global(.active) {
+    background-color: var(--GW-SIDE-NAV-SUB-ITEM-BACKGROUND-COLOR-HOVER);
+    box-shadow: none; }
+
+.sideNavAccordion .expandedAccordion .chevron {
+  color: var(--GW-SIDE-NAV-CHEVRON-COLOR-ACTIVE); }
+
+.activeAccordion {
+  color: var(--GW-SIDE-NAV-ITEM-COLOR-ACTIVE);
+  background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR-ACTIVE);
+  position: relative; }
+  .activeAccordion::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 0.25rem;
+    height: 100%;
+    background-color: var(--GW-SIDE-NAV-BORDER-COLOR-SELECTED);
+    left: 0;
+    top: 0; }
+
+.chevronWrapper {
+  width: var(--GW-SIDE-NAV-CHEVRON-WRAPPER-WIDTH);
+  height: var(--GW-SIDE-NAV-CHEVRON-WRAPPER-HEIGHT); }
+  .chevronWrapper:hover {
+    background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR-HOVER); }
+  .chevronWrapper .chevronIcon {
+    font-size: var(--GW-SIDE-NAV-CHEVRON-SIZE); }
+  .chevronWrapper:hover .chevronIcon {
+    color: var(--GW-SIDE-NAV-CHEVRON-COLOR); }
+
+/*# sourceMappingURL=SideNavigation.module.css.map */

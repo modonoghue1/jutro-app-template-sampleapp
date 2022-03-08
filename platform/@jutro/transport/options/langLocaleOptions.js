@@ -1,0 +1,1 @@
+export function langLocaleOptions(language,locale){return{headers:{"gw-language":language,"gw-locale":locale}}}

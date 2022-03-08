@@ -1,0 +1,1 @@
+import PropTypes from"prop-types";import{intlMessageShape}from"./intlMessageShape";export const avatarPropTypes={username:PropTypes.string,title:intlMessageShape,subtitle:intlMessageShape,imageSource:PropTypes.string};export const avatarShape=PropTypes.shape(avatarPropTypes);

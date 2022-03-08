@@ -1,0 +1,179 @@
+{
+    // ======================================================================
+    // Wizard definition
+    // ======================================================================
+    "jutro": "6.0.0",
+    "fnol.wizard": {
+        // implicit properties
+        // "path": "/claim/fnol", // assume set in routes.js for now and connected to <FNOLWizard>
+        // "route": "/claim/fnol", // assume set in routes.js for now and connected to <FNOLWizard>
+        // "component": "FNOLWizard",  // assume set in routes.js for now and connected to <FNOLWizard>
+        "id": "fnol.wizard",
+        "type": "wizard",
+        // wizard properties
+        "title": "FNOL Wizard",
+        // wizard flow properties
+        "flow": {
+            // start
+            "start": "claim.info",
+            // from-step: to-step
+            "claim.info": "claim.location",
+            "claim.location": "claim.vehicle",
+            // from-step: to-step rules
+            "claim.vehicle": [
+                {
+                    "rule": "flow.anyVehicleDamaged:eq:true",
+                    "step": "claim.vehicle.damaged"
+                },
+                {
+                    "rule": "flow.anyoneInjured:eq:true",
+                    "step": "claim.loss.injury"
+                },
+                {
+                    "rule": "flow.anythingDamaged:eq:true",
+                    "step": "claim.loss.property"
+                },
+                {
+                    // default
+                    "step": "claim.confirmation"
+                }
+            ],
+            "claim.vehicle.damaged": [
+                {
+                    "rule": "flow.anyoneInjured:eq:true",
+                    "step": "claim.loss.injury"
+                },
+                {
+                    "rule": "flow.anythingDamaged:eq:true",
+                    "step": "claim.loss.property"
+                },
+                {
+                    "step": "claim.confirmation"
+                }
+            ],
+            "claim.loss.injury": [
+                {
+                    "rule": "flow.anythingDamaged:eq:true",
+                    "step": "claim.loss.property"
+                },
+                {
+                    // default
+                    "step": "claim.confirmation"
+                }
+            ],
+            "claim.loss.property": "claim.confirmation",
+            "claim.confirmation": "claim.submission",
+            "knockout": "claim.knockout",
+            "end": "claim.submission"
+        },
+        "wizardProps": {
+            "title": "Another FNOL title",
+            "renderProgressBar": false,
+            "cancelPath": "/dashboard", // use null or " to hide cancel button
+            "finishPath": "/dashboard" // use null or " to hide finish button
+        }
+    },
+    // ======================================================================
+    // Step definition
+    // ======================================================================
+    "claim.info": {
+        "id": "claim.info",
+        "type": "wizardpage",
+        "route": "context",
+        "title": "Claim Info",
+        "component": "ClaimInfo",
+        "componentProps": {
+            "path": "lossType"
+        }
+    },
+    "claim.location": {
+        "id": "claim.location",
+        "type": "wizardpage",
+        "route": "location",
+        "title": "Claim Location",
+        "component": "ClaimLocation",
+        "componentProps": {
+            "path": "lossLocation"
+        }
+    },
+    "claim.vehicle": {
+        "id": "claim.vehicle",
+        "type": "wizardpage",
+        "route": "vehicle",
+        "title": "Claim Vehicle",
+        "component": "ClaimVehicle"
+    },
+    "claim.vehicle.damaged": {
+        "id": "claim.vehicle.damaged",
+        "type": "wizardpage",
+        "route": "vehicle.damaged",
+        "title": "Claim Vehicle Damaged",
+        "component": "VehicleLoss"
+    },
+    "claim.loss.injury": {
+        "id": "claim.loss.injury",
+        "type": "wizardpage",
+        "route": "loss.injury",
+        "title": "Claim Loss:Injury",
+        "component": "LossInjury",
+        "contentLayout": {
+            "component": "Grid"
+        }
+    },
+    "claim.loss.property": {
+        "id": "claim.loss.property",
+        "type": "wizardpage",
+        "route": "loss.property",
+        "title": "Claim Loss:Property",
+        "component": "ClaimProperty",
+        "contentLayout": {
+            "component": "Grid"
+        }
+    },
+    "claim.knockout": {
+        "id": "claim.knockout",
+        "type": "wizardpage",
+        "route": "knockout",
+        "title": "Claim Knockout",
+        "component": "FNOLWizardPage",
+        "contentLayout": {
+            "component": "Grid"
+        },
+        "content": [
+            {
+                "id": "knockoutTitle",
+                "type": "element",
+                "component": "h4",
+                "content": "Knockout Title"
+            }
+        ],
+        "wizardPageProps": {
+            "buttonProps": {
+                "next": {
+                    "children": "Done"
+                }
+            }
+        }
+    },
+    "claim.confirmation": {
+        "id": "claim.confirmation",
+        "type": "wizardpage",
+        "route": "confirmation",
+        "title": "Claim Confirmation",
+        "component": "ClaimConfirmation"
+    },
+    "claim.submission": {
+        "id": "claim.submission",
+        "type": "wizardpage",
+        "route": "confirm",
+        "title": "Claim Submission",
+        "component": "ClaimSubmission",
+        "wizardPageProps": {
+            "buttonProps": {
+                "finish": {
+                    "children": "Done"
+                }
+            }
+        }
+    }
+}

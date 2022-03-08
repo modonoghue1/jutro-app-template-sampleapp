@@ -1,0 +1,53 @@
+{
+  "jutro": "5.3",
+  "claim.property.view": {
+    "id": "claimProperty",
+    "type": "page",
+    "contentLayout": {
+      "component": "Grid",
+      "componentProps": {
+        "hgap": "large",
+        "vgap": "large"
+      }
+    },
+    "content": [
+      {
+        "id": "propertyComplexity",
+        "type": "field",
+        "component": "DropdownSelect",
+        "componentProps": {
+          "label": "Property complexity",
+          "path": "segment",
+          "availableValues": [ {
+            "code": "prop_high",
+            "description": "Property - high complexity",
+            "name": "Property - high complexity",
+            "sortOrder": 12
+          },
+            {
+              "code": "prop_low",
+              "description": "Property - low complexity",
+              "name": "Property - low complexity",
+              "sortOrder": 13
+            },
+            {
+              "code": "prop_mid",
+              "description": "Property - mid complexity",
+              "name": "Property - mid complexity",
+              "sortOrder": 14
+            }
+          ]
+        }
+      },
+      {
+        "id": "lossPropertyDetails",
+        "type": "field",
+        "component": "TextArea",
+        "componentProps": {
+          "label": "Provide more details",
+          "path": "lossPropertyDetails",
+        }
+      }
+    ]
+  }
+}

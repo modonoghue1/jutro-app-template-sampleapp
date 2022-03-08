@@ -1,0 +1,16 @@
+ul.navigationContent {
+  outline: none;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%; }
+
+.topNavigationItem {
+  height: 100%; }
+
+.contextSwitcherContainer {
+  display: flex;
+  justify-content: center; }
+
+/*# sourceMappingURL=NavigationContent.module.css.map */

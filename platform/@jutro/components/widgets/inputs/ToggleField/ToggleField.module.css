@@ -1,0 +1,62 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.toggle .toggleButton {
+  height: var(--GW-FIELD-COMPONENT-HEIGHT);
+  color: var(--GW-TOGGLE-FIELD-COLOR);
+  width: auto;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  flex: 1 0 0;
+  transition: all var(--GW-ANIMATION-DURATION);
+  background: var(--GW-FIELD-COMPONENT-BACKGROUND-COLOR);
+  white-space: nowrap;
+  border: 1px solid var(--GW-BORDER-COLOR); }
+  .toggle .toggleButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+    color: var(--GW-SELECTOR-COLOR-FOCUS);
+    background-image: none; }
+  .toggle .toggleButton.left:focus, .toggle .toggleButton.middle:focus, .toggle .toggleButton.right:focus {
+    z-index: 10;
+    border: 1px solid var(--GW-FIELD-COMPONENT-BORDER-COLOR-FOCUS); }
+  .toggle .toggleButton.left, .toggle .toggleButton.left:focus {
+    border-radius: var(--GW-BORDER-RADIUS) 0 0 var(--GW-BORDER-RADIUS); }
+  .toggle .toggleButton.middle, .toggle .toggleButton.middle:focus {
+    border-radius: 0; }
+  .toggle .toggleButton.right, .toggle .toggleButton.right:focus {
+    border-radius: 0 var(--GW-BORDER-RADIUS) var(--GW-BORDER-RADIUS) 0; }
+  .toggle .toggleButton:hover {
+    box-shadow: var(--GW-SHADOW-2);
+    background: var(--GW-SELECTOR-BACKGROUND-COLOR-HOVER); }
+    .toggle .toggleButton:hover:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .toggle .toggleButton:active, .toggle .toggleButton:active:focus {
+    box-shadow: var(--GW-SHADOW-2);
+    background: var(--GW-SELECTOR-BACKGROUND-COLOR-ACTIVE); }
+  .toggle .toggleButton.active, .toggle .toggleButton.active:focus {
+    color: var(--GW-SELECTOR-SELECTED-COLOR);
+    background: var(--GW-SELECTOR-SELECTED-BACKGROUND-COLOR);
+    font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD); }
+  .toggle .toggleButton.active.activeKeypress, .toggle .toggleButton.active:active {
+    border-color: var(--GW-FIELD-COMPONENT-BACKGROUND-COLOR); }
+  .toggle .toggleButton[disabled], .toggle .toggleButton:global(.disabled) {
+    opacity: var(--GW-OPACITY-DISABLED);
+    box-shadow: 0 0 0 1px var(--GW-BORDER-COLOR);
+    color: var(--GW-TOGGLE-FIELD-COLOR);
+    background: var(--GW-FIELD-COMPONENT-BACKGROUND-COLOR);
+    cursor: not-allowed; }
+    .toggle .toggleButton[disabled].active, .toggle .toggleButton:global(.disabled).active {
+      color: var(--GW-SELECTOR-SELECTED-COLOR);
+      background: var(--GW-SELECTOR-SELECTED-BACKGROUND-COLOR); }
+
+.toggle .toggleButton + .toggleButton {
+  border-left-style: none; }
+
+.content {
+  width: 100%;
+  display: inline-flex; }
+
+/*# sourceMappingURL=ToggleField.module.css.map */

@@ -1,0 +1,78 @@
+{
+  "$schema": "../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json",
+  "jutro": "5.2.0-next.0",
+  "settings-page": {
+    "id": "settings-page-id",
+    "type": "page",
+    "contentLayout": {
+      "component": "Flex",
+      "componentProps": {
+        "direction": "column",
+        "className": "settings"
+      }
+    },
+    "content": [
+      {
+        "id": "settings-page-title",
+        "type": "element",
+        "component": "h3",
+        "content": {
+          "id": "jutro.app.settings.pageTitle",
+          "defaultMessage": "Settings"
+        }
+      },
+      {
+        "id": "globalization-settings-card",
+        "type": "element",
+        "component": "GlobalizationSettingsCard",
+        "componentProps": {
+          "id": "globalizationSettingsCard",
+          "title": {
+            "id": "jutro.app.settings.localeAndLanguageTitle",
+            "defaultMessage": "Region and Language"
+          }
+        }
+      },
+      {
+        "id": "theme-settings-card",
+        "type": "element",
+        "component": "ThemeSettingsCard",
+        "componentProps": {
+          "id": "themeSettingsCard",
+          "title": {
+            "id": "jutro.app.settings.themeTitle",
+            "defaultMessage": "Theme"
+          },
+          "label": {
+            "id": "jutro.app.settings.currentTheme",
+            "defaultMessage": "Current theme"
+          }
+        }
+      },
+      {
+        "id": "navigation-placement-settings-card",
+        "type": "element",
+        "component": "NavigationPlacementSettingsCard",
+        "componentProps": {
+          "id": "navigationPlacementSettingsCard",
+          "title": {
+            "id": "jutro.app.settings.navigationPlacementTitle",
+            "defaultMessage": "Navigation"
+          }
+        }
+      },
+      {
+        "id": "about-settings-card",
+        "type": "element",
+        "component": "AboutSettingsCard",
+        "componentProps": {
+          "id": "aboutSettingsCard",
+          "title": {
+            "id": "jutro.app.settings.aboutTitle",
+            "defaultMessage": "About"
+          }
+        }
+      }
+    ]
+  }
+}

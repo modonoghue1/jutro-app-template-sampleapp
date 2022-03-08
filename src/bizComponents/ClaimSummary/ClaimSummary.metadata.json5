@@ -1,0 +1,14 @@
+// UI metadata file loaded and used in ClaimSummary
+{
+  // ======================================================================
+  // UI metadata for the "ClaimSummary" component
+  // ======================================================================
+  "jutro": "6.0.0",
+  "jutro-app.claimsummary.agent": {
+    "id": "claimsummary",
+    "type": "page",
+    "content": [
+    ]
+  },
+  "$schema": "../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json"
+}

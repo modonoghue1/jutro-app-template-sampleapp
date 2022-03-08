@@ -1,0 +1,12 @@
+---
+to: "<%= `${path}/${name}/uiMetadataMigration/migration.js` %>"
+---
+import { createFieldFilter } from '@jutro/cli-snapshot-tools';
+import { migrationAction } from './actions';
+
+export default [
+    {
+        filter: createFieldFilter,
+        actions: [migrationAction()],
+    },
+];

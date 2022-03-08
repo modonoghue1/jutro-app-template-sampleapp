@@ -1,0 +1,1 @@
+export function formatTemplatedString(string,variableName,value){return string&&"string"==typeof string?string.startsWith("{")&&string.endsWith("}")&&string.substr(1,string.length-2)===variableName?value:string.replace(new RegExp(`{${variableName}}`,"g"),value):value}

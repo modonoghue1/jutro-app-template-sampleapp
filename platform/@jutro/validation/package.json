@@ -1,0 +1,56 @@
+{
+  "_from": "@jutro/validation@6.5.0",
+  "_id": "@jutro/validation@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-+SeKvJDVW/H+7is4RXWIO1AvWX8=",
+  "_location": "/@jutro/validation",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/validation@6.5.0",
+    "name": "@jutro/validation",
+    "escapedName": "@jutro%2fvalidation",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/validation/-/@jutro/validation-6.5.0.tgz",
+  "_shasum": "f9278abc90d55bf1feee2b384575883b502f597f",
+  "_spec": "@jutro/validation@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/locale": "6.5.0",
+    "@jutro/platform": "6.5.0",
+    "@jutro/prop-types": "6.5.0",
+    "lodash": "4.17.21",
+    "prop-types": "15.7.2"
+  },
+  "deprecated": false,
+  "description": "Provides validation functionality for forms",
+  "devDependencies": {
+    "@jutro/test": "6.5.0",
+    "@jutro/uiconfig": "6.5.0",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^13.0.10"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/validation",
+  "peerDependencies": {
+    "core-js": "3.10.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "version": "6.5.0"
+}

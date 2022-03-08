@@ -1,0 +1,13 @@
+.newClaimContainer {
+  margin-top: var(--GW-LAYOUT-5);
+}
+
+:global(#claimListDatatable) {
+  :global(.jut__ActionColumn__actionItem) {
+    opacity: 1;
+
+    &:disabled {
+      opacity: var(--GW-OPACITY-DISABLED);
+    }
+  }
+}

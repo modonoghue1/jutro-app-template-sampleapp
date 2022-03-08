@@ -1,0 +1,85 @@
+[
+  {
+    // "attributes": {
+      "assignedGroup": {
+        "displayName": "Auto1 - TeamA",
+        "id": "demo_sample:31"
+      },
+      "assignedUser": {
+        "displayName": "Andy Applegate",
+        "id": "demo_sample:1",
+        "type": "User",
+        "uri": "/admin/v1/users/demo_sample:1"
+      },
+      "assignmentStatus": {
+        "code": "assigned",
+        "name": "Assigned"
+      },
+      "claimNumber": "failed to fetch",
+      "faultRating": {
+        "code": "thirdparty",
+        "name": "Other party at fault"
+      },
+      "flagged": {
+        "code": "neverflagged",
+        "name": "Never flagged"
+      },
+      "id": "failed to fetch",
+      "incidentOnly": false,
+      "insured": {
+        "displayName": "failed to fetch",
+        "id": "cc:102",
+        "uri": "/claim/v1/claims/cc:34/contacts/cc:102"
+      },
+      "jurisdiction": {
+        "code": "CA",
+        "name": "California"
+      },
+      "lobCode": {
+        "code": "PersonalAutoLine",
+        "name": "Personal Auto Line"
+      },
+      "lossCause": {
+        "code": "vehcollision",
+        "name": "Collision with motor vehicle"
+      },
+      "lossDate": "2020-08-27T00:00:00.000Z",
+      "lossType": {
+        "code": "AUTO",
+        "name": "Auto"
+      },
+      "mainContact": {
+        "displayName": "failed to fetch",
+        "id": "cc:102",
+        "uri": "/claim/v1/claims/cc:34/contacts/cc:102"
+      },
+      "policyNumber": "failed to fetch",
+      "reportedByType": {
+        "code": "other",
+        "name": "Other"
+      },
+      "reportedDate": "2021-01-23T00:00:00.000Z",
+      "reporter": {
+        "displayName": "failed to fetch",
+        "id": "cc:102",
+        "uri": "/claim/v1/claims/cc:34/contacts/cc:102"
+      },
+      "segment": {
+        "code": "auto_mid",
+        "name": "Auto - mid complexity"
+      },
+      "state": {
+        "code": "open",
+        "name": "Open"
+      },
+      "strategy": {
+        "code": "auto_normal",
+        "name": "Auto - Investigate"
+      },
+      "validationLevel": {
+        "code": "payment",
+        "name": "Ability to pay"
+      }
+    }
+  // }
+]

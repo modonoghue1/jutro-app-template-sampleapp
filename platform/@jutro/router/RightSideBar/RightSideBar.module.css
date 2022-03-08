@@ -1,0 +1,27 @@
+.rightSideBar {
+  background-color: var(--GW-RIGHT-SIDEBAR-SIDE-BACKGROUND-COLOR); }
+
+.bar {
+  background-color: var(--GW-RIGHT-SIDEBAR-BAR-BACKGROUND-COLOR);
+  box-shadow: var(--GW-SHADOW-SIDE);
+  z-index: 0; }
+
+.icons {
+  flex: 1; }
+
+.footer {
+  text-align: center;
+  padding: var(--GW-SPACING-3);
+  border-top: var(--GW-BORDER-COLOR) 1px solid; }
+
+.hiddenSide {
+  display: none; }
+
+.contentWrapper {
+  width: var(--GW-RIGHT-SIDEBAR-SIDE-WIDTH);
+  background-color: var(--GW-RIGHT-SIDEBAR-SIDE-BACKGROUND-COLOR); }
+
+.collapseOuterContentWrapper {
+  box-shadow: var(--GW-SHADOW-SIDE); }
+
+/*# sourceMappingURL=RightSideBar.module.css.map */

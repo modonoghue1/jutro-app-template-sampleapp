@@ -1,0 +1,36 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.columnEntry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--GW-COLUMN-ENTRY-WIDTH);
+  height: var(--GW-COLUMN-ENTRY-HEIGHT);
+  background-color: var(--GW-COLUMN-ENTRY-BACKGROUND-COLOR);
+  border: 1px solid transparent;
+  border-radius: var(--GW-BORDER-RADIUS);
+  padding: 0 var(--GW-SPACING-4);
+  margin: var(--GW-SPACING-1);
+  transition: background-color var(--GW-ANIMATION-DURATION); }
+  .columnEntry:hover {
+    background-color: var(--GW-COLUMN-ENTRY-BACKGROUND-COLOR-HOVER); }
+
+.columnEntryCheckbox {
+  align-items: center; }
+
+.columnEntryLabel {
+  cursor: pointer;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  /* stylelint-disable-line property-no-unknown */
+  display: -webkit-box;
+  display: box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+/*# sourceMappingURL=ColumnEntry.module.css.map */

@@ -1,0 +1,72 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.fieldComponent {
+  color: var(--GW-FIELD-COMPONENT-COLOR); }
+
+.controlReadOnly {
+  color: var(--GW-FIELD-COMPONENT-COLOR);
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  font-size: var(--GW-FONT-SIZE-INPUT);
+  line-height: var(--GW-LINE-HEIGHT-INPUT); }
+
+.controlReadOnlySecondary {
+  height: var(--GW-FIELD-COMPONENT-HEIGHT);
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  margin-left: var(--GW-SPACING-2);
+  font-size: var(--GW-FONT-SIZE-INPUT);
+  line-height: var(--GW-LINE-HEIGHT-INPUT); }
+
+.controls {
+  width: 100%;
+  flex: 2 2 0;
+  overflow-wrap: break-word; }
+
+.relative {
+  position: relative; }
+
+@media (min-width: 769px) {
+  .reversed > :first-child {
+    flex: 1; }
+  .reversed > :last-child {
+    flex: 1; } }
+
+@media (min-width: 769px) {
+  .fullWidthSimple > :first-child,
+  .fullWidth > :first-child {
+    flex: 1; }
+  .fullWidthSimple > :last-child,
+  .fullWidth > :last-child {
+    flex: 1; } }
+
+.contentContainer {
+  position: relative; }
+
+.validationIcon {
+  color: var(--GW-FIELD-COMPONENT-VALIDATION-ICON-COLOR); }
+
+.invalidStateIcon {
+  color: var(--GW-COLOR-ERROR); }
+
+.validStateIcon {
+  color: var(--GW-COLOR-SUCCESS); }
+
+.hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.left {
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  position: relative; }
+  .left .controlReadOnly {
+    overflow: auto; }
+
+/*# sourceMappingURL=FieldComponent.module.css.map */

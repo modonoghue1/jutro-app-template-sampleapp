@@ -1,0 +1,29 @@
+.pageWrapper {
+  width: 100%;
+  padding-bottom: var(--GW-SPACING-8);
+}
+
+.main {
+  padding: 0 var(--GW-SPACING-8);
+
+  & > div {
+    margin-top: var(--GW-SPACING-10);
+
+    &:first-child {
+      margin-top: -115px;
+    }
+  }
+}
+
+.header {
+  background: var(--APP-PRIMARY-COLOR);
+  height: var(--APP-HEADER-HEIGHT);
+  box-sizing: border-box;
+  padding-top: calc(var(--GW-SPACING-6) * 4);
+  padding-left: var(--GW-SPACING-8);
+  padding-right: var(--GW-SPACING-8);
+
+  h1 {
+    color: var(--GW-TEXT-COLOR-3);
+  }
+}

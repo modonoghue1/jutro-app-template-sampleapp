@@ -1,0 +1,147 @@
+@import '~@jutro/theme/assets/sass/helpers';
+
+.sideColumn {
+  width: var(--APP-SIDE-BAR-COLLAPSED-WIDTH);
+  padding: 0;
+  position: relative;
+  z-index: var(--GW-Z-INDEX-3);
+  background-color: var(--APP-TERTIARY-COLOR);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.74);
+  transition: width var(--GW-ANIMATION-DURATION);
+
+  @include gw-breakpoint-up(phone) {
+    width: var(--APP-SIDE-BAR-COLLAPSED-WIDTH);
+  }
+
+  @include gw-breakpoint-down(phone) {
+    width: 0;
+    position: fixed;
+    height: 100%;
+  }
+}
+
+.expandedSideColumn {
+  width: var(--APP-SIDE-BAR-EXPANDED-WIDTH);
+  padding: calc(2 * var(--GW-LAYOUT-10)) var(--GW-LAYOUT-5)
+    calc(2 * var(--GW-LAYOUT-10)) var(--GW-LAYOUT-6);
+
+  @include gw-breakpoint-down(phone) {
+    position: fixed;
+  }
+}
+
+.expanderButton {
+  width: var(--APP-SIDE-BAR-EXPANDER-SIZE);
+  height: var(--APP-SIDE-BAR-EXPANDER-SIZE);
+  padding: 0;
+  position: absolute;
+  top: calc(var(--APP-HEADER-HEIGHT) - 0.5 * var(--APP-SIDE-BAR-EXPANDER-SIZE));
+  right: calc(-0.5 * var(--APP-SIDE-BAR-EXPANDER-SIZE));
+  z-index: var(--GW-Z-INDEX-1);
+  background-color: var(--APP-SIDE-BAR-EXPANDER-BACKGROUND-COLOR);
+  color: var(--APP-TERTIARY-COLOR);
+  border-radius: 50%;
+  border: 0.8px solid var(--APP-SIDE-BAR-EXPANDER-BORDER-COLOR); // in design: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--GW-SHADOW-2);
+
+  @include gw-breakpoint-down(phone) {
+    top: 30px; // todo
+    left: var(--GW-SPACING-2);
+  }
+}
+
+.expanderIcon {
+  font-size: var(--APP-SIDE-BAR-EXPANDER-FONT-SIZE);
+
+  &:global(.jut__Chevron__open) {
+    transform: rotate(180deg);
+  }
+}
+
+.sideBlock {
+  margin: var(--GW-SPACING-4) 0;
+  color: var(--GW-TEXT-COLOR-3);
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    line-height: var(--GW-LAYOUT-10);
+
+    .buttonLink {
+      padding-left: var(--GW-SPACING-10);
+      border-left: 4px solid transparent;
+      border-radius: 0;
+
+      &:hover,
+      &:active {
+        background: rgba(22, 255, 255, 0.1);
+        border-left-color: var(--APP-SECONDARY-COLOR);
+      }
+    }
+  }
+}
+
+.sideBlockTitle {
+  @include typography-h4;
+
+  font-weight: var(--GW-FONT-WEIGHT-BOLD);
+  text-transform: uppercase;
+  padding: var(--GW-SPACING-4) 0;
+}
+
+.avatar {
+  color: var(--GW-TEXT-COLOR-3);
+
+  & > span {
+    margin-left: var(--GW-SPACING-4);
+  }
+}
+
+.accordionCardHeader {
+  padding-left: 0;
+
+  span {
+    vertical-align: text-top;
+    margin-left: var(--GW-SPACING-2);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.accordionCardBody {
+  margin: 0 calc(-1 * var(--GW-LAYOUT-5)) 0 calc(-1 * var(--GW-LAYOUT-6));
+}
+
+.sideLink {
+  color: var(--GW-TEXT-COLOR-3);
+}
+
+.button,
+.buttonLink {
+  --GW-BUTTON-OUTLINED-COLOR: var(--GW-TEXT-COLOR-3);
+  --GW-BUTTON-OUTLINED-BACKGROUND-COLOR: var(--APP-TERTIARY-COLOR);
+  --GW-BUTTON-OUTLINED-BORDER-COLOR: var(--GW-TEXT-COLOR-3);
+}
+
+.buttonLink {
+  --GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR-HOVER: 'transparent';
+  --GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR-ACTIVE: 'transparent';
+
+  color: var(--GW-TEXT-COLOR-3);
+  background: transparent;
+  justify-content: left;
+  padding-left: 0;
+  border: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:visited,
+  &:active {
+    opacity: 0.8;
+  }
+}

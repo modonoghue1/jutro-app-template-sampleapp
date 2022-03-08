@@ -1,0 +1,12 @@
+.globalizationChooser {
+  height: var(--GW-GLOBALIZATION-CHOOSER-HEIGHT);
+  width: auto;
+  min-width: var(--GW-GLOBALIZATION-CHOOSER-MIN-WIDTH);
+  padding: var(--GW-SPACING-2) var(--GW-SPACING-3);
+  display: inline-block;
+  border: 1px solid var(--GW-BORDER-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  background-color: var(--GW-GLOBALIZATION-CHOOSER-BACKGROUND-COLOR);
+  color: var(--GW-GLOBALIZATION-CHOOSER-COLOR); }
+
+/*# sourceMappingURL=GlobalizationChooser.module.css.map */

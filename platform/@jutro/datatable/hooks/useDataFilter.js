@@ -1,0 +1,1 @@
+import{useMemo}from"react";import{dataFilter}from"../filters/dataFilter";export const useDataFilter=(data,filters,options)=>useMemo((()=>[dataFilter(data,filters,options),Date.now()]),[data,filters,options]);

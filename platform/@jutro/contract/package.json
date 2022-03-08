@@ -1,0 +1,51 @@
+{
+  "_from": "@jutro/contract@6.5.0",
+  "_id": "@jutro/contract@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-HLElDHaqstpwRPqqgD/d3d8Veuk=",
+  "_location": "/@jutro/contract",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/contract@6.5.0",
+    "name": "@jutro/contract",
+    "escapedName": "@jutro%2fcontract",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/locale",
+    "/@jutro/platform",
+    "/@jutro/services"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/contract/-/@jutro/contract-6.5.0.tgz",
+  "_shasum": "1cb1250c76aab2da7044faaa803fdddddf157ae9",
+  "_spec": "@jutro/contract@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/logger": "6.5.0",
+    "js-sha256": "0.9.0",
+    "lodash": "4.17.21"
+  },
+  "deprecated": false,
+  "description": "Provides an API for using contracts (interfaces)",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/contract",
+  "peerDependencies": {
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

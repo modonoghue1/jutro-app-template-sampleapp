@@ -1,0 +1,1 @@
+import PropTypes from"prop-types";import{ComponentPropTypes}from"@jutro/prop-types";export const sliderValuePropType=ComponentPropTypes.all(ComponentPropTypes.enabledOn(PropTypes.number,"range",!1),ComponentPropTypes.enabledOn(ComponentPropTypes.all(PropTypes.arrayOf(PropTypes.number.isRequired),ComponentPropTypes.withLength(2)),"range",!0));

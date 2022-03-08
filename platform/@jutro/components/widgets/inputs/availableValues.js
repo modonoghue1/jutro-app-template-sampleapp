@@ -1,0 +1,1 @@
+export const getOptionCode=option=>{var _option$code;return null!==(_option$code=null==option?void 0:option.code)&&void 0!==_option$code?_option$code:option.id};export const getOptionName=option=>{var _option$name;return null!==(_option$name=null==option?void 0:option.name)&&void 0!==_option$name?_option$name:option.displayName};

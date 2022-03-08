@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({userAvatar:{id:"jutro-components.widgets.Avatar.useravatar",defaultMessage:"User avatar"}});

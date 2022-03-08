@@ -1,0 +1,9 @@
+.thumbnailWrapper figure {
+  margin: 0;
+  display: block; }
+
+.thumbnailWrapper .thumbnail {
+  height: calc(var(--GW-FONT-SIZE-BODY) * var(--GW-LINE-HEIGHT-BODY));
+  width: auto; }
+
+/*# sourceMappingURL=ThumbnailColumn.module.css.map */

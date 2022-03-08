@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({title:{id:"jutro-components.widgets.PopoverContainer.title",defaultMessage:"Popover Container"}});

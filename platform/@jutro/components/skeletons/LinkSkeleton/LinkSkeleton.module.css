@@ -1,0 +1,13 @@
+.icon {
+  background-color: var(--GW-TEXT-COLOR-2);
+  height: var(--GW-SIDE-NAV-ITEM-ICON-SIZE); }
+
+.text {
+  background-color: #d1d9e2;
+  height: var(--GW-FONT-SIZE-BODY); }
+
+.notification {
+  background-color: var(--GW-TEXT-COLOR-2);
+  height: var(--GW-FONT-SIZE-BODY); }
+
+/*# sourceMappingURL=LinkSkeleton.module.css.map */

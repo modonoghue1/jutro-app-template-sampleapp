@@ -1,0 +1,1 @@
+import{createContext,useContext}from"react";import noop from"lodash/noop";import styles from"./DataTable.module.css";export const TableContext=createContext({styles:styles,columns:{configurable:!0,config:[],setConfig:noop}});export const useTableContext=()=>useContext(TableContext);

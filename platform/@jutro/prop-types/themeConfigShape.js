@@ -1,0 +1,1 @@
+import PropTypes from"prop-types";export const themeConfigPropTypes={name:PropTypes.string.isRequired,prefix:PropTypes.string,rootStyle:PropTypes.objectOf(PropTypes.string.isRequired),dropTarget:PropTypes.string};export const themeConfigShape=PropTypes.shape(themeConfigPropTypes);

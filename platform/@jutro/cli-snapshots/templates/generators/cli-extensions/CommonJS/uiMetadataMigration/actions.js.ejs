@@ -1,0 +1,12 @@
+---
+to: "<%= `${path}/${name}/uiMetadataMigration/actions.js` %>"
+---
+const actionTypes = {
+    migrationAction: '[ Extension ]: PERFORMING_MIGRATION_ACTION',
+};
+
+const migrationAction = () => ({
+    type: actionTypes.migrationAction,
+});
+
+module.exports = { actionTypes, migrationAction };

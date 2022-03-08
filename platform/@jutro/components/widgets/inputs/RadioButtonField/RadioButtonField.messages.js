@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({yes:{id:"jutro-components.widgets.inputs.RadioButtonField.Yes",defaultMessage:"Yes"},no:{id:"jutro-components.widgets.inputs.RadioButtonField.No",defaultMessage:"No"}});

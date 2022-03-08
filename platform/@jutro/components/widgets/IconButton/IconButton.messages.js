@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({iconButtonText:{id:"jutro-components.widgets.IconButton.button",defaultMessage:"Button"}});

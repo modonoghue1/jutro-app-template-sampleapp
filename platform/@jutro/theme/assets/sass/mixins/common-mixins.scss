@@ -1,0 +1,84 @@
+@mixin lineClamp($numberOfLines) {
+  /*! autoprefixer: off */
+  // https://github.com/postcss/autoprefixer/issues/776#issuecomment-297734206
+  // https://github.com/postcss/autoprefixer/issues/776#issuecomment-391893496
+  -webkit-box-orient: vertical;
+
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/box-orient
+  box-orient: vertical; /* stylelint-disable-line property-no-unknown */
+  display: -webkit-box;
+  display: box;
+  overflow: hidden;
+  -webkit-line-clamp: $numberOfLines;
+  line-clamp: $numberOfLines;
+}
+
+// Apply consistent focused state to an element
+@mixin focus-selector($color: var(--GW-FOCUS-COLOR-LIGHT), $inset: false) {
+  &:focus {
+    @include focus-shadow-style($color, $inset);
+    @content;
+  }
+}
+
+// Apply shadow to an element
+@mixin focus-shadow-style($color: var(--GW-FOCUS-COLOR-LIGHT), $inset: false) {
+  $boxShadow: 0 0 0 2px $color;
+
+  outline: none;
+  @if $inset {
+    box-shadow: inset $boxShadow;
+  } @else {
+    box-shadow: $boxShadow;
+  }
+}
+
+// Reset the focused state
+@mixin focus-style-none() {
+  outline: none;
+  box-shadow: none;
+}
+
+// Hide scrollbar
+@mixin hide-scrollbar() {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content/
+@mixin screen-reader-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused
+//
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+@mixin screen-reader-only-focusable {
+  &:active,
+  &:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+
+@mixin has-mouse {
+  @media (pointer: fine) {
+    @content;
+  }
+}

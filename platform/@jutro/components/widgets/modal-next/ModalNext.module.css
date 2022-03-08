@@ -1,0 +1,43 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.modal {
+  background: var(--GW-MODAL-BACKGROUND-COLOR);
+  border: 1px solid transparent;
+  border-radius: var(--GW-BORDER-RADIUS);
+  box-shadow: var(--GW-SHADOW-2);
+  outline: none;
+  position: absolute;
+  min-width: 25vw;
+  min-height: 0;
+  max-width: 95vw;
+  max-height: 95vh; }
+  @media (max-width: 1024px) {
+    .modal {
+      min-width: 35vw; } }
+  @media (max-width: 768px) {
+    .modal {
+      min-width: 55vw; } }
+  @media (max-width: 580px) {
+    .modal {
+      min-width: 85vw; } }
+
+.modalLayout {
+  max-height: inherit; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--GW-MODAL-OVERLAY-BACKGROUND-COLOR);
+  z-index: var(--GW-Z-INDEX-4);
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding: var(--GW-LAYOUT-6) var(--GW-LAYOUT-6); }
+
+/*# sourceMappingURL=ModalNext.module.css.map */

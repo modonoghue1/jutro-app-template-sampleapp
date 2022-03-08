@@ -1,0 +1,193 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.applicationHeader {
+  background-color: var(--GW-HEADER-BACKGROUND-COLOR);
+  border: none;
+  height: var(--GW-HEADER-HEIGHT);
+  position: relative;
+  box-shadow: none; }
+
+.subApplicationHeader {
+  align-items: center;
+  display: flex;
+  height: var(--GW-SUBHEADER-HEIGHT);
+  padding: 0 var(--GW-LAYOUT-6);
+  background: var(--GW-TOP-NAV-BACKGROUND-COLOR);
+  box-shadow: var(--GW-SHADOW-2);
+  position: relative;
+  z-index: var(--GW-Z-INDEX-1); }
+  .subApplicationHeader :global(.opened) .navigationDropDown.navItem {
+    background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR-ACTIVE); }
+    .subApplicationHeader :global(.opened) .navigationDropDown.navItem::after {
+      height: var(--GW-TOP-NAV-ITEM-UNDERLINE-WIDTH);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      background-color: var(--GW-TOP-NAV-ITEM-FOCUS-OUTLINE-COLOR); }
+
+.hiddenOverflow {
+  overflow: hidden; }
+
+.headerActions {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: var(--GW-SPACING-6);
+  z-index: var(--GW-Z-INDEX-1); }
+  @media (min-width: 1025px) {
+    .headerActions {
+      flex: 0 0 auto; } }
+
+.logoWrapper {
+  display: flex;
+  flex: 1 0 0;
+  min-width: 0; }
+  .logoWrapper img {
+    object-fit: contain; }
+  @media (min-width: 1025px) {
+    .logoWrapper {
+      padding-right: var(--GW-SPACING-6); } }
+  @media (max-width: 1024px) {
+    .logoWrapper {
+      justify-content: center; } }
+
+@media (min-width: 1025px) {
+  .logoWrapperHasSearch {
+    flex: 0 0 calc(50% - var(--GW-HEADER-SEARCH-MAX-WIDTH) / 2); } }
+
+.applicationLogoTitleLink {
+  padding: 0.25rem;
+  height: var(--GW-HEADER-LOGO-SIZE);
+  min-width: 0;
+  outline: none;
+  text-decoration: none;
+  z-index: var(--GW-Z-INDEX-1);
+  border-radius: var(--GW-BORDER-RADIUS);
+  border: 1px solid transparent; }
+  .applicationLogoTitleLink:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-DARK);
+    border-color: var(--GW-HEADER-BUTTON-FOCUS-BORDER-COLOR); }
+  .applicationLogoTitleLink:hover {
+    background-color: var(--GW-BUTTON-INVERSE-BACKGROUND-COLOR-HOVER); }
+  .applicationLogoTitleLink:active {
+    background-color: var(--GW-BUTTON-INVERSE-BACKGROUND-COLOR-ACTIVE); }
+  .applicationLogoTitleLink .applicationLogo {
+    min-height: initial;
+    height: 100%; }
+
+.moreButtonDropdown {
+  height: 100%; }
+
+.moreMenuItem {
+  display: flex !important; }
+
+.navItem {
+  height: 100%;
+  color: var(--GW-TOP-NAV-ITEM-COLOR);
+  padding: 0 var(--GW-SPACING-4); }
+  .navItem:hover {
+    background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR-HOVER); }
+  .navItem:hover::after, .navItem:focus::after {
+    height: var(--GW-TOP-NAV-ITEM-UNDERLINE-WIDTH);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background-color: var(--GW-TOP-NAV-ITEM-FOCUS-OUTLINE-COLOR); }
+
+.activeNavItem {
+  height: 100%;
+  background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR-ACTIVE);
+  color: var(--GW-TOP-NAV-ITEM-COLOR-ACTIVE); }
+  .activeNavItem::after {
+    height: var(--GW-TOP-NAV-ITEM-UNDERLINE-WIDTH);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background-color: var(--GW-TOP-NAV-ITEM-FOCUS-OUTLINE-COLOR); }
+  .activeNavItem:hover {
+    background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR-HOVER); }
+
+.headerActionButton {
+  --GW-BURGER-MENU-BUTTON-SIZE: var(--GW-HEADER-BUTTON-HEIGHT);
+  padding: 0;
+  width: var(--GW-HEADER-BUTTON-HEIGHT);
+  height: var(--GW-HEADER-BUTTON-HEIGHT);
+  outline: none; }
+  .headerActionButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-DARK);
+    border: 1px solid var(--GW-HEADER-BUTTON-FOCUS-BORDER-COLOR);
+    background-color: transparent; }
+
+:global(.withLightFocusOnApplicationHeader) {
+  font-size: calc(var(--GW-HEADER-AVATAR-SIZE) / 1.75);
+  position: relative; }
+  :global(.withLightFocusOnApplicationHeader):global(.dropdownMenuAvatarTrigger) {
+    min-width: var(--GW-HEADER-AVATAR-SIZE);
+    width: var(--GW-HEADER-AVATAR-SIZE);
+    height: var(--GW-HEADER-AVATAR-SIZE); }
+  :global(.withLightFocusOnApplicationHeader):focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-DARK); }
+    :global(.withLightFocusOnApplicationHeader):focus::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 1px solid var(--GW-HEADER-AVATAR-BORDER-COLOR-FOCUS);
+      border-radius: 50%; }
+
+.burgerMenuSidebarStyledContent {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem; }
+
+.burgerMenuAvatar {
+  padding-top: var(--GW-SPACING-3);
+  padding-bottom: var(--GW-SPACING-3); }
+
+.burgerMenuWrapper {
+  flex: 0 0 auto; }
+  @media (max-width: 1024px) {
+    .burgerMenuWrapper {
+      padding-right: var(--GW-SPACING-6); } }
+
+.burgerMenuLink {
+  padding: 0.5rem 1.5rem; }
+
+.contextSwitcher {
+  margin-right: var(--GW-LAYOUT-6); }
+
+.navigationBar {
+  width: 100%; }
+
+.helpIcon {
+  color: transparent; }
+  .helpIcon, .helpIcon:hover, .helpIcon:active {
+    text-decoration: none; }
+  .helpIcon:focus {
+    outline: none; }
+
+.centerWrapper {
+  display: flex;
+  flex: 0 1 var(--GW-HEADER-SEARCH-MAX-WIDTH);
+  justify-content: center;
+  min-width: var(--GW-HEADER-SEARCH-MAX-WIDTH);
+  margin-right: auto; }
+
+.logoTitleText {
+  color: var(--GW-TEXT-COLOR-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/*# sourceMappingURL=ApplicationHeader.module.css.map */

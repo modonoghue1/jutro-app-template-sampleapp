@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({incompleteInput:{id:"jutro-components.widgets.inputs.incomplete",defaultMessage:"Incomplete input"}});

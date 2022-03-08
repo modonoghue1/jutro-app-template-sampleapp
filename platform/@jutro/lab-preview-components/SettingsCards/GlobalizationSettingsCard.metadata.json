@@ -1,0 +1,27 @@
+{
+  "$schema": "../../../../packages/jutro-uimetadata/src/common/json-schema/metadata.schema.json",
+  "GCSettingCard": {
+    "id": "globalization-settings-card-id",
+    "type": "page",
+    "contentLayout": {
+      "component": "div"
+    },
+    "content": [
+      {
+        "type": "element",
+        "component": "GlobalizationChooser",
+        "id": "MetadataGlobalizationChooser",
+        "componentProps": {
+          "skipPropagation": true,
+          "onLanguageValueChange": "onLanguageValueChange",
+          "onLocaleValueChange": "onLocaleValueChange",
+          "containerStyle": "inlineWithIndent",
+          "languageValue": "en",
+          "localeValue": "en-US",
+          "availableLocaleValues": ["en-US", "fr-FR", "fr-CA", "EN", "PL"],
+          "availableLanguageValues": ["en", "fr-FR", "de-DE"]
+        }
+      }
+    ]
+  }
+}

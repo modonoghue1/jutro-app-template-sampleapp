@@ -1,0 +1,39 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.tooltip :global {
+  position: relative;
+  color: var(--GW-TOOLTIP-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  background-color: var(--GW-TOOLTIP-BACKGROUND-COLOR);
+  will-change: transform;
+  text-align: left;
+  box-shadow: var(--GW-SHADOW-2);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+  .tooltip :global a {
+    color: var(--GW-TOOLTIP-LINK-COLOR);
+    text-decoration: none; }
+    .tooltip :global a:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .tooltip :global a:hover {
+    color: var(--GW-TOOLTIP-LINK-COLOR-HOVER);
+    text-decoration: underline; }
+  .tooltip :global a:active {
+    color: var(--GW-TOOLTIP-LINK-COLOR-ACTIVE);
+    text-decoration: none; }
+
+.tooltip[data-placement^='top'] :global .tippy-arrow::before {
+  border-top-color: var(--GW-TOOLTIP-BACKGROUND-COLOR); }
+
+.tooltip[data-placement^='bottom'] :global .tippy-arrow::before {
+  border-bottom-color: var(--GW-TOOLTIP-BACKGROUND-COLOR); }
+
+.tooltip[data-placement^='left'] :global .tippy-arrow::before {
+  border-left-color: var(--GW-TOOLTIP-BACKGROUND-COLOR); }
+
+.tooltip[data-placement^='right'] :global .tippy-arrow::before {
+  border-right-color: var(--GW-TOOLTIP-BACKGROUND-COLOR); }
+
+/*# sourceMappingURL=Tooltip.module.css.map */

@@ -1,0 +1,37 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.header {
+  padding: 0;
+  z-index: var(--GW-Z-INDEX-4);
+  box-shadow: var(--GW-SHADOW-1);
+  background-color: var(--GW-CONSUMER-HEADER-BACKGROUND-COLOR);
+  border-bottom: 4px solid var(--GW-CONSUMER-HEADER-BORDER-BOTTOM-COLOR);
+  height: var(--GW-HEADER-HEIGHT); }
+  @media (max-width: 580px) {
+    .header {
+      height: var(--GW-CONSUMER-HEADER-PHONE-HEIGHT); } }
+
+.headerContent {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+.positionSticky {
+  position: sticky;
+  top: 0;
+  left: auto;
+  right: 0; }
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 var(--GW-LAYOUT-4); }
+  .headerContainer.fluid {
+    margin: 0; }
+  @media (min-width: 769px) {
+    .headerContainer {
+      margin-left: var(--GW-LAYOUT-6);
+      margin-right: var(--GW-LAYOUT-6); } }
+
+/*# sourceMappingURL=Header.module.css.map */

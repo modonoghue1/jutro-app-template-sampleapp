@@ -1,0 +1,34 @@
+.loader,
+.loaderOnly {
+  position: relative;
+  display: inline-block; }
+
+.loader::after,
+.loaderOnly::after {
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+
+.underLoader {
+  opacity: 0;
+  height: 0;
+  margin: 0; }
+
+.ellipsis {
+  animation: blink 1.4s infinite; }
+
+.ellipsisSecondDot {
+  animation-delay: 0.2s; }
+
+.ellipsisThirdDot {
+  animation-delay: 0.4s; }
+
+@keyframes blink {
+  0% {
+    opacity: 0.2; }
+  20% {
+    opacity: 1; }
+  100% {
+    opacity: 0.2; } }
+
+/*# sourceMappingURL=AsyncAction.module.css.map */

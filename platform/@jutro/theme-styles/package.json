@@ -1,0 +1,47 @@
+{
+  "_from": "@jutro/theme-styles@6.5.0",
+  "_id": "@jutro/theme-styles@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-WotfsrrrZb8jxRPRpDPlIANOEKs=",
+  "_location": "/@jutro/theme-styles",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/theme-styles@6.5.0",
+    "name": "@jutro/theme-styles",
+    "escapedName": "@jutro%2ftheme-styles",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/lab-preview-components",
+    "/@jutro/lab-preview-storybook-preset",
+    "/@jutro/theme"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/theme-styles/-/@jutro/theme-styles-6.5.0.tgz",
+  "_shasum": "5a8b5fb2baeb65bf23c513d1a433e520034e10ab",
+  "_spec": "@jutro/theme-styles@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Provides basic themes styling definitions for Jutro",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/theme-styles",
+  "peerDependencies": {
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

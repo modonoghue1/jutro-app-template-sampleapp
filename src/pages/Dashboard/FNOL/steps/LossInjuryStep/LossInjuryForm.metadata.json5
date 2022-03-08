@@ -1,0 +1,1406 @@
+{
+    "jutro": "6.0.0",
+    "fnol.injuredForm": {
+        "id": "fnol.injuredForm",
+        "type": "page",
+        "contentLayout": {
+            "component": "Grid"
+        },
+        "content": [
+          {
+            "id": "primaryDetailsInjuredForm",
+            "type": "element",
+            "component": "flex",
+            "componentProps": {
+              "direction": "column",
+            },
+            "content": [
+              {
+                "id": "firstName",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                  "label": "First Name",
+                  "path": "firstName",
+                  "required": true
+                }
+              },
+              {
+                "id": "lastName",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                  "label": "Last Name",
+                  "path": "lastName",
+                  "required": true,
+                }
+              },
+              {
+                "id": "role",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                  "label": "Role",
+                  "path": "role",
+                  "required": true
+                }
+              },
+            ]
+          },
+          {
+            "id": "detailedBodyPartHeading",
+            "type": "element",
+            "component": "h5",
+            "content": "Body Part Details"
+          },
+          {
+            "id": "ambulanceUsed",
+            "type": "field",
+            "component": "Checkbox",
+            "componentProps": {
+              "label": "Is ambulance used?",
+              "path": "ambulanceUsed",
+              "showInlineLabel": true,
+              "defaultValue": false,
+            }
+          },
+          {
+            "id": "detailedBodyPart",
+            "type": "field",
+            "component": "DropdownSelect",
+            "componentProps": {
+              "label": "Body part code",
+              "path": "bodyParts.detailedBodyPart.code",
+              "availableValues": [ {
+                "code": "10",
+                "description": "Multiple head injuries - Any combination of head injuries",
+                "name": "Multiple head injuries",
+                "sortOrder": 0
+              },
+                {
+                  "code": "11",
+                  "description": "Skull",
+                  "name": "Skull",
+                  "sortOrder": 1
+                },
+                {
+                  "code": "12",
+                  "description": "Brain",
+                  "name": "Brain",
+                  "sortOrder": 2
+                },
+                {
+                  "code": "13",
+                  "description": "Ear(s) - includes: hearing, inside eardrum",
+                  "name": "Ear(s)",
+                  "sortOrder": 3
+                },
+                {
+                  "code": "14",
+                  "description": "Eye(s) - includes: optic nerves, vision, eye lids",
+                  "name": "Eye(s)",
+                  "sortOrder": 4
+                },
+                {
+                  "code": "15",
+                  "description": "Nose - includes: nasal passage, sinus, sense of smell",
+                  "name": "Nose",
+                  "sortOrder": 5
+                },
+                {
+                  "code": "16",
+                  "description": "Teeth",
+                  "name": "Teeth",
+                  "sortOrder": 6
+                },
+                {
+                  "code": "17",
+                  "description": "Mouth - includes: lips, tongue, throat, taste",
+                  "name": "Mouth",
+                  "sortOrder": 7
+                },
+                {
+                  "code": "18",
+                  "description": "Soft tissue (head)",
+                  "name": "Soft tissue (head)",
+                  "sortOrder": 8
+                },
+                {
+                  "code": "19",
+                  "description": "Facial bones - includes: jaw",
+                  "name": "Facial bones",
+                  "sortOrder": 9
+                },
+                {
+                  "code": "20",
+                  "description": "Multiple neck injuries - any combination of neck injuries",
+                  "name": "Multiple neck injuries",
+                  "sortOrder": 10
+                },
+                {
+                  "code": "21",
+                  "description": "Vertebrae - includes: spinal column bone, cervical segment",
+                  "name": "Vertebrae",
+                  "sortOrder": 11
+                },
+                {
+                  "code": "22",
+                  "description": "Disc (neck) - includes: spinal column cartilage, cervical segment",
+                  "name": "Disc (neck)",
+                  "sortOrder": 12
+                },
+                {
+                  "code": "23",
+                  "description": "Spinal cord (neck) - includes: nerve tissue, cervical segment",
+                  "name": "Spinal cord (neck)",
+                  "sortOrder": 13
+                },
+                {
+                  "code": "24",
+                  "description": "Larynx - includes: cartilage, vocal cords",
+                  "name": "Larynx",
+                  "sortOrder": 14
+                },
+                {
+                  "code": "25",
+                  "description": "Soft tissue (neck) - Other than larynx or trachea",
+                  "name": "Soft tissue (neck)",
+                  "sortOrder": 15
+                },
+                {
+                  "code": "26",
+                  "description": "Trachea",
+                  "name": "Trachea",
+                  "sortOrder": 16
+                },
+                {
+                  "code": "30",
+                  "description": "Multiple upper extremities - any combination of arm and hand injuries",
+                  "name": "Multiple upper extremities",
+                  "sortOrder": 17
+                },
+                {
+                  "code": "31",
+                  "description": "Upper arm - humerus and corresponding muscles, excluding clavicle and scapula",
+                  "name": "Upper arm",
+                  "sortOrder": 18
+                },
+                {
+                  "code": "32",
+                  "description": "Elbow - radial head",
+                  "name": "Elbow",
+                  "sortOrder": 19
+                },
+                {
+                  "code": "33",
+                  "description": "Lower arm - forearm: radius, ulna, and corresponding muscle",
+                  "name": "Lower arm",
+                  "sortOrder": 20
+                },
+                {
+                  "code": "34",
+                  "description": "Wrist - carpals and corresponding muscles",
+                  "name": "Wrist",
+                  "sortOrder": 21
+                },
+                {
+                  "code": "35",
+                  "description": "Hand - metacarpals and corresponding muscles, excluding wrists and fingers",
+                  "name": "Hand",
+                  "sortOrder": 22
+                },
+                {
+                  "code": "36",
+                  "description": "Finger(s) - other than thumb and corresponding muscles",
+                  "name": "Finger(s)",
+                  "sortOrder": 23
+                },
+                {
+                  "code": "37",
+                  "description": "Thumb",
+                  "name": "Thumb",
+                  "sortOrder": 24
+                },
+                {
+                  "code": "38",
+                  "description": "Shoulder(s) - armpit, rotator cuff, trapezius, clavicle, scapula",
+                  "name": "Shoulder(s)",
+                  "sortOrder": 25
+                },
+                {
+                  "code": "39",
+                  "description": "Wrist(s) and hand(s)",
+                  "name": "Wrist(s) and Hand(s)",
+                  "sortOrder": 26
+                },
+                {
+                  "code": "40",
+                  "description": "Multiple trunk injuries - any combination of trunk injuries",
+                  "name": "Multiple trunk injuries",
+                  "sortOrder": 27
+                },
+                {
+                  "code": "41",
+                  "description": "Upper back area - (thoracic area) upper back muscles, excluding vertebrae, disc, spinal cord",
+                  "name": "Upper back area",
+                  "sortOrder": 28
+                },
+                {
+                  "code": "42",
+                  "description": "Lower back area - (lumbar area) lower back muscles, excluding sacrum, coccyx, pelvis, vertebrae, disc, spinal cord",
+                  "name": "Lower back area",
+                  "sortOrder": 29
+                },
+                {
+                  "code": "43",
+                  "description": "Disc (back) - spinal column cartilage other than cervical segment",
+                  "name": "Disc (back)",
+                  "sortOrder": 30
+                },
+                {
+                  "code": "44",
+                  "description": "Chest - including: ribs, sternum, soft tissue",
+                  "name": "Chest",
+                  "sortOrder": 31
+                },
+                {
+                  "code": "45",
+                  "description": "Sacrum and coccyx - first nine vertebrae",
+                  "name": "Sacrum and coccyx",
+                  "sortOrder": 32
+                },
+                {
+                  "code": "46",
+                  "description": "Pelvis",
+                  "name": "Pelvis",
+                  "sortOrder": 33
+                },
+                {
+                  "code": "47",
+                  "description": "Spinal cord (back) - nerve tissue other than cervical segment",
+                  "name": "Spinal cord (back)",
+                  "sortOrder": 34
+                },
+                {
+                  "code": "48",
+                  "description": "Internal organs - other than heart and lungs",
+                  "name": "Internal organs",
+                  "sortOrder": 35
+                },
+                {
+                  "code": "49",
+                  "description": "Heart",
+                  "name": "Heart",
+                  "sortOrder": 36
+                },
+                {
+                  "code": "60",
+                  "description": "Lungs",
+                  "name": "Lungs",
+                  "sortOrder": 37
+                },
+                {
+                  "code": "61",
+                  "description": "Abdomen including groin - excluding injury to internal organs",
+                  "name": "Abdomen including groin",
+                  "sortOrder": 38
+                },
+                {
+                  "code": "62",
+                  "description": "Buttocks - soft tissue",
+                  "name": "Buttocks",
+                  "sortOrder": 39
+                },
+                {
+                  "code": "63",
+                  "description": "Lumbar or sacral vertebrae - bone portion of the spinal column",
+                  "name": "Lumbar or sacral vertebrae",
+                  "sortOrder": 40
+                },
+                {
+                  "code": "67",
+                  "description": "Ribs",
+                  "name": "Ribs",
+                  "sortOrder": 41
+                },
+                {
+                  "code": "68",
+                  "description": "Stomach",
+                  "name": "Stomach",
+                  "sortOrder": 42
+                },
+                {
+                  "code": "50",
+                  "description": "Multiple lower appendages - any combination of leg and foot injuries",
+                  "name": "Multiple lower appendages",
+                  "sortOrder": 43
+                },
+                {
+                  "code": "51",
+                  "description": "Hip",
+                  "name": "Hip",
+                  "sortOrder": 44
+                },
+                {
+                  "code": "52",
+                  "description": "Upper leg - femur and corresponding muscles",
+                  "name": "Upper leg",
+                  "sortOrder": 45
+                },
+                {
+                  "code": "53",
+                  "description": "Knee - Patella",
+                  "name": "Knee",
+                  "sortOrder": 46
+                },
+                {
+                  "code": "54",
+                  "description": "Lower leg - tibia, fibula and corresponding muscles",
+                  "name": "Lower leg",
+                  "sortOrder": 47
+                },
+                {
+                  "code": "55",
+                  "description": "Ankle - tarsals",
+                  "name": "Ankle",
+                  "sortOrder": 48
+                },
+                {
+                  "code": "56",
+                  "description": "Foot - metatarsals, heel, Achilles tendon and corresponding muscles, excluding ankle or toes",
+                  "name": "Foot",
+                  "sortOrder": 49
+                },
+                {
+                  "code": "57",
+                  "description": "Toes",
+                  "name": "Toes",
+                  "sortOrder": 50
+                },
+                {
+                  "code": "58",
+                  "description": "Great toe",
+                  "name": "Great toe",
+                  "sortOrder": 51
+                },
+                {
+                  "code": "64",
+                  "description": "Artificial appliance - braces, etc.",
+                  "name": "Artificial appliance",
+                  "sortOrder": 52
+                },
+                {
+                  "code": "65",
+                  "description": "Unclassified - insufficient info to properly identify",
+                  "name": "Unclassified - insufficient info to properly identify",
+                  "sortOrder": 53
+                },
+                {
+                  "code": "66",
+                  "description": "No physical injury - mental disorder",
+                  "name": "No physical injury",
+                  "sortOrder": 54
+                },
+                {
+                  "code": "90",
+                  "description": "Multiple body parts - applies when more than one major body part has been affect (such as an arm and a leg)",
+                  "name": "Multiple body parts",
+                  "sortOrder": 55
+                },
+                {
+                  "code": "91",
+                  "description": "Body systems (with no external injury) - applies to the functioning of an entire body system without external injury (e.g. poisoning, inflammation)",
+                  "name": "Body systems (with no external injury)",
+                  "sortOrder": 56
+                },
+                {
+                  "code": "99",
+                  "description": "A code referencing the anatomic classification of the injury",
+                  "name": "Whole Body",
+                  "sortOrder": 57
+                }]
+            }
+          },
+          {
+            "id": "detailedBodyPartDesc",
+            "type": "field",
+            "component": "DropdownSelect",
+            "componentProps": {
+              "label": "Body part description",
+              "path": "bodyParts.detailedBodyPartDesc.code",
+              "availableValues": [
+                {
+                  "code": "14C",
+                  "description": "Blindness in both eyes",
+                  "name": "Blindness in both eyes",
+                  "sortOrder": 0
+                },
+                {
+                  "code": "14A",
+                  "description": "The loss of eye by enucleation (including disfigurement resulting there from)",
+                  "name": "Eye loss - enucleation",
+                  "sortOrder": 1
+                },
+                {
+                  "code": "57B",
+                  "description": "Little toe at distal joint",
+                  "name": "Little toe - distal joint",
+                  "sortOrder": 2
+                },
+                {
+                  "code": "57A",
+                  "description": "Little toe metatarsal bone",
+                  "name": "Little toe metatarsal bone",
+                  "sortOrder": 3
+                },
+                {
+                  "code": "58C",
+                  "description": "The loss of a great toe at the second or distal joint",
+                  "name": "Loss of a great toe at second or distal joint",
+                  "sortOrder": 4
+                },
+                {
+                  "code": "58A",
+                  "description": "The loss of a great toe with the metatarsal bone thereof",
+                  "name": "Loss of a great toe with metatarsal bone",
+                  "sortOrder": 5
+                },
+                {
+                  "code": "36M",
+                  "description": "The loss of a little finger and the metacarpal bone thereof",
+                  "name": "Loss of a little finger and the metacarpal bone",
+                  "sortOrder": 6
+                },
+                {
+                  "code": "36P",
+                  "description": "The loss of a little finger at the distal joint",
+                  "name": "Loss of a little finger at distal joint",
+                  "sortOrder": 7
+                },
+                {
+                  "code": "36N",
+                  "description": "The loss of a little finger at the proximal joint",
+                  "name": "Loss of a little finger at proximal joint",
+                  "sortOrder": 8
+                },
+                {
+                  "code": "36O",
+                  "description": "The loss of a little finger at the second joint",
+                  "name": "Loss of a little finger at second joint",
+                  "sortOrder": 9
+                },
+                {
+                  "code": "36L",
+                  "description": "The loss of a ring finger at the distal joint",
+                  "name": "Loss of a ring finger at distal joint",
+                  "sortOrder": 10
+                },
+                {
+                  "code": "36K",
+                  "description": "The loss of a ring finger at the second joint",
+                  "name": "Loss of a ring finger at second joint",
+                  "sortOrder": 11
+                },
+                {
+                  "code": "36E",
+                  "description": "The loss of a second finger and the metacarpal bone thereof",
+                  "name": "Loss of a second finger and metacarpal bone",
+                  "sortOrder": 12
+                },
+                {
+                  "code": "36I",
+                  "description": "The loss of a third or ring finger and the metacarpal thereof",
+                  "name": "Loss of a third or ring finger and metacarpal",
+                  "sortOrder": 13
+                },
+                {
+                  "code": "37A",
+                  "description": "The loss of a thumb and metacarpal bone thereof",
+                  "name": "Loss of a thumb and metacarpal bone",
+                  "sortOrder": 14
+                },
+                {
+                  "code": "37B",
+                  "description": "The loss of a thumb at the proximal joint",
+                  "name": "Loss of a thumb at proximal joint",
+                  "sortOrder": 15
+                },
+                {
+                  "code": "37C",
+                  "description": "The loss of a thumb at the second or distal joint",
+                  "name": "Loss of a thumb at second or distal joint",
+                  "sortOrder": 16
+                },
+                {
+                  "code": "36D",
+                  "description": "The loss of an index finger at the distal joint",
+                  "name": "Loss of an index finger at distal joint",
+                  "sortOrder": 17
+                },
+                {
+                  "code": "36B",
+                  "description": "The loss of an index finger at the proximal joint",
+                  "name": "Loss of an index finger at proximal joint",
+                  "sortOrder": 18
+                },
+                {
+                  "code": "36C",
+                  "description": "The loss of an index finger at the second joint",
+                  "name": "Loss of an index finger at second joint",
+                  "sortOrder": 19
+                },
+                {
+                  "code": "36A",
+                  "description": "The loss of an index finger and metacarpal bone thereof",
+                  "name": "Loss of an index finger metacarpal bone",
+                  "sortOrder": 20
+                },
+                {
+                  "code": "57D",
+                  "description": "The loss of any other toe at the proximal joint",
+                  "name": "Loss of any other toe at proximal joint",
+                  "sortOrder": 21
+                },
+                {
+                  "code": "57F",
+                  "description": "The loss of any other toe at the second or distal joint",
+                  "name": "Loss of any other toe at second or distal joint",
+                  "sortOrder": 22
+                },
+                {
+                  "code": "57C",
+                  "description": "The loss of any other toe with the metatarsal bone thereof",
+                  "name": "Loss of any other toe with the metatarsal bone",
+                  "sortOrder": 23
+                },
+                {
+                  "code": "58B",
+                  "description": "The loss of a great toe at the proximal joint",
+                  "name": "Loss of great toe at proximal joint",
+                  "sortOrder": 24
+                },
+                {
+                  "code": "36H",
+                  "description": "The loss of a middle finger at the distal joint",
+                  "name": "Loss of middle finger at distal joint",
+                  "sortOrder": 25
+                },
+                {
+                  "code": "36F",
+                  "description": "The loss of a middle finger at the proximal joint",
+                  "name": "Loss of middle finger at proximal joint",
+                  "sortOrder": 26
+                },
+                {
+                  "code": "36G",
+                  "description": "The loss of a middle finger at the second joint",
+                  "name": "Loss of middle finger at second joint",
+                  "sortOrder": 27
+                },
+                {
+                  "code": "36J",
+                  "description": "The loss of a ring finger at the proximal joint",
+                  "name": "Loss of ring finger at proximal joint",
+                  "sortOrder": 28
+                },
+                {
+                  "code": "57G",
+                  "description": "Other toe at distal joint",
+                  "name": "Other toe at distal joint",
+                  "sortOrder": 29
+                },
+                {
+                  "code": "57E",
+                  "description": "Other toe at middle joint",
+                  "name": "Other toe at middle joint",
+                  "sortOrder": 30
+                },
+                {
+                  "code": "13C",
+                  "description": "Where worker prior to injury has suffered a total loss of hearing in one ear, and as a result of the accident loses total hearing in remaining ear",
+                  "name": "Prior hearing loss one ear - loss in remaining ear",
+                  "sortOrder": 31
+                },
+                {
+                  "code": "14B",
+                  "description": "Total blindness of one eye",
+                  "name": "Total blindness of one eye",
+                  "sortOrder": 32
+                },
+                {
+                  "code": "13A",
+                  "description": "Total deafness of both ears",
+                  "name": "Total deafness of both ears",
+                  "sortOrder": 33
+                },
+                {
+                  "code": "13B",
+                  "description": "Total deafness of one ear",
+                  "name": "Total deafness of one ear",
+                  "sortOrder": 34
+                }
+              ]
+            }
+          },
+          {
+            "id": "impairmentPercentage",
+            "type": "field",
+            "component": "InputNumber",
+            "componentProps": {
+              "label": "Impairment percentage",
+              "path": "bodyParts.impairmentPercentage",
+              "maxValue": 100,
+              "minValue": 0
+            }
+          },
+          {
+            "id": "ordering",
+            "type": "field",
+            "component": "InputNumber",
+            "componentProps": {
+              "label": "Ordering",
+              "path": "bodyParts.ordering",
+            }
+          },
+          {
+            "id": "primaryBodyPart",
+            "type": "field",
+            "component": "DropdownSelect",
+            "componentProps": {
+              "label": "Primary body part",
+              "path": "bodyParts.primaryBodyPart.code",
+              "availableValues":  [
+                {
+                  "code": "head",
+                  "description": "Head",
+                  "name": "Head",
+                  "sortOrder": 0
+                },
+                {
+                  "code": "neck",
+                  "description": "Neck",
+                  "name": "Neck",
+                  "sortOrder": 1
+                },
+                {
+                  "code": "upper",
+                  "description": "Upper extremities",
+                  "name": "Upper extremities",
+                  "sortOrder": 2
+                },
+                {
+                  "code": "trunk",
+                  "description": "Trunk",
+                  "name": "Trunk",
+                  "sortOrder": 3
+                },
+                {
+                  "code": "lower",
+                  "description": "Lower extremities",
+                  "name": "Lower extremities",
+                  "sortOrder": 4
+                },
+                {
+                  "code": "multiple",
+                  "description": "Multiple body parts",
+                  "name": "Multiple body parts",
+                  "sortOrder": 5
+                }
+              ]
+            }
+          },
+          {
+            "id": "sideOfBody",
+            "type": "field",
+            "component": "DropdownSelect",
+            "componentProps": {
+              "label": "Side of body",
+              "path": "bodyParts.sideOfBody.code",
+              "availableValues":  [
+                {
+                  "code": "left",
+                  "description": "Left side of Body",
+                  "name": "Left",
+                  "sortOrder": 0
+                },
+                {
+                  "code": "right",
+                  "description": "Right side of body",
+                  "name": "Right",
+                  "sortOrder": 1
+                },
+                {
+                  "code": "both",
+                  "description": "Both sides of body",
+                  "name": "Both",
+                  "sortOrder": 2
+                }
+              ]
+            }
+          },
+          {
+            "id": "description",
+            "type": "field",
+            "component": "TextArea",
+            "componentProps": {
+              "label": "Description",
+              "path": "description",
+            }
+          },
+          {
+            "id": "detailedInjuryType",
+            "type": "field",
+            "component": "DropdownSelect",
+            "componentProps": {
+              "label": "Detailed injury type",
+              "path": "detailedInjuryType.code",
+              "availableValues": [
+                {
+                  "code": "01",
+                  "description": "No Physical Injury - Glasses, contacts, artificial appliance",
+                  "name": "No Physical Injury",
+                  "sortOrder": 0
+                },
+                {
+                  "code": "02",
+                  "description": "Amputation",
+                  "name": "Amputation",
+                  "sortOrder": 1
+                },
+                {
+                  "code": "03",
+                  "description": "Angina pectoris (chest pain)",
+                  "name": "Angina pectoris",
+                  "sortOrder": 2
+                },
+                {
+                  "code": "04",
+                  "description": "Burn - heat (burn or scald) or chemical (corrosive damage)",
+                  "name": "Burn",
+                  "sortOrder": 3
+                },
+                {
+                  "code": "07",
+                  "description": "Concussion - brain, cerebral",
+                  "name": "Concussion",
+                  "sortOrder": 4
+                },
+                {
+                  "code": "10",
+                  "description": "Contusion - bruise with intact skin surface, hematoma",
+                  "name": "Contusion",
+                  "sortOrder": 5
+                },
+                {
+                  "code": "13",
+                  "description": "Crushing",
+                  "name": "Crushing",
+                  "sortOrder": 6
+                },
+                {
+                  "code": "16",
+                  "description": "Dislocation - pinched nerve, slipped or ruptured disc, herniated disc, complete tear, MD dislocation",
+                  "name": "Dislocation",
+                  "sortOrder": 7
+                },
+                {
+                  "code": "19",
+                  "description": "Electric shock",
+                  "name": "Electric shock",
+                  "sortOrder": 8
+                },
+                {
+                  "code": "22",
+                  "description": "Enucleation - removal of organ or tumor",
+                  "name": "Enucleation",
+                  "sortOrder": 9
+                },
+                {
+                  "code": "25",
+                  "description": "Foreign body",
+                  "name": "Foreign body",
+                  "sortOrder": 10
+                },
+                {
+                  "code": "28",
+                  "description": "Fracture - breaking of a bone or a cartilage",
+                  "name": "Fracture",
+                  "sortOrder": 11
+                },
+                {
+                  "code": "30",
+                  "description": "Freezing - frostbite",
+                  "name": "Freezing",
+                  "sortOrder": 12
+                },
+                {
+                  "code": "31",
+                  "description": "Hearing loss or impairment",
+                  "name": "Hearing loss or impairment",
+                  "sortOrder": 13
+                },
+                {
+                  "code": "32",
+                  "description": "Heat prostration - heat stroke, sun stroke, excluding sun burn",
+                  "name": "Heat prostration",
+                  "sortOrder": 14
+                },
+                {
+                  "code": "34",
+                  "description": "Hernia - abnormal protrusion of an organ through its containing wall",
+                  "name": "Hernia",
+                  "sortOrder": 15
+                },
+                {
+                  "code": "36",
+                  "description": "Infection",
+                  "name": "Infection",
+                  "sortOrder": 16
+                },
+                {
+                  "code": "37",
+                  "description": "Inflammation",
+                  "name": "Inflammation",
+                  "sortOrder": 17
+                },
+                {
+                  "code": "40",
+                  "description": "Laceration - cuts, scratches, abrasions, superficial wounds",
+                  "name": "Laceration",
+                  "sortOrder": 18
+                },
+                {
+                  "code": "41",
+                  "description": "Myocardial infarction - heart attack, heart conditions, hypertension",
+                  "name": "Myocardial infarction",
+                  "sortOrder": 19
+                },
+                {
+                  "code": "42",
+                  "description": "Poisoning (not overdose or cumulative injury)",
+                  "name": "Poisoning (not overdose or cumulative injury)",
+                  "sortOrder": 20
+                },
+                {
+                  "code": "43",
+                  "description": "Puncture",
+                  "name": "Puncture",
+                  "sortOrder": 21
+                },
+                {
+                  "code": "46",
+                  "description": "Rupture",
+                  "name": "Rupture",
+                  "sortOrder": 22
+                },
+                {
+                  "code": "47",
+                  "description": "Severance",
+                  "name": "Severance",
+                  "sortOrder": 23
+                },
+                {
+                  "code": "49",
+                  "description": "Sprain",
+                  "name": "Sprain",
+                  "sortOrder": 24
+                },
+                {
+                  "code": "52",
+                  "description": "Strain",
+                  "name": "Strain",
+                  "sortOrder": 25
+                },
+                {
+                  "code": "53",
+                  "description": "Syncope - fainting, passing out",
+                  "name": "Syncope",
+                  "sortOrder": 26
+                },
+                {
+                  "code": "54",
+                  "description": "Asphyxiation - strangulation, drowning",
+                  "name": "Asphyxiation",
+                  "sortOrder": 27
+                },
+                {
+                  "code": "55",
+                  "description": "Vascular - strokes, varicose veins, other circulatory injuries",
+                  "name": "Vascular",
+                  "sortOrder": 28
+                },
+                {
+                  "code": "58",
+                  "description": "Vision Loss",
+                  "name": "Vision Loss",
+                  "sortOrder": 29
+                },
+                {
+                  "code": "59",
+                  "description": "Other specific injury",
+                  "name": "Other specific injury",
+                  "sortOrder": 30
+                },
+                {
+                  "code": "60",
+                  "description": "Dust disease - all other lung disease",
+                  "name": "Dust disease",
+                  "sortOrder": 31
+                },
+                {
+                  "code": "61",
+                  "description": "Asbestosis - lung disease from asbestos",
+                  "name": "Asbestosis",
+                  "sortOrder": 32
+                },
+                {
+                  "code": "62",
+                  "description": "Black lung - lung disease from coal mining",
+                  "name": "Black lung",
+                  "sortOrder": 33
+                },
+                {
+                  "code": "63",
+                  "description": "Byssinosis - lung disease from cotton, flax, hemp",
+                  "name": "Byssinosis",
+                  "sortOrder": 34
+                },
+                {
+                  "code": "64",
+                  "description": "Silicosis - lung disease from inhalation of silica (quartz) dust",
+                  "name": "Silicosis",
+                  "sortOrder": 35
+                },
+                {
+                  "code": "65",
+                  "description": "Respiratory disorders (gases, fumes, chemicals)",
+                  "name": "Respiratory disorders (gases, fumes, chemicals)",
+                  "sortOrder": 36
+                },
+                {
+                  "code": "66",
+                  "description": "Poisoning (chemical)",
+                  "name": "Poisoning (chemical)",
+                  "sortOrder": 37
+                },
+                {
+                  "code": "67",
+                  "description": "Poisoning (metal)",
+                  "name": "Poisoning (metal)",
+                  "sortOrder": 38
+                },
+                {
+                  "code": "68",
+                  "description": "Dermatitis - from repeated contact with irritants",
+                  "name": "Dermatitis",
+                  "sortOrder": 39
+                },
+                {
+                  "code": "69",
+                  "description": "Mental disorder",
+                  "name": "Mental disorder",
+                  "sortOrder": 40
+                },
+                {
+                  "code": "70",
+                  "description": "Radiation",
+                  "name": "Radiation",
+                  "sortOrder": 41
+                },
+                {
+                  "code": "71",
+                  "description": "All other occupational disease injuries",
+                  "name": "All other occupational disease injuries",
+                  "sortOrder": 42
+                },
+                {
+                  "code": "72",
+                  "description": "Loss of hearing",
+                  "name": "Loss of hearing",
+                  "sortOrder": 43
+                },
+                {
+                  "code": "73",
+                  "description": "Contagious disease",
+                  "name": "Contagious disease",
+                  "sortOrder": 44
+                },
+                {
+                  "code": "74",
+                  "description": "Cancer",
+                  "name": "Cancer",
+                  "sortOrder": 45
+                },
+                {
+                  "code": "75",
+                  "description": "AIDS",
+                  "name": "AIDS",
+                  "sortOrder": 46
+                },
+                {
+                  "code": "76",
+                  "description": "Video display terminal diseases - excluding carpal tunnel syndrome",
+                  "name": "Video display terminal diseases",
+                  "sortOrder": 47
+                },
+                {
+                  "code": "77",
+                  "description": "Mental stress",
+                  "name": "Mental stress",
+                  "sortOrder": 48
+                },
+                {
+                  "code": "78",
+                  "description": "Carpal Tunnel Syndrome",
+                  "name": "Carpal Tunnel Syndrome",
+                  "sortOrder": 49
+                },
+                {
+                  "code": "79",
+                  "description": "Hepatitis C",
+                  "name": "Hepatitis C",
+                  "sortOrder": 50
+                },
+                {
+                  "code": "80",
+                  "description": "All other cumulative injuries",
+                  "name": "All other cumulative injuries",
+                  "sortOrder": 51
+                },
+                {
+                  "code": "90",
+                  "description": "Multiple physical injuries only",
+                  "name": "Multiple physical injuries only",
+                  "sortOrder": 52
+                },
+                {
+                  "code": "91",
+                  "description": "Multiple injuries including both physical and psychological",
+                  "name": "Multiple injuries including both physical and psychological",
+                  "sortOrder": 53
+                }
+              ]
+            }
+          },
+          {
+            "id": "lossParty",
+            "type": "field",
+            "component": "DropdownSelect",
+            "componentProps": {
+              "label": "Loss party",
+              "path": "lossParty.code",
+              "availableValues": [ {
+                "code": "insured",
+                "description": "Insured's loss",
+                "name": "Insured's loss",
+                "sortOrder": 0
+              },
+                {
+                  "code": "third_party",
+                  "description": "Third-party liability",
+                  "name": "Third-party liability",
+                  "sortOrder": 1
+                }]
+            }
+          },
+          {
+            "id": "lostWages",
+            "type": "field",
+            "component": "Checkbox",
+            "componentProps": {
+              "label": "Lost wages?",
+              "path": "lostWages",
+              "showInlineLabel": true,
+              "defaultValue": false,
+            }
+          },
+          {
+            "id": "primaryDoctor",
+            "type": "field",
+            "component": "Input",
+            "componentProps": {
+              "label": "Primary doctor",
+              "path": "primaryDoctor",
+
+            }
+          },
+          {
+            "id": "severity",
+            "type": "field",
+            "component": "DropdownSelect",
+            "componentProps": {
+              "label": "Severity",
+              "path": "severity.code",
+              "availableValues": [ {
+                "code": "acup",
+                "description": "Acupuncture",
+                "name": "Acupuncture",
+                "sortOrder": 0
+              },
+                {
+                  "code": "chir",
+                  "description": "Chiropractor",
+                  "name": "Chiropractor",
+                  "sortOrder": 1
+                },
+                {
+                  "code": "emer_care",
+                  "description": "Emergency care",
+                  "name": "Emergency care",
+                  "sortOrder": 2
+                },
+                {
+                  "code": "er",
+                  "description": "ER treated & released",
+                  "name": "ER treated & released",
+                  "sortOrder": 3
+                },
+                {
+                  "code": "hospital",
+                  "description": "Hospitalized",
+                  "name": "Hospitalized",
+                  "sortOrder": 4
+                },
+                {
+                  "code": "inject",
+                  "description": "Injections",
+                  "name": "Injections",
+                  "sortOrder": 5
+                },
+                {
+                  "code": "major_surgery",
+                  "description": "Major surgery",
+                  "name": "Major surgery",
+                  "sortOrder": 6
+                },
+                {
+                  "code": "minor_surgery",
+                  "description": "Minor surgery",
+                  "name": "Minor surgery",
+                  "sortOrder": 7
+                },
+                {
+                  "code": "mri",
+                  "description": "MRI",
+                  "name": "MRI",
+                  "sortOrder": 8
+                },
+                {
+                  "code": "mult_treatments",
+                  "description": "Multiple treatments",
+                  "name": "Multiple treatments",
+                  "sortOrder": 9
+                },
+                {
+                  "code": "neuro",
+                  "description": "Neurologic",
+                  "name": "Neurologic",
+                  "sortOrder": 10
+                },
+                {
+                  "code": "ortho",
+                  "description": "Orthopedic",
+                  "name": "Orthopedic",
+                  "sortOrder": 11
+                },
+                {
+                  "code": "pt",
+                  "description": "Physical therapy",
+                  "name": "Physical therapy",
+                  "sortOrder": 12
+                },
+                {
+                  "code": "pcp",
+                  "description": "Primary care physician",
+                  "name": "Primary care physician",
+                  "sortOrder": 13
+                },
+                {
+                  "code": "counsel",
+                  "description": "Psych counseling",
+                  "name": "Psych counseling",
+                  "sortOrder": 14
+                },
+                {
+                  "code": "rehab",
+                  "description": "Rehab",
+                  "name": "Rehab",
+                  "sortOrder": 15
+                },
+                {
+                  "code": "xray",
+                  "description": "X-ray",
+                  "name": "X-ray",
+                  "sortOrder": 16
+                },
+                {
+                  "code": "oth",
+                  "description": "Other",
+                  "name": "Other",
+                  "sortOrder": 17
+                }]
+            }
+          },
+          {
+            "id": "treatmentType",
+            "type": "field",
+            "component": "DropdownSelect",
+            "componentProps": {
+              "label": "Treatment type",
+              "path": "treatmentType.code",
+              "availableValues": [
+                {
+                  "code": "acup",
+                  "description": "Acupuncture",
+                  "name": "Acupuncture",
+                  "sortOrder": 0
+                },
+                {
+                  "code": "chir",
+                  "description": "Chiropractor",
+                  "name": "Chiropractor",
+                  "sortOrder": 1
+                },
+                {
+                  "code": "emer_care",
+                  "description": "Emergency care",
+                  "name": "Emergency care",
+                  "sortOrder": 2
+                },
+                {
+                  "code": "er",
+                  "description": "ER treated & released",
+                  "name": "ER treated & released",
+                  "sortOrder": 3
+                },
+                {
+                  "code": "hospital",
+                  "description": "Hospitalized",
+                  "name": "Hospitalized",
+                  "sortOrder": 4
+                },
+                {
+                  "code": "inject",
+                  "description": "Injections",
+                  "name": "Injections",
+                  "sortOrder": 5
+                },
+                {
+                  "code": "major_surgery",
+                  "description": "Major surgery",
+                  "name": "Major surgery",
+                  "sortOrder": 6
+                },
+                {
+                  "code": "minor_surgery",
+                  "description": "Minor surgery",
+                  "name": "Minor surgery",
+                  "sortOrder": 7
+                },
+                {
+                  "code": "mri",
+                  "description": "MRI",
+                  "name": "MRI",
+                  "sortOrder": 8
+                },
+                {
+                  "code": "mult_treatments",
+                  "description": "Multiple treatments",
+                  "name": "Multiple treatments",
+                  "sortOrder": 9
+                },
+                {
+                  "code": "neuro",
+                  "description": "Neurologic",
+                  "name": "Neurologic",
+                  "sortOrder": 10
+                },
+                {
+                  "code": "ortho",
+                  "description": "Orthopedic",
+                  "name": "Orthopedic",
+                  "sortOrder": 11
+                },
+                {
+                  "code": "pt",
+                  "description": "Physical therapy",
+                  "name": "Physical therapy",
+                  "sortOrder": 12
+                },
+                {
+                  "code": "pcp",
+                  "description": "Primary care physician",
+                  "name": "Primary care physician",
+                  "sortOrder": 13
+                },
+                {
+                  "code": "counsel",
+                  "description": "Psych counseling",
+                  "name": "Psych counseling",
+                  "sortOrder": 14
+                },
+                {
+                  "code": "rehab",
+                  "description": "Rehab",
+                  "name": "Rehab",
+                  "sortOrder": 15
+                },
+                {
+                  "code": "xray",
+                  "description": "X-ray",
+                  "name": "X-ray",
+                  "sortOrder": 16
+                },
+                {
+                  "code": "oth",
+                  "description": "Other",
+                  "name": "Other",
+                  "sortOrder": 17
+                }
+              ]
+            }
+          },
+          {
+                "id": "controls",
+                "type": "element",
+                "component": "div",
+                "content": [
+                    {
+                        "id": "cancelInjured",
+                        "type": "action",
+                        "component": "Button",
+                        "componentProps": {
+                            "onClick": "onCancelNewInjured",
+                            "type": "outlined"
+                        },
+                        "content": {
+                            "id": "injured.cancel",
+                            "defaultMessage": "Cancel"
+                        }
+                    },
+                    {
+                        "id": "saveInjured",
+                        "type": "action",
+                        "component": "Button",
+                        "componentProps": {
+                            "onClick": "onSaveNewInjured",
+                            "type": "outlined"
+                        },
+                        "content": {
+                            "id": "injured.add",
+                            "defaultMessage": "Save"
+                        }
+                    }
+                ],
+                "contentLayout": {
+                    "component": "Flex",
+                    "componentProps": {
+                        "alignItems": "middle",
+                        "justifyContent": "right",
+                        "gap": "medium"
+                    }
+                }
+            },
+        ]
+    }
+}

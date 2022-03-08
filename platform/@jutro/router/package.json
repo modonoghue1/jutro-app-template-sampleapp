@@ -1,0 +1,78 @@
+{
+  "_from": "@jutro/router@6.5.0",
+  "_id": "@jutro/router@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-8wrISUrSo4pl0NoXXmdI8edlJ6c=",
+  "_location": "/@jutro/router",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/router@6.5.0",
+    "name": "@jutro/router",
+    "escapedName": "@jutro%2frouter",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/app",
+    "/@jutro/datatable",
+    "/@jutro/floorplan",
+    "/@jutro/uiconfig",
+    "/@jutro/wizard-next"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/router/-/@jutro/router-6.5.0.tgz",
+  "_shasum": "f30ac8494ad2a38a65d0da175e6748f1e76527a7",
+  "_spec": "@jutro/router@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/auth": "6.5.0",
+    "@jutro/components": "6.5.0",
+    "@jutro/events": "6.5.0",
+    "@jutro/layout": "6.5.0",
+    "@jutro/locale": "6.5.0",
+    "@jutro/logger": "6.5.0",
+    "@jutro/platform": "6.5.0",
+    "@jutro/prop-types": "6.5.0",
+    "@jutro/services": "6.5.0",
+    "@jutro/test": "6.5.0",
+    "@jutro/theme": "6.5.0",
+    "@jutro/uimetadata": "6.5.0",
+    "classnames": "2.2.6",
+    "fontfaceobserver": "2.1.0",
+    "history": "4.10.1",
+    "lodash": "4.17.21",
+    "memoize-one": "5.1.1",
+    "prop-types": "15.7.2",
+    "react-focus-lock": "2.5.0",
+    "react-helmet": "6.1.0",
+    "react-intl": "5.15.5",
+    "react-use-measure": "2.0.4"
+  },
+  "deprecated": false,
+  "description": "Provides router components for React",
+  "devDependencies": {
+    "@types/fontfaceobserver": "0.0.6"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/router",
+  "peerDependencies": {
+    "core-js": "3.10.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router": "5.2.0",
+    "react-router-dom": "5.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

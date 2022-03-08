@@ -1,0 +1,61 @@
+    /**
+     * {{description}}
+{{#each methodParams}}
+     * @param {{curly_bracket true}}{{this.type}}{{curly_bracket}} {{this.name}} {{this.description}}
+{{/each}}
+{{#if requestInfo}}
+     * @param {{curly_bracket true}}{{requestInfo.type}}{{curly_bracket}} {{requestInfo.name}} {{requestInfo.description}}
+{{/if}}
+{{#if optsParams}}
+     * @param {Object} opts Optional query parameters
+{{/if}}
+{{#each optsParams}}
+     * @param {{curly_bracket true}}{{this.type}}{{curly_bracket}} opts.{{this.name}} {{this.description}}
+{{/each}}
+     * @returns {{curly_bracket true}}Array<{{responseInfo.type}}>{{curly_bracket}} Array of {{responseInfo.description}}
+     *
+     * @example
+     * "{{methodPath}}"
+     */
+    {{methodName}}({{#each methodParams}}{{this.name}}, {{/each}}{{#if requestInfo}}{{requestInfo.name}}, {{/if}}{{#if optsParams}}opts{{/if}}) {
+        {{> optsHandling this }}
+
+        const url = `${this.baseUrl}{{methodUrl}}${search}`;
+{{#if requestInfo}}
+        const wrapper = ({{requestInfo.name}}) ?
+            {
+                data: {
+                    attributes: {{requestInfo.name}}
+                },
+            }
+            : undefined;
+        return this.restService.post(url, wrapper)
+{{else}}
+        return this.restService.get(url)
+{{/if}}
+            .then(resultData => {
+                let results;
+                // if 'includes', then response has 'related' on each element that
+                // refers to 'included'. Resolve references and return
+                if (resultData?.included) {
+                    const includedKeys = Object.keys(resultData.included);
+                    includedKeys.forEach(key => {
+                        resultData.included[key] = resultData.included[key].map(item => unwrap(item));
+                    });
+                    results = resultData?.data?.map(item => unwrap(item, resultData.included));
+                } else {
+                    results = resultData?.data?.map(item => unwrap(item));
+                }
+
+                // wrap results if pagination/total is included
+                if (pageOffset || pageSize || resultData?.total) {
+                    return {
+                        offset: pageOffset ?? 0,
+                        count: resultData?.count,
+                        total: resultData?.total,
+                        data: results
+                    };
+                }
+                return results;
+            });
+    }

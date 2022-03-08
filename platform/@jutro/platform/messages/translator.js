@@ -1,0 +1,1 @@
+import{getMessageService}from"./service-api";export default function translator(){return function(target){target.prototype.translate=(key,...args)=>getMessageService().getMessage(key,...args)}}

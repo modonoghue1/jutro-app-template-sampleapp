@@ -1,0 +1,1 @@
+let uniqueIdForComponents=0;export const generateComponentId=id=>`${id}_${(()=>{const currentId=uniqueIdForComponents;return uniqueIdForComponents+=1,currentId})()}`;

@@ -1,0 +1,47 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.input {
+  width: 100%;
+  height: var(--GW-FIELD-COMPONENT-HEIGHT);
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  color: var(--GW-FIELD-COMPONENT-COLOR);
+  background-color: var(--GW-FIELD-COMPONENT-BACKGROUND-COLOR);
+  border: 1px solid var(--GW-BORDER-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  box-shadow: none;
+  display: block;
+  padding: var(--GW-SPACING-2) 0.75rem;
+  margin: 0;
+  transition: var(--GW-ANIMATION-SPEED) all;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  caret-color: currentColor;
+  text-align: inherit;
+  font-size: var(--GW-FONT-SIZE-INPUT);
+  line-height: var(--GW-LINE-HEIGHT-INPUT); }
+  .input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+    border-color: var(--GW-FIELD-COMPONENT-BORDER-COLOR-FOCUS); }
+  .input[disabled], .input:global(.disabled) {
+    opacity: var(--GW-OPACITY-DISABLED);
+    cursor: not-allowed; }
+  .input:global(.invalid) {
+    color: var(--GW-COLOR-ERROR);
+    border-color: var(--GW-COLOR-ERROR); }
+    .input:global(.invalid):focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-ERROR-COLOR-DARK); }
+  .input:global(.warning) {
+    color: var(--GW-COLOR-WARNING);
+    border-color: var(--GW-COLOR-WARNING); }
+    .input:global(.warning):focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-WARNING-COLOR-LIGHT); }
+
+.labpreviewBorder {
+  border: 2px solid var(--GW-COLOR-ERROR); }
+
+/*# sourceMappingURL=InputField.module.css.map */

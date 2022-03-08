@@ -1,0 +1,73 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.fieldLabelContainer {
+  display: flex;
+  flex-direction: column; }
+
+.fieldLabel {
+  color: var(--GW-FIELD-COMPONENT-COLOR);
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  display: inline-block;
+  position: relative;
+  font-size: var(--GW-FONT-SIZE-LABEL);
+  line-height: var(--GW-LINE-HEIGHT-LABEL); }
+  @media (min-width: 769px) {
+    .fieldLabel {
+      word-wrap: break-word; } }
+  .fieldLabel button[class*='tooltip'] {
+    margin-left: 0.5rem; }
+
+.secondaryLabel {
+  color: var(--GW-FIELD-COMPONENT-COLOR-SECONDARY);
+  font-size: var(--GW-FONT-SIZE-SECONDARY-LABEL);
+  line-height: var(--GW-LINE-HEIGHT-SECONDARY-LABEL); }
+
+.optional {
+  color: var(--GW-FIELD-COMPONENT-COLOR-SECONDARY);
+  margin-left: 0.25rem; }
+
+.requiredSymbol {
+  color: var(--GW-FIELD-COMPONENT-REQUIRED-SYMBOL-COLOR);
+  font-weight: var(--GW-FONT-WEIGHT-BOLD);
+  margin-right: var(--GW-SPACING-1); }
+
+.hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.left {
+  text-align: right;
+  margin-right: var(--GW-SPACING-3);
+  margin-bottom: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  padding-top: 0;
+  align-items: flex-end;
+  justify-content: center; }
+  .left span.secondaryLabel {
+    display: block; }
+  .left .optional {
+    margin-left: var(--GW-SPACING-3); }
+  .left .readOnly {
+    padding-top: 0; }
+
+.top {
+  text-align: left;
+  margin-right: var(--GW-SPACING-3);
+  margin-bottom: var(--GW-SPACING-2);
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 0; }
+
+.right {
+  margin-left: var(--GW-SPACING-4); }
+
+/*# sourceMappingURL=FieldLabel.module.css.map */

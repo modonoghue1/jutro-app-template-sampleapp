@@ -1,0 +1,1 @@
+const SUPPORTED_HTML_CONTAINER=new Set(["div","form","article","ul","ol","li"]);export const isSupportedHTMLContainer=component=>SUPPORTED_HTML_CONTAINER.has(component);

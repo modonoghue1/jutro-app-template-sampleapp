@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({showAll:{id:"jutro-datatable.Pagination.ShowAll",defaultMessage:"Show All"},previous:{id:"jutro-datatable.Pagination.Previous",defaultMessage:"Prev"},next:{id:"jutro-datatable.Pagination.Next",defaultMessage:"Next"},resultOf:{id:"jutro-datatable.Pagination.`Result of`",defaultMessage:"Results of"}});

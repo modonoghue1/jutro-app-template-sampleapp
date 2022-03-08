@@ -1,0 +1,3 @@
+{
+  "extends": "@jutro/build-tools/stylelint-config/index"
+}

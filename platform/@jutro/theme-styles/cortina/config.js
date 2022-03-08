@@ -1,0 +1,1 @@
+import{cortinaColors}from"./colors-vars";import{cortinaFloorplans}from"./floorplans-vars";export const cortinaThemeConfig={name:"Cortina",rootStyle:{...cortinaColors,...cortinaFloorplans}};

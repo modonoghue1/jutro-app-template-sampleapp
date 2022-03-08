@@ -1,0 +1,31 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.HelpPopover {
+  width: var(--GW-HELP-POPOVER-WIDTH);
+  max-height: var(--GW-HELP-POPOVER-MAX-HEIGHT);
+  z-index: var(--GW-HELP-POPOVER-Z-INDEX); }
+
+.popoverContainer {
+  width: 100%; }
+
+.content {
+  padding: var(--GW-SPACING-4) var(--GW-SPACING-6);
+  max-height: calc( var(--GW-HELP-POPOVER-MAX-HEIGHT) - 2 * var(--GW-HELP-POPOVER-FOOTER-HEIGHT));
+  overflow-y: auto;
+  height: 100%; }
+
+.footer {
+  height: var(--GW-HELP-POPOVER-FOOTER-HEIGHT);
+  text-align: center; }
+
+.helpComponent {
+  margin: var(--GW-SPACING-2) 0;
+  color: var(--GW-HELP-POPOVER-COLOR);
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+
+.helpLink {
+  color: var(--GW-HELP-POPOVER-LINK-COLOR); }
+
+/*# sourceMappingURL=HelpPopover.module.css.map */

@@ -1,0 +1,23 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.inputMask:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+  border-color: var(--GW-FIELD-COMPONENT-BORDER-COLOR-FOCUS); }
+
+.inputMask:global(.invalid) {
+  border-color: var(--GW-COLOR-ERROR);
+  color: var(--GW-COLOR-ERROR); }
+
+.inputMask:global(.warning) {
+  color: var(--GW-COLOR-WARNING);
+  border-color: var(--GW-COLOR-WARNING); }
+
+.empty, .empty:global(.invalid) {
+  color: var(--GW-FIELD-COMPONENT-COLOR-EMPTY); }
+
+.labpreviewBorder {
+  border: 2px solid var(--GW-COLOR-ERROR); }
+
+/*# sourceMappingURL=InputMaskField.module.css.map */

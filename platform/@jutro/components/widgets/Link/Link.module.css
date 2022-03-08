@@ -1,0 +1,49 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.link {
+  display: inline-block;
+  min-height: var(--GW-LINK-HEIGHT);
+  color: var(--GW-LINK-COLOR);
+  text-decoration: none;
+  border-radius: var(--GW-BORDER-RADIUS);
+  outline: none;
+  cursor: pointer;
+  vertical-align: baseline;
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+  .link:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+    .link:focus .text {
+      text-decoration: underline; }
+  .link:hover {
+    color: var(--GW-LINK-COLOR-HOVER); }
+  .link:active, .link:global(.active) {
+    color: var(--GW-LINK-COLOR-ACTIVE); }
+  .link.disabled, .link.disabled:link, .link.disabled:visited, .link.disabled:hover, .link.disabled:active, .link.disabled:focus, .link:global(.disabled), .link:global(.disabled):link, .link:global(.disabled):visited, .link:global(.disabled):hover, .link:global(.disabled):active, .link:global(.disabled):focus {
+    opacity: var(--GW-OPACITY-DISABLED);
+    color: var(--GW-LINK-COLOR);
+    cursor: not-allowed;
+    user-select: none;
+    pointer-events: none; }
+    .link.disabled .text, .link.disabled:link .text, .link.disabled:visited .text, .link.disabled:hover .text, .link.disabled:active .text, .link.disabled:focus .text, .link:global(.disabled) .text, .link:global(.disabled):link .text, .link:global(.disabled):visited .text, .link:global(.disabled):hover .text, .link:global(.disabled):active .text, .link:global(.disabled):focus .text {
+      text-decoration: none; }
+  .link.inline .text, .link.inline .text:link, .link.inline .text:visited, .link.inline .text:hover, .link.inline .text:active, .link.inline .text:focus {
+    text-decoration: underline; }
+  .link .icon {
+    margin: 0 var(--GW-SPACING-2);
+    font-size: var(--GW-ICON-FONT-SIZE-1);
+    line-height: var(--GW-ICON-LINE-HEIGHT); }
+  .link .text {
+    text-decoration: none; }
+    .link .text:hover {
+      text-decoration: underline; }
+    .link .text:active, .link .text:global(.active) {
+      text-decoration: underline; }
+  .link .left {
+    margin-left: 0; }
+  .link .right {
+    margin-right: 0; }
+
+/*# sourceMappingURL=Link.module.css.map */

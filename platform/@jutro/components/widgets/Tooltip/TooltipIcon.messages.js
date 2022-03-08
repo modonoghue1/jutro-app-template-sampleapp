@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({showTooltip:{id:"jutro-components.widgets.Tooltip.showtooltip",defaultMessage:"Show tooltip"}});

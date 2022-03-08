@@ -1,0 +1,747 @@
+{
+  "jutro": "4.2.0-next.0",
+  "a.b.codelessForm": {
+    "id": "codelessForm",
+    "type": "page",
+    "contentLayout": {
+      "component": "Grid",
+      "componentProps": {
+        "gap": "small"
+      }
+    },
+    "content": [
+      {
+        "id": "panel",
+        "type": "container",
+        "component": "Panel",
+        "componentProps": {
+          "title": {
+            "id": "jutro-app.codeless.Codeless Form",
+            "defaultMessage": "Codeless Form"
+          }
+        },
+        "content": [
+          {
+            "id": "form",
+            "type": "container",
+            "component": "div",
+            "contentLayout": {
+              "component": "Grid",
+              "componentProps": {
+                "gap": "large"
+              }
+            },
+            "content": [
+              {
+                "id": "typeahead",
+                "type": "field",
+                "component": "TypeaheadMultiSelect",
+                "componentProps": {
+                  "onValueChange": "valueChangeFn",
+                  "onBlur": "blurFn",
+                  "onFocus": "focusFn",
+                  "singleSelect": false,
+                  "label": {
+                    "id": "translation.typeahead.label",
+                    "defaultMessage": "Label"
+                  },
+                  "availableValues": [
+                    {
+                      "code": "option-1",
+                      "name": "Option 1"
+                    },
+                    {
+                      "code": "option-2",
+                      "name": "Option 2"
+                    },
+                    {
+                      "code": "option-3",
+                      "name": "Option 3"
+                    }
+                  ],
+                  "placeholder": {
+                    "id": "translation.typeahead.placeholder",
+                    "defaultMessage": "Try typing something here..."
+                  },
+                }
+              },
+              {
+                "id": "paragraphAboutYourBuild",
+                "type": "element",
+                "component": "IntlElement",
+                "componentProps": {
+                  "tag": "p"
+                },
+                "content": {
+                  "id": "jutro-app.codeless.loremIpsum",
+                  "defaultMessage": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget massa varius, suscipit risus et, facilisis lectus. Donec eget lacus massa. Sed a tortor orci. Maecenas vitae blandit velit, vel pellentesque diam. Maecenas at lorem."
+                }
+              },
+              {
+                "id": "yearBuilt",
+                "type": "field",
+                "datatype": "date",
+                "componentProps": {
+                  "path": "baseData.yearBuilt",
+                  "label": {
+                    "id": "jutro-app.codeless.yearBuilt",
+                    "defaultMessage": "Year built"
+                  },
+                  "placeholder": {
+                    "id": "jutro-app.codeless.yearBuilt.pleaseSelect",
+                    "defaultMessage": "Please select"
+                  },
+                  "required": true
+                }
+              },
+              {
+                "id": "rentalTime",
+                "type": "field",
+                "component": "DateRange",
+                "componentProps": {
+                  "startPath": "baseData.rentalStartDate",
+                  "endPath": "baseData.rentalEndDate",
+                  "label": {
+                    "id": "jutro-app.codeless.rentalForm",
+                    "defaultMessage": "Rental from"
+                  },
+                  "placeholder": {
+                    "id": "jutro-app.codeless.yearBuilt.pleaseSelect",
+                    "defaultMessage": "Please select"
+                  },
+                  "endLabel": {
+                    "id": "jutro-app.codeless.rentalTo",
+                    "defaultMessage": "To"
+                  }
+                }
+              },
+              {
+                "id": "initialValue",
+                "type": "field",
+                "component": "Currency",
+                "componentProps": {
+                  "path": "baseData.initialValue",
+                  "label": {
+                    "id": "jutro-app.codeless.initialValue",
+                    "defaultMessage": "Initial value estimation"
+                  },
+                  "required": true,
+                  "defaultValue": {
+                    "amount": 350000,
+                    "currency": "USD"
+                  }
+                }
+              },
+              {
+                "id": "numberOfStories",
+                "type": "field",
+                "datatype": "Select",
+                "componentProps": {
+                  "path": "baseData.numberOfStories",
+                  "label": {
+                    "id": "jutro-app.codeless.numberOfStories",
+                    "defaultMessage": "Number of Stories"
+                  },
+                  "availableValues": [
+                    {
+                      "code": "1",
+                      "name": "1"
+                    },
+                    {
+                      "code": "2",
+                      "name": "2"
+                    },
+                    {
+                      "code": "3",
+                      "name": "3"
+                    }
+                  ],
+                  "alwaysShowPlaceholder": true,
+                  "defaultValue": "1",
+                  "required": true
+                }
+              },
+              {
+                "id": "garage",
+                "type": "field",
+                "datatype": "Boolean",
+                "componentProps": {
+                  "path": "baseData.garage",
+                  "label": {
+                    "id": "jutro-app.codeless.garage",
+                    "defaultMessage": "Garage"
+                  },
+                  "availableValues": [
+                    {
+                      "id": "attachedGarage",
+                      "displayName": {
+                        "id": "jutro-app.codeless.attachedGarage",
+                        "defaultMessage": "Attached Garage"
+                      }
+                    },
+                    {
+                      "id": "noGarage",
+                      "displayName": {
+                        "id": "jutro-app.codeless.noGarage",
+                        "defaultMessage": "No Garage"
+                      }
+                    }
+                  ],
+                  "defaultValue": "noGarage",
+                  "required": true
+                }
+              },
+              {
+                "id": "constructionType",
+                "type": "field",
+                "datatype": "Select",
+                "componentProps": {
+                  "path": "baseData.constructionType",
+                  "label": {
+                    "id": "jutro-app.codeless.constructionType",
+                    "defaultMessage": "Construction Type"
+                  },
+                  "availableValues": [
+                    {
+                      "code": "concrete",
+                      "name": {
+                        "id": "jutro-app.codeless.concrete",
+                        "defaultMessage": "Concrete"
+                      }
+                    },
+                    {
+                      "code": "inconcrete",
+                      "name": {
+                        "id": "jutro-app.codeless.inconcrete",
+                        "defaultMessage": "Inconcrete"
+                      }
+                    }
+                  ],
+                  "required": true
+                }
+              },
+              {
+                "id": "constructionTypeMessage",
+                "type": "element",
+                "component": "IntlElement",
+                "componentProps": {
+                  "tag": "h1"
+                },
+                "content": {
+                  "id": "jutro-app.codeless.About its construction",
+                  "defaultMessage": "About its construction"
+                }
+              },
+              {
+                "id": "paragraphAboutYourConstruction",
+                "type": "element",
+                "component": "IntlElement",
+                "componentProps": {
+                  "tag": "p"
+                },
+                "content": {
+                  "id": "jutro-app.codeless.loremIpsum",
+                  "defaultMessage": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget massa varius, suscipit risus et, facilisis lectus. Donec eget lacus massa. Sed a tortor orci. Maecenas vitae blandit velit, vel pellentesque diam. Maecenas at lorem."
+                }
+              },
+              {
+                "id": "foundationType",
+                "type": "field",
+                "datatype": "Select",
+                "componentProps": {
+                  "path": "baseData.foundationType",
+                  "label": {
+                    "id": "jutro-app.codeless.foundationType",
+                    "defaultMessage": "Foundation Type"
+                  },
+                  "availableValues": [
+                    {
+                      "code": "slab",
+                      "name": {
+                        "id": "jutro-app.codeless.slab",
+                        "defaultMessage": "Slab"
+                      }
+                    },
+                    {
+                      "code": "notSlab",
+                      "name": {
+                        "id": "jutro-app.codeless.notSlab",
+                        "defaultMessage": "Not Slab"
+                      }
+                    }
+                  ],
+                  "required": true
+                }
+              },
+              {
+                "id": "roofType",
+                "type": "field",
+                "component": "ImageRadioButton",
+                "componentProps": {
+                  "path": "baseData.roofType",
+                  "label": {
+                    "id": "jutro-app.codeless.roofType",
+                    "defaultMessage": "Roof Type"
+                  },
+                  "availableValues": [
+                    {
+                      "code": "composition",
+                      "name": {
+                        "id": "jutro-app.codeless.compShingles",
+                        "defaultMessage": "Composition Shingles"
+                      }
+                    },
+                    {
+                      "code": "wood",
+                      "name": {
+                        "id": "jutro-app.codeless.woodShingles",
+                        "defaultMessage": "Wood Shingles"
+                      }
+                    },
+                    {
+                      "code": "tile",
+                      "name": {
+                        "id": "jutro-app.codeless.tileClay",
+                        "defaultMessage": "Tile Clay"
+                      }
+                    },
+                    {
+                      "code": "slateconcrete",
+                      "name": {
+                        "id": "jutro-app.codeless.slateConcrete",
+                        "defaultMessage": "Slate Concrete"
+                      }
+                    },
+                    {
+                      "code": "tileconcrete",
+                      "name": {
+                        "id": "jutro-app.codeless.tileConcrete",
+                        "defaultMessage": "Tile Concrete"
+                      }
+                    },
+                    {
+                      "code": "other",
+                      "name": {
+                        "id": "jutro-app.codeless.other",
+                        "defaultMessage": "Other"
+                      }
+                    }
+                  ],
+                  "imageBasePath": "images/imageRadioButton",
+                  "defaultValue": "composition",
+                  "required": true
+                }
+              },
+              {
+                "id": "roofTypeUpgraded",
+                "type": "field",
+                "datatype": "checkbox",
+                "componentProps": {
+                  "path": "baseData.roofTypeUpgraded",
+                  "label": {
+                    "id": "jutro-app.codeless.roofTypeUpgraded",
+                    "defaultMessage": "Select if roof has been upgraded"
+                  },
+                  "showInlineLabel": true,
+                  "defaultValue": "false"
+                }
+              },
+              {
+                "id": "plumbingType",
+                "type": "field",
+                "datatype": "select",
+                "componentProps": {
+                  "path": "baseData.plumbingType",
+                  "label": {
+                    "id": "jutro-app.codeless.plumbingType",
+                    "defaultMessage": "Plumbing Type"
+                  },
+                  "availableValues": [
+                    {
+                      "code": "copper",
+                      "name": {
+                        "id": "jutro-app.codeless.copper",
+                        "defaultMessage": "Copper"
+                      }
+                    },
+                    {
+                      "code": "notCopper",
+                      "name": {
+                        "id": "jutro-app.codeless.notCopper",
+                        "defaultMessage": "Not Copper"
+                      }
+                    }
+                  ],
+                  "required": true
+                }
+              },
+              {
+                "id": "plumbingTypeUpgraded",
+                "type": "field",
+                "datatype": "checkbox",
+                "componentProps": {
+                  "path": "baseData.plumbingTypeUpgraded",
+                  "label": {
+                    "id": "jutro-app.codeless.plumbingTypeUpgraded",
+                    "defaultMessage": "Select if plumbing has been upgraded"
+                  },
+                  "showInlineLabel": true,
+                  "defaultValue": "false"
+                }
+              },
+              {
+                "id": "primaryHeating",
+                "type": "field",
+                "datatype": "select",
+                "componentProps": {
+                  "path": "baseData.primaryHeating",
+                  "label": {
+                    "id": "jutro-app.codeless.primaryHeating",
+                    "defaultMessage": "Primary Heating"
+                  },
+                  "availableValues": [
+                    {
+                      "code": "gas",
+                      "name": {
+                        "id": "jutro-app.codeless.gas",
+                        "defaultMessage": "Gas"
+                      }
+                    },
+                    {
+                      "code": "electricity",
+                      "name": {
+                        "id": "jutro-app.codeless.electricity",
+                        "defaultMessage": "Electricity"
+                      }
+                    }
+                  ],
+                  "required": true
+                }
+              },
+              {
+                "id": "secondaryHeating",
+                "type": "field",
+                "datatype": "boolean",
+                "componentProps": {
+                  "path": "baseData.secondaryHeating",
+                  "label": {
+                    "id": "jutro-app.codeless.secondaryHeating",
+                    "defaultMessage": "Secondary Heating"
+                  },
+                  "availableValues": [
+                    {
+                      "code": "yes",
+                      "name": {
+                        "id": "jutro-app.codeless.yes",
+                        "defaultMessage": "Yes"
+                      }
+                    },
+                    {
+                      "code": "no",
+                      "name": {
+                        "id": "jutro-app.codeless.no",
+                        "defaultMessage": "No"
+                      }
+                    }
+                  ],
+                  "defaultValue": "yes",
+                  "required": true
+                }
+              },
+              {
+                "id": "secondaryHeatingUpgraded",
+                "type": "field",
+                "datatype": "checkbox",
+                "componentProps": {
+                  "path": "baseData.secondaryHeatingUpgraded",
+                  "label": {
+                    "id": "jutro-app.codeless.secondaryHeatingUpgraded",
+                    "defaultMessage": "Select if heating has been upgraded"
+                  },
+                  "showInlineLabel": true,
+                  "defaultValue": "false"
+                }
+              },
+              {
+                "id": "wiringType",
+                "type": "field",
+                "datatype": "select",
+                "componentProps": {
+                  "path": "baseData.wiringType",
+                  "label": {
+                    "id": "jutro-app.codeless.wiringType",
+                    "defaultMessage": "Wiring Type"
+                  },
+                  "availableValues": [
+                    {
+                      "code": "copper",
+                      "name": {
+                        "id": "jutro-app.codeless.copper",
+                        "defaultMessage": "Copper"
+                      }
+                    },
+                    {
+                      "code": "notCopper",
+                      "name": {
+                        "id": "jutro-app.codeless.notCopper",
+                        "defaultMessage": "Not Copper"
+                      }
+                    }
+                  ],
+                  "required": true
+                }
+              },
+              {
+                "id": "electricalSystem",
+                "type": "field",
+                "datatype": "select",
+                "componentProps": {
+                  "path": "baseData.electricalSystem",
+                  "label": {
+                    "id": "jutro-app.codeless.electricalSystem",
+                    "defaultMessage": "Electrical System"
+                  },
+                  "availableValues": [
+                    {
+                      "code": "circuitBoard",
+                      "name": {
+                        "id": "jutro-app.codeless.circuitBoard",
+                        "defaultMessage": "Circuit Board"
+                      }
+                    },
+                    {
+                      "code": "notCircuitBoard",
+                      "name": {
+                        "id": "jutro-app.codeless.notCircuitBoard",
+                        "defaultMessage": "Not Circuit Board"
+                      }
+                    }
+                  ],
+                  "required": true
+                }
+              },
+              {
+                "id": "electricalSystemUpgraded",
+                "type": "field",
+                "datatype": "checkbox",
+                "componentProps": {
+                  "path": "baseData.electricalSystemUpgraded",
+                  "label": {
+                    "id": "jutro-app.codeless.electricalSystemUpgraded",
+                    "defaultMessage": "Select if wiring has been upgraded"
+                  },
+                  "showInlineLabel": true,
+                  "defaultValue": true
+                }
+              },
+              {
+                "id": "externalLinksMenu",
+                "type": "container",
+                "component": "DropdownMenu",
+                "componentProps": {
+                  "onRenderTrigger": "menuTriggerCallback"
+                },
+                "content": [
+                  {
+                    "id": "externalLinksMenuHeader1",
+                    "type": "container",
+                    "component": "DropdownMenuHeader",
+                    "componentProps": {
+                      "title": {
+                        "id": "jutro-app.Pages.CodelessForm.Heating",
+                        "defaultMessage": "Heating"
+                      }
+                    },
+                    "content": [
+                      {
+                        "id": "externalLinksMenuLink1",
+                        "type": "element",
+                        "component": "DropdownMenuLink",
+                        "content": {
+                          "id": "jutro-app.Pages.CodelessForm.externalLink",
+                          "defaultMessage": "Beginner's Guide"
+                        },
+                        "componentProps": {
+                          "to": {
+                            "id": "jutro-app.Pages.CodelessForm.externalLinkHref",
+                            "defaultMessage": "/linktobeginnersguide"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "externalLinksMenuSeparator",
+                    "type": "element",
+                    "component": "DropdownMenuSeparator"
+                  },
+                  {
+                    "id": "externalLinksMenuHeader2",
+                    "type": "container",
+                    "component": "DropdownMenuHeader",
+                    "componentProps": {
+                      "title": {
+                        "id": "jutro-app.Pages.CodelessForm.Electrical",
+                        "defaultMessage": "Electrical"
+                      }
+                    },
+                    "content": [
+                      {
+                        "id": "externalLinksMenuLink2",
+                        "type": "element",
+                        "component": "DropdownMenuLink",
+                        "content": {
+                          "id": "jutro-app.Pages.CodelessForm.ExpertsGuide",
+                          "defaultMessage": "Expert's Guide"
+                        },
+                        "componentProps": {
+                          "to": {
+                            "id": "jutro-app.Pages.CodelessForm.externalLinkHref2",
+                            "defaultMessage": "/linktoexpertsguide"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "internalLinksMenu",
+                "type": "container",
+                "component": "DropdownMenuButton",
+                "componentProps": {
+                  "buttonText": {
+                    "id": "jutro-app.Pages.CodelessForm.internalLinksMenuButtonText",
+                    "defaultMessage": "Internal Links"
+                  }
+                },
+                "content": [
+                  {
+                    "id": "internalLinksMenuHeader1",
+                    "type": "container",
+                    "component": "DropdownMenuHeader",
+                    "componentProps": {
+                      "title": {
+                        "id": "jutro-app.Pages.CodelessForm.Forms",
+                        "defaultMessage": "Forms"
+                      }
+                    },
+                    "content": [
+                      {
+                        "id": "internalLinksMenuLink1",
+                        "type": "element",
+                        "component": "DropdownMenuLink",
+                        "content": {
+                          "id": "jutro-app.Pages.CodelessForm.TPSReports",
+                          "defaultMessage": "TPS Reports"
+                        },
+                        "componentProps": {
+                          "to": {
+                            "id": "jutro-app.Pages.CodelessForm.internalLinkHref",
+                            "defaultMessage": "/linktoreports"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "internalLinksMenuSeparator",
+                    "type": "element",
+                    "component": "DropdownMenuSeparator"
+                  },
+                  {
+                    "id": "internalLinksMenuHeader2",
+                    "type": "container",
+                    "component": "DropdownMenuHeader",
+                    "componentProps": {
+                      "title": {
+                        "id": "jutro-app.Pages.CodelessForm.FAQs",
+                        "defaultMessage": "FAQs"
+                      }
+                    },
+                    "content": [
+                      {
+                        "id": "internalLinksMenuLink2",
+                        "type": "element",
+                        "component": "DropdownMenuLink",
+                        "content": {
+                          "id": "jutro-app.Pages.CodelessForm.HowToUseAKeyboard",
+                          "defaultMessage": "How To Use A Keyboard"
+                        },
+                        "componentProps": {
+                          "to": {
+                            "id": "jutro-app.Pages.CodelessForm.internalLinkHref2",
+                            "defaultMessage": "/linktoKBFaq"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "testFileUpload",
+                "type": "field",
+                "component": "FileUpload",
+                "componentProps": {
+                  "path": "baseData.fileupload",
+                  "imageSource": "images/fileUploadField/file-upload-empty-state@2x.png",
+                  "disableDragAndDrop": false,
+                  "label": {
+                    "id": "jutro-app.Pages.CodelessForm.testFileUploadLabel",
+                    "defaultMessage": "File Upload"
+                  },
+                  "maxFileSizeKB": 2,
+                  "maxLength": 20,
+                  "type": "large"
+                }
+              },
+              {
+                "id": "span",
+                "type": "element",
+                "component": "IntlElement",
+                "componentProps": {
+                  "tag": "span"
+                },
+                "content": {
+                  "id": "jutro-app.codeless.loremIpsum",
+                  "defaultMessage": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget massa varius, suscipit risus et, facilisis lectus. Donec eget lacus massa. Sed a tortor orci. Maecenas vitae blandit velit, vel pellentesque diam. Maecenas at lorem."
+                }
+              },
+              {
+                "id": "actionBar",
+                "type": "container",
+                "component": "div",
+                "contentLayout": {
+                  "component": "Grid",
+                  "componentProps": {
+                    "columns": [
+                      "1fr"
+                    ],
+                    "justifyItems": "evenly"
+                  }
+                },
+                "content": [
+                  {
+                    "id": "save",
+                    "type": "action",
+                    "component": "Button",
+                    "componentProps": {
+                      "onClick": "saveForm"
+                    },
+                    "content": {
+                      "id": "jutro-app.codeless.submit",
+                      "defaultMessage": "Submit",
+                      "description": "Submit the form"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "$schema": "../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json"
+}

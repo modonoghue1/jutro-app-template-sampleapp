@@ -1,0 +1,11 @@
+---
+to: "<%= `${path}/${h.capitalize(name)}/${h.capitalize(name)}Context.js` %>"
+---
+import { createContext } from 'react';
+
+export const <%= h.capitalize(name) %>Context = createContext({
+    formData: {},
+    setFormData: null,
+    valid: true,
+    setValid: null,
+});

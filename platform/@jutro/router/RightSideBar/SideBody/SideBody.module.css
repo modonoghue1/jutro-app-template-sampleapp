@@ -1,0 +1,8 @@
+.sideBody {
+  height: 100%;
+  width: 100%;
+  padding: var(--GW-LAYOUT-4) var(--GW-LAYOUT-4); }
+  .sideBody:focus {
+    outline: none; }
+
+/*# sourceMappingURL=SideBody.module.css.map */

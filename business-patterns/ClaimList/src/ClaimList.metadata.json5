@@ -1,0 +1,111 @@
+{
+    "$schema": "../../../platform/@jutro/uimetadata/common/json-schema/metadata.schema.json",
+    "jutro": "6.5.0",
+    "claimList.view": {
+        "id": "claimList",
+        "type": "page",
+        "content": [
+            {
+                "id": "claimListDatatable",
+                "type": "container",
+                "component": "DataTable",
+                "componentProps": {
+                    "path": "claimList",
+                    "rowIdPath": "id",
+                    "columnsConfigurable": false,
+                    "showSearch": false,
+                    "showPagination": false
+                },
+                "content": [
+                    {
+                        "id": "claimListDatatable_claimNumber",
+                        "type": "element",
+                        "component": "WarningColumn",
+                        "componentProps": {
+                            "header": "Claim №",
+                            "path": "id",
+                            "warningPath": "flagged.name",
+                            "sortable": false
+                        }
+                    },
+                    {
+                        "id": "claimListDatatable_policyType",
+                        "type": "element",
+                        "component": "IconColumn",
+                        "componentProps": {
+                            "header": "Policy Type",
+                            "path": "lossType.code",
+                            "iconMap": {
+                                "AUTO": "mi-directions-car",
+                                "HOME": "mi-house",
+                                "LIFE": "mi-person"
+                            }
+                        }
+                    },
+                    {
+                        "id": "claimListDatatable_description",
+                        "type": "element",
+                        "component": "DisplayColumn",
+                        "componentProps": {
+                            "fieldDatatype": "textarea",
+                            "header": "Description",
+                            "path": "description",
+                            "sortable": false
+                        }
+                    },
+                    {
+                        "id": "claimListDatatable_lossDate",
+                        "type": "element",
+                        "component": "DisplayColumn",
+                        "componentProps": {
+                            "fieldDatatype": "date",
+                            "header": "Loss Date",
+                            "path": "lossDate"
+                        }
+                    },
+                    {
+                        "id": "claimListDatatable_claimType",
+                        "type": "element",
+                        "component": "DisplayColumn",
+                        "componentProps": {
+                            "header": "Claim Type",
+                            "path": "claimType"
+                        }
+                    },
+                    {
+                        "id": "claimListDatatable_status",
+                        "type": "element",
+                        "component": "StatusColumn",
+                        "componentProps": {
+                            "header": "Status",
+                            "path": "state.code",
+                            "statusMap": {
+                                "open": "neutral",
+                                "approved": "success",
+                                "processing": "info",
+                                "declined": "error"
+                            }
+                        }
+                    },
+                    {
+                        "id": "claimListDatatable_actions",
+                        "type": "container",
+                        "component": "ActionColumn",
+                        "content": [
+                            {
+                                "id": "claimListDatatable_seeDetails",
+                                "type": "action",
+                                "component": "ActionItem",
+                                "componentProps": {
+                                    "label": "See details",
+                                    "onClick": "onSeeDetailsClick",
+                                    "singleActionType": "link"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

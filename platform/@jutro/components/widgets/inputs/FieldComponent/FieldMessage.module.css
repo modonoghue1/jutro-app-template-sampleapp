@@ -1,0 +1,40 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.fieldValidationMessage {
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  margin-top: var(--GW-SPACING-1);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+  .fieldValidationMessage:empty {
+    display: none; }
+
+.fieldMessage {
+  position: inherit; }
+
+.error {
+  color: var(--GW-COLOR-ERROR);
+  margin-right: var(--GW-SPACING-2); }
+
+.warning {
+  color: var(--GW-COLOR-WARNING);
+  margin-right: var(--GW-SPACING-2); }
+
+.success {
+  color: var(--GW-FIELD-COMPONENT-VALID-COLOR);
+  margin-right: var(--GW-SPACING-2); }
+
+.card {
+  border: none;
+  border-radius: var(--GW-BORDER-RADIUS);
+  box-shadow: var(--GW-SHADOW-2);
+  padding: var(--GW-SPACING-2) var(--GW-SPACING-3);
+  margin-top: var(--GW-SPACING-1); }
+
+.iconWrapper {
+  display: flex;
+  align-items: center; }
+
+/*# sourceMappingURL=FieldMessage.module.css.map */

@@ -1,0 +1,419 @@
+{
+  "requests": [
+    {
+      "body": {
+        "data": {
+          "attributes": {
+            "description": "Rear-ended another car",
+            "lossCause": {
+              "code": "vehcollision"
+            },
+            "lossDate": "#(args.today)",
+            "lossLocation": {
+              "addressLine1": " Somewhere Street",
+              "city": "San Mateo",
+              "country": "US",
+              "postalCode": "94404",
+              "state": {
+                "code": "CA"
+              }
+            },
+            "policyNumber": "#(args.policyNumber)",
+            "reporter": {
+              "policySystemId": "pc:contact_1"
+            }
+          }
+        }
+      },
+      "method": "post",
+      "uri": "/claim/v1/claims",
+      "vars": [
+        {
+          "name": "claimId",
+          "path": "$.data.attributes.id"
+        },
+        {
+          "name": "reporterUri",
+          "path": "$.data.attributes.reporter.uri"
+        },
+        {
+          "name": "insuredUri",
+          "path": "$.data.attributes.insured.uri"
+        },
+        {
+          "name": "addressId",
+          "path": "$.data.attributes.policyAddresses[0].id"
+        }
+      ]
+    },
+    {
+      "body": {
+        "data": {
+          "attributes": {
+            "body": "Test note body"
+          }
+        }
+      },
+      "method": "post",
+      "uri": "/claim/v1/claims/${claimId}/notes"
+    },
+    {
+      "body": {
+        "data": {
+          "attributes": {
+            "collision": true,
+            "collisionPoint": {
+              "code": "03"
+            },
+            "damageDescription": "Damaged front bumper",
+            "driver": {
+              "policySystemId": "pc:contact_1"
+            },
+            "lossParty": {
+              "code": "insured"
+            },
+            "severity": {
+              "code": "major-auto"
+            },
+            "vehicle": {
+              "policySystemId": "pcveh:1"
+            }
+          }
+        }
+      },
+      "method": "post",
+      "uri": "/claim/v1/claims/${claimId}/vehicle-incidents",
+      "vars": [
+        {
+          "name": "vehicleIncidentId",
+          "path": "$.data.attributes.id"
+        },
+        {
+          "name": "driverUri",
+          "path": "$.data.attributes.driver.uri"
+        }
+      ]
+    },
+    {
+      "body": {
+        "data": {
+          "attributes": {
+            "coverageSubtype": {
+              "code": "PACollisionCov"
+            },
+            "primaryCoverage": {
+              "code": "PACollisionCov"
+            },
+            "vehicleIncident": {
+              "id": "${vehicleIncidentId}"
+            }
+          }
+        }
+      },
+      "method": "post",
+      "uri": "/claim/v1/claims/${claimId}/exposures",
+      "vars": [
+        {
+          "name": "exposureId",
+          "path": "$.data.attributes.id"
+        }
+      ]
+    },
+    {
+      "body": {
+        "data": {
+          "attributes": {
+            "claimant": {
+              "policySystemId": "pc:contact_1"
+            }
+          }
+        }
+      },
+      "method": "patch",
+      "uri": "/claim/v1/claims/${claimId}/exposures/${exposureId}"
+    },
+    {
+      "body": {
+        "data": {
+          "attributes": {
+            "cellPhone": {
+              "countryCode": {
+                "code": "US"
+              },
+              "number": "555-555-5555"
+            },
+            "dateOfBirth": "1928-11-18",
+            "emailAddress1": "mickey.mouse@email.com",
+            "emailAddress2": "mickey@mouse.com",
+            "firstName": "Mickey",
+            "homePhone": {
+              "countryCode": {
+                "code": "US"
+              },
+              "number": "555-555-5556"
+            },
+            "lastName": "Mouse",
+            "licenseNumber": "ABCDE12345",
+            "licenseState": {
+              "code": "CA"
+            },
+            "primaryAddress": {
+              "addressLine1": "1313 Disneyland Dr.",
+              "addressLine2": "Toon Town",
+              "addressLine3": "Mickey's House",
+              "city": "Anaheim",
+              "country": "US",
+              "county": "Orange County",
+              "postalCode": "92802",
+              "state": {
+                "code": "CA"
+              }
+            },
+            "primaryLanguage": {
+              "code": "en_US"
+            },
+            "primaryLocale": {
+              "code": "en_US"
+            },
+            "primaryPhoneType": {
+              "code": "home"
+            },
+            "contactSubtype": "Person"
+          }
+        }
+      },
+      "method": "post",
+      "uri": "/claim/v1/claims/${claimId}/contacts",
+      "vars": [
+        {
+          "name": "mickeyMouseId",
+          "path": "$.data.attributes.id"
+        }
+      ]
+    },
+    {
+      "body": {
+        "data": {
+          "attributes": {
+            "addressBookUID": "DOCTOR-12345",
+            "dateOfBirth": "1959-06-11",
+            "emailAddress1": "gregory.house@email.com",
+            "emailAddress2": "ghouse@princetonplainsboro.com",
+            "firstName": "Gregory",
+            "lastName": "House",
+            "primaryAddress": {
+              "addressLine1": "1000 Hospital Dr.",
+              "addressLine2": "Second Floor",
+              "addressLine3": "House's Office",
+              "city": "Princeton",
+              "country": "US",
+              "postalCode": "08540",
+              "state": {
+                "code": "NJ"
+              }
+            },
+            "primaryLanguage": {
+              "code": "en_US"
+            },
+            "primaryLocale": {
+              "code": "en_US"
+            },
+            "primaryPhoneType": {
+              "code": "work"
+            },
+            "contactSubtype": "Doctor",
+            "workPhone": {
+              "countryCode": {
+                "code": "US"
+              },
+              "number": "666-666-6666"
+            }
+          }
+        }
+      },
+      "method": "post",
+      "uri": "/claim/v1/claims/${claimId}/contacts",
+      "vars": [
+        {
+          "name": "gregoryHouseId",
+          "path": "$.data.attributes.id"
+        }
+      ]
+    },
+    {
+      "body": {
+        "data": {
+          "attributes": {
+            "ambulanceUsed": true,
+            "bodyParts": [
+              {
+                "detailedBodyPart": {
+                  "code": "57"
+                },
+                "detailedBodyPartDesc": {
+                  "code": "57B"
+                },
+                "impairmentPercentage": 77,
+                "ordering": 12,
+                "primaryBodyPart": {
+                  "code": "lower"
+                },
+                "sideOfBody": {
+                  "code": "left"
+                }
+              }
+            ],
+            "description": "Head trauma, possible concussion",
+            "detailedInjuryType": {
+              "code": "07"
+            },
+            "disabledDueToAccident": {
+              "code": "notdisabled"
+            },
+            "generalInjuryType": {
+              "code": "specific"
+            },
+            "injuredPerson": {
+              "id": "${mickeyMouseId}"
+            },
+            "lossParty": {
+              "code": "third_party"
+            },
+            "lostWages": false,
+            "primaryDoctor": {
+              "id": "${gregoryHouseId}"
+            },
+            "severity": {
+              "code": "major-injury"
+            },
+            "treatmentType": {
+              "code": "er"
+            }
+          }
+        }
+      },
+      "method": "post",
+      "uri": "/claim/v1/claims/${claimId}/injury-incidents",
+      "vars": [
+        {
+          "name": "mickeyUri",
+          "path": "$.data.attributes.injuredPerson.uri"
+        },
+        {
+          "name": "gregoryUri",
+          "path": "$.data.attributes.primaryDoctor.uri"
+        }
+      ]
+    },
+    {
+      "body": {
+        "data": {
+          "attributes": {
+            "collision": true,
+            "collisionPoint": {
+              "code": "03"
+            },
+            "damageDescription": "Damaged rear bumper",
+            "driver": {
+              "id": "${mickeyMouseId}"
+            },
+            "lossParty": {
+              "code": "third_party"
+            },
+            "severity": {
+              "code": "major-auto"
+            },
+            "vehicle": {
+              "color": "silver",
+              "licensePlate": "MERLIN0",
+              "make": "Subaru",
+              "model": "Outback",
+              "year": 2005
+            }
+          }
+        }
+      },
+      "method": "post",
+      "uri": "/claim/v1/claims/${claimId}/vehicle-incidents"
+    },
+    {
+      "body": {
+        "data": {
+          "attributes": {
+            "addressBookUID": "REPAIRSHOP-12345",
+            "companyName": "#(args.name)",
+            "editableRoles": [
+              {
+                "active": true,
+                "relatedTo": {
+                  "id": "${claimId}",
+                  "type": "Claim"
+                },
+                "role": {
+                  "code": "repairshop"
+                }
+              }
+            ],
+            "contactSubtype": "AutoRepairShop"
+          }
+        }
+      },
+      "method": "post",
+      "uri": "/claim/v1/claims/${claimId}/contacts",
+      "vars": [
+        {
+          "name": "specialistId",
+          "path": "$.data.attributes.id"
+        }
+      ]
+    },
+    {
+      "body": {
+        "data": {
+          "attributes": {
+            "instruction": {
+              "serviceAddress": {
+                "id": "${addressId}"
+              },
+              "customer": {
+                "id": "${mickeyMouseId}"
+              },
+              "services": [
+                {
+                  "code": "#(args.service1Code)"
+                },
+                {
+                  "code": "#(args.service2Code)"
+                }
+              ]
+            },
+            "kind": {
+              "code": "#(args.kind)"
+            },
+            "requestedQuoteCompletionDate": "#(args.requestedCompletionDate)",
+            "specialist": {
+              "id": "${specialistId}"
+            }
+          }
+        }
+      },
+      "method": "post",
+      "uri": "/claim/v1/claims/${claimId}/service-requests"
+    },
+    {
+      "method": "post",
+      "uri": "/claim/v1/claims/${claimId}/submit"
+    }
+  ],
+  "selections": [
+    {
+      "uri": "${reporterUri}"
+    },
+    {
+      "uri": "${insuredUri}"
+    },
+    {
+      "uri": "${driverUri}"
+    }
+  ]
+}

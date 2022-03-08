@@ -1,0 +1,8 @@
+.button {
+    --GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR: none;
+    padding: 0 var(--GW-SPACING-2);
+}
+
+.selected {
+    font-weight: var(--GW-FONT-WEIGHT-BOLD);
+}

@@ -1,0 +1,27 @@
+// UI metadata file loaded and used in ClaimDetails Page
+{
+  // ======================================================================
+  // UI metadata for the "ClaimDetails" page
+  // ======================================================================
+  "jutro": "6.0.0",
+  "jutro-app.claimdetails.agent": {
+    "id": "claimdetails",
+    "type": "page",
+    "contentLayout": {
+      "component": "Flex",
+      "componentProps": {
+        "direction": "column",
+        "alignItems": "center"
+      }
+    },
+    "content": [
+      {
+        "id": "sfd",
+        "type": "element",
+        "component": "div",
+        "content": "i'm a claims details page"
+      }
+    ]
+  },
+  "$schema": "../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json"
+}

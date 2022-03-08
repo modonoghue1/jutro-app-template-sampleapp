@@ -1,0 +1,106 @@
+.dashboard {
+  --CUSTOM-PINK-COLOR: #ff6160;
+  --CUSTOM-PINK-COLOR-HOVER: #cb1f1f;
+  --CUSTOM-PINK-COLOR-ACTIVE: #ba1d1d;
+  --CUSTOM-YELLOW-COLOR: #ff9d2e;
+  --CUSTOM-BLUE-COLOR: #1567e5;
+  --CUSTOM-GREEN-COLOR: #2a8440;
+  --CUSTOM-DARK-GREY-COLOR: #28333f;
+  --CUSTOM-BORDER-COLOR: #d1d9e2;
+  --CUSTOM-EVEN-TABLE-TR-BACKGROUND: #f7faff;
+
+  height: 100%;
+  max-width: 80rem;
+  margin: auto;
+
+  .actionButtons {
+    background-color: var(--CUSTOM-PINK-COLOR);
+    border: 2px solid var(--CUSTOM-PINK-COLOR);
+    box-shadow: none;
+
+    &:hover {
+      background: var(--CUSTOM-PINK-COLOR-HOVER);
+      border: 2px solid var(--CUSTOM-PINK-COLOR-HOVER);
+    }
+
+    &:active,
+    &:active:focus,
+    &:active:focus:hover,
+    &.activeKeypress,
+    &.activeKeypress:focus {
+      background: var(--CUSTOM-PINK-COLOR-ACTIVE);
+      border: 2px solid var(--CUSTOM-PINK-COLOR-ACTIVE);
+    }
+  }
+
+  :global(.ReactTable.-striped *:not(.mir)) {
+    font-size: var(--GW-FONT-SIZE-BODY);
+    line-height: 2rem;
+  }
+
+  :global(.ReactTable .rt-thead.-header),
+  :global(.ReactTable.-striped .rt-tbody) {
+    border-bottom: 1px solid var(--CUSTOM-BORDER-COLOR);
+    box-shadow: none;
+  }
+
+  :global(.ReactTable.-striped .rt-tbody div.rt-tr.-even) {
+    background-color: var(--CUSTOM-EVEN-TABLE-TR-BACKGROUND);
+  }
+}
+
+.dashboardCard {
+  padding: 1.5rem;
+  box-shadow: 0 0 12px 0 rgba(143, 157, 179, 0.2);
+  border: none;
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tileContent {
+  display: flex;
+  flex-direction: column;
+
+  .tileCount {
+    color: var(--GW-TEXT-COLOR-1);
+    font-size: var(--GW-FONT-SIZE-H2);
+    font-family: var(--GW-FONT-FAMILY);
+    font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+    text-align: center;
+    line-height: var(--GW-LINE-HEIGHT-H2);
+  }
+
+  .tileTitle {
+    color: var(--GW-TEXT-COLOR-2);
+    font-family: var(--GW-FONT-FAMILY);
+    font-size: var(--GW-FONT-SIZE-BODY);
+    font-weight: normal;
+    line-height: var(--GW-LINE-HEIGHT-BODY);
+    text-align: center;
+  }
+
+  .tileActiveBar {
+    width: 100%;
+    height: 4px;
+    border-radius: 0 0 var(--GW-BORDER-RADIUS) var(--GW-BORDER-RADIUS);
+    background-color: var(--GW-BRAND-COLOR-1);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.titleBar {
+  border-bottom: 1px solid var(--CUSTOM-BORDER-COLOR);
+  margin-bottom: 10px;
+
+  .filters {
+    color: var(--CUSTOM-DARK-GREY-COLOR);
+    font-size: var(--GW-FONT-SIZE-H4);
+  }
+}

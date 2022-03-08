@@ -1,0 +1,44 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.iconButton {
+  border: none;
+  background: none;
+  border-radius: var(--GW-BORDER-RADIUS);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--GW-ICON-BUTTON-HEIGHT);
+  width: var(--GW-ICON-BUTTON-WIDTH);
+  padding: 0;
+  cursor: pointer;
+  font-size: var(--GW-ICON-FONT-SIZE-2);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+  .iconButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .iconButton .padding {
+    padding: var(--GW-SPACING-2); }
+  .iconButton .icon {
+    color: var(--GW-CLICKABLE-ELEMENT-COLOR); }
+  .iconButton .light {
+    color: var(--GW-BUTTON-INVERSE-COLOR); }
+  .iconButton .neutral {
+    color: var(--GW-ICON-BUTTON-NEUTRAL-COLOR); }
+  .iconButton:hover {
+    background-color: var(--GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR-HOVER); }
+    .iconButton:hover.light {
+      background-color: var(--GW-BUTTON-INVERSE-BACKGROUND-COLOR-HOVER); }
+  .iconButton .activeKeypress,
+  .iconButton .activeKeypress:focus, .iconButton:active {
+    background-color: var(--GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR-ACTIVE); }
+    .iconButton .activeKeypress.light,
+    .iconButton .activeKeypress:focus.light, .iconButton:active.light {
+      background-color: var(--GW-BUTTON-INVERSE-BACKGROUND-COLOR-ACTIVE); }
+  .iconButton:disabled, .iconButton:global(.disabled) {
+    opacity: var(--GW-OPACITY-DISABLED);
+    cursor: not-allowed; }
+    .iconButton:disabled, .iconButton:disabled:hover, .iconButton:disabled:active, .iconButton:global(.disabled), .iconButton:global(.disabled):hover, .iconButton:global(.disabled):active {
+      background-color: transparent; }
+
+/*# sourceMappingURL=IconButton.module.css.map */

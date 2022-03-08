@@ -1,0 +1,9 @@
+// UI metadata file loaded and used in ClaimActivityList
+{
+    // ======================================================================
+    // UI metadata for the "ClaimActivityList" component
+    // ======================================================================
+    "jutro": "6.5.0",
+    "jutro-app.claimactivitylist.agent": {},
+    "$schema": "../../../platform/@jutro/uimetadata/common/json-schema/metadata.schema.json"
+}

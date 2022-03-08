@@ -1,0 +1,42 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.screenReaderOnly {
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.brandedLoader {
+  width: var(--GW-BRANDED-LOADER-SIZE);
+  height: var(--GW-BRANDED-LOADER-SIZE); }
+
+.logoSegment {
+  fill: var(--GW-BRANDED-LOADER-COLOR);
+  opacity: 0; }
+
+.fill1 {
+  animation: hideshow var(--GW-BRANDED-LOADER-ANIMATION-DURATION) linear infinite; }
+
+.fill2 {
+  animation: hideshow var(--GW-BRANDED-LOADER-ANIMATION-DURATION) linear infinite;
+  animation-delay: calc(var(--GW-BRANDED-LOADER-ANIMATION-DURATION) / 6.6); }
+
+@keyframes hideshow {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 1; }
+  60% {
+    opacity: 1; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+/*# sourceMappingURL=BrandedLoader.module.css.map */

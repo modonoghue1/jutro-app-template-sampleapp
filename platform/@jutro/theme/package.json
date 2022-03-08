@@ -1,0 +1,68 @@
+{
+  "_from": "@jutro/theme@6.5.0",
+  "_id": "@jutro/theme@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-FJjcvfwc+S9rjWZXGpJFz+mn8HU=",
+  "_location": "/@jutro/theme",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/theme@6.5.0",
+    "name": "@jutro/theme",
+    "escapedName": "@jutro%2ftheme",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/app",
+    "/@jutro/components",
+    "/@jutro/datatable",
+    "/@jutro/floorplan",
+    "/@jutro/lab-preview-components",
+    "/@jutro/lab-preview-storybook-preset",
+    "/@jutro/layout",
+    "/@jutro/router",
+    "/@jutro/wizard-next"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/theme/-/@jutro/theme-6.5.0.tgz",
+  "_shasum": "1498dcbdfc1cf92f6b8d66571a9245cfe9a7f075",
+  "_spec": "@jutro/theme@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/locale": "6.5.0",
+    "@jutro/logger": "6.5.0",
+    "@jutro/platform": "6.5.0",
+    "@jutro/prop-types": "6.5.0",
+    "@jutro/test": "6.5.0",
+    "@jutro/theme-styles": "6.5.0",
+    "classnames": "2.2.6",
+    "lodash": "4.17.21",
+    "prop-types": "15.7.2",
+    "react-intl": "5.15.5"
+  },
+  "deprecated": false,
+  "description": "Provides theme support for React",
+  "devDependencies": {
+    "@jutro/test": "6.5.0"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/theme",
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

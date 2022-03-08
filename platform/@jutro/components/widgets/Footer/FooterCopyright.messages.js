@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({copyrightMessage:{id:"jutro-components.widgets.Footer.copyright",defaultMessage:"Copyright © 2001-{year} Guidewire Software"}});

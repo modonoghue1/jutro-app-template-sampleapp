@@ -1,0 +1,69 @@
+@mixin typography-h1 {
+  font-size: var(--GW-FONT-SIZE-H1);
+  line-height: var(--GW-LINE-HEIGHT-H1);
+}
+
+@mixin typography-h2 {
+  font-size: var(--GW-FONT-SIZE-H2);
+  line-height: var(--GW-LINE-HEIGHT-H2);
+}
+
+@mixin typography-h3 {
+  font-size: var(--GW-FONT-SIZE-H3);
+  line-height: var(--GW-LINE-HEIGHT-H3);
+}
+
+@mixin typography-h4 {
+  font-size: var(--GW-FONT-SIZE-H4);
+  line-height: var(--GW-LINE-HEIGHT-H4);
+}
+
+@mixin typography-h5 {
+  font-size: var(--GW-FONT-SIZE-H5);
+  line-height: var(--GW-LINE-HEIGHT-H5);
+}
+
+@mixin typography-body {
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY);
+}
+
+@mixin typography-subtext {
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT);
+}
+
+@mixin typography-label {
+  font-size: var(--GW-FONT-SIZE-LABEL);
+  line-height: var(--GW-LINE-HEIGHT-LABEL);
+}
+
+@mixin typography-secondary-label {
+  font-size: var(--GW-FONT-SIZE-SECONDARY-LABEL);
+  line-height: var(--GW-LINE-HEIGHT-SECONDARY-LABEL);
+}
+
+@mixin typography-input {
+  font-size: var(--GW-FONT-SIZE-INPUT);
+  line-height: var(--GW-LINE-HEIGHT-INPUT);
+}
+
+@mixin typography-button {
+  font-size: var(--GW-FONT-SIZE-BUTTON);
+  line-height: var(--GW-LINE-HEIGHT-BUTTON);
+}
+
+@mixin icon-size-1 {
+  font-size: var(--GW-ICON-FONT-SIZE-1);
+  line-height: var(--GW-ICON-LINE-HEIGHT);
+}
+
+@mixin icon-size-2 {
+  font-size: var(--GW-ICON-FONT-SIZE-2);
+  line-height: var(--GW-ICON-LINE-HEIGHT);
+}
+
+@mixin icon-size-3 {
+  font-size: var(--GW-ICON-FONT-SIZE-3);
+  line-height: var(--GW-ICON-LINE-HEIGHT);
+}

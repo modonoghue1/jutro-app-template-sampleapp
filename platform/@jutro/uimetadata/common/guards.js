@@ -1,0 +1,1 @@
+export function isMetadataJSON(metadata){return"object"==typeof metadata&&"jutro"in metadata}export function isMetadataFloorPlan(metadata){return"object"==typeof metadata&&"floorplan"===metadata.type}

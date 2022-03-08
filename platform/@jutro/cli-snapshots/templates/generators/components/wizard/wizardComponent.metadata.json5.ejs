@@ -1,0 +1,103 @@
+---
+to: '<%= `${path}/${h.capitalize(name)}/${h.capitalize(name)}.metadata.json5` %>'
+---
+{
+    "key.<%= h.changeCase.lowerCase(name)%>.wizard": {
+        "id": "wizard.id",
+        "type": "wizard",
+        "title": "<%= h.capitalize(name)%>",
+        "flow": [
+            "key.<%= h.changeCase.lowerCase(name)%>.step1", // components for these routes can be defined in App.metadata.json5
+            "key.<%= h.changeCase.lowerCase(name)%>.step2",
+            "key.<%= h.changeCase.lowerCase(name)%>.step3"
+        ],
+        "wizardProps": {
+            "cancelPath": "/cancel",
+            "finishPath": "/finish",
+            "knockoutPath": "/knockoutPage",
+            "buttonProps": {
+                "cancel": {},
+                "next": {},
+                "previous": {},
+                "finish": {}
+            },
+            "onFinish": {"callback": "onFinishWizard", "callbackProps": {
+                "message": "finishing"
+              }},
+              "onStart": {"callback": "onStartWizard", "callbackProps": {
+                "message": "starting"
+              }},
+              "onCancel": "onCancelWizard"
+        }
+    },
+    "key.<%= h.changeCase.lowerCase(name)%>.step1": {
+        "type": "wizardpage",
+        "route": "step1",
+        "component": "<%= h.capitalize(name) %>Page",
+        "id": "step1",
+        "componentProps": {},
+        "content":[],
+        "wizardPageProps": {
+          "title": "Step #1",
+          "skipOnResume": false,
+          "onNext": "saveForm",
+          "onLoad": {
+            "callback": "loadPage",
+            "callbackProps": {
+              "message": "loaded page 1"
+            }
+          },
+          "buttonProps": {
+            "next": {},
+            "previous": {}
+          }
+        }
+    },
+    "key.<%= h.changeCase.lowerCase(name)%>.step2": {
+        "type": "wizardpage",
+        "route": "step2",
+        "id": "step2",
+        "component": "<%= h.capitalize(name) %>Page",
+        "componentProps": {},
+        "content": [],
+        "wizardPageProps": {
+          "title": "Step #2",
+          "skipOnResume": false,
+          "onNext": "saveForm",
+          "onLoad": {
+            "callback": "loadPage",
+            "callbackProps": {
+              "message": "loaded page 2"
+            }
+          },
+         "onPrevious": "resumePage"
+        },
+        "buttonProps": {
+            "next": {},
+            "previous": {}
+        }
+    },
+     "key.<%= h.changeCase.lowerCase(name)%>.step3": {
+        "type": "wizardpage",
+        "route": "step3",
+        "id": "step3",
+        "component": "<%= h.capitalize(name) %>Page",
+        "componentProps": {},
+        "content":[],
+        "wizardPageProps": {
+          "title": "Step #3",
+          "onLoad": {
+            "callback": "loadPage",
+            "callbackProps": {
+              "message": "loaded page 3"
+            }
+          },
+          "onPrevious": "resumePage"
+        },
+        "buttonProps": {
+            "next": {},
+            "previous": {}
+        }
+    }
+  }
+  

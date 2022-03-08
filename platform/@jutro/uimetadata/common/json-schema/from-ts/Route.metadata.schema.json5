@@ -1,0 +1,121 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "path": {
+      "$ref": "#/definitions/datatypes/pathShape",
+      "description": "URL path of the route"
+    },
+    "exact": {
+      "description": "When true, will only match if the path matches the location.pathname exactly",
+      "type": "boolean"
+    },
+    "strict": {
+      "description": "When true, a path that has a trailing slash will only match a location.pathname with a trailing slash.",
+      "type": "boolean"
+    },
+    "sensitive": {
+      "description": "Match from case sensitive",
+      "type": "boolean"
+    },
+    "redirect": {
+      "$ref": "#/definitions/datatypes/pathShape",
+      "description": "Path to which redirect when entering current page"
+    },
+    "push": {
+      "description": "When true, redirecting will push a new entry onto the history instead of replacing the current one",
+      "type": "boolean"
+    },
+    "to": {
+      "$ref": "#/definitions/datatypes/toShape",
+      "description": "A location to redirect to"
+    },
+    "from": {
+      "description": "A pathname to redirect from.",
+      "type": "string"
+    },
+    "id": {
+      "$ref": "#/definitions/datatypes/idShape",
+      "description": "Identifier for route"
+    },
+    "component": {
+      "description": "Component to be rendered as the destination page for this route",
+      "type": "string"
+    },
+    "componentProps": {
+      "description": "Properties for the component to be rendered",
+      "type": "object",
+      "properties": {},
+      "additionalProperties": true
+    },
+    "title": {
+      "$ref": "#/definitions/datatypes/intlShape",
+      "description": "Title to be displayed for route"
+    },
+    "showOnNavBar": {
+      "description": "Defines whether route should be shown in the navigation",
+      "type": "boolean"
+    },
+    "navLink": {
+      "description": "Nav link properties",
+      "$ref": "#/definitions/ts/Route/NavLinkPropTypes"
+    },
+    "routes": {
+      "description": "Array of route subroutes",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/metadata/route"
+      }
+    },
+    "href": {
+      "description": "External path from application",
+      "type": "string"
+    }
+  },
+  "anyOf": [
+    {
+      "required": ["component"]
+    },
+    {
+      "required": ["redirect"]
+    },
+    {
+      "required": ["routes"]
+    }
+  ],
+  "definitions": {
+    "NavLinkPropTypes": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Identifier for nav link; should be unique per page",
+          "type": "string"
+        },
+        "text": {
+          "description": "Label for nav link",
+          "$ref": "#/definitions/datatypes/intlShape"
+        },
+        "icon": {
+          "description": "Icon for nav link",
+          "type": "string"
+        },
+        "className": {
+          "description": "Additional className for nav link",
+          "type": "string"
+        },
+        "activeClassName": {
+          "description": "Additional className for nav link active state",
+          "type": "string"
+        },
+        "notifications": {
+          "description": "The notification value of the Badge",
+          "type": "number"
+        },
+        "component": {
+          "description": "React element to render nav item",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

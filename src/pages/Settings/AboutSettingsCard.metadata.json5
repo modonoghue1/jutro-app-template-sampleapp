@@ -1,0 +1,37 @@
+{
+  "$schema": "../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json",
+  "jutro": "5.2.0-next.0",
+  "about-card": {
+    "id": "about-card-id",
+    "type": "page",
+    "contentLayout": {
+      "component": "Flex",
+      "componentProps": {
+        "alignItems": "center"
+      }
+    },
+    "content": [
+      {
+        "id": "about-card-logo",
+        "type": "element",
+        "component": "img",
+        "componentProps": {
+          "src": "./images/guidewire-logo.png",
+          "alt": {
+            "id": "jutro.app.settings.aboutSettings.logoTitle",
+            "defaultMessage": "Guidewire Cloud"
+          }
+        }
+      },
+      {
+        "id": "about-card-logo-title",
+        "type": "element",
+        "component": "h5",
+        "content": {
+          "id": "jutro.app.settings.aboutSettings.logoTitle",
+          "defaultMessage": "Guidewire Cloud"
+        }
+      }
+    ]
+  }
+}

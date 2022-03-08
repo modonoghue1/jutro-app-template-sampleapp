@@ -1,0 +1,21 @@
+.numberInput {
+  position: relative; }
+  .numberInput input[type='number']::-webkit-inner-spin-button,
+  .numberInput input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  .numberInput input[type='number'] {
+    -moz-appearance: textfield; }
+  .numberInput .numberInputButton {
+    position: absolute;
+    height: calc(50% - var(--GW-LAYOUT-1) - var(--GW-BORDER-WIDTH));
+    width: var(--GW-SPACING-5);
+    right: var(--GW-LAYOUT-3);
+    cursor: pointer;
+    padding: 0; }
+  .numberInput .numberInputUp {
+    top: var(--GW-LAYOUT-1); }
+  .numberInput .numberInputDown {
+    bottom: var(--GW-LAYOUT-1); }
+
+/*# sourceMappingURL=NumberInput.module.css.map */

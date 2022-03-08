@@ -1,0 +1,1 @@
+import _ from"lodash";export default(nextCandidate,prev)=>{if(!prev)return nextCandidate;const result=Object.entries(nextCandidate).reduce(((delta,[key,value])=>prev[key]===value?delta:{...delta,[key]:value}),{});return _.isEmpty(result)?null:result};

@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({breadcrumbLabel:{id:"jutro-components.widgets.Breadcrumb.ariaLabel",defaultMessage:"breadcrumb"},breadcrumbBackButtonLabel:{id:"jutro-components.widgets.Breadcrumb.backButtonLabel",defaultMessage:"Back"}});

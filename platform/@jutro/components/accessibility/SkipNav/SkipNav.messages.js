@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({skipNavMessage:{id:"jutro-components.accessibility.SkipNav.navigation",defaultMessage:"Skip to content"}});

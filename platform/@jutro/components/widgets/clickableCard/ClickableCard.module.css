@@ -1,0 +1,35 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.clickableCard {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background-color: var(--GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  padding: var(--GW-CARD-PADDING);
+  box-shadow: var(--GW-SHADOW-2);
+  min-width: 14.5rem;
+  color: var(--GW-CLICKABLE-ELEMENT-COLOR);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+  .clickableCard:hover:not(.disabled) {
+    background-color: var(--GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR-HOVER);
+    outline: none;
+    cursor: pointer; }
+  .clickableCard:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .clickableCard:active:not(:focus-within):not(.disabled), .clickableCard:active:focus {
+    background-color: var(--GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR-ACTIVE);
+    outline: none;
+    box-shadow: none; }
+  .clickableCard .activeKeypress,
+  .clickableCard .activeKeypress:focus {
+    background-color: var(--GW-CLICKABLE-ELEMENT-BACKGROUND-COLOR-ACTIVE);
+    outline: none;
+    box-shadow: none; }
+  .clickableCard.disabled {
+    opacity: var(--GW-OPACITY-DISABLED);
+    cursor: not-allowed; }
+
+/*# sourceMappingURL=ClickableCard.module.css.map */

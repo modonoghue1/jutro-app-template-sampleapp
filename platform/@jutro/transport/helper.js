@@ -1,0 +1,1 @@
+export function fastOptionsMerge(defaults,overrides){const headers={...null==defaults?void 0:defaults.headers,...null==overrides?void 0:overrides.headers};return{...defaults,...overrides,headers:headers}}

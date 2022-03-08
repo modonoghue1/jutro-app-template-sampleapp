@@ -1,0 +1,1 @@
+import{createContext,useContext}from"react";export const AuthContext=createContext(void 0);export const useAuth=()=>useContext(AuthContext);

@@ -1,0 +1,486 @@
+{
+  "jutro": "5.0.0-next.0",
+  "account.details.view": {
+    "id": "accountDetails",
+    "type": "page",
+    "content": [
+      {
+        "id": "panel1",
+        "type": "container",
+        "component": "Panel",
+        "componentProps": {
+          "className": "app__BillPaymentForm__paymentPanel",
+          "title": {
+            "id": "app.account-details.view.personalDetailsHeading",
+            "defaultMessage": "Personal Details"
+          },
+          "renderHeader": "renderPanelHeader",
+          "fluid": true
+        },
+        "content": [
+          {
+            "id": "addressBillingDetailsView",
+            "type": "container",
+            "component": "div",
+            "contentLayout": {
+              "component": "Grid",
+              "componentProps": {
+                "gap": "large",
+                "columns": [
+                  1,
+                  1
+                ],
+                "phone": {
+                  "columns": [
+                    1
+                  ]
+                }
+              }
+            },
+            "content": [
+              {
+                "id": "firstName",
+                "type": "field",
+                "datatype": "text",
+                "componentProps": {
+                  "path": "formData.firstName",
+                  "label": {
+                    "id": "account-details.firstName",
+                    "defaultMessage": "First Name"
+                  }
+                },
+              },
+              {
+                "id": "lastName",
+                "type": "field",
+                "datatype": "text",
+                "componentProps": {
+                  "path": "formData.lastName",
+                  "label": {
+                    "id": "account-details.lastName",
+                    "defaultMessage": "Last Name",
+                  }
+                },
+              },
+              {
+                "id": "phoneNumber",
+                "type": "field",
+                "datatype": "text",
+                "componentProps": {
+                  "path": "formData.phoneNumber",
+                  "label": {
+                    "id": "account-details.phoneNumber",
+                    "defaultMessage": "Phone Number",
+                  }
+                },
+              },
+              {
+                "id": "emailId",
+                "type": "field",
+                "datatype": "text",
+                "componentProps": {
+                  "path": "formData.emailId",
+                  "label": {
+                    "id": "account-details.emailId",
+                    "defaultMessage": "Email ID",
+                  }
+                },
+              }
+            ]
+          },
+        ]
+      },
+      {
+        "id": "panel2",
+        "type": "container",
+        "component": "Panel",
+        "componentProps": {
+          "className": "app__BillPaymentForm__paymentPanel",
+          "title": {
+            "id": "app.account-details.view.addressBillingDetailsHeading",
+            "defaultMessage": "Address and Billing"
+          },
+          "renderHeader": "renderPanelHeader",
+          "fluid": true
+        },
+        "content": [
+          {
+            "id": "addressAndBillingViewForm",
+            "type": "container",
+            "component": "div",
+            "contentLayout": {
+              "component": "Grid",
+              "componentProps": {
+                "gap": "large",
+                "columns": [
+                  1,
+                  1,
+                  1
+                ],
+                "phone": {
+                  "columns": [
+                    1
+                  ]
+                }
+              }
+            },
+            "content": [
+              {
+                "id": "primaryAddressSummary",
+                "type": "field",
+                "component": "TextArea",
+                "componentProps": {
+                  "label": {
+                    "id": "account-details.primaryAddress",
+                    "defaultMessage": "Primary Address"
+                  }
+                },
+              },
+              {
+                "id": "billingAddressSummary",
+                "type": "field",
+                "component": "TextArea",
+                "componentProps": {
+                  "label": {
+                    "id": "account-details.billingAddressSummary",
+                    "defaultMessage": "Billing Address",
+                  }
+                },
+              },
+              {
+                "id": "billDeliverySummary",
+                "type": "field",
+                "datatype": "text",
+                "componentProps": {
+                  "label": {
+                    "id": "account-details.billDeliverySummary",
+                    "defaultMessage": "Bill Delivery",
+                  }
+                },
+              },
+            ]
+          },
+          {
+            "id": "addressAndBillingEditForm",
+            "type": "container",
+            "component": "div",
+            "contentLayout": {
+              "component": "ColumnsLayout",
+              "componentProps": {
+                "id": "addressAndBillingEditFormLayout",
+                "gap": "large",
+                "columns": [
+                  1,
+                  1
+                ],
+                "phone": {
+                  "columns": 1
+                }
+              }
+            },
+            "content": [
+              {
+                "id": "addressAndBillingEditFormLeftColumn",
+                "type": "layout",
+                "component": "GridLayout",
+                "content": [
+                  {
+                    "id": "addressLine1",
+                    "type": "field",
+                    "datatype": "text",
+                    "componentProps": {
+                      "path": "formData.primaryAddress.addressLine1",
+                      "label": {
+                        "id": "account-details.addressLine1",
+                        "defaultMessage": "Address (line 1)"
+                      }
+                    }
+                  },
+                  {
+                    "id": "addressLine2",
+                    "type": "field",
+                    "datatype": "text",
+                    "componentProps": {
+                      "path": "formData.primaryAddress.addressLine2",
+                      "label": {
+                        "id": "account-details.street",
+                        "defaultMessage": "Address (line 2)",
+                      }
+                    },
+                  },
+                  {
+                    "id": "city",
+                    "type": "field",
+                    "datatype": "text",
+                    "componentProps": {
+                      "path": "formData.primaryAddress.city",
+                      "label": {
+                        "id": "account-details.city",
+                        "defaultMessage": "City",
+                      }
+                    },
+                  },
+                  {
+                    "id": "state",
+                    "type": "field",
+                    "datatype": "text",
+                    "componentProps": {
+                      "path": "formData.primaryAddress.state",
+                      "label": {
+                        "id": "account-details.state",
+                        "defaultMessage": "State",
+                      }
+                    },
+                  },
+                  {
+                    "id": "postalCode",
+                    "type": "field",
+                    "datatype": "text",
+                    "componentProps": {
+                      "path": "formData.primaryAddress.postalCode",
+                      "label": {
+                        "id": "account-details.postalCode",
+                        "defaultMessage": "Zip Code",
+                      }
+                    },
+                  },
+                  {
+                    "id": "country",
+                    "type": "field",
+                    "datatype": "text",
+                    "componentProps": {
+                      "path": "formData.primaryAddress.country",
+                      "label": {
+                        "id": "account-details.country",
+                        "defaultMessage": "Country",
+                      }
+                    },
+                  },
+                  {
+                    "id": "billingAddressSameAsPrimary",
+                    "type": "field",
+                    "component": "Checkbox",
+                    "componentProps": {
+                      "path": "formData.billingAddressSameAsPrimary",
+                      "showInlineLabel": true,
+                      "label": {
+                        "id": "account-details.billingAddressSameAsPrimary",
+                        "defaultMessage": "Billing address same as Primary Address"
+                      }
+                    }
+                  },
+                  {
+                    "id": "billingAddressEditForm",
+                    "type": "container",
+                    "component": "div",
+                    "contentLayout": {
+                      "component": "GridLayout",
+                      "componentProps": {
+                        "id": "billingAddressEditFormLayout",
+                        "gap": "large",
+                        "columns": [
+                          1
+                        ],
+                      }
+                    },
+                    "content": [
+                      {
+                        "id": "billingAddressEditFormHeading",
+                        "type": "component",
+                        "component": "IntlElement",
+                        "componentProps": {
+                          "tag": "h3"
+                        },
+                        "content": {
+                          "id": "app.account-details.view.billingAddressEditHeading",
+                          "defaultMessage": "Billing address"
+                        }
+                      },
+                      {
+                        "id": "billingAddressLine1",
+                        "type": "field",
+                        "datatype": "text",
+                        "componentProps": {
+                          "path": "formData.billingAddress.addressLine1",
+                          "label": {
+                            "id": "account-details.billingEdit.addressLine1",
+                            "defaultMessage": "Address (line 1)"
+                          }
+                        }
+                      },
+                      {
+                        "id": "billingAddressLine2",
+                        "type": "field",
+                        "datatype": "text",
+                        "componentProps": {
+                          "path": "formData.billingAddress.addressLine2",
+                          "label": {
+                            "id": "account-details.billingEdit.addressLine2",
+                            "defaultMessage": "Address (line 2)",
+                          }
+                        },
+                      },
+                      {
+                        "id": "billingCity",
+                        "type": "field",
+                        "datatype": "text",
+                        "componentProps": {
+                          "path": "formData.billingAddress.city",
+                          "label": {
+                            "id": "account-details.billingEdit.city",
+                            "defaultMessage": "City",
+                          }
+                        },
+                      },
+                      {
+                        "id": "billingState",
+                        "type": "field",
+                        "datatype": "text",
+                        "componentProps": {
+                          "path": "formData.billingAddress.state",
+                          "label": {
+                            "id": "account-details.billingEdit.state",
+                            "defaultMessage": "State",
+                          }
+                        },
+                      },
+                      {
+                        "id": "billingPostalCode",
+                        "type": "field",
+                        "datatype": "text",
+                        "componentProps": {
+                          "path": "formData.billingAddress.postalCode",
+                          "label": {
+                            "id": "account-details.postalCode",
+                            "defaultMessage": "Postal Code",
+                          }
+                        },
+                      },
+                      {
+                        "id": "billingCountry",
+                        "type": "field",
+                        "datatype": "text",
+                        "componentProps": {
+                          "path": "formData.billingAddress.country",
+                          "label": {
+                            "id": "account-details.billingEdit.country",
+                            "defaultMessage": "Country",
+                          }
+                        },
+                      },
+                    ]
+                  },
+                  {
+                    "id": "billDelivery",
+                    "type": "field",
+                    "datatype": "radio",
+                    "componentProps": {
+                      "path": "formData.billDelivery",
+                      "label": {
+                        "id": "account-details.billDelivery",
+                        "defaultMessage": "Bill Delivery"
+                      },
+                    }
+                  },
+                  {
+                    "id": "billDeliveryEmailId",
+                    "type": "field",
+                    "datatype": "text",
+                    "componentProps": {
+                      "path": "formData.billDeliveryEmailId",
+                      "label": {
+                        "id": "account-details.billDeliveryEmailId",
+                        "defaultMessage": "Email",
+                      }
+                    },
+                  },
+                ]
+              },
+              {
+                "id": "addressAndBillingEditFormRightColumn",
+                "type": "layout",
+                "component": "GridLayout",
+                "componentProps": {
+                  "className": "addressAndBillingEditFormRightColumn",
+                },
+                "content": [
+                  {
+                    "id": "currentLocationMap",
+                    "type": "field",
+                    "component": "MapArea",
+                    "componentProps": {
+                      "path": "formData.primaryAddress",
+                      "label": {
+                        "id": "account-details.currentLocation",
+                        "defaultMessage": "Current Location",
+                      },
+                      "secondaryLabel": {
+                        "id": "account-details.currentLocation.description",
+                        "defaultMessage": "Preview your current location address",
+                      },
+                      "onValueChange": "onMapValueChange"
+                    },
+                  },
+                ]
+              }
+            ]
+          },
+          {
+            "id": "buttonsContainer",
+            "type": "container",
+            "component": "div",
+            "contentLayout": {
+              "component": "Flex",
+              "componentProps": {
+                "justifyContent": "right",
+                "className": "formButtonsContainer"
+              },
+            },
+            "content": [
+              {
+                "id": "editButton",
+                "type": "element",
+                "component": "Button",
+                "content": {
+                  "id": "jutro-app.components.AccountDetails.editButtonLabel",
+                  "defaultMessage": "Edit Details"
+                },
+                "componentProps": {
+                  "type": "filled",
+                  "onClick": "onEditButtonClick"
+                }
+              },
+              {
+                "id": "cancelButton",
+                "type": "element",
+                "component": "Button",
+                "content": {
+                  "id": "jutro-app.components.AccountDetails.cancelButtonLabel",
+                  "defaultMessage": "Cancel"
+                },
+                "componentProps": {
+                  "type": "outlined",
+                  "onClick": "onCancelButtonClick"
+                }
+              },
+              {
+                "id": "saveButton",
+                "type": "element",
+                "component": "Button",
+                "content": {
+                  "id": "jutro-app.components.AccountDetails.saveButtonLabel",
+                  "defaultMessage": "Save"
+                },
+                "componentProps": {
+                  "type": "filled",
+                  "onClick": "onSaveButtonClick"
+                }
+              },
+            ]
+          }
+        ]
+      }
+    ],
+  },
+  "$schema": "..\\..\\..\\node_modules\\@jutro\\uimetadata\\common\\json-schema\\metadata.schema.json"
+}

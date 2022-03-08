@@ -1,0 +1,30 @@
+.checkboxGroup {
+  padding-top: var(--GW-SPACING-3); }
+  .checkboxGroup:first-child {
+    padding-top: 0; }
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  bottom: auto; }
+
+.fieldLabelContainer {
+  justify-content: unset; }
+  .fieldLabelContainer span {
+    line-height: 1rem;
+    vertical-align: top; }
+
+.horizontal {
+  display: flex;
+  flex-wrap: wrap; }
+  .horizontal .checkboxGroup {
+    padding-top: 0;
+    padding-right: var(--GW-SPACING-5);
+    padding-bottom: var(--GW-SPACING-3); }
+    .horizontal .checkboxGroup:last-child {
+      padding-right: 0; }
+  .horizontal .labelContainer {
+    flex-direction: row;
+    align-items: baseline; }
+
+/*# sourceMappingURL=CheckboxGroupField.module.css.map */

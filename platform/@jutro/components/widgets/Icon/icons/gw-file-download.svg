@@ -1,0 +1,11 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    id="gw-file-download"
+    viewBox="0 0 24 24"
+>
+    <title>File Download</title>
+    <g>
+        <path fill="none" d="M0 0h24v24H0Z" />
+        <path d="M19 9h-4V3H9v6H5l7 7 7-7v0ZM5 18v2h14v-2H5v0Z" />
+    </g>
+</svg>

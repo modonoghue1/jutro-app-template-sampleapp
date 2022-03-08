@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({defaultPlaceholder:{id:"jutro-components.widgets.inputs.DropdownSelectField.placeholder",defaultMessage:"Please Select"}});

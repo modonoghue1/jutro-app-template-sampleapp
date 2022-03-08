@@ -1,0 +1,25 @@
+{
+  "name": "@business-patterns/address-component",
+  "version": "1.0.0",
+  "description": "Address component",
+  "main": "./index.js",
+  "author": "Guidewire",
+  "license": "proprietary",
+  "private": false,
+  "sideEffects": false,
+  "peerDependencies": {
+    "@jutro/uiconfig": "^6.0.0",
+    "@jutro/layout": "^6.0.0",
+    "@jutro/components": "^6.0.0",
+    "@jutro/prop-types": "^6.0.0",
+    "@jutro/locale": "^6.0.0",
+    "lodash": "4.17.20",
+    "react": "17.0.2",
+    "prop-types": "15.7.2"
+  },
+  "devDependencies": {
+    "@business-patterns/components": "^1.0.0",
+    "@business-patterns/helpers": "^1.0.1"
+  },
+  "module": "./_esm/index.js"
+}

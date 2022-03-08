@@ -1,0 +1,15 @@
+@import '~@jutro/theme/assets/sass/helpers';
+
+.panelHeader {
+  padding-bottom: var(--GW-SPACING-5);
+  border-bottom: 1px solid var(--GW-SEPARATOR-COLOR);
+  margin-bottom: var(--GW-SPACING-5);
+}
+
+.panelTitle {
+  @include typography-h2;
+
+  display: block;
+  color: var(--GW-PANEL-TITLE-COLOR);
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+}

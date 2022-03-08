@@ -1,0 +1,1 @@
+export const itemTag="article";export function alignmentSpecs(mappings){return Object.entries(mappings).map((([key,value])=>({position:key,className:value})))}

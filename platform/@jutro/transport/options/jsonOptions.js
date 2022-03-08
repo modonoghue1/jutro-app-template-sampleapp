@@ -1,0 +1,1 @@
+import{JSON_CONTENT_TYPE,CONTENT_TYPE}from"../common";export const jsonOptions={headers:{[CONTENT_TYPE]:`${JSON_CONTENT_TYPE}; charset=UTF-8`}};

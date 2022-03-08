@@ -1,0 +1,272 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.dataTable {
+  background-color: var(--GW-BACKGROUND-COLOR);
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  color: var(--GW-DATA-TABLE-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+  .dataTable *:not(:global(.mir)):not(:global(.gw)) {
+    font-size: var(--GW-FONT-SIZE-SUBTEXT);
+    line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+  .dataTable :global(.mir),
+  .dataTable :global(.gw) {
+    font-size: 16px; }
+  .dataTable :global(.gw) {
+    font-size: 16px; }
+
+:global(.ReactTable div.rt-resizable-header) {
+  outline: none; }
+  :global(.ReactTable div.rt-resizable-header):not(.unsortedHeaderCell):focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+
+:global(.ReactTable .rt-resizer) {
+  width: var(--GW-SPACING-5);
+  right: calc(-1 * var(--GW-SPACING-3)); }
+
+:global(.ReactTable.-highlight .rt-tbody div.rt-tr:not(.-padRow)) {
+  background-color: var(--GW-BACKGROUND-COLOR); }
+  :global(.ReactTable.-highlight .rt-tbody div.rt-tr:not(.-padRow)):hover {
+    background-color: var(--GW-DATA-TABLE-ROW-BACKGROUND-COLOR-HOVER); }
+  :global(.ReactTable.-highlight .rt-tbody div.rt-tr:not(.-padRow)).clickableRow:active, :global(.ReactTable.-highlight .rt-tbody div.rt-tr:not(.-padRow)).activeRow {
+    background-color: var(--GW-DATA-TABLE-CLICKABLE-ROW-BACKGROUND-COLOR-ACTIVE); }
+  :global(.ReactTable.-highlight .rt-tbody div.rt-tr:not(.-padRow)).clickableRow:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  :global(.ReactTable.-highlight .rt-tbody div.rt-tr:not(.-padRow)).selectedRow {
+    background-color: var(--GW-DATA-TABLE-CLICKABLE-ROW-BACKGROUND-COLOR-SELECTED); }
+  :global(.ReactTable.-highlight .rt-tbody div.rt-tr:not(.-padRow)).editedRow .actionColumn button {
+    opacity: 1; }
+  :global(.ReactTable.-highlight .rt-tbody div.rt-tr:not(.-padRow)).tableRow:not(.editedRow) .actionColumn button {
+    background-color: transparent; }
+
+:global(.ReactTable.-striped .rt-tbody div.rt-tr.-odd) {
+  background-color: var(--GW-DATA-TABLE-ROW-ODD-BACKGROUND-COLOR); }
+
+:global(.ReactTable.-striped .rt-tbody div.rt-tr.-even) {
+  background-color: var(--GW-DATA-TABLE-ROW-EVEN-BACKGROUND-COLOR); }
+
+:global(.ReactTable .rt-thead div.rt-th.-cursor-pointer)::after {
+  content: '\e5cf';
+  /* stylelint-disable */
+  font-family: "Material Icons Round";
+  font-weight: var(--GW-FONT-WEIGHT-BLACK);
+  color: var(--GW-DATA-TABLE-SORT-CHEVRON-COLOR);
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+
+:global(.ReactTable .rt-thead div.rt-th.-sort-desc),
+:global(.ReactTable .rt-thead div.rt-th.-sort-asc) {
+  color: var(--GW-DATA-TABLE-COLUMN-HEADER-COLOR-SELECTED);
+  box-shadow: none; }
+  :global(.ReactTable .rt-thead div.rt-th.-sort-desc):focus,
+  :global(.ReactTable .rt-thead div.rt-th.-sort-asc):focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  :global(.ReactTable .rt-thead div.rt-th.-sort-desc)::after,
+  :global(.ReactTable .rt-thead div.rt-th.-sort-asc)::after {
+    font-family: "Material Icons Round";
+    font-weight: var(--GW-FONT-WEIGHT-BLACK);
+    color: var(--GW-DATA-TABLE-COLUMN-HEADER-COLOR-SELECTED);
+    font-size: var(--GW-FONT-SIZE-BODY);
+    line-height: var(--GW-LINE-HEIGHT-BODY); }
+
+:global(.ReactTable .rt-thead div.rt-th.-sort-desc::after) {
+  content: '\e5cf'; }
+
+:global(.ReactTable .rt-thead div.rt-th.-sort-asc::after) {
+  content: '\e5ce'; }
+
+.dataTable .reactTable,
+.dataTable .reactTable .tableCell {
+  border: none; }
+
+.reactTable div:global(.rt-table) {
+  overflow: unset; }
+
+.dataTable .reactTable .tableHeader {
+  border-bottom: var(--GW-DATA-TABLE-BORDER);
+  box-shadow: none; }
+  .dataTable .reactTable .tableHeader .unsortedHeaderCell {
+    padding: 0; }
+
+.dataTable .reactTable .tableBody {
+  overflow: unset;
+  border-bottom: var(--GW-DATA-TABLE-BORDER); }
+
+.dataTable .reactTable .tableBody .tableRowGroup {
+  border-bottom: none;
+  overflow: hidden; }
+
+.dataTable .reactTable .tableHeader .tableHeaderCell,
+.dataTable .reactTable .tableBody .tableRow .tableCell:not(.expanderCell) {
+  border-right: none;
+  display: flex;
+  align-items: center;
+  padding: var(--GW-SPACING-1) var(--GW-SPACING-3);
+  min-height: var(--GW-DATA-TABLE-ROW-MIN-HEIGHT);
+  transition-property: width, min-width, opacity;
+  white-space: pre-wrap; }
+  .dataTable .reactTable .tableHeader .tableHeaderCell.headerOneLine,
+  .dataTable .reactTable .tableBody .tableRow .tableCell:not(.expanderCell).headerOneLine {
+    white-space: nowrap; }
+  .dataTable .reactTable .tableHeader .tableHeaderCell.editedCell,
+  .dataTable .reactTable .tableBody .tableRow .tableCell:not(.expanderCell).editedCell {
+    line-height: unset;
+    min-height: unset;
+    overflow: visible; }
+  .dataTable .reactTable .tableHeader .tableHeaderCell.selectionCell,
+  .dataTable .reactTable .tableBody .tableRow .tableCell:not(.expanderCell).selectionCell {
+    padding-left: var(--GW-SPACING-4); }
+
+.dataTable .reactTable .tableBody .tableRow .tableCell.expanderCell {
+  max-width: calc(10px + var(--GW-DATA-TABLE-EXPANDER-ICON-WIDTH)) !important;
+  width: calc(10px + var(--GW-DATA-TABLE-EXPANDER-ICON-WIDTH)) !important; }
+  .dataTable .reactTable .tableBody .tableRow .tableCell.expanderCell.serviceCell {
+    padding-left: 0;
+    padding-right: 0; }
+
+.dataTable .reactTable .tableBody .tableRow .tableCell {
+  white-space: initial;
+  position: static; }
+  .dataTable .reactTable .tableBody .tableRow .tableCell:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .dataTable .reactTable .tableBody .tableRow .tableCell:not(.actionColumn):not(.expanderCell):not(.editedCell):not(.selectionCell) > * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%; }
+
+.dataTable .reactTable .tableHeader .tableHeaderCell {
+  position: relative;
+  font-weight: var(--GW-FONT-WEIGHT-BOLD); }
+
+.dataTable .reactTable .tableBody .tableRow :global(.rt-expandable) {
+  display: flex;
+  align-items: center; }
+  .dataTable .reactTable .tableBody .tableRow :global(.rt-expandable):focus {
+    border: none;
+    outline: none; }
+  .dataTable .reactTable .tableBody .tableRow :global(.rt-expandable):global(.disabled) {
+    cursor: default; }
+    .dataTable .reactTable .tableBody .tableRow :global(.rt-expandable):global(.disabled) .expanderIcon {
+      opacity: var(--GW-OPACITY-DISABLED); }
+
+.dataTable
+.reactTable
+.tableHeader
+.tableHeaderCell:not(.selectionCell):first-child,
+.dataTable
+.reactTable
+.tableBody
+.tableCell:not(.selectionCell):not(.expanderCell):first-child {
+  padding-left: var(--GW-SPACING-4); }
+
+.dataTable .reactTable .tableHeader .tableHeaderCell:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+
+.dataTable .reactTable .tableHeader .tableHeaderCell:last-child,
+.dataTable .reactTable .tableBody .tableCell:last-child {
+  padding-right: var(--GW-SPACING-4); }
+
+.tableBar {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--GW-SPACING-6) var(--GW-SPACING-4);
+  background-color: var(--GW-DATA-TABLE-TABLE-BAR-BACKGROUND-COLOR); }
+
+.selectionActions {
+  border-right: none;
+  padding-right: 0; }
+  .selectionActions.transition {
+    overflow: hidden; }
+  .selectionActions .buttons {
+    position: relative;
+    left: 100%;
+    transition: left 0.4s ease; }
+    .selectionActions .buttons.enter {
+      left: 0; }
+    .selectionActions .buttons > * {
+      margin-left: var(--GW-SPACING-3); }
+    .selectionActions .buttons > *:first-child {
+      margin-left: 0; }
+
+.withBorder {
+  border-right: var(--GW-DATA-TABLE-BORDER);
+  padding-right: var(--GW-SPACING-4); }
+
+.columnsConfigAction {
+  padding-left: var(--GW-SPACING-4); }
+
+.searchWrapper {
+  max-width: var(--GW-DATA-TABLE-SEARCH-MAX-WIDTH);
+  flex: 1; }
+
+.searchWrapperDisabled {
+  opacity: var(--GW-OPACITY-DISABLED); }
+
+.search {
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+.expanderIcon {
+  width: var(--GW-DATA-TABLE-EXPANDER-ICON-WIDTH);
+  display: flex;
+  place-items: center;
+  place-content: center; }
+  .expanderIcon:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+
+.expandableRowWrapper {
+  padding: var(--GW-SPACING-4) var(--GW-SPACING-6); }
+
+.expandableRow {
+  background-color: var(--GW-BACKGROUND-COLOR); }
+
+.noDataMessage {
+  padding-top: var(--GW-SPACING-6);
+  padding-bottom: var(--GW-SPACING-6);
+  color: var(--GW-DATA-TABLE-NO-ROWS-COLOR);
+  text-align: center;
+  border-bottom: var(--GW-DATA-TABLE-BORDER);
+  background-color: var(--GW-BACKGROUND-COLOR);
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+
+.clickableRow {
+  cursor: pointer; }
+
+.radio {
+  width: 0.875rem;
+  line-height: 0; }
+
+.headerMultiline {
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  /* stylelint-disable-line property-no-unknown */
+  display: -webkit-box;
+  display: box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  line-clamp: 2; }
+
+.actionPanel {
+  display: flex; }
+
+.textRight {
+  text-align: right; }
+
+.tableHeaderCell.textRight {
+  justify-content: flex-end; }
+
+.textLeft {
+  text-align: left; }
+
+/*# sourceMappingURL=DataTable.module.css.map */

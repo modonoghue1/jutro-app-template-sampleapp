@@ -1,0 +1,1 @@
+export default function defer(){const deferred={promise:null,resolve:null,reject:null};return deferred.promise=new Promise(((resolve,reject)=>{deferred.resolve=resolve,deferred.reject=reject})),deferred}

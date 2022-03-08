@@ -1,0 +1,1 @@
+export{MicroAppContainer}from"./MicroAppContainer";

@@ -1,0 +1,147 @@
+{
+  "$schema": "../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json",
+  "jutro": "6.0.0",
+  "api-example-page": {
+    "id": "api-example-page",
+    "type": "page",
+    "contentLayout": {
+      "component": "Flex",
+      "componentProps": {
+        "direction": "column",
+        "alignItems": "center"
+      }
+    },
+    "content": [
+      {
+        "id": "api-example-page-title",
+        "type": "element",
+        "component": "h3",
+        "content": {
+          "id": "jutro.app.Pages.ApiExample.pageTitle",
+          "defaultMessage": "Speech Recognition Example using IBM Watson"
+        }
+      },
+      {
+        "id": "apiExamplemainWrapper",
+        "type": "container",
+        "component": "div",
+        "contentLayout": {
+          "component": "Grid",
+          "componentProps": {
+            "gap": "large",
+            "columns": [
+              "1fr",
+              "1fr"
+            ],
+            "justifyItems": "evenly",
+            "justifyContent": "center"
+          }
+        },
+        "content": [
+          {
+            "id": "speechRecognitionPanel",
+            "type": "container",
+            "component": "Panel",
+            "componentProps": {
+              "title": {
+                "id": "jutro-app.Pages.ApiExample.speechRecognitionPanel",
+                "defaultMessage": "Try it now"
+              },
+              "subTitle": "\u200B"
+            },
+            "content": [
+              {
+                "id": "infoGrid",
+                "component": "div",
+                "type": "container",
+                "contentLayout": {
+                  "component": "Grid",
+                  "componentProps": {
+                    "columns": [
+                      "1fr"
+                    ]
+                  }
+                },
+                "content": [
+                  {
+                    "id": "infoGridItem",
+                    "component": "GridItem",
+                    "type": "container",
+                    "componentProps": {
+                      "textAlign": "center"
+                    },
+                    "content": [
+                      {
+                        "id": "infoGridItemMessage",
+                        "component": "IntlElement",
+                        "componentProps": {
+                          "tag": "span"
+                        },
+                        "type": "element",
+                        "content": "Hold the microphone button and give a voice command."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "watsonGridItem",
+                    "component": "GridItem",
+                    "type": "container",
+                    "componentProps": {
+                      "textAlign": "center"
+                    },
+                    "content": [
+                      {
+                        "type": "element",
+                        "id": "watsonInterfaceComponent",
+                        "component": "WatsonInterfaceComponent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "speechRecognitionCommandsPanel",
+            "type": "container",
+            "component": "Panel",
+            "componentProps": {
+              "title": {
+                "id": "jutro-app.Pages.ApiExample.speechRecognitionCommandsPanel",
+                "defaultMessage": "List of commands"
+              },
+              "subTitle": "\u200B"
+            },
+            "content": [
+              {
+                "id": "ol",
+                "type": "container",
+                "component": "ul",
+                "content": [
+                  {
+                    "id": "vehicle",
+                    "type": "element",
+                    "component": "li",
+                    "content": "Add a new Vehicle with ID Number <VIN_NUMBER>"
+                  },
+                  {
+                    "id": "startNewClaim",
+                    "type": "element",
+                    "component": "li",
+                    "content": "Start a new Claim"
+                  },
+                  {
+                    "id": "fnol",
+                    "type": "element",
+                    "component": "li",
+                    "content": "Start a new first notice of loss"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

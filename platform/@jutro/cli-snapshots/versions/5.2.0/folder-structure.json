@@ -1,0 +1,40 @@
+[
+  {
+    "path": "html",
+    "message": "Jutro uses the /html directory by default to look for an index.html",
+    "children": [
+      {
+        "path": "index.html"
+      }
+    ]
+  },
+  {
+    "path": "src",
+    "children": [
+      {
+        "path": "app",
+        "children": [
+          {
+            "path": "App.js"
+          }
+        ]
+      },
+      {
+        "path": "i18n",
+        "message": "The src/i18n folder is where translation files should be stored"
+      },
+      {
+        "path": "pages"
+      },
+      {
+        "path": "index.js"
+      }
+    ]
+  },
+  {
+    "path": "config-overrides.js"
+  },
+  {
+    "path": "configItems.js"
+  }
+]

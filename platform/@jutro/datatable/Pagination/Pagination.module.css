@@ -1,0 +1,83 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--GW-SPACING-4); }
+
+.paginationNav {
+  display: flex; }
+
+.paginationNavButton {
+  padding: 0 var(--GW-SPACING-2);
+  color: var(--GW-PAGINATION-COLOR);
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  height: var(--GW-DATA-TABLE-BUTTON-SIZE);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+  .paginationNavButton:hover {
+    background-color: var(--GW-PAGINATION-BUTTON-BACKGROUND-COLOR); }
+    .paginationNavButton:hover:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .paginationNavButton:active, .paginationNavButton:active:focus, .paginationNavButton:active:focus:hover, .paginationNavButton:global(.active) {
+    background-color: var(--GW-PAGINATION-BUTTON-BACKGROUND-COLOR-ACTIVE);
+    color: var(--GW-PAGINATION-COLOR); }
+  .paginationNavButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .paginationNavButton span i {
+    margin: 0; }
+
+.pageButtonsWrapper {
+  display: flex; }
+
+.selectedPageButton {
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  background-color: var(--GW-PAGINATION-BUTTON-BACKGROUND-COLOR);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+.resultOfMessage {
+  padding-left: var(--GW-SPACING-2); }
+
+.pageSizeSelectWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.paginationSelect + .paginationMenu {
+  min-width: var(--GW-SPACING-3);
+  max-height: var(--GW-PAGINATION-DROPDOWN-MAX-HEIGHT);
+  overflow-y: auto; }
+
+.paginationMenu .paginationMenuItem {
+  padding-left: var(--GW-SPACING-3);
+  padding-right: var(--GW-SPACING-3);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+.paginationSelect {
+  padding: 0 var(--GW-SPACING-2);
+  border-radius: var(--GW-BORDER-RADIUS);
+  color: var(--GW-PAGINATION-COLOR);
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  background-color: var(--GW-PAGINATION-DROPDOWN-BACKGROUND-COLOR);
+  height: var(--GW-DATA-TABLE-BUTTON-SIZE);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+  .paginationSelect:hover {
+    background-color: var(--GW-PAGINATION-DROPDOWN-BACKGROUND-COLOR-HOVER); }
+    .paginationSelect:hover:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+      background-color: var(--GW-PAGINATION-DROPDOWN-BACKGROUND-COLOR-HOVER); }
+  .paginationSelect:active, .paginationSelect:active:focus, .paginationSelect:active:focus:hover, .paginationSelect:global(.active) {
+    background-color: var(--GW-PAGINATION-DROPDOWN-BACKGROUND-COLOR-ACTIVE); }
+  .paginationSelect:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+    background-color: var(--GW-PAGINATION-DROPDOWN-BACKGROUND-COLOR-FOCUS); }
+
+/*# sourceMappingURL=Pagination.module.css.map */

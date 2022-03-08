@@ -1,0 +1,48 @@
+---
+to: '<%= path %>/<%= h.capitalize(name) %>/__tests__/<%= h.capitalize(name) %>-test.js'
+---
+import React from 'react';
+import { mountWithTranslatorContext, textWasTranslated } from '@jutro/test';
+import { axe, toHaveNoViolations } from 'jest-axe';
+import messages from '../<%= h.capitalize(name) %>.messages';
+import { <%= h.capitalize(name) %> } from '../<%= h.capitalize(name) %>';
+
+expect.extend(toHaveNoViolations);
+
+describe('<%= h.capitalize(name) %>', () => {
+    it('renders default component', () => {
+        const wrapper = mount(<<%= h.capitalize(name)%> />);
+        expect(wrapper).toBeDefined();
+    });
+
+    it('renders with default prop value', () => {
+        const wrapper = mount(<<%= h.capitalize(name)%> />);
+        expect(wrapper.props().title).toBe('sample');
+    });
+
+    it('renders with custom prop value', () => {
+        const newTitle = 'newTitle';
+        const wrapper = mount(<<%= h.capitalize(name)%> title={newTitle} />);
+        expect(wrapper.props().title).toBe(newTitle);
+    });
+
+    it('renders with css class', () => {
+        const wrapper = mount(<<%= h.capitalize(name)%> />);
+        expect(wrapper.find('div').props().className).toBe('<%= h.changeCase.lcFirst(name) %>');
+    });
+
+    it('renders with translation', () => {
+        const wrapper = mountWithTranslatorContext(<<%= h.capitalize(name)%> />);
+        textWasTranslated(wrapper.text(), messages.label);
+    });
+
+    it('has no a11y violations', async () => {
+        const wrapper = mount(
+            <main>
+                <<%= h.capitalize(name)%> />
+            </main>
+        );
+        const results = await axe(wrapper.getDOMNode());
+        expect(results).toHaveNoViolations();
+    });
+});

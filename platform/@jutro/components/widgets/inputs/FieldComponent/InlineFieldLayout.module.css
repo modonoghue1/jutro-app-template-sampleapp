@@ -1,0 +1,15 @@
+.inlineFieldLayout {
+  display: block;
+  padding-bottom: 1rem; }
+
+.label {
+  margin-left: 0; }
+
+.controls {
+  margin-left: 0; }
+
+.messages {
+  margin-bottom: 0;
+  vertical-align: middle; }
+
+/*# sourceMappingURL=InlineFieldLayout.module.css.map */

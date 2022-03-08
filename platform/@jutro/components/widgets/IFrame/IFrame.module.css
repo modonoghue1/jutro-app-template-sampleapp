@@ -1,0 +1,36 @@
+.iframeContainer {
+  position: relative;
+  width: 100%;
+  height: 0; }
+
+.iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: var(--GW-BORDER-RADIUS);
+  border: 1px solid var(--GW-BORDER-COLOR); }
+
+.noBorder {
+  border: none; }
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.aspect-ratio-4x3 {
+  padding-bottom: calc(100% * 3 / 4); }
+
+.aspect-ratio-16x9 {
+  padding-bottom: calc(100% * 9 / 16); }
+
+.aspect-ratio-17x9 {
+  padding-bottom: calc(100% * 9 / 17); }
+
+.aspect-ratio-2x1 {
+  padding-bottom: calc(100% * 1 / 2); }
+
+/*# sourceMappingURL=IFrame.module.css.map */

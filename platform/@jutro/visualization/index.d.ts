@@ -1,0 +1,1 @@
+export { Vega } from './Vega';

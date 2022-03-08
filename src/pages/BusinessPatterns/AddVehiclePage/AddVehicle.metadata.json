@@ -1,0 +1,190 @@
+{
+  "jutro": "6.0.0",
+  "add.vehicle.form": {
+    "id": "addVehicleForm",
+    "type": "page",
+    "contentLayout": {
+      "component": "Grid"
+    },
+    "content": [
+      {
+        "id": "vin",
+        "type": "field",
+        "component": "Input",
+        "componentProps": {
+          "label": "Vehicle Identification Number",
+          "path": "vin",
+          "validator": {
+            "pattern": "[A-HJ-NPR-Z0-9]{17}",
+            "message": "VIN is invalid"
+          }
+        }
+      },
+      {
+        "id": "unknownVin",
+        "type": "action",
+        "component": "Button",
+        "componentProps": {
+          "type": "text",
+          "onClick": "continueForm"
+        },
+        "content": "I don't have my VIN number"
+      },
+      {
+        "id": "detailsContainer",
+        "type": "container",
+        "component": "div",
+        "componentProps": {},
+        "contentLayout": {
+          "component": "Grid"
+        },
+        "content": [
+          {
+            "id": "yearMakeModelContainer",
+            "type": "container",
+            "component": "div",
+            "componentProps": {},
+            "contentLayout": {
+              "component": "Grid",
+              "componentProps": {
+                "columns": [
+                  "1fr",
+                  "1fr",
+                  "1fr"
+                ]
+              }
+            },
+            "content": [
+              {
+                "id": "year",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                  "required": true,
+                  "label": "Year",
+                  "placeholder": "Select",
+                  "path": "year",
+                  "alwaysShowPlaceholder": true,
+                  "availableValues": [
+                    {
+                      "code": "2021",
+                      "name": "2021"
+                    },
+                    {
+                      "code": "2020",
+                      "name": "2020"
+                    },
+                    {
+                      "code": "2019",
+                      "name": "2019"
+                    },
+                    {
+                      "code": "2018",
+                      "name": "2018"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "make",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                  "required": true,
+                  "label": "Make",
+                  "placeholder": "Select",
+                  "path": "make",
+                  "alwaysShowPlaceholder": true,
+                  "availableValues": [
+                    {
+                      "code": "BMW",
+                      "name": "BMW"
+                    },
+                    {
+                      "code": "Ford",
+                      "name": "Ford"
+                    },
+                    {
+                      "code": "Honda",
+                      "name": "Honda"
+                    },
+                    {
+                      "code": "Toyota",
+                      "name": "Toyota"
+                    },
+                    {
+                      "code": "Volkswagen",
+                      "name": "Volkswagen"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "model",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                  "required": true,
+                  "label": "Model",
+                  "placeholder": "Select",
+                  "path": "model",
+                  "alwaysShowPlaceholder": true,
+                  "availableValues": [
+                    {
+                      "code": "eMustang",
+                      "name": "eMustang"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "otherContainer",
+            "type": "container",
+            "component": "div",
+            "componentProps": {},
+            "contentLayout": {
+              "component": "Grid"
+            },
+            "content": [
+              {
+                "id": "primaryZip",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                  "label": "Primary Zip Code",
+                  "path": "primaryZip",
+                  "required": true,
+                  "showRequired": true
+                }
+              },
+              {
+                "id": "primaryUse",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                  "label": "Primary Use",
+                  "path": "primaryUse",
+                  "required": true,
+                  "showRequired": true,
+                  "availableValues": [
+                    {
+                      "code": "work",
+                      "name": "Work"
+                    },
+                    {
+                      "code": "pleasure",
+                      "name": "Pleasure"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+

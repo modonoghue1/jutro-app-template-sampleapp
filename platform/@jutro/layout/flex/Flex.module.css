@@ -1,0 +1,164 @@
+.gwFlex {
+  display: flex;
+  max-width: 100%;
+  padding: 0; }
+  .gwFlex hr {
+    margin: 0; }
+  .gwFlex p {
+    margin: 0; }
+
+.gwFlexItem {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%; }
+
+.gwDirectionRow.gwGapNone > *,
+.gwDirectionRowReverse.gwGapNone > * {
+  margin-left: 0;
+  margin-right: 0; }
+
+.gwDirectionRow.gwGapSmall > *,
+.gwDirectionRowReverse.gwGapSmall > * {
+  margin-left: calc(var(--GW-SPACING-4) / 2);
+  margin-right: calc(var(--GW-SPACING-4) / 2); }
+
+.gwDirectionRow.gwGapMedium > *,
+.gwDirectionRowReverse.gwGapMedium > * {
+  margin-left: var(--GW-LAYOUT-2);
+  margin-right: var(--GW-LAYOUT-2); }
+
+.gwDirectionRow.gwGapLarge > *,
+.gwDirectionRowReverse.gwGapLarge > * {
+  margin-left: var(--GW-LAYOUT-3);
+  margin-right: var(--GW-LAYOUT-3); }
+
+.gwDirectionRow > *:first-child,
+.gwDirectionRowReverse > *:first-child {
+  margin-left: 0; }
+
+.gwDirectionRow > *:last-child,
+.gwDirectionRowReverse > *:last-child {
+  margin-right: 0; }
+
+.gwDirectionColumn.gwGapNone > *,
+.gwDirectionColumnReverse.gwGapNone > * {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.gwDirectionColumn.gwGapSmall > *,
+.gwDirectionColumnReverse.gwGapSmall > * {
+  margin-top: calc(var(--GW-SPACING-4) / 2);
+  margin-bottom: calc(var(--GW-SPACING-4) / 2); }
+
+.gwDirectionColumn.gwGapMedium > *,
+.gwDirectionColumnReverse.gwGapMedium > * {
+  margin-top: var(--GW-LAYOUT-2);
+  margin-bottom: var(--GW-LAYOUT-2); }
+
+.gwDirectionColumn.gwGapLarge > *,
+.gwDirectionColumnReverse.gwGapLarge > * {
+  margin-top: var(--GW-LAYOUT-3);
+  margin-bottom: var(--GW-LAYOUT-3); }
+
+.gwDirectionColumn > *:first-child,
+.gwDirectionColumnReverse > *:first-child {
+  margin-top: 0; }
+
+.gwDirectionColumn > *:last-child,
+.gwDirectionColumnReverse > *:last-child {
+  margin-bottom: 0; }
+
+.gwAlignItemsStart {
+  align-items: flex-start; }
+
+.gwAlignItemsCenter {
+  align-items: center; }
+
+.gwAlignItemsEnd {
+  align-items: flex-end; }
+
+.gwAlignItemsBaseline {
+  align-items: baseline; }
+
+.gwAlignItemsStretch {
+  align-items: stretch; }
+
+.gwAlignContentStart {
+  align-content: flex-start; }
+
+.gwAlignContentCenter {
+  align-content: center; }
+
+.gwAlignContentEnd {
+  align-content: flex-end; }
+
+.gwAlignContentBaseline {
+  align-content: baseline; }
+
+.gwAlignContentStretch {
+  align-content: stretch; }
+
+.gwAlignSelfStart {
+  align-self: flex-start; }
+
+.gwAlignSelfCenter {
+  align-self: center; }
+
+.gwAlignSelfEnd {
+  align-self: flex-end; }
+
+.gwAlignSelfBaseline {
+  align-self: baseline; }
+
+.gwAlignSelfStretch {
+  align-self: stretch; }
+
+.gwJustifyContentStart {
+  justify-content: flex-start; }
+
+.gwJustifyContentCenter {
+  justify-content: center; }
+
+.gwJustifyContentEnd {
+  justify-content: flex-end; }
+
+.gwJustifyContentAround {
+  justify-content: space-around; }
+
+.gwJustifyContentBetween {
+  justify-content: space-between; }
+
+.gwJustifyContentEvenly {
+  justify-content: space-evenly; }
+
+.gwTextLeft {
+  text-align: left; }
+
+.gwTextCenter {
+  text-align: center; }
+
+.gwTextRight {
+  text-align: right; }
+
+.gwWrap {
+  flex-wrap: wrap; }
+
+.gwNoWrap {
+  flex-wrap: nowrap; }
+
+.gwReverseWrap {
+  flex-wrap: wrap-reverse; }
+
+.gwDirectionRow {
+  flex-direction: row; }
+
+.gwDirectionRowReverse {
+  flex-direction: row-reverse; }
+
+.gwDirectionColumn {
+  flex-direction: column; }
+
+.gwDirectionColumnReverse {
+  flex-direction: column-reverse; }
+
+/*# sourceMappingURL=Flex.module.css.map */

@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({decreaseBtnLabel:{id:"jutro-components.widgets.inputs.StepperField.decrease",defaultMessage:"Decrease value"},increaseBtnLabel:{id:"jutro-components.widgets.inputs.StepperField.increase",defaultMessage:"Increase value"}});

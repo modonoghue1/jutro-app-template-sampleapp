@@ -1,0 +1,110 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.genericSelect:global(.disabled) {
+  opacity: var(--GW-OPACITY-DISABLED);
+  pointer-events: auto; }
+  .genericSelect:global(.disabled),
+  .genericSelect:global(.disabled) .control {
+    cursor: not-allowed; }
+
+.control {
+  padding: var(--GW-SPACING-1) 0.75rem;
+  min-height: var(--GW-FIELD-COMPONENT-HEIGHT);
+  color: var(--GW-FIELD-COMPONENT-COLOR);
+  background-color: var(--GW-FIELD-COMPONENT-BACKGROUND-COLOR);
+  border: 1px solid var(--GW-BORDER-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  transition: var(--GW-ANIMATION-DURATION) all;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  outline: none;
+  max-height: var(--GW-GENERIC-SELECT-MAX-HEIGHT);
+  overflow: auto;
+  cursor: pointer;
+  font-size: var(--GW-FONT-SIZE-INPUT);
+  line-height: var(--GW-LINE-HEIGHT-INPUT); }
+  .control:global(.invalid) {
+    border-color: var(--GW-COLOR-ERROR); }
+  .control:global(.warning) {
+    border-color: var(--GW-COLOR-WARNING); }
+  .control div {
+    padding: 0;
+    margin: 0; }
+
+.controlFocused {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+  border-color: var(--GW-FIELD-COMPONENT-BORDER-COLOR-FOCUS); }
+
+.focusedInvalid {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--GW-FOCUS-ERROR-COLOR-DARK); }
+
+.focusedWarning {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--GW-FOCUS-WARNING-COLOR-LIGHT); }
+
+.labpreviewBorder {
+  border: 2px solid var(--GW-COLOR-ERROR); }
+
+.selectIcon svg {
+  color: var(--GW-FIELD-COMPONENT-COLOR);
+  z-index: var(--GW-Z-INDEX-2);
+  pointer-events: none;
+  font-size: var(--GW-ICON-FONT-SIZE-3);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+
+.stickySelectIcon {
+  position: sticky;
+  top: 0;
+  align-self: flex-start; }
+
+div.placeholder {
+  color: var(--GW-FIELD-COMPONENT-PLACEHOLDER-COLOR);
+  max-width: calc(100% - var(--GW-SPACING-2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+div.menu {
+  border-radius: var(--GW-BORDER-RADIUS);
+  background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR);
+  box-shadow: var(--GW-SHADOW-2);
+  margin: var(--GW-SPACING-1) 0;
+  z-index: var(--GW-Z-INDEX-3); }
+
+.menuList {
+  padding: var(--GW-SPACING-2) 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  position: relative;
+  max-height: var(--GW-GENERIC-SELECT-MENU-MAX-HEIGHT); }
+
+div.option {
+  padding: var(--GW-SPACING-2) var(--GW-SPACING-4);
+  color: var(--GW-DROPDOWN-OPTION-COLOR);
+  cursor: pointer;
+  font-size: var(--GW-FONT-SIZE-INPUT);
+  line-height: var(--GW-LINE-HEIGHT-INPUT); }
+  div.option:hover {
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-HOVER); }
+  div.option:active {
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-ACTIVE); }
+
+div.optionFocused {
+  background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-HOVER); }
+
+div.optionFocused:active {
+  background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-ACTIVE); }
+
+div.optionSelected {
+  color: var(--GW-DROPDOWN-OPTION-SELECTED-COLOR);
+  background-color: var(--GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR); }
+  div.optionSelected:hover {
+    background-color: var(--GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR-HOVER); }
+  div.optionSelected:hover:active {
+    background-color: var(--GW-DROPDOWN-OPTION-SELECTED-BACKGROUND-COLOR-ACTIVE); }
+
+/*# sourceMappingURL=GenericSelectControl.module.css.map */

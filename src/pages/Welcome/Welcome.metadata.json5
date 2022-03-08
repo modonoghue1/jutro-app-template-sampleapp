@@ -1,0 +1,123 @@
+// UI metadata file loaded and used in Welcome Page
+{
+  // ======================================================================
+  // UI metadata for the "Welcome" page
+  // ======================================================================
+  "jutro": "4.2.0-next.0",
+  "jutro-app.metadata-driven.welcome": {
+    "id": "welcomePage",
+    "type": "page",
+    "contentLayout": {
+      "component": "Flex",
+      "componentProps": {
+        "direction": "column",
+        "alignItems": "center"
+      }
+    },
+    "content": [
+      {
+        "id": "welcomeHeader1",
+        "type": "element",
+        "component": "Image",
+        "componentProps": {
+          "className": "image",
+          "src": "images/jutro.png",
+          "alt": "jutro-app.Pages.Welcome.logo"
+        }
+      },
+      {
+        "id": "welcomeMainWrapper",
+        "type": "container",
+        "component": "div",
+        "contentLayout": {
+          "component": "Grid",
+          "componentProps": {
+            "gap": "large",
+            "columns": [
+              "1fr"
+            ],
+            "justifyItems": "evenly",
+            "justifyContent": "center"
+          }
+        },
+        "content": [
+          {
+            "id": "panel",
+            "type": "container",
+            "component": "Panel",
+            "componentProps": {
+              "title": "Useful resources and links",
+              "subTitle": "\u200B"
+            },
+            "content": [
+              {
+                "id": "ul",
+                "type": "container",
+                "component": "ul",
+                "content": [
+                  {
+                    "id": "li5",
+                    "type": "container",
+                    "component": "li",
+                    "content": [
+                      {
+                        "id": "resourcesText1",
+                        "component": "span",
+                        "type": "element",
+                        "content": "Check the "
+                      },
+                      {
+                        "id": "resourcesLink",
+                        "component": "Link",
+                        "componentProps": {
+                          "href": "https://docs.guidewire.com/jutro/documentation/6.5.0/"
+                        },
+                        "type": "action",
+                        "content": "Jutro Documentation"
+                      },
+                      {
+                        "id": "resourcesText2",
+                        "component": "span",
+                        "type": "element",
+                        "content": " for docs, materials etc."
+                      }
+                    ]
+                  },
+                  {
+                    "id": "li9",
+                    "type": "container",
+                    "component": "li",
+                    "content": [
+                      {
+                        "id": "needSupportForDevsText1",
+                        "component": "span",
+                        "type": "element",
+                        "content": "For support, use the "
+                      },
+                      {
+                        "id": "needSupportForDevsLink",
+                        "component": "Link",
+                        "componentProps": {
+                          "href": "https://jutro-community.slack.com/archives/C01T9BQN4B0"
+                        },
+                        "type": "action",
+                        "content": "#general"
+                      },
+                      {
+                        "id": "needSupportForDevsText2",
+                        "component": "span",
+                        "type": "element",
+                        "content": " Slack channel"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "$schema": "../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json"
+}

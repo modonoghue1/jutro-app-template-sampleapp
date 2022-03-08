@@ -1,0 +1,29 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.tooltipIcon {
+  color: var(--GW-TOOLTIP-ICON-COLOR);
+  padding: 0;
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: relative; }
+  .tooltipIcon > svg {
+    position: relative;
+    width: auto; }
+  .tooltipIcon:focus > svg {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+    border-radius: var(--GW-BORDER-RADIUS-FULL); }
+
+.top {
+  position: absolute; }
+
+.left {
+  position: absolute;
+  right: calc(-1 * var(--GW-SPACING-8));
+  height: var(--GW-FIELD-COMPONENT-HEIGHT);
+  align-items: center; }
+
+/*# sourceMappingURL=TooltipIcon.module.css.map */

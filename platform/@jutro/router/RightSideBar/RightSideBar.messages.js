@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({collapsedButtonLabel:{id:"jutro-router.RightSideBar.collapsedButtonLabel",defaultMessage:"Expand menu"},expandedButtonLabel:{id:"jutro-router.RightSideBar.expandedButtonLabel",defaultMessage:"Collapse menu"}});

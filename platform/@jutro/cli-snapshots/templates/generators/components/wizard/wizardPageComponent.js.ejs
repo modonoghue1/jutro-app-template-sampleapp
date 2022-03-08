@@ -1,0 +1,70 @@
+---
+to: '<%= `${path}/${h.capitalize(name)}/${h.capitalize(name)}Page.js` %>'
+---
+import React, { useContext, useCallback, useState } from 'react';
+import Proptypes from 'prop-types';
+import { useLocation } from 'react-router-dom';
+import { ScrollToError, WizardPage } from '@jutro/wizard-next';
+import { set } from 'lodash';
+import { MetadataForm } from '@jutro/uiconfig';
+import { <%= h.capitalize(name) %>Context } from './<%= h.capitalize(name) %>Context';
+import styles from './<%= h.capitalize(name) %>Page.module.scss';
+
+export const <%= h.capitalize(name) %>Page = ({
+    uiProps,
+    wizardPageProps,
+}) => {
+    const [submitted, setSubmitted] = useState(false);
+    const [errorTimestamp, setErrorTimestamp] = useState(0);
+    const {
+        valid,
+        formData,
+        setFormData,
+        onValidationChange,
+    } = useContext(<%= h.capitalize(name) %>Context);
+    const location = useLocation();
+
+    const saveForm = useCallback(() => {
+        if (valid) {
+            return true;
+        }
+        setErrorTimestamp(errorTimestamp + 1);
+        setSubmitted(true);
+        return false;
+    }, [valid, setSubmitted, errorTimestamp]);
+
+    const writeValue = useCallback((value, path) => {
+        const newFormData = { ...formData };
+        set(newFormData, path, value);
+        setFormData(newFormData);
+    }, [formData, setFormData]);
+
+    return (
+        <WizardPage
+            className={styles.wizardPage}
+            id="<%= h.changeCase.kebabCase(name) %>-page"
+            location={location}
+            resolveCallbackMap={{
+                saveForm,
+                loadPage: ({message}) => console.log(message),
+                resumePage: () => console.log('back to previous page')
+            }}
+            {...wizardPageProps}
+        >
+            <MetadataForm
+                uiProps={uiProps}
+                data={formData}
+                onValidationChange={onValidationChange}
+                onDataChange={writeValue}
+                showErrors={submitted}
+                showOptional
+            />
+            <ScrollToError counter={errorTimestamp} />
+        </WizardPage>
+    );
+};
+
+<%= h.capitalize(name) %>Page.propTypes = {
+    uiProps: Proptypes.object,
+    wizardPageProps: Proptypes.object,
+};

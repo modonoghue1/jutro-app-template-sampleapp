@@ -1,0 +1,27 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.stepper {
+  display: flex;
+  align-items: center; }
+
+.input {
+  text-align: center;
+  padding: 0;
+  width: var(--GW-STEPPER-FIELD-WIDTH);
+  margin-right: var(--GW-SPACING-2);
+  margin-left: var(--GW-SPACING-2);
+  -moz-appearance: textfield;
+  font-size: var(--GW-FONT-SIZE-INPUT);
+  line-height: var(--GW-LINE-HEIGHT-INPUT); }
+  .input:focus {
+    background-color: var(--GW-FIELD-COMPONENT-BACKGROUND-COLOR); }
+  .input:not(:focus) {
+    border: none;
+    text-overflow: ellipsis; }
+  .input::-webkit-outer-spin-button, .input::-webkit-inner-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0; }
+
+/*# sourceMappingURL=StepperField.module.css.map */

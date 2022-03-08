@@ -1,0 +1,8 @@
+.mapArea {
+  position: relative;
+  width: 100%;
+  padding-bottom: calc(var(--GW-MAP-AREA-ASPECT-RATIO) - 2px);
+  border: 1px solid var(--GW-BORDER-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS); }
+
+/*# sourceMappingURL=MapArea.module.css.map */

@@ -1,0 +1,1 @@
+export function defaultExceptionHandler(err){return Promise.reject(err.message)}

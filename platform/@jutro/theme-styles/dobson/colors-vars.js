@@ -1,0 +1,1 @@
+export const dobsonColors={"--GW-BACKGROUND-COLOR-BODY":"#f0f1f5"};

@@ -1,0 +1,23 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.fieldContainer {
+  display: contents; }
+
+.startDateLabel {
+  grid-column: 1;
+  grid-row: 1; }
+
+.startDateField {
+  grid-column: 1;
+  grid-row: 2; }
+
+.endDateLabel {
+  grid-column: 2;
+  grid-row: 1; }
+
+.endDateField {
+  grid-column: 2;
+  grid-row: 2; }
+
+/*# sourceMappingURL=DateRangeField.module.css.map */

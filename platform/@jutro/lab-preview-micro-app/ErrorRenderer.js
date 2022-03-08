@@ -1,0 +1,1 @@
+export const ErrorRenderer=({error:error})=>{throw error};ErrorRenderer.displayName="ErrorRenderer";

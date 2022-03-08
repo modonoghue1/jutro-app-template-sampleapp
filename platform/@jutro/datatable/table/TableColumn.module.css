@@ -1,0 +1,20 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.textRight {
+  text-align: right; }
+
+.textLeft {
+  text-align: left; }
+
+.textCenter {
+  text-align: center; }
+
+.tableCell {
+  border-bottom: solid 0 var(--GW-BORDER-COLOR);
+  padding: var(--GW-SPACING-3) var(--GW-SPACING-4);
+  vertical-align: top;
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+
+/*# sourceMappingURL=TableColumn.module.css.map */

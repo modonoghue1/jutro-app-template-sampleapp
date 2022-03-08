@@ -1,0 +1,683 @@
+[
+  {
+    "id": "arson",
+    "type": "field",
+    "component": "Toggle",
+    "componentProps": {
+      "path": "arson",
+      "label": {
+        "id": "claim.arson.label",
+        "defaultMessage": "Arson"
+      }
+    }
+  },
+  {
+    "id": "assignedByUser",
+    "type": "field",
+    "component": "SimpleRef",
+    "componentProps": {
+      "referenceType": "User",
+      "readOnly": true,
+      "path": "assignedByUser",
+      "label": {
+        "id": "claim.assignedByUser.label",
+        "defaultMessage": "Assigned By User"
+      }
+    }
+  },
+  {
+    "id": "assignedGroup",
+    "type": "field",
+    "component": "SimpleRef",
+    "componentProps": {
+      "readOnly": true,
+      "path": "assignedGroup",
+      "label": {
+        "id": "claim.assignedGroup.label",
+        "defaultMessage": "Assigned Group"
+      }
+    }
+  },
+  {
+    "id": "assignedQueue",
+    "type": "field",
+    "component": "SimpleRef",
+    "componentProps": {
+      "readOnly": true,
+      "path": "assignedQueue",
+      "label": {
+        "id": "claim.assignedQueue.label",
+        "defaultMessage": "Assigned Queue"
+      }
+    }
+  },
+  {
+    "id": "assignedUser",
+    "type": "field",
+    "component": "SimpleRef",
+    "componentProps": {
+      "referenceType": "User",
+      "readOnly": true,
+      "path": "assignedUser",
+      "label": {
+        "id": "claim.assignedUser.label",
+        "defaultMessage": "Assigned User"
+      }
+    }
+  },
+  {
+    "id": "assignmentStatus",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "AssignmentStatus",
+          "name": "AssignmentStatus"
+        }
+      ],
+      "readOnly": true,
+      "path": "assignmentStatus",
+      "label": {
+        "id": "claim.assignmentStatus.label",
+        "defaultMessage": "Assignment Status"
+      }
+    }
+  },
+  {
+    "id": "claimNumber",
+    "type": "field",
+    "component": "Input",
+    "componentProps": {
+      "maxLength": 40,
+      "readOnly": true,
+      "path": "claimNumber",
+      "label": {
+        "id": "claim.claimNumber.label",
+        "defaultMessage": "Claim Number"
+      }
+    }
+  },
+  {
+    "id": "closeDate",
+    "type": "field",
+    "component": "Date",
+    "componentProps": {
+      "dataType": "date-time",
+      "readOnly": true,
+      "path": "closeDate",
+      "label": {
+        "id": "claim.closeDate.label",
+        "defaultMessage": "Close Date"
+      }
+    }
+  },
+  {
+    "id": "closedOutcome",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "ClaimClosedOutcomeType",
+          "name": "ClaimClosedOutcomeType"
+        }
+      ],
+      "readOnly": true,
+      "path": "closedOutcome",
+      "label": {
+        "id": "claim.closedOutcome.label",
+        "defaultMessage": "Closed Outcome"
+      }
+    }
+  },
+  {
+    "id": "description",
+    "type": "field",
+    "component": "TextArea",
+    "componentProps": {
+      "maxLength": 1333,
+      "path": "description",
+      "label": {
+        "id": "claim.description.label",
+        "defaultMessage": "Description"
+      }
+    }
+  },
+  {
+    "id": "faultRating",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "FaultRating",
+          "name": "FaultRating"
+        }
+      ],
+      "path": "faultRating",
+      "label": {
+        "id": "claim.faultRating.label",
+        "defaultMessage": "Fault Rating"
+      }
+    }
+  },
+  {
+    "id": "filterPropertyRiskUnits",
+    "type": "field",
+    "component": "TypeaheadMultiSelect",
+    "componentProps": {
+      "createOnly": true,
+      "path": "filterPropertyRiskUnits",
+      "label": {
+        "id": "claim.filterPropertyRiskUnits.label",
+        "defaultMessage": "Filter Property Risk Units"
+      }
+    }
+  },
+  {
+    "id": "filterVehicleRiskUnits",
+    "type": "field",
+    "component": "TypeaheadMultiSelect",
+    "componentProps": {
+      "createOnly": true,
+      "path": "filterVehicleRiskUnits",
+      "label": {
+        "id": "claim.filterVehicleRiskUnits.label",
+        "defaultMessage": "Filter Vehicle Risk Units"
+      }
+    }
+  },
+  {
+    "id": "fireDepartmentResponded",
+    "type": "field",
+    "component": "Toggle",
+    "componentProps": {
+      "path": "fireDepartmentResponded",
+      "label": {
+        "id": "claim.fireDepartmentResponded.label",
+        "defaultMessage": "Fire Department Responded"
+      }
+    }
+  },
+  {
+    "id": "fireSource",
+    "type": "field",
+    "component": "TextArea",
+    "componentProps": {
+      "maxLength": 250,
+      "path": "fireSource",
+      "label": {
+        "id": "claim.fireSource.label",
+        "defaultMessage": "Fire Source"
+      }
+    }
+  },
+  {
+    "id": "flagged",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "FlaggedType",
+          "name": "FlaggedType"
+        }
+      ],
+      "path": "flagged",
+      "label": {
+        "id": "claim.flagged.label",
+        "defaultMessage": "Flagged"
+      }
+    }
+  },
+  {
+    "id": "hasWaterBeenTurnedOff",
+    "type": "field",
+    "component": "Toggle",
+    "componentProps": {
+      "path": "hasWaterBeenTurnedOff",
+      "label": {
+        "id": "claim.hasWaterBeenTurnedOff.label",
+        "defaultMessage": "Has Water Been Turned Off"
+      }
+    }
+  },
+  {
+    "id": "howReported",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "HowReportedType",
+          "name": "HowReportedType"
+        }
+      ],
+      "path": "howReported",
+      "label": {
+        "id": "claim.howReported.label",
+        "defaultMessage": "How Reported"
+      }
+    }
+  },
+  {
+    "id": "howWasFireDiscovered",
+    "type": "field",
+    "component": "TextArea",
+    "componentProps": {
+      "maxLength": 250,
+      "path": "howWasFireDiscovered",
+      "label": {
+        "id": "claim.howWasFireDiscovered.label",
+        "defaultMessage": "How Was Fire Discovered"
+      }
+    }
+  },
+  {
+    "id": "id",
+    "type": "field",
+    "component": "Input",
+    "componentProps": {
+      "path": "id",
+      "label": {
+        "id": "claim.id.label",
+        "defaultMessage": "Id"
+      }
+    }
+  },
+  {
+    "id": "incidentOnly",
+    "type": "field",
+    "component": "Toggle",
+    "componentProps": {
+      "path": "incidentOnly",
+      "label": {
+        "id": "claim.incidentOnly.label",
+        "defaultMessage": "Incident Only"
+      }
+    }
+  },
+  {
+    "id": "insured",
+    "type": "field",
+    "component": "ObjectRef",
+    "componentProps": {
+      "referenceType": "UpdatablePolicyObjectReference",
+      "readOnly": true,
+      "path": "insured",
+      "label": {
+        "id": "claim.insured.label",
+        "defaultMessage": "Insured"
+      }
+    }
+  },
+  {
+    "id": "isAnyoneInjured",
+    "type": "field",
+    "component": "Toggle",
+    "componentProps": {
+      "path": "isAnyoneInjured",
+      "label": {
+        "id": "claim.isAnyoneInjured.label",
+        "defaultMessage": "Is Anyone Injured"
+      }
+    }
+  },
+  {
+    "id": "isHomeHabitable",
+    "type": "field",
+    "component": "Toggle",
+    "componentProps": {
+      "path": "isHomeHabitable",
+      "label": {
+        "id": "claim.isHomeHabitable.label",
+        "defaultMessage": "Is Home Habitable"
+      }
+    }
+  },
+  {
+    "id": "isHomeSecure",
+    "type": "field",
+    "component": "Toggle",
+    "componentProps": {
+      "path": "isHomeSecure",
+      "label": {
+        "id": "claim.isHomeSecure.label",
+        "defaultMessage": "Is Home Secure"
+      }
+    }
+  },
+  {
+    "id": "isRoofProtected",
+    "type": "field",
+    "component": "Toggle",
+    "componentProps": {
+      "path": "isRoofProtected",
+      "label": {
+        "id": "claim.isRoofProtected.label",
+        "defaultMessage": "Is Roof Protected"
+      }
+    }
+  },
+  {
+    "id": "jurisdiction",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "Jurisdiction",
+          "name": "Jurisdiction"
+        }
+      ],
+      "path": "jurisdiction",
+      "label": {
+        "id": "claim.jurisdiction.label",
+        "defaultMessage": "Jurisdiction"
+      }
+    }
+  },
+  {
+    "id": "lobCode",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "LOBCode",
+          "name": "LOBCode"
+        }
+      ],
+      "createOnly": true,
+      "path": "lobCode",
+      "label": {
+        "id": "claim.lobCode.label",
+        "defaultMessage": "Lob Code"
+      }
+    }
+  },
+  {
+    "id": "lossCause",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "LossCause",
+          "name": "LossCause"
+        }
+      ],
+      "path": "lossCause",
+      "label": {
+        "id": "claim.lossCause.label",
+        "defaultMessage": "Loss Cause"
+      }
+    }
+  },
+  {
+    "id": "lossDate",
+    "type": "field",
+    "component": "Date",
+    "componentProps": {
+      "dataType": "date-time",
+      "createOnly": true,
+      "path": "lossDate",
+      "label": {
+        "id": "claim.lossDate.label",
+        "defaultMessage": "Loss Date"
+      }
+    }
+  },
+  {
+    "id": "lossLocation",
+    "type": "field",
+    "component": "ObjectRef",
+    "componentProps": {
+      "referenceType": "ClaimAddress",
+      "path": "lossLocation",
+      "label": {
+        "id": "claim.lossLocation.label",
+        "defaultMessage": "Loss Location"
+      }
+    }
+  },
+  {
+    "id": "lossType",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "LossType",
+          "name": "LossType"
+        }
+      ],
+      "readOnly": true,
+      "path": "lossType",
+      "label": {
+        "id": "claim.lossType.label",
+        "defaultMessage": "Loss Type"
+      }
+    }
+  },
+  {
+    "id": "mainContact",
+    "type": "field",
+    "component": "ObjectRef",
+    "componentProps": {
+      "referenceType": "UpdatablePolicyObjectReference",
+      "path": "mainContact",
+      "label": {
+        "id": "claim.mainContact.label",
+        "defaultMessage": "Main Contact"
+      }
+    }
+  },
+  {
+    "id": "policyAddresses",
+    "type": "field",
+    "component": "ArrayRef",
+    "componentProps": {
+      "referenceType": "ClaimAddress",
+      "readOnly": true,
+      "path": "policyAddresses",
+      "label": {
+        "id": "claim.policyAddresses.label",
+        "defaultMessage": "Policy Addresses"
+      }
+    }
+  },
+  {
+    "id": "policyNumber",
+    "type": "field",
+    "component": "Input",
+    "componentProps": {
+      "maxLength": 40,
+      "createOnly": true,
+      "path": "policyNumber",
+      "label": {
+        "id": "claim.policyNumber.label",
+        "defaultMessage": "Policy Number"
+      }
+    }
+  },
+  {
+    "id": "reportedByType",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "PersonRelationType",
+          "name": "PersonRelationType"
+        }
+      ],
+      "path": "reportedByType",
+      "label": {
+        "id": "claim.reportedByType.label",
+        "defaultMessage": "Reported By Type"
+      }
+    }
+  },
+  {
+    "id": "reportedDate",
+    "type": "field",
+    "component": "Date",
+    "componentProps": {
+      "dataType": "date-time",
+      "path": "reportedDate",
+      "label": {
+        "id": "claim.reportedDate.label",
+        "defaultMessage": "Reported Date"
+      }
+    }
+  },
+  {
+    "id": "reporter",
+    "type": "field",
+    "component": "ObjectRef",
+    "componentProps": {
+      "referenceType": "UpdatablePolicyObjectReference",
+      "path": "reporter",
+      "label": {
+        "id": "claim.reporter.label",
+        "defaultMessage": "Reporter"
+      }
+    }
+  },
+  {
+    "id": "segment",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "ClaimSegment",
+          "name": "ClaimSegment"
+        }
+      ],
+      "readOnly": true,
+      "path": "segment",
+      "label": {
+        "id": "claim.segment.label",
+        "defaultMessage": "Segment"
+      }
+    }
+  },
+  {
+    "id": "smokeDamageOnly",
+    "type": "field",
+    "component": "Toggle",
+    "componentProps": {
+      "path": "smokeDamageOnly",
+      "label": {
+        "id": "claim.smokeDamageOnly.label",
+        "defaultMessage": "Smoke Damage Only"
+      }
+    }
+  },
+  {
+    "id": "state",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "ClaimState",
+          "name": "ClaimState"
+        }
+      ],
+      "readOnly": true,
+      "path": "state",
+      "label": {
+        "id": "claim.state.label",
+        "defaultMessage": "State"
+      }
+    }
+  },
+  {
+    "id": "strategy",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "ClaimStrategy",
+          "name": "ClaimStrategy"
+        }
+      ],
+      "readOnly": true,
+      "path": "strategy",
+      "label": {
+        "id": "claim.strategy.label",
+        "defaultMessage": "Strategy"
+      }
+    }
+  },
+  {
+    "id": "validationLevel",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "ValidationLevel",
+          "name": "ValidationLevel"
+        }
+      ],
+      "readOnly": true,
+      "path": "validationLevel",
+      "label": {
+        "id": "claim.validationLevel.label",
+        "defaultMessage": "Validation Level"
+      }
+    }
+  },
+  {
+    "id": "waterSource",
+    "type": "field",
+    "component": "DropdownSelect",
+    "componentProps": {
+      "dataType": "object",
+      "availableValues": [
+        {
+          "code": "WaterSource",
+          "name": "WaterSource"
+        }
+      ],
+      "path": "waterSource",
+      "label": {
+        "id": "claim.waterSource.label",
+        "defaultMessage": "Water Source"
+      }
+    }
+  },
+  {
+    "id": "witnesses",
+    "type": "field",
+    "component": "ArrayRef",
+    "componentProps": {
+      "referenceType": "Witness",
+      "path": "witnesses",
+      "label": {
+        "id": "claim.witnesses.label",
+        "defaultMessage": "Witnesses"
+      }
+    }
+  }
+]

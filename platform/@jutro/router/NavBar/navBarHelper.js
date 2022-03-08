@@ -1,0 +1,1 @@
+import _ from"lodash";export const removeNavLinkIcon=({navLink:navLink,...rest})=>navLink?{...rest,navLink:_.omit(navLink,"icon")}:rest;export const shouldShowIcons=routes=>{const showOnNavBarRoutes=routes.filter((route=>_.get(route,"showOnNavBar",!0)));return showOnNavBarRoutes.every((({navLink:navLink})=>navLink))&&showOnNavBarRoutes.every((({navLink:{icon:icon}})=>icon))};

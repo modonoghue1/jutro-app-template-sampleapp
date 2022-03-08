@@ -1,0 +1,13 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.chevron {
+  display: block;
+  transition: transform var(--GW-ANIMATION-DURATION);
+  transform-origin: center;
+  outline: none; }
+
+.open {
+  transform: rotate(90deg); }
+
+/*# sourceMappingURL=Chevron.module.css.map */

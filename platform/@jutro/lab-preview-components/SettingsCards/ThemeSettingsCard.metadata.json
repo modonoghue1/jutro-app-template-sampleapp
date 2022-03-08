@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../../packages/jutro-uimetadata/src/common/json-schema/metadata.schema.json",
+  "ThemeSettingCard": {
+    "id": "theme-settings-card-id",
+    "type": "page",
+    "contentLayout": {
+      "component": "div"
+    },
+    "content": [
+      {
+        "type": "element",
+        "component": "ThemeChooser",
+        "id": "MetadataThemeChooser",
+        "componentProps": {
+          "label": "Current theme",
+          "onThemeChange": "onThemeChange",
+          "skipPropagation": true
+        }
+      }
+    ]
+  }
+}

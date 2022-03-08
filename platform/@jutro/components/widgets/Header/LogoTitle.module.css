@@ -1,0 +1,38 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.logoTitle {
+  display: flex;
+  align-items: center;
+  margin-right: initial;
+  height: 100%; }
+
+.title {
+  color: var(--GW-LOGO-TITLE-COLOR);
+  margin-left: var(--GW-SPACING-3);
+  white-space: nowrap;
+  font-size: var(--GW-FONT-SIZE-LABEL);
+  line-height: var(--GW-LINE-HEIGHT-LABEL); }
+  @media (min-width: 769px) {
+    .title {
+      font-size: var(--GW-FONT-SIZE-H4);
+      line-height: var(--GW-LINE-HEIGHT-H4); } }
+  @media (min-width: 1025px) {
+    .title {
+      font-size: var(--GW-FONT-SIZE-H3);
+      line-height: var(--GW-LINE-HEIGHT-H3); } }
+
+.logoTitle .logo {
+  height: var(--GW-LOGO-TITLE-HEIGHT-PHONE);
+  width: auto;
+  min-height: var(--GW-LOGO-TITLE-HEIGHT-PHONE); }
+  @media (min-width: 769px) {
+    .logoTitle .logo {
+      height: var(--GW-LOGO-TITLE-HEIGHT-TABLET);
+      min-height: var(--GW-LOGO-TITLE-HEIGHT-TABLET); } }
+  @media (min-width: 1025px) {
+    .logoTitle .logo {
+      height: var(--GW-LOGO-TITLE-HEIGHT-DESKTOP);
+      min-height: var(--GW-LOGO-TITLE-HEIGHT-DESKTOP); } }
+
+/*# sourceMappingURL=LogoTitle.module.css.map */

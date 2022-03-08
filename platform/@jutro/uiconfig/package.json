@@ -1,0 +1,71 @@
+{
+  "_from": "@jutro/uiconfig@6.5.0",
+  "_id": "@jutro/uiconfig@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-Uh6b47aSojKax/zEUl2rFq1eyIo=",
+  "_location": "/@jutro/uiconfig",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/uiconfig@6.5.0",
+    "name": "@jutro/uiconfig",
+    "escapedName": "@jutro%2fuiconfig",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/datatable",
+    "/@jutro/floorplan",
+    "/@jutro/lab-preview-components",
+    "/@jutro/lab-preview-micro-app",
+    "/@jutro/visualization",
+    "/@jutro/wizard-next"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/uiconfig/-/@jutro/uiconfig-6.5.0.tgz",
+  "_shasum": "521e9be3b692a2329ac7fcc4525dab16ad5ec88a",
+  "_spec": "@jutro/uiconfig@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/components": "6.5.0",
+    "@jutro/data": "6.5.0",
+    "@jutro/layout": "6.5.0",
+    "@jutro/locale": "6.5.0",
+    "@jutro/logger": "6.5.0",
+    "@jutro/platform": "6.5.0",
+    "@jutro/prop-types": "6.5.0",
+    "@jutro/router": "6.5.0",
+    "@jutro/uimetadata": "6.5.0",
+    "ajv": "6.12.6",
+    "classnames": "2.2.6",
+    "lodash": "4.17.21",
+    "prop-types": "15.7.2"
+  },
+  "deprecated": false,
+  "description": "Provides an API for building UI using metadata",
+  "devDependencies": {
+    "@jutro/test": "6.5.0",
+    "history": "4.10.1",
+    "json-logic-js": "^1.2.2",
+    "md5": "^2.2.1"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/uiconfig",
+  "peerDependencies": {
+    "core-js": "3.10.0",
+    "react": "17.0.2",
+    "react-router-dom": "5.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

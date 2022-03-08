@@ -1,0 +1,12 @@
+---
+to: "<%= `${path}/${name}/uiMetadataMigration/migration.js` %>"
+---
+const { createFieldFilter } = require('@jutro/cli-snapshot-tools');
+const { migrationAction } = require('./actions');
+
+module.exports = [
+    {
+        filter: createFieldFilter,
+        actions: [migrationAction()],
+    },
+];

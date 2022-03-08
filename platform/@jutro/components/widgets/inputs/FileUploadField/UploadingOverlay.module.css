@@ -1,0 +1,10 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  border-radius: var(--GW-BORDER-RADIUS);
+  margin: var(--GW-SPACING-1);
+  z-index: var(--GW-Z-INDEX-1); }
+
+/*# sourceMappingURL=UploadingOverlay.module.css.map */

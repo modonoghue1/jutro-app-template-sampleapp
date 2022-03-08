@@ -1,0 +1,159 @@
+{
+    "jutro": "6.0",
+    "claim.notes.view": {
+        "id": "claimVehicle",
+        "type": "page",
+        "contentLayout": {
+            "component": "Grid",
+            "componentProps": {
+                "hgap": "large",
+                "vgap": "large"
+            }
+        },
+        "content": [
+            {
+                "id": "subject",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "maxLength": 255,
+                    "path": "subject",
+                    "label": {
+                        "id": "note.subject.label",
+                        "defaultMessage": "Subject"
+                    }
+                }
+            },
+            {
+                "id": "body",
+                "type": "field",
+                "component": "TextArea",
+                "componentProps": {
+                    "maxLength": 65000,
+                    "path": "body",
+                    "label": {
+                        "id": "note.body.label",
+                        "defaultMessage": "Body"
+                    },
+                    "required": true
+                }
+            },
+            {
+                "id": "confidential",
+                "type": "field",
+                "component": "Toggle",
+                "componentProps": {
+                    "path": "confidential",
+                    "label": {
+                        "id": "note.confidential.label",
+                        "defaultMessage": "Confidential"
+                    },
+                    "controlClassName": "horizontalGrid"
+                }
+            },
+            {
+                "id": "securityType",
+                "type": "field",
+                "component": "Toggle",
+                "componentProps": {
+                    "dataType": "object",
+                    "availableValues": [
+                        {
+                            "code": "medical",
+                            "name": "Medical"
+                        },
+                        {
+                            "code": "private",
+                            "name": "Private"
+                        },
+                        {
+                            "code": "public",
+                            "name": "Public"
+                        },
+                        {
+                            "code": "sensitive",
+                            "name": "Sensitive"
+                        }
+                    ],
+                    "path": "securityType",
+                    "label": {
+                        "id": "note.securityType.label",
+                        "defaultMessage": "Security Type"
+                    },
+                    "controlClassName": "horizontalGrid"
+                },
+                "dynamicProps": [
+                    {
+                        "if": "confidential:ne:true",
+                        "then": {
+                            "visible": false
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "topic",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "dataType": "object",
+                    "availableValues": [
+                        {
+                            "code": "general",
+                            "name": "General"
+                        },
+                        {
+                            "code": "fnol",
+                            "name": "First notice of loss"
+                        },
+                        {
+                            "code": "coverage",
+                            "name": "Coverage"
+                        },
+                        {
+                            "code": "investigation",
+                            "name": "Investigation"
+                        },
+                        {
+                            "code": "medical",
+                            "name": "Medical issues"
+                        },
+                        {
+                            "code": "evaluation",
+                            "name": "Evaluation"
+                        },
+                        {
+                            "code": "settlement",
+                            "name": "Settlement"
+                        },
+                        {
+                            "code": "subrogation",
+                            "name": "Subrogation"
+                        },
+                        {
+                            "code": "salvage",
+                            "name": "Salvage"
+                        },
+                        {
+                            "code": "litigation",
+                            "name": "Litigation"
+                        },
+                        {
+                            "code": "denial",
+                            "name": "Denial"
+                        },
+                        {
+                            "code": "reinsurance",
+                            "name": "Reinsurance"
+                        }
+                    ],
+                    "path": "topic",
+                    "label": {
+                        "id": "note.topic.label",
+                        "defaultMessage": "Topic"
+                    }
+                }
+            }
+        ]
+    }
+}

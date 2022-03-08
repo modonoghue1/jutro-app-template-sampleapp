@@ -1,0 +1,1 @@
+export default{create:config=>event=>Object.keys(event).reduce(((result,key)=>{var _config$eventKeys;return null!=config&&null!==(_config$eventKeys=config.eventKeys)&&void 0!==_config$eventKeys&&_config$eventKeys[key]?(result[key]=config.eventKeys[key],result):(result[key]=event[key],result)}),{})};

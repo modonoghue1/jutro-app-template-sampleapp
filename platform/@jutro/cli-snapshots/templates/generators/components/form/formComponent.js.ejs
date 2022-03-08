@@ -1,0 +1,79 @@
+---
+to: "<%= `${path}/${h.capitalize(name)}/${h.capitalize(name)}.js` %>"
+---
+import React, { useState, useContext, useCallback } from 'react';
+import { set } from 'lodash';
+import cx from 'classnames';
+import PropTypes from 'prop-types';
+import { ModalNextContext } from '@jutro/components';
+import { MetadataForm } from '@jutro/uiconfig';
+import styles from './<%= h.capitalize(name) %>.module.scss';
+import uiMetadata from './<%= h.capitalize(name) %>.metadata.json5';
+import messages from './<%= h.capitalize(name) %>.messages';
+
+
+
+export const <%= h.capitalize(name) %> = ({ className }) => {
+    const { showAlert } = useContext(ModalNextContext)
+
+    const showSuccess = msg => {
+        showAlert({
+            status: 'success',
+            title: messages.genericSuccessMessage,
+            message: msg,
+        });
+    };
+
+    const showError = msg => {
+        showAlert({
+            status: 'error',
+            title: messages.genericErrorMessage,
+            message: msg,
+        });
+    };
+    const [isValid, setIsValid] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
+    const [formData, setFormData] = useState({});
+
+    const onValidationChange = useCallback(newIsValid => {
+        setIsValid(newIsValid);
+    }, []);
+
+    const writeValue = (value, path) => {
+        setFormData(prevState => {
+            const newState = { ...prevState };
+            set(newState, path, value);
+            return newState;
+        });
+    };
+
+    const saveForm = () => {
+        if (isValid) {
+            showSuccess(messages.formSavedSuccesfully);
+        } else {
+            showError(messages.formValidationError);
+            setSubmitted(true);
+        }
+    };
+
+    return (
+        <div className={cx(styles.<%= h.changeCase.lcFirst(name) %>, className)}>
+            <MetadataForm
+                uiProps={uiMetadata['a.b.<%=h.changeCase.lcFirst(name) %>']}
+                data={formData}
+                onValidationChange={onValidationChange}
+                onDataChange={writeValue}
+                showErrors={submitted}
+                showOptional
+                classNameMap={styles}
+                callbackMap={{
+                    saveForm: saveForm,
+                }}
+            />
+        </div>
+    );
+};
+
+<%= h.capitalize(name) %>.propTypes = {
+    className: PropTypes.string,
+};

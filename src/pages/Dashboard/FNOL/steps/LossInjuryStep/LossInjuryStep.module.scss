@@ -1,0 +1,56 @@
+.validationMessage {
+  font-weight: var(--GW-FONT-WEIGHT-LIGHT);
+  margin-top: var(--GW-SPACING-1);
+  display: inline-block;
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY);
+  color: var(--GW-COLOR-ERROR);
+}
+
+.injuredPeopleSwitch {
+  & :global(.jut__SwitchField__switch) {
+    justify-content: space-between;
+  }
+
+  & :global(.jut__SwitchField__labelSection) {
+    flex: unset;
+  }
+
+  & :global(.jut__SwitchField__controlSection) {
+    flex: unset;
+  }
+}
+
+.personsList {
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+
+  &:first-child {
+    margin-top: 0 !important;
+  }
+
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+.personEntry,
+.accountPersonEntry {
+  border-radius: var(--GW-BORDER-RADIUS);
+  border: 1px solid var(--GW-BORDER-COLOR);
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 8px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.accountPersonEntry {
+  cursor: pointer;
+}

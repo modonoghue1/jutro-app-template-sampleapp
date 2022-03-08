@@ -1,0 +1,16 @@
+.imageFigure {
+  display: table; }
+
+.imageFigureCaption {
+  display: table-caption;
+  caption-side: bottom;
+  text-align: center;
+  background-color: var(--GW-IMAGE-CAPTION-BACKGROUND-COLOR);
+  color: var(--GW-IMAGE-CAPTION-COLOR);
+  padding: var(--GW-SPACING-1) var(--GW-SPACING-3);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT); }
+
+.imageFigureLoading {
+  display: none; }
+
+/*# sourceMappingURL=Image.module.css.map */

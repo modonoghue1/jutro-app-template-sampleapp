@@ -1,0 +1,11 @@
+---
+to: "<%= `${path}/${name}/index.js` %>"
+---
+const template = require('./package-template.json');
+const uiMetadata = require('./uiMetadataMigration');
+const codemods = require('./codemods');
+const { cssMods } = require('./cssmods');
+
+const version = '<%= `${name}` %>';
+
+module.exports = { template, uiMetadata, codemods, cssMods, version };

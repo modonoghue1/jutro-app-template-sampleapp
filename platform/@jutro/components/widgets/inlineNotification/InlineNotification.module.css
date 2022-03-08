@@ -1,0 +1,57 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.inlineNotification {
+  border-radius: var(--GW-BORDER-RADIUS);
+  min-height: var(--GW-INLINE-NOTIFICATION-MIN-HEIGHT);
+  width: 100%;
+  display: flex;
+  position: relative; }
+  .inlineNotification:empty {
+    display: none; }
+
+.messageDefault {
+  display: inline-block;
+  font-weight: var(--GW-FONT-WEIGHT-BOLD);
+  padding-right: var(--GW-SPACING-2); }
+
+.message {
+  display: inline-block;
+  padding: var(--GW-SPACING-3) calc(2 * var(--GW-SPACING-6)) var(--GW-SPACING-3) var(--GW-SPACING-3);
+  word-break: break-word;
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  line-height: calc( var(--GW-INLINE-NOTIFICATION-MIN-HEIGHT) - 2 * var(--GW-SPACING-3)); }
+
+.inlineNotification .dismissButton {
+  position: absolute;
+  right: calc( ( var(--GW-INLINE-NOTIFICATION-MIN-HEIGHT) - var(--GW-NOTIFICATION-DISMISS-BUTTON-SIZE) ) / 2);
+  top: calc( ( var(--GW-INLINE-NOTIFICATION-MIN-HEIGHT) - var(--GW-NOTIFICATION-DISMISS-BUTTON-SIZE) ) / 2);
+  width: var(--GW-NOTIFICATION-DISMISS-BUTTON-SIZE);
+  height: var(--GW-NOTIFICATION-DISMISS-BUTTON-SIZE);
+  padding: 0; }
+  .inlineNotification .dismissButton:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+    background-color: transparent; }
+
+.iconWrapper {
+  padding: calc( ( var(--GW-INLINE-NOTIFICATION-MIN-HEIGHT) - var(--GW-NOTIFICATION-DISMISS-BUTTON-SIZE) ) / 2) 0 calc( ( var(--GW-INLINE-NOTIFICATION-MIN-HEIGHT) - var(--GW-NOTIFICATION-DISMISS-BUTTON-SIZE) ) / 2) calc( ( var(--GW-INLINE-NOTIFICATION-MIN-HEIGHT) - var(--GW-NOTIFICATION-DISMISS-BUTTON-SIZE) ) / 2);
+  display: flex; }
+
+.inlineNotificationInfo {
+  color: var(--GW-COLOR-INFO-CONTRAST);
+  background-color: var(--GW-COLOR-INFO); }
+
+.inlineNotificationSuccess {
+  color: var(--GW-COLOR-SUCCESS-CONTRAST);
+  background-color: var(--GW-COLOR-SUCCESS); }
+
+.inlineNotificationWarning {
+  color: var(--GW-COLOR-WARNING-CONTRAST);
+  background-color: var(--GW-COLOR-WARNING); }
+
+.inlineNotificationError {
+  color: var(--GW-COLOR-ERROR-CONTRAST);
+  background-color: var(--GW-COLOR-ERROR); }
+
+/*# sourceMappingURL=InlineNotification.module.css.map */

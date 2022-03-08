@@ -1,0 +1,14 @@
+.designWrapper {
+  position: relative; }
+
+.designGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.designCell {
+  background-color: rgba(255, 192, 203, 0.25); }
+
+/*# sourceMappingURL=DesignGrid.module.css.map */

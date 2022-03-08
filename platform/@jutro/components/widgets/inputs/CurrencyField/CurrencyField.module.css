@@ -1,0 +1,41 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.currency {
+  outline: none; }
+  .currency.inputContainer {
+    display: inline-flex;
+    align-items: center; }
+  .currency.focusWithin {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+    .currency.focusWithin:global(.invalid) {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-ERROR-COLOR-DARK); }
+    .currency.focusWithin:global(.warning) {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-WARNING-COLOR-LIGHT); }
+
+.currencySymbol {
+  color: var(--GW-CURRENCY-FIELD-SYMBOL-COLOR); }
+
+.currencyInput {
+  color: var(--GW-FIELD-COMPONENT-COLOR);
+  background-color: var(--GW-FIELD-COMPONENT-BACKGROUND-COLOR);
+  border: none;
+  width: 100%;
+  outline: none;
+  box-shadow: none;
+  text-align: inherit;
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  font-size: var(--GW-FONT-SIZE-INPUT);
+  line-height: var(--GW-LINE-HEIGHT-INPUT); }
+  .currencyInput:last-child {
+    padding-left: var(--GW-SPACING-2); }
+  .currencyInput[disabled], .currencyInput:global(.disabled) {
+    cursor: not-allowed; }
+
+.labpreviewBorder {
+  border: 2px solid var(--GW-COLOR-ERROR); }
+
+/*# sourceMappingURL=CurrencyField.module.css.map */

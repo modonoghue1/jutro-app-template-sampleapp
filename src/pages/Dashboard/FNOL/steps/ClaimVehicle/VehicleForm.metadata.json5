@@ -1,0 +1,150 @@
+{
+    "jutro": "5.3",
+    "fnol.vehicleForm": {
+        "id": "claimVehicle",
+        "type": "page",
+        "contentLayout": {
+            "component": "Grid",
+            "componentProps": {
+                "hgap": "large",
+                "vgap": "large"
+            }
+        },
+        "content": [
+            {
+                "id": "driverName",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "label": "Driver Name",
+                    "path": "driverName",
+                    "required": true
+                }
+            },
+            {
+                "id": "licensePlate",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "label": "Registration Number",
+                    "path": "registrationNumber",
+                    "required": true
+                }
+            },
+            {
+                "id": "color",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "label": "Vehicle Color",
+                    "path": "color"
+                }
+            },
+            {
+                "id": "make",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "label": "Make",
+                    "placeholder": "Select",
+                    "path": "make",
+                    "alwaysShowPlaceholder": true,
+                    "availableValues": [
+                        {
+                            "code": "subaru",
+                            "name": "Subaru"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "model",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "label": "Model",
+                    "placeholder": "Select",
+                    "path": "model",
+                    "alwaysShowPlaceholder": true,
+                    "availableValues": [
+                        {
+                            "code": "outback",
+                            "name": "Outback"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "year",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "label": "Year",
+                    "path": "year"
+                }
+            },
+            {
+                "id": "insuranceNumberAvailability",
+                "type": "field",
+                "component": "Switch",
+                "componentProps": {
+                    "label": "Do you have an insurance number available?",
+                    "path": "insuranceNumberAvailable",
+                    "required": true,
+                    "className": "vehiclesInsuranceNumberSwitch"
+                }
+            },
+            {
+                "id": "insuranceNumber",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "label": "Insurance Number",
+                    "path": "insuranceNumber",
+                    "required": true
+                }
+            },
+            {
+                "id": "controls",
+                "type": "element",
+                "component": "div",
+                "content": [
+                    {
+                        "id": "cancelVehicle",
+                        "type": "action",
+                        "component": "Button",
+                        "componentProps": {
+                            "onClick": "onCancelNewVehicle",
+                            "type": "outlined"
+                        },
+                        "content": {
+                            "id": "vehicles.cancel",
+                            "defaultMessage": "Cancel"
+                        }
+                    },
+                    {
+                        "id": "saveVehicle",
+                        "type": "action",
+                        "component": "Button",
+                        "componentProps": {
+                            "onClick": "onSaveNewVehicle",
+                            "type": "outlined"
+                        },
+                        "content": {
+                            "id": "vehicles.add",
+                            "defaultMessage": "Save"
+                        }
+                    }
+                ],
+                "contentLayout": {
+                    "component": "Flex",
+                    "componentProps": {
+                        "alignItems": "middle",
+                        "justifyContent": "right",
+                        "gap": "medium"
+                    }
+                }
+            }
+        ]
+    }
+}

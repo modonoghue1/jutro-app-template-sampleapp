@@ -1,0 +1,22 @@
+.wrapper {
+  position: relative; }
+
+.outerContentWrapper {
+  overflow: hidden; }
+  .outerContentWrapper.overContent {
+    position: absolute; }
+  .outerContentWrapper.hidden {
+    visibility: hidden; }
+
+.phantomBox {
+  position: absolute;
+  height: 100%;
+  right: 0; }
+
+.fullHeight {
+  height: 100%; }
+
+.contentWrapper {
+  overflow: hidden; }
+
+/*# sourceMappingURL=Collapse.module.css.map */

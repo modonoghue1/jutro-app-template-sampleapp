@@ -1,0 +1,22 @@
+span.badge {
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD); }
+  span.badge.notification {
+    color: var(--GW-BADGE-NOTIFICATION-COLOR);
+    background-color: var(--GW-BADGE-NOTIFICATION-BACKGROUND-COLOR);
+    border: var(--GW-BADGE-NOTIFICATION-BORDER);
+    box-shadow: var(--GW-SHADOW-1); }
+  span.badge.primary {
+    color: var(--GW-BADGE-PRIMARY-COLOR);
+    background-color: var(--GW-BADGE-PRIMARY-BACKGROUND-COLOR); }
+  span.badge.inverse {
+    color: var(--GW-BADGE-INVERSE-COLOR);
+    background-color: var(--GW-BADGE-INVERSE-BACKGROUND-COLOR); }
+
+.liveRegionContext {
+  display: block;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px; }
+
+/*# sourceMappingURL=Badge.module.css.map */

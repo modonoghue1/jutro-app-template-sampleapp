@@ -1,0 +1,28 @@
+{
+  "baseUrl": "process.env.DEPLOY_URL",
+  "pages": [
+    {
+      "url": "/",
+      "thresholds": {
+        "performance": 0.98,
+        "accessibility": 1,
+        "pwa": 0.5
+      }
+    }
+  ],
+  "lighthouseConfig": {
+    "upload": {
+      "target": "temporary-public-storage"
+    },
+    "collect": {
+      "numberOfRuns": 2,
+      "isSinglePageApplication": true,
+      "settings": {
+        "preset": "desktop"
+      }
+    },
+    "assert": {
+      "includePassedAssertions": true
+    }
+  }
+}

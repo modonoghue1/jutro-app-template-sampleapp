@@ -1,0 +1,62 @@
+{
+  "_from": "@jutro/lab-preview-storybook-preset@6.5.0",
+  "_id": "@jutro/lab-preview-storybook-preset@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-PzsJrr0bdgkroYaaFsXzeoVzouw=",
+  "_location": "/@jutro/lab-preview-storybook-preset",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/lab-preview-storybook-preset@6.5.0",
+    "name": "@jutro/lab-preview-storybook-preset",
+    "escapedName": "@jutro%2flab-preview-storybook-preset",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/lab-preview-storybook-preset/-/@jutro/lab-preview-storybook-preset-6.5.0.tgz",
+  "_shasum": "3f3b09aebd1b76092ba1869a16c5f37a8573a2ec",
+  "_spec": "@jutro/lab-preview-storybook-preset@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/components": "6.5.0",
+    "@jutro/layout": "6.5.0",
+    "@jutro/locale": "6.5.0",
+    "@jutro/overrides": "6.5.0",
+    "@jutro/theme": "6.5.0",
+    "@jutro/theme-styles": "6.5.0",
+    "@jutro/toolset-compilers": "6.5.0",
+    "@jutro/translations": "6.5.0",
+    "@storybook/api": "6.2.1",
+    "@storybook/client-logger": "6.2.1",
+    "@storybook/components": "6.2.1",
+    "@storybook/node-logger": "6.2.1",
+    "@storybook/theming": "6.2.1",
+    "lodash": "4.17.21",
+    "react-router-dom": "5.2.0",
+    "storybook-addon-jsx": "7.3.7",
+    "uuid": "8.3.2"
+  },
+  "deprecated": false,
+  "devDependencies": {
+    "@jutro/test": "6.5.0",
+    "@storybook/addons": "6.2.1",
+    "@types/uuid": "^8.3.0"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/lab-preview-storybook-preset",
+  "peerDependencies": {
+    "@storybook/addons": "6.2.1",
+    "react": "17.0.2"
+  },
+  "version": "6.5.0"
+}

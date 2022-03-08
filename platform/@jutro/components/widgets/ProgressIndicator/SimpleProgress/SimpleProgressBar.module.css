@@ -1,0 +1,38 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.simpleProgressBar {
+  width: 100%;
+  counter-reset: step; }
+
+.progressBar {
+  min-height: var(--GW-SIMPLE-PROGRESS-BAR-MIN-HEIGHT);
+  background-color: var(--GW-PROGRESS-BARS-LEFT-BAR-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  overflow: hidden; }
+  .progressBar .progressBarSteps {
+    transform-origin: left;
+    min-height: var(--GW-SIMPLE-PROGRESS-BAR-MIN-HEIGHT);
+    background-color: var(--GW-PROGRESS-BARS-COMPLETE-COLOR);
+    transition: var(--GW-ANIMATION-DURATION);
+    border-radius: var(--GW-BORDER-RADIUS); }
+
+.labelContainer {
+  display: flex;
+  justify-content: space-between; }
+
+.labelContainerCenter {
+  display: flex;
+  justify-content: center; }
+
+.label,
+.progressLabel {
+  color: var(--GW-PROGRESS-BARS-STATUS-COLOR);
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: var(--GW-SPACING-1);
+  margin-top: var(--GW-SPACING-2);
+  font-size: var(--GW-FONT-SIZE-LABEL);
+  line-height: var(--GW-LINE-HEIGHT-LABEL); }
+
+/*# sourceMappingURL=SimpleProgressBar.module.css.map */

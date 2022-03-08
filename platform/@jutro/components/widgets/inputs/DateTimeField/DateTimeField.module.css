@@ -1,0 +1,25 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.fieldContainer {
+  display: contents; }
+
+.dateLabel {
+  grid-column: 1;
+  grid-row: 1; }
+
+.dateField {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 10rem; }
+
+.timeLabel {
+  grid-column: 2;
+  grid-row: 1; }
+
+.timeField {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 7rem; }
+
+/*# sourceMappingURL=DateTimeField.module.css.map */

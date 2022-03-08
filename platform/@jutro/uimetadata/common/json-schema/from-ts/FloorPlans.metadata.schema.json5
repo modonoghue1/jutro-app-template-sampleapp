@@ -1,0 +1,601 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "type": {
+            "const": "floorplan",
+            "description": "(required) type of metadata; this must always be 'floorplan' for floorplan definitions"
+        },
+        "matches": {
+            "description": "The props to match against the current location. If match, the configuration override will be applied",
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/ts/FloorPlans/RouteMatch"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/ts/FloorPlans/RouteMatch"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "showHeader": {
+            "description": "Show/hide Header",
+            "type": "boolean"
+        },
+        "showSubHeader": {
+            "description": "Defines whether the sub navigation is shown or not",
+            "type": "boolean"
+        },
+        "showFooter": {
+            "description": "Show/hide footer",
+            "type": "boolean"
+        },
+        "showLeftSide": {
+            "description": "Show/hide left navigation",
+            "type": "boolean"
+        },
+        "showRightSide": {
+            "description": "Show/hide right panel",
+            "type": "boolean"
+        },
+        "routes": {
+            "description": "App routes to be shown in Sub Header",
+            "$ref": "#/definitions/metadata/routes"
+        },
+        "sideRoutes": {
+            "description": "App routes to be shown in Left Side",
+            "$ref": "#/definitions/metadata/routes"
+        },
+        "renderHeader": {
+            "description": "Render custom header",
+            "$ref": "#/definitions/datatypes/funcShape"
+        },
+        "header": {
+            "description": "Properties for Application Header component",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "className": {
+                    "description": "CSS class name for this component",
+                    "type": "string"
+                },
+                "logoSrc": {
+                    "description": "Display logo from source",
+                    "type": "string"
+                },
+                "logoTitle": {
+                    "description": "The title for the logo",
+                    "$ref": "#/definitions/datatypes/intlShape"
+                },
+                "logoUrl": {
+                    "description": "The link path for the logo",
+                    "type": "string"
+                },
+                "onSearchValueChange": {
+                    "description": "Display search field. Callback for the search field value change",
+                    "$ref": "#/definitions/datatypes/funcShape"
+                },
+                "onLoadValues": {
+                    "description": "Function for asynchronous data loading in search field",
+                    "$ref": "#/definitions/datatypes/funcShape"
+                },
+                "searchAvailableValues": {
+                    "description": "Array of choice objects to display",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "$ref": "#/definitions/datatypes/idShape"
+                            },
+                            "displayName": {
+                                "$ref": "#/definitions/datatypes/intlShape"
+                            },
+                            "subtitle": {
+                                "$ref": "#/definitions/datatypes/intlShape"
+                            },
+                            "secondaryLabel": {
+                                "$ref": "#/definitions/datatypes/intlShape"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        },
+                        "required": ["type"]
+                    }
+                },
+                "showNotifications": {
+                    "description": "Display notification icon",
+                    "type": "boolean"
+                },
+                "showAvatar": {
+                    "description": "Display avatar",
+                    "type": "boolean"
+                },
+                "avatarProps": {
+                    "description": "Avatar props to be passed down if not using auth info (username, imageSource, title, subtitle)",
+                    "type": "object",
+                    "additionalProperties": true,
+                    "properties": {
+                        "username": {
+                            "description": "username used to render initials in Avatar",
+                            "type": "string"
+                        },
+                        "title": {
+                            "description": "The main title to be displayed inside the Avatar MenuDropdown",
+                            "$ref": "#/definitions/datatypes/intlShape"
+                        },
+                        "subtitle": {
+                            "description": "The main subtitle to be displayed inside the Avatar MenuDropdown",
+                            "$ref": "#/definitions/datatypes/intlShape"
+                        },
+                        "imageSource": {
+                            "description": "Image source for the Avatar button",
+                            "type": "string"
+                        }
+                    }
+                },
+                "commonAvatarRoutes": {
+                    "description": "Array of items to be displayed as common Avatar content",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                            "id": {
+                                "description": "Used to identify dropdown menu link component.",
+                                "$ref": "#/definitions/datatypes/idShape"
+                            },
+                            "to": {
+                                "description": "Internal link.",
+                                "$ref": "#/definitions/datatypes/intlShape"
+                            },
+                            "href": {
+                                "description": "External link.",
+                                "type": "string"
+                            },
+                            "target": {
+                                "description": "Specifies where to open the external link.",
+                                "type": "string"
+                            },
+                            "rel": {
+                                "description": "Specifies the relationship between the current and an external document.",
+                                "type": "string"
+                            },
+                            "disabled": {
+                                "description": "If `true`, this link is disabled",
+                                "type": "boolean"
+                            },
+                            "onMenuItemClick": {
+                                "description": "Callback supposed to be triggered when clicked in the context of menu",
+                                "$ref": "#/definitions/datatypes/funcShape"
+                            },
+                            "focused": {
+                                "description": "If `true`, the link is considered as a currently active one",
+                                "type": "boolean"
+                            },
+                            "className": {
+                                "description": "The class name of the link",
+                                "type": "string"
+                            },
+                            "activeClassName": {
+                                "description": "The class to give the link when it is active",
+                                "type": "string"
+                            },
+                            "visible": {
+                                "description": "If true, this link is visible.",
+                                "type": "boolean"
+                            },
+                            "onClick": {
+                                "description": "On link click event handler",
+                                "$ref": "#/definitions/datatypes/funcShape"
+                            },
+                            "title": {
+                                "description": "The link title",
+                                "$ref": "#/definitions/datatypes/intlShape"
+                            }
+                        }
+                    }
+                },
+                "searchFieldPlaceholder": {
+                    "description": "Search field placeholder",
+                    "$ref": "#/definitions/datatypes/intlShape"
+                },
+                "showAppSwitcher": {
+                    "description": "Flag to show App Switcher when set to true",
+                    "type": "boolean"
+                },
+                "appSwitcherItems": {
+                    "description": "Array of items to be displayed in App Switcher menu",
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "title": {
+                                        "description": "Title that will be displayed below the icon",
+                                        "type": "string"
+                                    },
+                                    "to": {
+                                        "description": "Internal path to the application",
+                                        "$ref": "#/definitions/datatypes/intlToShape"
+                                    },
+                                    "href": {
+                                        "description": "External path",
+                                        "$ref": "#/definitions/datatypes/intlShape"
+                                    },
+                                    "imageUrl": {
+                                        "type": "string",
+                                        "description": "Source of the image"
+                                    },
+                                    "imageAlt": {
+                                        "type": "string",
+                                        "description": "Alternative text of the image"
+                                    },
+                                    "exact": {
+                                        "type": "boolean",
+                                        "description": "Flag for the exact path matching in react-router"
+                                    },
+                                    "onClick": {
+                                        "description": "Callback on item click event handler",
+                                        "$ref": "#/definitions/datatypes/funcShape"
+                                    },
+                                    "isFocused": {
+                                        "type": "boolean",
+                                        "description": "Flag to indicate if the current item is focused"
+                                    }
+                                },
+                                "required": ["title"],
+                                "additionalProperties": false
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "title": {
+                                        "description": "Title of the application group",
+                                        "type": "string"
+                                    },
+                                    "items": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "title": {
+                                                    "description": "Title that will be displayed below the icon",
+                                                    "type": "string"
+                                                },
+                                                "to": {
+                                                    "description": "Internal path to the application",
+                                                    "$ref": "#/definitions/datatypes/intlToShape"
+                                                },
+                                                "href": {
+                                                    "description": "External path",
+                                                    "$ref": "#/definitions/datatypes/intlShape"
+                                                },
+                                                "imageUrl": {
+                                                    "type": "string",
+                                                    "description": "Source of the image"
+                                                },
+                                                "imageAlt": {
+                                                    "type": "string",
+                                                    "description": "Alternative text of the image"
+                                                },
+                                                "exact": {
+                                                    "type": "boolean",
+                                                    "description": "Flag for the exact path matching in react-router"
+                                                },
+                                                "onClick": {
+                                                    "description": "Callback on item click event handler",
+                                                    "$ref": "#/definitions/datatypes/funcShape"
+                                                },
+                                                "isFocused": {
+                                                    "type": "boolean",
+                                                    "description": "Flag to indicate if the current item is focused"
+                                                }
+                                            },
+                                            "required": ["title"],
+                                            "additionalProperties": false
+                                        },
+                                        "description": "Array of the route items"
+                                    },
+                                    "isInitiallyCollapsed": {
+                                        "type": "boolean",
+                                        "description": "Default state for the expandable application group"
+                                    }
+                                },
+                                "required": ["title", "items"],
+                                "additionalProperties": false
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "separator": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "required": [],
+                                "additionalProperties": false
+                            }
+                        ]
+                    }
+                },
+                "useAuthInfo": {
+                    "description": "Use Okta auth info",
+                    "type": "boolean"
+                },
+                "showHelp": {
+                    "description": "Flag to show Help dropdown when set to true",
+                    "type": "boolean"
+                },
+                "helpUrl": {
+                    "description": "The link path for the help page",
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "properties": {
+                                "label": {
+                                    "$ref": "#/definitions/datatypes/intlShape"
+                                },
+                                "onClick": {
+                                    "description": "Creates a new function.",
+                                    "$ref": "#/definitions/datatypes/funcShape"
+                                },
+                                "href": {
+                                    "$ref": "#/definitions/datatypes/intlShape"
+                                }
+                            },
+                            "required": ["label"]
+                        },
+                        {
+                            "$ref": "#/definitions/datatypes/intlShape"
+                        }
+                    ]
+                },
+                "helpPopoverItems": {
+                    "description": "Help popover items",
+                    "type": "array",
+                    "items": {}
+                },
+                "callbackMap": {
+                    "type": "object",
+                    "description": "Map to resolve callbacks on avatar links"
+                },
+                "appSwitcherFooterText": {
+                    "description": "Text displayed on footer link in AppSwitcher",
+                    "$ref": "#/definitions/datatypes/intlShape"
+                },
+                "appSwitcherFooterUrl": {
+                    "description": "URL to which footer link in AppSwitcher leads",
+                    "type": "string"
+                },
+                "onAppSwitcherFooterClick": {
+                    "description": "Callback which will be triggered when footer link in AppSwitcher is clicked",
+                    "$ref": "#/definitions/datatypes/funcShape"
+                },
+                "appSwitcherSearchEnabled": {
+                    "type": "boolean",
+                    "description": "Enables search field in AppSwitcher if the number of items equals or is above `appSwitcherCollapsibleGroupsThreshold` value",
+                    "defaultValue": true
+                },
+                "appSwitcherCollapsibleGroupsThreshold": {
+                    "type": "number",
+                    "description": "Number of items from which the groups in AppSwitcher are collapsible and the search is displayed",
+                    "defaultValue": 15
+                },
+                "appSwitcherHideFooter": {
+                    "type": "boolean",
+                    "description": "Prop to specify if the footer in AppSwitcher should be hidden or not",
+                    "defaultValue": false
+                }
+            }
+        },
+        "subHeader": {
+            "description": "Sub header config",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "className": {
+                    "type": "string"
+                },
+                "contextSwitcher": {
+                    "$ref": "#/definitions/ts/FloorPlans/ContextSwitcherPropTypes"
+                }
+            }
+        },
+        "rightSide": {
+            "description": "Right panel config",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "isInitiallyCollapsed": {
+                    "type": "boolean"
+                },
+                "collapsible": {
+                    "type": "boolean"
+                },
+                "sides": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "label": {
+                                "$ref": "#/definitions/datatypes/intlShape",
+                                "description": "Label describing the content used for accessibility"
+                            },
+                            "icon": {
+                                "description": "Icon that will represent the content on the icon bar",
+                                "type": "string"
+                            },
+                            "component": {
+                                "description": "Component to render as content",
+                                "type": "string"
+                            },
+                            "componentProps": {
+                                "description": "Component props",
+                                "type": "object",
+                                "properties": {},
+                                "additionalProperties": true
+                            }
+                        },
+                        "required": ["component", "label"]
+                    }
+                }
+            }
+        },
+        "footer": {
+            "description": "Children components config for Footer",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "component": {
+                    "description": "Component to be rendered",
+                    "type": "string"
+                },
+                "componentProps": {
+                    "type": "object",
+                    "properties": {},
+                    "additionalProperties": true
+                },
+                "content": {
+                    "$ref": "#/definitions/datatypes/contentShape",
+                    "description": "the content to display; single component or array of components"
+                }
+            }
+        },
+        "scrollContent": {
+            "description": "Make content scrollable",
+            "type": "boolean"
+        },
+        "className": {
+            "description": "Additional class names for component.",
+            "type": "string"
+        },
+        "leftSide": {
+            "description": "Props passed to SideNavigation",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "contextSwitcher": {
+                    "$ref": "#/definitions/ts/FloorPlans/ContextSwitcherPropTypes",
+                    "description": "Context switcher object"
+                },
+                "className": {
+                    "type": "string"
+                },
+                "collapsible": {
+                    "type": "boolean"
+                },
+                "collapsed": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "excludeScrollToTopRoutes": {
+            "description": "Props path the pages which should be exclude from automatic scroll to top",
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/ts/FloorPlans/RouteMatch"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/ts/FloorPlans/RouteMatch"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "string"
+                }
+            ]
+        },
+        "notificationChildren": {
+            "type": "object",
+            "description": "Notification content to be rendered"
+        },
+        "avatarChildren": {
+            "type": "object",
+            "description": "Avatar content to be rendered"
+        }
+    },
+    "definitions": {
+        "RouteMatch": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "path": {
+                    "description": "URL path of the route",
+                    "type": "string"
+                },
+                "exact": {
+                    "description": "When true, will only match if the path matches the location.pathname exactly",
+                    "type": "boolean"
+                },
+                "strict": {
+                    "description": "When true, a path that has a trailing slash will only match a location.pathname with a trailing slash.",
+                    "type": "boolean"
+                },
+                "sensitive": {
+                    "description": "Match from case sensitive",
+                    "type": "boolean"
+                }
+            }
+        },
+        "ContextSwitcherPropTypes": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "defaultLabel": {
+                    "description": "Default button label when no context is active",
+                    "$ref": "#/definitions/datatypes/intlShape"
+                },
+                "values": {
+                    "description": "Array of values for the contexts",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "path": {
+                                "description": "The context path",
+                                "type": "string"
+                            },
+                            "title": {
+                                "description": "Context title",
+                                "$ref": "#/definitions/datatypes/intlShape"
+                            },
+                            "exact": {
+                                "description": "When true, will only match if the path matches the location.pathname exactly\n(unless match regular expression matches)",
+                                "type": "boolean"
+                            },
+                            "match": {
+                                "description": "The context will be considered active if the path matches this regular\nexpression, even if the path does not match the active route",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "required": ["values"]
+        }
+    }
+}

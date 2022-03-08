@@ -1,0 +1,33 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.fieldWithIcon {
+  position: relative;
+  width: 100%; }
+  .fieldWithIcon input:not(:first-child) {
+    padding-left: calc( 0.75rem + var(--GW-ICON-FONT-SIZE-1) + var(--GW-SPACING-3)); }
+  .fieldWithIcon input:not(:last-child) {
+    padding-right: calc( var(--GW-SPACING-3) + var(--GW-ICON-FONT-SIZE-1) + 0.75rem); }
+
+svg.iconWrapper,
+.iconWrapper {
+  position: absolute;
+  text-align: inherit;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.75rem; }
+  svg.iconWrapper:last-child,
+  .iconWrapper:last-child {
+    left: auto;
+    right: 0.75rem; }
+
+svg.icon,
+.icon {
+  color: var(--GW-FIELD-COMPONENT-COLOR);
+  vertical-align: middle;
+  pointer-events: none; }
+  svg.icon:global(.disabled),
+  .icon:global(.disabled) {
+    opacity: var(--GW-OPACITY-DISABLED); }
+
+/*# sourceMappingURL=FieldIcon.module.css.map */

@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({confirmButtonText:{id:"jutro-components.modal.AlertModal.confirmButtonText",defaultMessage:"Close"}});

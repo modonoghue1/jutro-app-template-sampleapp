@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({globSettingsTitle:{id:"jutro-lab-preview-components.GlobalizationSettingsCard.title",defaultMessage:"Language and Regional Format"}});

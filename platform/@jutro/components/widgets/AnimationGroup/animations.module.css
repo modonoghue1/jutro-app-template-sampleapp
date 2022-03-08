@@ -1,0 +1,72 @@
+/**
+* 'Expand' animation
+*/
+.expand_enter.expand_enter_active {
+  transition: height 400ms ease; }
+
+.expand_exit {
+  transition: height 200ms ease; }
+
+/*
+* 'Insert' animations
+* This is an example of simple transitions
+*/
+.insert_enter {
+  opacity: 0.01;
+  transform: translateX(-30px); }
+
+.insert_enter.insert_enter_active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 400ms ease-out, transform 400ms cubic-bezier(0.18, 0.89, 0.32, 1.28); }
+
+.insert_exit {
+  opacity: 1; }
+
+.insert_exit.insert_exit_active {
+  opacity: 0.01;
+  transition: opacity 200ms ease-in; }
+
+/*
+* 'Highlight' animations
+* This is an example of animation/keyframes instead of simple transitions
+*/
+.highlight_enter.highlight_enter_active {
+  animation: highlight-in 0.5s; }
+
+.highlight_exit.highlight_exit_active {
+  animation: highlight-in 0.5s reverse; }
+
+@keyframes highlight-in {
+  0% {
+    opacity: 0; }
+  50% {
+    background-color: rgba(0, 0, 0, 0.3); }
+  100% {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.1); } }
+
+/*
+* 'Reveal' animations
+* This pattern shows how to apply the same transition animation on the enter and exit (reversing direction)
+*/
+.reveal_base {
+  overflow: hidden; }
+
+.reveal_enter {
+  transition: 400ms ease-out all; }
+
+.reveal_exit {
+  transition: 400ms ease-in all; }
+
+.reveal_exit.reveal_exit_active,
+.reveal_enter {
+  transform: translateY(-100%);
+  opacity: 0; }
+
+.reveal_enter.reveal_enter_active,
+.reveal_exit {
+  transform: translateY(0);
+  opacity: 1; }
+
+/*# sourceMappingURL=animations.module.css.map */

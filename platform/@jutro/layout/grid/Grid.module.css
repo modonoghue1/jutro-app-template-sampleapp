@@ -1,0 +1,141 @@
+.grid {
+  display: grid;
+  width: 100%; }
+  .grid hr {
+    margin: 0; }
+  .grid p {
+    margin: 0; }
+
+.vgapNone {
+  grid-row-gap: 0; }
+
+.vgapSmall {
+  grid-row-gap: var(--GW-SPACING-4); }
+
+.vgapMedium {
+  grid-row-gap: var(--GW-LAYOUT-4); }
+
+.vgapLarge {
+  grid-row-gap: var(--GW-LAYOUT-6); }
+
+.hgapNone {
+  grid-column-gap: 0; }
+
+.hgapSmall {
+  grid-column-gap: var(--GW-SPACING-4); }
+
+.hgapMedium {
+  grid-column-gap: var(--GW-LAYOUT-4); }
+
+.hgapLarge {
+  grid-column-gap: var(--GW-LAYOUT-6); }
+
+.alignItemsStart {
+  align-items: flex-start; }
+
+.alignItemsCenter {
+  align-items: center; }
+
+.alignItemsEnd {
+  align-items: flex-end; }
+
+.alignItemsBaseline {
+  align-items: baseline; }
+
+.alignItemsStretch {
+  align-items: stretch; }
+
+.alignContentStart {
+  align-content: flex-start; }
+
+.alignContentCenter {
+  align-content: center; }
+
+.alignContentEnd {
+  align-content: flex-end; }
+
+.alignContentBaseline {
+  align-content: baseline; }
+
+.alignContentStretch {
+  align-content: stretch; }
+
+.alignSelfStart {
+  align-self: flex-start; }
+
+.alignSelfCenter {
+  align-self: center; }
+
+.alignSelfEnd {
+  align-self: flex-end; }
+
+.alignSelfBaseline {
+  align-self: baseline; }
+
+.alignSelfStretch {
+  align-self: stretch; }
+
+.justifyItemsStart {
+  justify-items: flex-start; }
+
+.justifyItemsCenter {
+  justify-items: center; }
+
+.justifyItemsEnd {
+  justify-items: flex-end; }
+
+.justifyItemsAround {
+  justify-items: space-around; }
+
+.justifyItemsBetween {
+  justify-items: space-between; }
+
+.justifyItemsEvenly {
+  justify-items: space-evenly; }
+
+.justifyItemsStretch {
+  justify-items: stretch; }
+
+.justifyContentStart {
+  justify-content: flex-start; }
+
+.justifyContentCenter {
+  justify-content: center; }
+
+.justifyContentEnd {
+  justify-content: flex-end; }
+
+.justifyContentAround {
+  justify-content: space-around; }
+
+.justifyContentBetween {
+  justify-content: space-between; }
+
+.justifyContentEvenly {
+  justify-content: space-evenly; }
+
+.justifyContentStretch {
+  justify-content: stretch; }
+
+.textLeft {
+  text-align: left; }
+
+.textCenter {
+  text-align: center; }
+
+.textRight {
+  text-align: right; }
+
+.justifySelfStart {
+  justify-self: flex-start; }
+
+.justifySelfEnd {
+  justify-self: flex-end; }
+
+.justifySelfCenter {
+  justify-self: center; }
+
+.justifySelfStretch {
+  justify-self: stretch; }
+
+/*# sourceMappingURL=Grid.module.css.map */

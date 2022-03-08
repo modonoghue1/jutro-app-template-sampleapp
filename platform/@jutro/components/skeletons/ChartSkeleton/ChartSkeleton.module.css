@@ -1,0 +1,25 @@
+.chartSkeleton {
+  height: 12.5rem;
+  width: 12.5rem;
+  border-radius: var(--GW-BORDER-RADIUS-FULL);
+  position: relative;
+  background: #d1d9e2;
+  overflow: hidden; }
+
+.segment {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform-origin: 50% 100%;
+  transform: translate(0, -50%) rotate(90deg) rotate(calc(var(--offset, 0) * 1deg)); }
+  .segment::before {
+    background: var(--segment-color);
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: translate(0, 100%) rotate(calc(var(--value, 45) * 1deg));
+    transform-origin: 50% 0; }
+
+/*# sourceMappingURL=ChartSkeleton.module.css.map */

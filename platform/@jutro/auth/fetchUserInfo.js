@@ -1,0 +1,1 @@
+export const fetchUserInfo=async accessToken=>(await fetch(accessToken.userinfoUrl,{headers:{Authorization:`Bearer ${accessToken.accessToken}`},method:"GET"})).json();

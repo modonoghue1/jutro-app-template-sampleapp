@@ -1,0 +1,61 @@
+{
+  "_from": "@jutro/floorplan@6.5.0",
+  "_id": "@jutro/floorplan@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-5tCcEZw4nG4AtWRCug+isBIb87M=",
+  "_location": "/@jutro/floorplan",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/floorplan@6.5.0",
+    "name": "@jutro/floorplan",
+    "escapedName": "@jutro%2ffloorplan",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/lab-preview-micro-app"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/floorplan/-/@jutro/floorplan-6.5.0.tgz",
+  "_shasum": "e6d09c119c389c6e00b56442ba0fa2b0121bf3b3",
+  "_spec": "@jutro/floorplan@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/components": "6.5.0",
+    "@jutro/layout": "6.5.0",
+    "@jutro/locale": "6.5.0",
+    "@jutro/platform": "6.5.0",
+    "@jutro/prop-types": "6.5.0",
+    "@jutro/router": "6.5.0",
+    "@jutro/test": "6.5.0",
+    "@jutro/theme": "6.5.0",
+    "@jutro/uiconfig": "6.5.0",
+    "classnames": "2.2.6",
+    "lodash": "4.17.21",
+    "prop-types": "15.7.2"
+  },
+  "deprecated": false,
+  "description": "Provides floorplans",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/floorplan",
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "5.2.0",
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

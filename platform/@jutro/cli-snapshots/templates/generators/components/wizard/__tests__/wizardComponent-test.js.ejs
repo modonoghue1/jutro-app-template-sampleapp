@@ -1,0 +1,88 @@
+---
+to: '<%= path %>/<%= h.capitalize(name) %>/__tests__/<%= h.capitalize(name) %>-test.js'
+---
+import React from 'react';
+import { mountRouteComponent, TranslatorContextForTest } from '@jutro/test';
+import { Route, Switch } from 'react-router-dom';
+import { <%= h.capitalize(name) %> } from '../<%= h.capitalize(name) %>';
+
+describe('<%= h.capitalize(name) %>', () => {
+    it('wizard mounts without error', () => {
+        const wizard = mountRouteComponent(
+            <Switch>
+                <Route
+                    path={`/wizard/:zip_ID([\\d_]+)?`}
+                    render={props =>
+                        TranslatorContextForTest(<<%= h.capitalize(name) %> {...props} />)
+                    }
+                />
+            </Switch>,
+            undefined,
+            undefined,
+            ['/wizard/90210_1234567']
+        );
+        expect(wizard).toBeDefined();
+    });
+
+    it('wizard moves to page two clicking on next', () => {
+        const wizard = mountRouteComponent(
+            <Switch>
+                <Route
+                    path={`/wizard/:zip_ID([\\d_]+)?`}
+                    render={props =>
+                        TranslatorContextForTest(<<%= h.capitalize(name) %> {...props} />)
+                    }
+                />
+            </Switch>,
+            undefined,
+            undefined,
+            ['/wizard/90210_1234567']
+        );
+        const nextButton = wizard.find('Button#nextBtn');
+        nextButton.simulate('click');
+        expect(wizard.find('WizardPage').text()).toEqual('Step #2');
+    });
+
+    it('wizard moves back to page three clicking on next button on page #2', () => {
+        const wizard = mountRouteComponent(
+            <Switch>
+                <Route
+                    path={`/wizard/:zip_ID([\\d_]+)?`}
+                    render={props =>
+                        TranslatorContextForTest(<<%= h.capitalize(name) %> {...props} />)
+                    }
+                />
+            </Switch>,
+            undefined,
+            undefined,
+            ['/wizard/90210_1234567']
+        );
+        const nextButton = wizard.find('Button#nextBtn');
+        nextButton.simulate('click');
+        expect(wizard.find('WizardPage').text()).toEqual('Step #2');
+        nextButton.simulate('click');
+        expect(wizard.find('WizardPage').text()).toEqual('Step #3');
+    });
+
+    it('wizard moves back to page one after clicking previous button on page two', () => {
+        const wizard = mountRouteComponent(
+            <Switch>
+                <Route
+                    path={`/wizard/:zip_ID([\\d_]+)?`}
+                    render={props =>
+                        TranslatorContextForTest(<<%= h.capitalize(name) %> {...props} />)
+                    }
+                />
+            </Switch>,
+            undefined,
+            undefined,
+            ['/wizard/90210_1234567']
+        );
+        const nextButton = wizard.find('Button#nextBtn');
+        nextButton.simulate('click');
+        expect(wizard.find('WizardPage').text()).toEqual('Step #2');
+        const prevButton = wizard.find('Button#prevBtn');
+        prevButton.simulate('click');
+        expect(wizard.find('WizardPage').text()).toEqual('Step #1');
+    });
+});

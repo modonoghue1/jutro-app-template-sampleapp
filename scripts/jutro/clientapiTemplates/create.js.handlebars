@@ -1,0 +1,70 @@
+    /**
+     * {{description}}
+{{#each methodParams}}
+     * @param {{curly_bracket true}}{{this.type}}{{curly_bracket}} {{this.name}} {{this.description}}
+{{/each}}
+{{#if requestInfo}}
+     * @param {{curly_bracket true}}{{requestInfo.type}}{{curly_bracket}} {{requestInfo.name}} {{requestInfo.description}}
+{{/if}}
+{{#if optsParams}}
+     * @param {Object} opts Optional query parameters
+{{/if}}
+{{#each optsParams}}
+     * @param {{curly_bracket true}}{{this.type}}{{curly_bracket}} opts.{{this.name}} {{this.description}}
+{{/each}}
+     * @returns {{curly_bracket true}}{{responseInfo.type}}{{curly_bracket}} {{responseInfo.description}}
+     *
+     * @example
+     * "{{methodPath}}"
+     */
+    {{methodName}}({{#each methodParams}}{{this.name}}, {{/each}}{{#if requestInfo}}{{requestInfo.name}}{{/if}}{{#if optsParams}}, opts{{/if}}) {
+        const { fields } = opts || {};
+
+        let search = '';
+        if (fields) {
+            search += buildSearchString({ fields: fields }, !!search);
+        }
+
+        const url = `${this.baseUrl}{{methodUrl}}${search}`;
+
+    {{#if docType }}
+        const formData = new FormData();
+        const {id, file, ...rest} = {{requestInfo.name}}
+        const wrapper = {
+            data: {
+                attributes: { ...rest }
+            }
+        }
+        formData.append('metadata', new Blob([JSON.stringify(wrapper)], { type: 'application/json' }));
+        formData.append('content', file);
+        return this.restService.post(url, formData, {
+             headers: {
+             'Content-Type': 'multipart/form-data'
+                      },
+        })
+            .then(result => unwrap(result?.data));
+
+    {{else}}
+        const { id, ...rest } = {{requestInfo.name}};
+        const wrapper = {
+            data: {
+                attributes: { ...rest }
+            }
+        }
+     {{#if_equals this.methodName 'createClaim'}}
+        return this.restService.post(url, wrapper).then(result => {
+            const claimData = unwrap(result?.data);
+            this.assignClaim(claimData);
+            const getCreatedClaims = () => this.getClaims({ filter: [
+                'assignedUser:eq:demo_sample::1',
+                'state:eq:draft',
+            ]})
+            const hasCreatedClaim = claims => claims.some(({ id: _id }) => _id === claimData.id);
+            return waitForClaims(getCreatedClaims, hasCreatedClaim, claimData)
+        });
+     {{else}}
+        return this.restService.post(url, wrapper)
+            .then(result => unwrap(result?.data));
+     {{/if_equals}}
+     {{/if}}
+    }

@@ -1,0 +1,1 @@
+import React from"react";import constant from"lodash/constant";import noop from"lodash/noop";export const AccordionContext=React.createContext({isAccordionOpen:constant(!1),toggleAccordionOpen:noop,stateCallBack:noop});

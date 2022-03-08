@@ -1,0 +1,25 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.container {
+  margin: 0 var(--GW-LAYOUT-6); }
+  @media (min-width: 1448px) {
+    .container {
+      max-width: 1448px;
+      margin: 0 auto; }
+      .container::before, .container::after {
+        content: '';
+        margin-left: var(--GW-LAYOUT-10); } }
+  @media (max-width: 1024px) {
+    .container {
+      margin: 0 var(--GW-LAYOUT-8); } }
+  @media (max-width: 580px) {
+    .container {
+      margin: 0 var(--GW-LAYOUT-2); } }
+  .container.fluid {
+    max-width: 100%;
+    margin: 0; }
+    .container.fluid::before, .container.fluid::after {
+      margin-left: 0; }
+
+/*# sourceMappingURL=Container.module.css.map */

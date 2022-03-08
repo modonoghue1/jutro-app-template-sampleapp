@@ -1,0 +1,1 @@
+export const decodeJWTTokenPayload=token=>JSON.parse(atob(token.split(".")[1]));

@@ -1,0 +1,1 @@
+import{COLLAPSE,TOGGLE,COLLAPSE_ALL}from"./types";export const collapse=payload=>({type:COLLAPSE,payload:payload});export const toggle=(rowId,viewIndex,allowMultiple)=>({type:TOGGLE,payload:{rowId:rowId,viewIndex:viewIndex,allowMultiple:allowMultiple}});export const collapseAll=()=>({type:COLLAPSE_ALL});

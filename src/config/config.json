@@ -1,0 +1,9 @@
+{
+  "localeSettings": {
+    "availableLocales": ["en-US", "es-ES", "es-MX", "de-DE", "pl"],
+    "availableLanguages": ["en", "es", "de", "pl", "yy"],
+    "preferredLocale": "en-US",
+    "preferredLanguage": "en",
+    "defaultCountryCode": "US"
+  }
+}

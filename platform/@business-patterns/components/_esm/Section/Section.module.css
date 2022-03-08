@@ -1,0 +1,16 @@
+.business-section {
+  margin: var(--GW-LAYOUT-4) 0;
+  position: relative; }
+  .business-section:not(:first-child):not(:last-child) {
+    margin: 0; }
+  .business-section:not(:first-child) + .business-section:not(:first-child) {
+    margin-top: var(--GW-LAYOUT-8);
+    margin-bottom: 0; }
+  .business-section .business-section-title {
+    letter-spacing: 0;
+    line-height: var(--GW-LINE-HEIGHT-H3);
+    font-size: var(--GW-FONT-SIZE-H3);
+    font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+    margin-bottom: var(--GW-LAYOUT-4); }
+
+/*# sourceMappingURL=Section.module.css.map */

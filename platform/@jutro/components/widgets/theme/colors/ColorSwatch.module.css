@@ -1,0 +1,29 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.colorSwatch {
+  display: inline-block;
+  padding: var(--GW-SPACING-1) var(--GW-SPACING-1) var(--GW-SPACING-2);
+  border: 1px solid transparent; }
+  .colorSwatch:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+
+.box {
+  width: var(--GW-COLOR-SWATCH-WIDTH);
+  height: var(--GW-COLOR-SWATCH-HEIGHT);
+  margin-bottom: var(--GW-SPACING-1);
+  border: 1px solid var(--GW-BORDER-COLOR); }
+
+.title {
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  color: var(--GW-COLOR-SWATCH-TITLE-COLOR);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+.color {
+  color: var(--GW-COLOR-SWATCH-COLOR);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+/*# sourceMappingURL=ColorSwatch.module.css.map */

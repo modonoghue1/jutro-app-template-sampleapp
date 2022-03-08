@@ -1,0 +1,40 @@
+{
+  "_from": "@business-patterns/helpers",
+  "_id": "@business-patterns/helpers@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-a6aRfhBapXeU+DFDJaFs32Eg2RM=",
+  "_location": "/@business-patterns/helpers",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@business-patterns/helpers",
+    "name": "@business-patterns/helpers",
+    "escapedName": "@business-patterns%2fhelpers",
+    "scope": "@business-patterns",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/",
+    "/@business-patterns/components"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@business-patterns/helpers/-/@business-patterns/helpers-1.0.1.tgz",
+  "_shasum": "6ba6917e105aa57794f8314325a16cdf6120d913",
+  "_spec": "@business-patterns/helpers",
+  "author": {
+    "name": "Guidewire Jutro team"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Generic helpers",
+  "license": "proprietary",
+  "main": "./index.js",
+  "module": "./_esm/index.js",
+  "name": "@business-patterns/helpers",
+  "private": false,
+  "sideEffects": false,
+  "version": "1.0.1"
+}

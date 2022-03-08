@@ -1,0 +1,64 @@
+{
+  "_from": "@jutro/logger@6.5.0",
+  "_id": "@jutro/logger@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-7S/2KK3zRq/Z+c1ax9nHq9ayNgs=",
+  "_location": "/@jutro/logger",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/logger@6.5.0",
+    "name": "@jutro/logger",
+    "escapedName": "@jutro%2flogger",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/app",
+    "/@jutro/auth",
+    "/@jutro/components",
+    "/@jutro/contract",
+    "/@jutro/datatable",
+    "/@jutro/events",
+    "/@jutro/lab-preview-micro-app",
+    "/@jutro/layout",
+    "/@jutro/locale",
+    "/@jutro/platform",
+    "/@jutro/router",
+    "/@jutro/services",
+    "/@jutro/theme",
+    "/@jutro/transport",
+    "/@jutro/uiconfig",
+    "/@jutro/uimetadata"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/logger/-/@jutro/logger-6.5.0.tgz",
+  "_shasum": "ed2ff628adf346afd9f9cd5ac7d9c7abd6b2360b",
+  "_spec": "@jutro/logger@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/config": "6.5.0",
+    "loglevel": "1.7.1",
+    "loglevel-plugin-prefix": "0.8.4"
+  },
+  "deprecated": false,
+  "description": "Provides logger for Jutro",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/logger",
+  "peerDependencies": {
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

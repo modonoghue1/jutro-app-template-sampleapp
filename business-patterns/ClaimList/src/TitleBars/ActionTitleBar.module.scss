@@ -1,0 +1,16 @@
+.actionTitleBar {
+  &.actionTitleBarContainer {
+    border-bottom: 1px solid var(--GW-BORDER-COLOR);
+    padding-bottom: var(--GW-LAYOUT-3);
+    margin-bottom: var(--GW-LAYOUT-3);
+  }
+
+  .title {
+    align-self: center;
+  }
+
+  .titleElement {
+    min-height: var(--GW-BUTTON-HEIGHT);
+    height: 100%;
+  }
+}

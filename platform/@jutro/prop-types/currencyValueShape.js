@@ -1,0 +1,1 @@
+import PropTypes from"prop-types";export const currencyValueShape=PropTypes.oneOfType([PropTypes.number,PropTypes.string,PropTypes.shape({amount:PropTypes.oneOfType([PropTypes.number,PropTypes.string]),currency:PropTypes.string})]);

@@ -1,0 +1,16 @@
+.policyDetailsItem {
+  background: #f6f6f6;
+  padding: var(--GW-SPACING-5);
+}
+
+:global(.jut__ActionColumn__actionItem.jut__Link__link) {
+  opacity: 1;
+
+  :global(.jut__Link__icon) {
+    margin: 0;
+  }
+}
+
+.panelsTable {
+  padding: 0;
+}

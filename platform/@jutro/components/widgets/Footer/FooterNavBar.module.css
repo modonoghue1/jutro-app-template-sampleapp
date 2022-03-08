@@ -1,0 +1,32 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.navBar {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0.75rem 0; }
+  @media (max-width: 1024px) {
+    .navBar {
+      padding: 0.25rem 0; } }
+
+.navItem {
+  display: flex;
+  padding-right: 2rem; }
+  @media (max-width: 580px) {
+    .navItem {
+      padding-right: 1.5rem; } }
+
+.navItem .navLink {
+  cursor: pointer;
+  padding: 0.125rem;
+  border-radius: var(--GW-BORDER-RADIUS);
+  border: 1px solid transparent; }
+  .navItem .navLink:hover {
+    opacity: 0.8;
+    text-decoration: underline; }
+  .navItem .navLink:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-DARK);
+    border-color: var(--GW-FOOTER-LINK-BORDER-COLOR-FOCUS); }
+
+/*# sourceMappingURL=FooterNavBar.module.css.map */

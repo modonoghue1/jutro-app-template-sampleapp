@@ -1,0 +1,9 @@
+.modalBody {
+  overflow: auto;
+  padding: var(--GW-MODAL-BODY-PADDING);
+  white-space: pre-wrap;
+  overflow-wrap: break-word; }
+  .modalBody.hasVerticalScrollbar {
+    box-shadow: inset 0 1px 1px 0 rgba(50, 63, 79, 0.16), inset 0 -2px 4px 0 rgba(50, 63, 79, 0.16); }
+
+/*# sourceMappingURL=ModalBody.module.css.map */

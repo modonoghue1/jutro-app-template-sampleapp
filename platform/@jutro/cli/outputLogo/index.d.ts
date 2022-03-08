@@ -1,0 +1,1 @@
+export { outputLogo } from "./outputLogo";

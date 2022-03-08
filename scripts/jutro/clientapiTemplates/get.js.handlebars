@@ -1,0 +1,23 @@
+    /**
+     * {{description}}
+{{#each methodParams}}
+     * @param {{curly_bracket true}}{{this.type}}{{curly_bracket}} {{this.name}} {{this.description}}
+{{/each}}
+{{#if optsParams}}
+     * @param {Object} opts Optional query parameters
+{{/if}}
+{{#each optsParams}}
+     * @param {{curly_bracket true}}{{this.type}}{{curly_bracket}} opts.{{this.name}} {{this.description}}
+{{/each}}
+     * @returns {{curly_bracket true}}{{responseInfo.type}}{{curly_bracket}} {{responseInfo.description}}
+     *
+     * @example
+     * "{{methodPath}}"
+     */
+    {{methodName}}({{#each methodParams}}{{this.name}}, {{/each}}{{#if optsParams}}opts{{/if}}) {
+        {{> optsHandling this }}
+
+        const url = `${this.baseUrl}{{methodUrl}}${search}`;
+        return this.restService.get(url)
+                .then(result => unwrap(result?.data));
+    }

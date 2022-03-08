@@ -1,0 +1,12 @@
+// NOTE: This file is generated at release time by TeamCity
+// Please DO NOT modify the contents
+// If you need to make a change, update the template under the templates directory
+{{#versions}}
+import * as {{name}} from './{{directory}}';
+{{/versions}}
+
+export const versions = [
+    {{#versions}}
+    {{name}},
+    {{/versions}}
+];

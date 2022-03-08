@@ -1,0 +1,101 @@
+---
+to: "<%= `${path}/${h.capitalize(name)}/${h.capitalize(name)}.metadata.json5` %>"
+---
+{
+    "a.b.<%= h.changeCase.lcFirst(name) %>": {
+        "id": "<%= h.changeCase.lcFirst(name) %>",
+        "type": "page",
+        "contentLayout": {
+            "component": "Grid",
+            "componentProps": {
+                "gap": "small"
+            }
+        },
+        "content": [
+            {
+                "id": "panel",
+                "type": "container",
+                "component": "Card",
+                "componentProps": {
+                    "title": {
+                        "id": "jutro-app.<%= h.capitalize(name) %>.<%= h.changeCase.sentenceCase(name) %>",
+                        "defaultMessage": "<%= h.changeCase.sentenceCase(name) %>"
+                    },
+                    "isPanel": true
+                },
+                "content": [
+                    {
+                        "id": "form",
+                        "type": "container",
+                        "component": "div",
+                        "contentLayout": {
+                            "component": "Grid",
+                            "componentProps": {
+                                "gap": "large"
+                            }
+                        },
+                        "content": [
+                            {
+                                "id": "name",
+                                "type": "field",
+                                "component": "input",
+                                "componentProps": {
+                                    "path": "baseData.name",
+                                    "label": {
+                                        "id": "jutro-app.<%= h.changeCase.lcFirst(name) %>.name",
+                                        "defaultMessage": "Name"
+                                    },
+                                    "required": true
+                                }
+                            },
+                            {
+                                "id": "date",
+                                "type": "field",
+                                "datatype": "date",
+                                "componentProps": {
+                                    "path": "baseData.date",
+                                    "label": {
+                                        "id": "jutro-app.<%= h.changeCase.lcFirst(name) %>.date",
+                                        "defaultMessage": "Current Date"
+                                    },
+                                    "placeholder": {
+                                        "id": "jutro-app.<%= h.changeCase.lcFirst(name) %>.date.pleaseSelect",
+                                        "defaultMessage": "Please select"
+                                    },
+                                    "required": true
+                                }
+                            },
+                            {
+                                "id": "actionBar",
+                                "type": "container",
+                                "component": "div",
+                                "contentLayout": {
+                                    "component": "Grid",
+                                    "componentProps": {
+                                        "columns": ["1fr"],
+                                        "justifyItems": "evenly"
+                                    }
+                                },
+                                "content": [
+                                    {
+                                        "id": "save",
+                                        "type": "action",
+                                        "component": "Button",
+                                        "componentProps": {
+                                            "onClick": "saveForm"
+                                        },
+                                        "content": {
+                                            "id": "jutro-app.codeless.submit",
+                                            "defaultMessage": "Submit",
+                                            "description": "Submit the form"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,48 @@
+{
+  "_from": "@jutro/data@6.5.0",
+  "_id": "@jutro/data@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-caR0LjM9hECP+ZPr1mSUfaEq4aA=",
+  "_location": "/@jutro/data",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/data@6.5.0",
+    "name": "@jutro/data",
+    "escapedName": "@jutro%2fdata",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/components",
+    "/@jutro/uiconfig"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/data/-/@jutro/data-6.5.0.tgz",
+  "_shasum": "71a4742e333d84408ff993ebd664947da12ae1a0",
+  "_spec": "@jutro/data@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "lodash": "4.17.21"
+  },
+  "deprecated": false,
+  "description": "Provides an API for handling common data operations",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/data",
+  "peerDependencies": {
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

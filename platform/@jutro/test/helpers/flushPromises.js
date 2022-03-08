@@ -1,0 +1,1 @@
+import _setImmediate from"@babel/runtime-corejs3/core-js-stable/set-immediate";export const flushPromises=()=>new Promise((resolve=>_setImmediate(resolve)));

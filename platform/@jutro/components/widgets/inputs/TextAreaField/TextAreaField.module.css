@@ -1,0 +1,11 @@
+.textArea {
+  min-height: var(--GW-TEXTAREA-FIELD-MIN-HEIGHT);
+  resize: vertical;
+  height: auto;
+  white-space: pre-wrap; }
+
+.textAreaReadOnly {
+  white-space: pre-wrap;
+  height: auto; }
+
+/*# sourceMappingURL=TextAreaField.module.css.map */

@@ -1,0 +1,12 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.headerActions {
+  display: flex;
+  margin-left: initial;
+  justify-content: right;
+  align-items: center; }
+  .headerActions > *:not(:last-child) {
+    margin-right: var(--GW-SPACING-5); }
+
+/*# sourceMappingURL=HeaderActions.module.css.map */

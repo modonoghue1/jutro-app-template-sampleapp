@@ -1,0 +1,26 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.tabSet {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+  .tabSet hr.divider {
+    margin: 0;
+    border-top: 1px solid var(--GW-SEPARATOR-COLOR); }
+  .tabSet:focus,
+  .tabSet *:focus {
+    outline: none; }
+
+.frame {
+  border: 1px solid var(--GW-BORDER-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS); }
+
+.content {
+  margin: 0;
+  background: var(--GW-TAB-BAR-BACKGROUND-COLOR);
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+
+/*# sourceMappingURL=TabSet.module.css.map */

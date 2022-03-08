@@ -1,0 +1,25 @@
+{
+    "jutro": "5.3",
+    "claim.confirmation.view": {
+        "id": "claimConrimation",
+        "type": "page",
+        "contentLayout": {
+            "component": "Flex",
+            "componentProps": {
+                "direction": "column",
+                "alignItems": "center"
+            }
+        },
+        "content": [
+            {
+                "id": "confirmationTitle",
+                "type": "element",
+                "component": "p",
+                "content": "If you want to create new FNOL with provided information , please proceed",
+                "selfLayout": {
+                    "component": "FlexItem"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,37 @@
+    /**
+     * {{description}}
+{{#each methodParams}}
+     * @param {{curly_bracket true}}{{this.type}}{{curly_bracket}} {{this.name}} {{this.description}}
+{{/each}}
+{{#if requestInfo}}
+     * @param {{curly_bracket true}}{{requestInfo.type}}{{curly_bracket}} {{requestInfo.name}} {{requestInfo.description}}
+{{/if}}
+{{#if optsParams}}
+     * @param {Object} opts Optional query parameters
+{{/if}}
+{{#each optsParams}}
+     * @param {{curly_bracket true}}{{this.type}}{{curly_bracket}} opts.{{this.name}} {{this.description}}
+{{/each}}
+     * @returns {{curly_bracket true}}{{responseInfo.type}}{{curly_bracket}} {{responseInfo.description}}
+     *
+     * @example
+     * "{{methodPath}}"
+     */
+    {{methodName}}({{#each methodParams}}{{this.name}}{{#unless @last}}, {{/unless}}{{/each}}{{#if requestInfo}}, {{requestInfo.name}}{{/if}}{{#if optsParams}}, opts{{/if}}) {
+        {{> optsHandling this }}
+        const url = `${this.baseUrl}{{methodUrl}}${search}`;
+{{#if requestInfo}}
+        const wrapper = ({{requestInfo.name}}) ?
+            {
+                data: {
+                    attributes: {{requestInfo.name}}
+                },
+            }
+            : undefined;
+{{else}}
+        const wrapper = undefined;
+{{/if}}
+        return this.restService
+            .post(url, wrapper){{#if responseInfo.unwrap}}
+            .then(result => unwrap(result?.data)){{/if}};
+    }

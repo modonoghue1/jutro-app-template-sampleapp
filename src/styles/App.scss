@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+.inlineWithIndent {
+  > * {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: var(--GW-SPACING-4);
+    }
+  }
+}

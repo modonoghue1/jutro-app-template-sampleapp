@@ -1,0 +1,1 @@
+export default function copyJSON(text){const tmp=document.createElement("TEXTAREA"),focus=document.activeElement;tmp.value=JSON.stringify(text,void 0,2),document.body.appendChild(tmp),tmp.select(),document.execCommand("copy"),document.body.removeChild(tmp),focus.focus()}

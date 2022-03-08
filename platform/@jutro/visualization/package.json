@@ -1,0 +1,51 @@
+{
+  "_from": "@jutro/visualization@6.5.0",
+  "_id": "@jutro/visualization@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-QCDEtbSu90nO1EQI8CcLoTjRPpI=",
+  "_location": "/@jutro/visualization",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/visualization@6.5.0",
+    "name": "@jutro/visualization",
+    "escapedName": "@jutro%2fvisualization",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/visualization/-/@jutro/visualization-6.5.0.tgz",
+  "_shasum": "4020c4b5b4aef749ced44408f0270ba138d13e92",
+  "_spec": "@jutro/visualization@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/uiconfig": "6.5.0",
+    "prop-types": "15.7.2",
+    "react-vega": "7.4.2",
+    "vega": "5.20.2",
+    "vega-embed": "6.17.0",
+    "vega-lite": "5.0.0"
+  },
+  "deprecated": false,
+  "description": "Provides an API for building visualization components",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/visualization",
+  "peerDependencies": {
+    "react": "17.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": true,
+  "version": "6.5.0"
+}

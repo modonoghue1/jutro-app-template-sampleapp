@@ -1,0 +1,53 @@
+{
+  "_from": "@jutro/events@6.5.0",
+  "_id": "@jutro/events@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-1AS0uiNQt9g6jkn6BtHzhIfiUpU=",
+  "_location": "/@jutro/events",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/events@6.5.0",
+    "name": "@jutro/events",
+    "escapedName": "@jutro%2fevents",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/app",
+    "/@jutro/components",
+    "/@jutro/router",
+    "/@jutro/transport"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/events/-/@jutro/events-6.5.0.tgz",
+  "_shasum": "d404b4ba2350b7d83a8e49fa06d1f38487e25295",
+  "_spec": "@jutro/events@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@datadog/browser-logs": "2.6.2",
+    "@jutro/config": "6.5.0",
+    "@jutro/logger": "6.5.0",
+    "lodash": "4.17.21"
+  },
+  "deprecated": false,
+  "description": "Provides analytics utilities",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/events",
+  "peerDependencies": {
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

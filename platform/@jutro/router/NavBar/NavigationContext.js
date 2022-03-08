@@ -1,0 +1,1 @@
+import{createContext}from"react";export const NavigationContext=createContext({activeRoute:"",setActiveRoute:()=>{},isCollapsed:!1,expand:()=>{},collapse:()=>{}});

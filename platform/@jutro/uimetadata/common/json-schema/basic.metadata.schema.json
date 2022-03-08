@@ -1,0 +1,1549 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "version": "6.5.0",
+  "title": "Jutro Metadata",
+  "description": "Metadata for rendering Jutro UI components, containers, elements and actions",
+  "definitions": {
+    "metadata": {
+      "layout": {
+        "type": "object",
+        "required": [
+          "component"
+        ],
+        "additionalProperties": false
+      },
+      "action": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/datatypes/idShape",
+            "description": "(required) identifier for action; should be unique per page"
+          },
+          "type": {
+            "const": "action",
+            "description": "(required) type of metadata; this must always be 'action' for action definitions"
+          },
+          "component": {
+            "type": "string",
+            "description": "(required) component to render"
+          },
+          "componentProps": {
+            "type": "object",
+            "description": "component-specific properties"
+          },
+          "content": {
+            "$ref": "#/definitions/datatypes/intlShape",
+            "description": "text content for action"
+          },
+          "selfLayout": {
+            "$ref": "#/definitions/datatypes/selfLayoutShape",
+            "description": "layout options for this item when used in another layout (eg. GridItem, FlexItem)"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type",
+          "component"
+        ],
+        "description": "used to describe interactive/call-to-action items"
+      },
+      "container": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/datatypes/idShape",
+            "description": "(required) identifier for container; should be unique per page"
+          },
+          "type": {
+            "const": "container",
+            "description": "(required) type of metadata; this must always be 'container' for container definitions"
+          },
+          "component": {
+            "type": "string",
+            "description": "(required) component or DOM element to render"
+          },
+          "componentProps": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "$ref": "#/definitions/datatypes/pathShape"
+              }
+            },
+            "description": "component-specific properties"
+          },
+          "content": {
+            "$ref": "#/definitions/datatypes/contentShape",
+            "description": "the content to display; single component or array of components"
+          },
+          "contentLayout": {
+            "$ref": "#/definitions/datatypes/contentLayoutShape",
+            "description": "layout options for the content of this item"
+          },
+          "selfLayout": {
+            "$ref": "#/definitions/datatypes/selfLayoutShape",
+            "description": "layout options for this item when used in another layout (eg. GridItem, FlexItem)"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type",
+          "component"
+        ],
+        "description": "used to describe items that contain other items"
+      },
+      "element": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/datatypes/idShape",
+            "description": "(required) identifier for element; should be unique per page"
+          },
+          "type": {
+            "const": "element",
+            "description": "(required) type of metadata; this must always be 'element' for element definitions"
+          },
+          "component": {
+            "type": "string",
+            "description": "(required) component or DOM element to render"
+          },
+          "componentProps": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "$ref": "#/definitions/datatypes/pathShape"
+              }
+            },
+            "description": "component-specific properties"
+          },
+          "content": {
+            "$ref": "#/definitions/datatypes/intlShape",
+            "description": "text content for element"
+          },
+          "selfLayout": {
+            "$ref": "#/definitions/datatypes/selfLayoutShape",
+            "description": "layout options for this item when used in another layout (eg. GridItem, FlexItem)"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type",
+          "component"
+        ],
+        "description": "used to describe static/non-interactive items"
+      },
+      "field": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/datatypes/idShape",
+            "description": "(required) identifier for field; should be unique per page"
+          },
+          "type": {
+            "const": "field",
+            "description": "(required) type of metadata; this must always be 'field' for field definitions"
+          },
+          "datatype": {
+            "type": "string",
+            "description": "datatype of value being rendered; if not provided, 'component' must be provided"
+          },
+          "component": {
+            "type": "string",
+            "description": "component or DOM element to render; if not provided, 'datatype' must be provided"
+          },
+          "componentProps": {
+            "type": "object",
+            "properties": {
+              "availableValues": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/datatypes/availableValueObjectShape"
+                }
+              },
+              "className": {
+                "type": "string",
+                "description": "Additional style to apply to the component"
+              },
+              "defaultValue": {
+                "description": "Default value"
+              },
+              "disabled": {
+                "type": "boolean",
+                "description": "If true, this field is disabled",
+                "defaultValue": false
+              },
+              "label": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "Label text to display; if not provided, uses '[id]' for development"
+              },
+              "path": {
+                "$ref": "#/definitions/datatypes/pathShape",
+                "description": "Passed as second argument to onValueChange if model is not present"
+              },
+              "placeholder": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "Placeholder to display on empty component"
+              },
+              "required": {
+                "type": "boolean",
+                "description": "If true, this field is required",
+                "defaultValue": false
+              },
+              "readOnly": {
+                "type": "boolean",
+                "description": "If true, this field is readonly",
+                "defaultValue": false
+              },
+              "tooltip": {
+                "$ref": "#/definitions/datatypes/tooltipShape",
+                "description": "To show tooltip after primary or the secondary label"
+              }
+            },
+            "description": "component-specific properties"
+          },
+          "content": {
+            "$ref": "#/definitions/datatypes/contentShape",
+            "description": "(optional for hybrid field/container types) content to be shown when this field is checked; single component or array of components"
+          },
+          "contentLayout": {
+            "$ref": "#/definitions/datatypes/contentLayoutShape",
+            "description": "layout options for the content of this item"
+          },
+          "selfLayout": {
+            "$ref": "#/definitions/datatypes/selfLayoutShape",
+            "description": "layout options for this item when used in another layout (eg. GridItem, FlexItem)"
+          }
+        },
+        "anyOf": [
+          {
+            "required": [
+              "id",
+              "type",
+              "component"
+            ]
+          },
+          {
+            "required": [
+              "id",
+              "type",
+              "datatype"
+            ]
+          }
+        ],
+        "description": "used to describe input/output items"
+      },
+      "floorplan": {
+        "placeholder": "injected during schema generation"
+      },
+      "iterable": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/datatypes/idShape",
+            "description": "(required) identifier for container; should be unique per page"
+          },
+          "type": {
+            "const": "iterable",
+            "description": "(required) type of metadata; this must always be 'iterable' for iterable definitions"
+          },
+          "component": {
+            "type": "string",
+            "description": "component to render; if not provided, renders content inside React.Fragment"
+          },
+          "componentProps": {
+            "type": "object",
+            "description": "component-specific properties"
+          },
+          "contentRepeat": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "$ref": "#/definitions/datatypes/pathShape"
+              },
+              "variableProps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "content": {
+                "$ref": "#/definitions/datatypes/contentObjectShape"
+              }
+            },
+            "description": "defines the repeatable content"
+          },
+          "contentEmpty": {
+            "$ref": "#/definitions/datatypes/contentShape",
+            "description": "what to display if no repeatable content"
+          },
+          "contentBefore": {
+            "$ref": "#/definitions/datatypes/contentShape",
+            "description": "what to display before repeatable content"
+          },
+          "contentAfter": {
+            "$ref": "#/definitions/datatypes/contentShape",
+            "description": "what to display after repeatable content"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type",
+          "component"
+        ],
+        "description": "used to describe items with iterable content"
+      },
+      "component": {
+        "type": "object",
+        "required": [],
+        "additionalProperties": false
+      },
+      "page": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/datatypes/idShape",
+            "description": "(required) identifier for page"
+          },
+          "type": {
+            "const": "page",
+            "description": "(required) type of metadata; this must always be 'page' for page definitions"
+          },
+          "component": {
+            "type": "string",
+            "description": "component to render"
+          },
+          "componentProps": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "$ref": "#/definitions/datatypes/intlShape"
+              }
+            },
+            "description": "component-specific properties"
+          },
+          "content": {
+            "$ref": "#/definitions/datatypes/contentShape",
+            "description": "the content to display; single component or array of components"
+          },
+          "contentLayout": {
+            "$ref": "#/definitions/datatypes/contentLayoutShape",
+            "description": "layout options for the content of this item"
+          },
+          "definitions": {
+            "type": "object"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type"
+        ],
+        "description": "used to describe pages"
+      },
+      "wizard": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/datatypes/idShape",
+            "description": "(required) identifier for wizard"
+          },
+          "type": {
+            "const": "wizard",
+            "description": "(required) type of metadata; this must always be 'wizard' for wizard definitions"
+          },
+          "title": {
+            "type": "string",
+            "description": "title shown above the wizard"
+          },
+          "stepNavTitle": {
+            "type": "string",
+            "description": "title shown in the wizard navigation"
+          },
+          "@ref": {
+            "type": "string",
+            "description": "used to reference a shared definition"
+          },
+          "component": {
+            "type": "string",
+            "description": "component to render"
+          },
+          "componentProps": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "$ref": "#/definitions/datatypes/intlShape"
+              }
+            },
+            "description": "component-specific properties"
+          },
+          "content": {
+            "$ref": "#/definitions/datatypes/contentShape",
+            "description": "the content to display; single component or array of components"
+          },
+          "flow": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "wizard flow is defined here"
+          },
+          "wizardProps": {
+            "type": "object",
+            "properties": {
+              "subRoutes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "route": {
+                      "$ref": "#/definitions/datatypes/pathShape",
+                      "description": "path of route"
+                    },
+                    "component": {
+                      "type": "string",
+                      "description": "name of component in component map"
+                    },
+                    "componentProps": {
+                      "type": "object",
+                      "description": "props to pass to the component"
+                    }
+                  }
+                },
+                "description": "subroutes to utilize subwizards within a wizard"
+              },
+              "cancelPath": {
+                "$ref": "#/definitions/datatypes/pathShape",
+                "description": "route to use on cancel action"
+              },
+              "finishPath": {
+                "$ref": "#/definitions/datatypes/pathShape",
+                "description": "route to use on finish action"
+              },
+              "knockoutPath": {
+                "$ref": "#/definitions/datatypes/pathShape",
+                "description": "route to use on knokout condition"
+              },
+              "onCancel": {
+                "$ref": "#/definitions/datatypes/wizardCallbackShape",
+                "description": "callback to use for cancel wizard action"
+              },
+              "onFinish": {
+                "$ref": "#/definitions/datatypes/wizardCallbackShape",
+                "description": "callback to use for finish wizard action"
+              },
+              "onStart": {
+                "$ref": "#/definitions/datatypes/wizardCallbackShape",
+                "description": "callback to use on wizard start action"
+              },
+              "buttonProps": {
+                "$ref": "#/definitions/datatypes/buttonPropsShape"
+              }
+            }
+          }
+        },
+        "description": "used to describe the wizard schema",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type"
+        ]
+      },
+      "wizardpage": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/datatypes/idShape",
+            "description": "(required) identifier for wizard"
+          },
+          "type": {
+            "const": "wizardpage",
+            "description": "(required) type of metadata; this must always be 'wizard' for wizard definitions"
+          },
+          "@ref": {
+            "type": "string",
+            "description": "used to reference a shared definition"
+          },
+          "route": {
+            "$ref": "#/definitions/datatypes/pathShape"
+          },
+          "path": {
+            "$ref": "#/definitions/datatypes/pathShape"
+          },
+          "title": {
+            "$ref": "#/definitions/datatypes/intlShape",
+            "description": "title to show on page/progress"
+          },
+          "component": {
+            "type": "string",
+            "description": "component to render"
+          },
+          "componentProps": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "$ref": "#/definitions/datatypes/intlShape"
+              }
+            },
+            "description": "component-specific properties"
+          },
+          "content": {
+            "$ref": "#/definitions/datatypes/contentShape",
+            "description": "the content to display; single component or array of components"
+          },
+          "contentLayout": {
+            "$ref": "#/definitions/datatypes/contentLayoutShape",
+            "description": "layout options for the content of this item"
+          },
+          "wizardPageProps": {
+            "type": "object",
+            "properties": {
+              "showOnStepNav": {
+                "type": "boolean",
+                "description": "skip or not based on its result. If no 'isStepValid' function, it will stop here",
+                "defaultValue": false
+              },
+              "skipOnResume": {
+                "type": "boolean",
+                "description": "skip on resume",
+                "defaultValue": false
+              },
+              "knockoutPath": {
+                "$ref": "#/definitions/datatypes/pathShape",
+                "description": "route to use on knokout condition"
+              },
+              "buttonProps": {
+                "$ref": "#/definitions/datatypes/buttonPropsShape"
+              }
+            }
+          },
+          "onPrevious": {
+            "$ref": "#/definitions/datatypes/wizardCallbackShape"
+          },
+          "onNext": {
+            "$ref": "#/definitions/datatypes/wizardCallbackShape"
+          }
+        },
+        "description": "used to describe the wizard schema",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "type"
+        ]
+      },
+      "routes": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/metadata/route"
+        },
+        "uniqueItems": true
+      },
+      "route": {
+        "placeholder": "injected during schema generation"
+      }
+    },
+    "datatypes": {
+      "availableValueObjectShape": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": [
+                  "string",
+                  "number"
+                ],
+                "description": "code for available component value"
+              },
+              "name": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "name for available component value"
+              },
+              "subtitle": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "subtitle text"
+              },
+              "secondaryLabel": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "secondary label text to display"
+              }
+            },
+            "required": [
+              "code",
+              "name"
+            ],
+            "defaultSnippets": [
+              {
+                "label": "AvailableValue shape with Code",
+                "body": {
+                  "code": "$1",
+                  "name": "$2"
+                }
+              },
+              {
+                "label": "AvailableValue with all props",
+                "body": {
+                  "code": "$1",
+                  "name": "$2",
+                  "subtitle": {},
+                  "secondaryLabel": {}
+                }
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": [
+                  "string",
+                  "number"
+                ],
+                "description": "id for available component value"
+              },
+              "displayName": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "display name for available component value"
+              },
+              "subtitle": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "subtitle text"
+              },
+              "secondaryLabel": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "secondary label text to display"
+              }
+            },
+            "required": [
+              "id",
+              "displayName"
+            ],
+            "defaultSnippets": [
+              {
+                "label": "AvailableValue shape with ID",
+                "body": {
+                  "id": "$1",
+                  "displayName": "$2"
+                }
+              },
+              {
+                "label": "AvailableValue with all props",
+                "body": {
+                  "id": "$1",
+                  "displayName": "$2",
+                  "subtitle": {},
+                  "secondaryLabel": {}
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "contentShape": {
+        "anyOf": [
+          {
+            "$ref": "#/definitions/datatypes/contentArrayShape"
+          },
+          {
+            "$ref": "#/definitions/datatypes/contentObjectShape"
+          },
+          {
+            "$ref": "#/definitions/datatypes/intlShape"
+          }
+        ],
+        "defaultSnippets": [
+          {
+            "label": "array of components",
+            "body": [
+              {
+                "id": "$1",
+                "type": "$2",
+                "component": "$3"
+              }
+            ]
+          },
+          {
+            "label": "component",
+            "body": {
+              "id": "$1",
+              "type": "$2",
+              "component": "$3"
+            }
+          },
+          {
+            "label": "[]",
+            "body": []
+          }
+        ]
+      },
+      "contentArrayShape": {
+        "type": "array",
+        "items": {
+          "anyOf": [
+            {
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "type": {
+                        "const": "action"
+                      }
+                    }
+                  },
+                  "then": {
+                    "$ref": "#/definitions/metadata/action"
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "type": {
+                        "const": "container"
+                      }
+                    }
+                  },
+                  "then": {
+                    "$ref": "#/definitions/metadata/container"
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "type": {
+                        "const": "element"
+                      }
+                    }
+                  },
+                  "then": {
+                    "$ref": "#/definitions/metadata/element"
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "type": {
+                        "const": "field"
+                      }
+                    }
+                  },
+                  "then": {
+                    "$ref": "#/definitions/metadata/field"
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "type": {
+                        "const": "iterable"
+                      }
+                    }
+                  },
+                  "then": {
+                    "$ref": "#/definitions/metadata/iterable"
+                  }
+                }
+              ]
+            },
+            {
+              "$ref": "#/definitions/datatypes/intlShape"
+            }
+          ],
+          "defaultSnippets": [
+            {
+              "label": "component",
+              "body": {
+                "id": "$1",
+                "type": "$2",
+                "component": "$3"
+              }
+            }
+          ]
+        },
+        "uniqueItems": true,
+        "additionalItems": false
+      },
+      "contentObjectShape": {
+        "type": "object",
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "action"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/metadata/action"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "container"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/metadata/container"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "element"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/metadata/element"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "field"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/metadata/field"
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "iterable"
+                }
+              }
+            },
+            "then": {
+              "$ref": "#/definitions/metadata/iterable"
+            }
+          }
+        ]
+      },
+      "contentLayoutShape": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "component": {
+                "type": "string",
+                "description": "(required) layout component (e.g. Grid, Flex)"
+              },
+              "componentProps": {
+                "type": "object",
+                "description": "properties for layout component"
+              }
+            },
+            "required": [
+              "component"
+            ],
+            "defaultSnippets": [
+              {
+                "label": "Layout component options",
+                "body": {
+                  "component": "$1"
+                }
+              },
+              {
+                "label": "Layout component options with props",
+                "body": {
+                  "component": "$1",
+                  "componentProps": {
+                    "${2:property}": "${3:value}"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "$ref": "#/definitions/metadata/layout"
+          }
+        ]
+      },
+      "idShape": {
+        "type": "string",
+        "pattern": "^([a-zA-Z0-9_-]+\\.)*[a-zA-Z0-9_-]+$"
+      },
+      "funcShape": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "callback": {
+                "type": "string"
+              },
+              "callbackProps": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "callback",
+              "callbackProps"
+            ],
+            "additionalProps": false,
+            "defaultSnippets": [
+              {
+                "label": "Function name",
+                "body": "${1:function_name}"
+              },
+              {
+                "label": "Function metadata object",
+                "body": {
+                  "callback": "$1",
+                  "callbackProps": {}
+                }
+              },
+              {
+                "label": "Function metadata object with props",
+                "body": {
+                  "callback": "$1",
+                  "callbackProps": {
+                    "${2:property}": "${3:value}"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "intlShape": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "message id"
+              },
+              "defaultMessage": {
+                "type": "string",
+                "description": "default display text"
+              },
+              "description": {
+                "type": "string",
+                "description": "additional message description"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "defaultMessage"
+            ],
+            "defaultSnippets": [
+              {
+                "label": "string",
+                "body": "$1"
+              },
+              {
+                "label": "react-intl object",
+                "body": {
+                  "id": "$1",
+                  "defaultMessage": "$2",
+                  "description": "$3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "intlToShape": {
+        "oneOf": [
+          {
+            "$ref": "#/definitions/datatypes/intlShape"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "pathname": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "Link path"
+              },
+              "search": {
+                "type": "string",
+                "description": "Query parameters"
+              },
+              "hash": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "Hash to put in the URL"
+              },
+              "state": {
+                "type": "object",
+                "description": "State to persist to the location"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "pathShape": {
+        "type": "string"
+      },
+      "toShape": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "pathname": {
+                "type": "string",
+                "description": "Link path"
+              },
+              "search": {
+                "type": "string",
+                "description": "Query parameters"
+              },
+              "hash": {
+                "type": "string",
+                "description": "Hash to put in the URL"
+              },
+              "state": {
+                "type": "object",
+                "description": "State to persist to the location"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "tooltipShape": {
+        "oneOf": [
+          {
+            "$ref": "#/definitions/datatypes/intlShape"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "href": {
+                "type": "string",
+                "description": "url to be opened when user clicks on link text"
+              },
+              "icon": {
+                "type": "string",
+                "description": "icon to be displayed"
+              },
+              "link": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "text of link to be rendered inside tooltip"
+              },
+              "linkIcon": {
+                "type": "string",
+                "description": "icon for link to be displayed"
+              },
+              "placement": {
+                "enum": [
+                  "left",
+                  "right",
+                  "top",
+                  "bottom"
+                ],
+                "description": "position of the tooltip in relation to icon"
+              },
+              "text": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "(required) text to be rendered inside the tooltip"
+              },
+              "title": {
+                "$ref": "#/definitions/datatypes/intlShape",
+                "description": "title to be rendered inside the tooltip"
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "defaultSnippets": [
+              {
+                "label": "tooltip properties",
+                "body": {
+                  "text": "$1"
+                }
+              }
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "buttonPropsShape": {
+        "type": "object",
+        "description": "override props for wizard buttons",
+        "properties": {
+          "cancel": {
+            "type": "object"
+          },
+          "finish": {
+            "type": "object"
+          },
+          "next": {
+            "type": "object"
+          },
+          "previous": {
+            "type": "object"
+          }
+        },
+        "defaultSnippets": [
+          {
+            "label": "Default",
+            "body": {}
+          },
+          {
+            "label": "Button props override",
+            "body": {
+              "cancel": {},
+              "finish": {},
+              "next": {},
+              "previous": {}
+            }
+          }
+        ]
+      },
+      "wizardCallbackShape": {
+        "type": "object",
+        "description": "callback shape of wizard",
+        "properties": {
+          "callback": {
+            "type": "string",
+            "description": "name of the callback"
+          },
+          "callbackProps": {
+            "type": "object",
+            "description": "callback props",
+            "properties": {
+              "progress": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "$ref": "#/definitions/datatypes/intlShape"
+                  }
+                }
+              },
+              "success": {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "$ref": "#/definitions/datatypes/pathShape"
+                  }
+                }
+              },
+              "failure": {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "$ref": "#/definitions/datatypes/pathShape"
+                  },
+                  "message": {
+                    "$ref": "#/definitions/datatypes/intlShape"
+                  }
+                }
+              },
+              "prompt": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "$ref": "#/definitions/datatypes/intlShape"
+                  },
+                  "message": {
+                    "$ref": "#/definitions/datatypes/intlShape"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "defaultSnippets": [
+          {
+            "label": "Default callback shape",
+            "body": {
+              "callback": "${1:onCalled}",
+              "callbackProps": {}
+            }
+          },
+          {
+            "label": "Default callback shape with all props",
+            "body": {
+              "callback": "${1:onCalled}",
+              "callbackProps": {
+                "progress": {},
+                "success": {},
+                "failure": {},
+                "prompt": {}
+              }
+            }
+          }
+        ]
+      },
+      "selfLayoutShape": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "component": {
+                "type": "string",
+                "description": "self layout component (e.g. GridItem, FlexItem)"
+              },
+              "componentProps": {
+                "type": "object",
+                "description": "properties for self layout component"
+              }
+            },
+            "required": [
+              "component"
+            ],
+            "defaultSnippets": [
+              {
+                "label": "Self layout component",
+                "body": {
+                  "component": "$1"
+                }
+              },
+              {
+                "label": "Self layout component with props",
+                "body": {
+                  "component": "$1",
+                  "componentProps": {
+                    "${2:property}": "$3"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "$ref": "#/definitions/metadata/layout"
+          }
+        ]
+      },
+      "currencyValueShape": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "amount": {
+                "type": "number",
+                "description": "numeric value of the amount"
+              },
+              "currency": {
+                "type": "string",
+                "description": "currency code"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "amount",
+              "currency"
+            ]
+          }
+        ]
+      },
+      "dateValueShape": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "year": {
+                "type": "number"
+              },
+              "month": {
+                "type": "number"
+              },
+              "day": {
+                "type": "number"
+              },
+              "hour": {
+                "type": "number"
+              },
+              "minute": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false,
+            "required": [
+              "year",
+              "month",
+              "day"
+            ]
+          }
+        ]
+      },
+      "dateFormatShape": {
+        "type": "string",
+        "enum": [
+          "vshort",
+          "short",
+          "long",
+          "abbreviated",
+          "full"
+        ]
+      },
+      "navLinkShape": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/datatypes/idShape",
+            "description": "identifier for nav link; should be unique per page"
+          },
+          "text": {
+            "type": "string",
+            "description": "label for nav link"
+          },
+          "icon": {
+            "type": "string",
+            "description": "icon for nav link"
+          },
+          "className": {
+            "type": "string",
+            "description": "additional className for nav link"
+          },
+          "activeClassName": {
+            "type": "string",
+            "description": "additional classname for nav link active state"
+          },
+          "component": {
+            "type": "string",
+            "description": "react element to render nav item"
+          },
+          "notifications": {
+            "type": "number",
+            "description": "value for the Badge"
+          }
+        },
+        "additionalProperties": false
+      },
+      "nestedTooltipShape": {
+        "type": "object",
+        "description": "Configuration options for tooltips nested within other components",
+        "properties": {
+          "id": {
+            "$ref": "#/definitions/datatypes/idShape",
+            "description": "Used to identify the component. Referenced to find it in the document tree"
+          },
+          "icon": {
+            "type": "string",
+            "description": "Icon to be displayed"
+          },
+          "text": {
+            "$ref": "#/definitions/datatypes/intlShape",
+            "description": "Text to be rendered inside the tooltip"
+          },
+          "title": {
+            "$ref": "#/definitions/datatypes/intlShape",
+            "description": "Title to be rendered inside the tooltip"
+          },
+          "href": {
+            "type": "string",
+            "description": "Url to be opened when user clicks on link text"
+          },
+          "link": {
+            "$ref": "#/definitions/datatypes/intlShape",
+            "description": "Text of link to be rendered inside tooltip"
+          },
+          "renderContent": {
+            "$ref": "#/definitions/datatypes/funcShape",
+            "description": "Function to render custom content in the tooltip. Overrides default content. When provided `link`, `href`, `text` and `title` properties are ignored."
+          },
+          "placement": {
+            "type": "string",
+            "description": "Direction for placing the tooltip against its trigger"
+          }
+        },
+        "additionalProperties": false
+      },
+      "themeConfigShape": {
+        "type": "object",
+        "description": "Configuration options for UI themes",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the theme to be displayed in the UI"
+          },
+          "prefix": {
+            "type": "string",
+            "description": "Optional prefix phrase for a themeRoot's className"
+          },
+          "rootStyle": {
+            "type": "object",
+            "description": "Optional map of CSS variables values overrides. For those without overrides, the default styles are being applied.",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "dropTarget": {
+            "type": "string",
+            "description": "Optional version when the theme is planned to be removed (if deprecated)"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ]
+      }
+    },
+    "ts": {}
+  },
+  "patternProperties": {
+    "^\\$schema$": {
+      "type": "string"
+    },
+    "^jutro$": {
+      "type": "string"
+    },
+    "^routes$": {
+      "$ref": "#/definitions/metadata/routes"
+    },
+    "^(?!jutro$)(?!routes$)[^$]+": {
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "action"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/definitions/metadata/action"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "container"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/definitions/metadata/container"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "element"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/definitions/metadata/element"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "field"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/definitions/metadata/field"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "page"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/definitions/metadata/page"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "iterable"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/definitions/metadata/iterable"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "wizard"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/definitions/metadata/wizard"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "wizardpage"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/definitions/metadata/wizardpage"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "floorplan"
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/definitions/metadata/floorplan"
+          }
+        }
+      ],
+      "defaultSnippets": [
+        {
+          "label": "page",
+          "body": {
+            "id": "$1",
+            "type": "page",
+            "content": []
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "jutro"
+  ],
+  "type": "object",
+  "additionalProperties": false
+}

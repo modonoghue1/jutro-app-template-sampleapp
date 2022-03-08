@@ -1,0 +1,158 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.progressStep {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--GW-BORDER-COLOR);
+  flex-direction: column;
+  outline: none;
+  position: relative; }
+  .progressStep:first-child .beforeConnector,
+  .progressStep:last-child .afterConnector {
+    display: none; }
+  .progressStep.visited .title, .progressStep.active .title {
+    color: var(--GW-PROGRESS-BARS-COMPLETE-COLOR); }
+  .progressStep.visited .progressMarker, .progressStep.active .progressMarker {
+    background-color: var(--GW-PROGRESS-BARS-COMPLETE-COLOR);
+    color: var(--GW-PROGRESS-BARS-COMPLETE-ICON-COLOR);
+    border-width: 0; }
+  .progressStep.visited:hover .title, .progressStep.active:hover .title {
+    color: var(--GW-PROGRESS-BARS-COMPLETE-COLOR-HOVER); }
+  .progressStep.visited:hover .progressMarker, .progressStep.active:hover .progressMarker {
+    background-color: var(--GW-PROGRESS-BARS-COMPLETE-COLOR-HOVER);
+    color: var(--GW-PROGRESS-BARS-COMPLETE-ICON-COLOR); }
+  .progressStep.visited .markersConnector,
+  .progressStep.active .beforeConnector {
+    border-color: var(--GW-PROGRESS-BARS-COMPLETE-COLOR); }
+  .progressStep:hover {
+    cursor: pointer; }
+    .progressStep:hover .title {
+      text-decoration: underline; }
+    .progressStep:hover .progressMarker {
+      color: var(--GW-PROGRESS-BARS-LEFT-COLOR-HOVER);
+      border-color: var(--GW-PROGRESS-BARS-LEFT-COLOR-HOVER); }
+  .progressStep:focus .progressMarker {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+    border-color: var(--GW-PROGRESS-BARS-LEFT-COLOR-FOCUS); }
+  .progressStep:focus .title {
+    text-decoration: underline;
+    color: var(--GW-PROGRESS-BARS-LEFT-COLOR-FOCUS); }
+  .progressStep .progressMarker {
+    height: var(--GW-PROGRESS-STEP-MARKER-SIZE);
+    width: var(--GW-PROGRESS-STEP-MARKER-SIZE);
+    border-radius: var(--GW-BORDER-RADIUS-FULL);
+    padding: 0;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--GW-PROGRESS-BARS-LEFT-COLOR);
+    color: var(--GW-PROGRESS-BARS-LEFT-COLOR); }
+
+.markerWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.progressStepDisabled {
+  opacity: var(--GW-OPACITY-DISABLED);
+  cursor: not-allowed; }
+
+.progressMarkerOverlay {
+  display: inline-flex;
+  align-items: center;
+  outline: none; }
+
+.title {
+  position: absolute;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 var(--GW-SPACING-1);
+  word-wrap: break-word;
+  text-align: center;
+  bottom: 0;
+  transform: translateY(100%);
+  color: var(--GW-PROGRESS-BARS-LEFT-COLOR);
+  font-size: var(--GW-FONT-SIZE-LABEL);
+  line-height: var(--GW-LINE-HEIGHT-LABEL); }
+
+.markersConnector {
+  position: absolute;
+  border-top: var(--GW-BORDER-WIDTH) solid var(--GW-PROGRESS-BARS-LEFT-BAR-COLOR);
+  top: 50%; }
+
+.beforeConnector {
+  left: 0;
+  right: 50%;
+  margin-right: var(--GW-SPACING-6);
+  border-radius: 0 1px 1px 0; }
+
+.afterConnector {
+  left: 50%;
+  right: 0;
+  margin-left: var(--GW-SPACING-6);
+  border-radius: 1px 0 0 1px; }
+
+.vertical.progressStep {
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: row; }
+  .vertical.progressStep .markerWrapper {
+    width: initial;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: flex-start; }
+  .vertical.progressStep .title {
+    position: static;
+    margin-left: var(--GW-SPACING-2);
+    transform: initial;
+    text-align: left; }
+  .vertical.progressStep .markersConnector {
+    position: static;
+    border: none;
+    width: 0.125rem;
+    height: 0.5rem;
+    background: var(--GW-PROGRESS-BARS-LEFT-BAR-COLOR);
+    border-radius: 1px;
+    margin: var(--GW-SPACING-1) auto; }
+  .vertical.progressStep .afterConnector {
+    margin: 0 auto;
+    transform: translateY(var(--GW-SPACING-1));
+    flex: 1; }
+    .vertical.progressStep .afterConnector::after {
+      content: '';
+      position: absolute;
+      background: var(--GW-PROGRESS-BARS-LEFT-BAR-COLOR);
+      border-radius: 1px;
+      height: calc(100% + 1px);
+      width: 100%; }
+  .vertical.progressStep.active .markersConnector.beforeConnector,
+  .vertical.progressStep.visited .markersConnector.beforeConnector {
+    background: var(--GW-PROGRESS-BARS-COMPLETE-COLOR); }
+
+@media (max-width: 580px) {
+  .title {
+    left: 50%;
+    transform: translate(-50%, 100%); }
+  .progressStep:not(.vertical):not(.active) .title {
+    display: none; }
+  .progressStep:not(.vertical) {
+    position: static; }
+    .progressStep:not(.vertical) .title {
+      width: max-content; } }
+
+.circle {
+  background-color: var(--GW-PROGRESS-BARS-COMPLETE-ICON-COLOR);
+  width: calc( var(--GW-PROGRESS-STEP-MARKER-SIZE) - 2 * var(--GW-PROGRESS-STEP-CURRENT-MARKER-RING-WIDTH));
+  height: calc( var(--GW-PROGRESS-STEP-MARKER-SIZE) - 2 * var(--GW-PROGRESS-STEP-CURRENT-MARKER-RING-WIDTH));
+  border-radius: var(--GW-BORDER-RADIUS-FULL);
+  position: absolute; }
+
+/*# sourceMappingURL=ProgressStep.module.css.map */

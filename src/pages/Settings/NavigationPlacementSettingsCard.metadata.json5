@@ -1,0 +1,38 @@
+{
+  "$schema": "../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json",
+  "jutro": "5.2.0-next.0",
+  "navigationPlacementSettingsCardContent": {
+    "id": "navigationPlacementSettingsCardContent",
+    "type": "page",
+    "content": [
+      {
+        "id": "toggle",
+        "type": "field",
+        "component": "Toggle",
+        "componentProps": {
+          "path": "navigationPlacement",
+          "availableValues": [
+            {
+              "displayName": {
+                "id": "jutro.app.settings.navigationPlacementSettingsCard.topLabel",
+                "defaultMessage": "Top"
+              },
+              "id": "top"
+            },
+            {
+              "displayName": {
+                "id": "jutro.app.settings.navigationPlacementSettingsCard.leftLabel",
+                "defaultMessage": "Left"
+              },
+              "id": "left"
+            }
+          ],
+          "label": {
+            "id": "jutro.app.settings.navigationPlacementSettingsCard.navigationPlacement",
+            "defaultMessage": "Navigation Placement"
+          }
+        }
+      }
+    ]
+  }
+}

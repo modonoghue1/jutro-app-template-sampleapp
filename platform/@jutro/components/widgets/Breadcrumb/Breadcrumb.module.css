@@ -1,0 +1,16 @@
+.breadcrumb {
+  display: inline-block; }
+  .breadcrumb:empty {
+    display: none; }
+  .breadcrumb .breadcrumbLink,
+  .breadcrumb .currentLink {
+    vertical-align: middle;
+    padding: var(--GW-SPACING-1) var(--GW-SPACING-2);
+    font-size: var(--GW-FONT-SIZE-BODY); }
+  .breadcrumb .divider {
+    font-size: var(--GW-FONT-SIZE-H4);
+    vertical-align: middle;
+    margin: var(--GW-SPACING-2);
+    color: var(--GW-BREADCRUMB-DIVIDER-COLOR); }
+
+/*# sourceMappingURL=Breadcrumb.module.css.map */

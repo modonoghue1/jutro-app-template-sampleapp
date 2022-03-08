@@ -1,0 +1,14 @@
+    /**
+     * {{description}}
+{{#each methodParams}}
+     * @param {{curly_bracket true}}{{this.type}}{{curly_bracket}} {{this.name}} {{this.description}}
+{{/each}}
+     * @returns {String} Delete status
+     *
+     * @example
+     * "{{methodPath}}"
+     */
+    {{methodName}}({{#each methodParams}}{{this.name}}{{#unless @last}}, {{/unless}}{{/each}}) {
+        const url = `${this.baseUrl}{{methodUrl}}`;
+        return this.restService.delete(url);
+    }

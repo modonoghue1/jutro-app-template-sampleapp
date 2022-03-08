@@ -1,0 +1,67 @@
+    /**
+     * {{description}}
+{{#each methodParams}}
+     * @param {{curly_bracket true}}{{this.type}}{{curly_bracket}} {{this.name}} {{this.description}}
+{{/each}}
+{{#if requestInfo}}
+     * @param {{curly_bracket true}}{{requestInfo.type}}{{curly_bracket}} {{requestInfo.name}} {{requestInfo.description}}
+{{/if}}
+{{#if optsParams}}
+     * @param {Object} opts Optional query parameters
+{{/if}}
+{{#each optsParams}}
+     * @param {{curly_bracket true}}{{this.type}}{{curly_bracket}} opts.{{this.name}} {{this.description}}
+{{/each}}
+     * @returns {{curly_bracket true}}{{responseInfo.type}}{{curly_bracket}} {{responseInfo.description}}
+     *
+     * @example
+     * "{{methodPath}}"
+     */
+    {{methodName}}({{#each methodParams}}{{this.name}}, {{/each}}{{#if requestInfo}}{{requestInfo.name}}{{/if}}{{#if optsParams}}, opts{{/if}}) {
+        {{> optsHandling this }}
+
+  {{#if docType }}
+               const formData = new FormData();
+               const {
+                    id,
+                    file,
+                    _checksum: checksum,
+                    _actions: actions,
+                    ...rest
+               } = {{requestInfo.name}};
+               const {{inferredIdParam}} = id;
+               const url = `${this.baseUrl}{{methodUrl}}${search}`;
+               const wrapper = {
+                    data: {
+                         attributes: { ...rest }
+                    }
+               }
+               formData.append('metadata', new Blob([JSON.stringify(wrapper)], { type: 'application/json' }));
+                formData.append('content', file);
+                return this.restService.patch(url, formData, {
+                         headers: {
+                              'Content-Type': 'multipart/form-data'
+                      },
+                     })
+            .then(result => unwrap(result?.data));
+
+       {{else}}
+
+               const {
+                    id,
+                    _checksum: checksum,
+                    _actions: actions,
+                    ...rest
+               } = {{requestInfo.name}};
+               const {{inferredIdParam}} = id;
+               const url = `${this.baseUrl}{{methodUrl}}${search}`;
+               const wrapper = {
+                    data: {
+                         attributes: rest,
+                         checksum
+                    }
+               }
+               return this.restService.patch(url, wrapper)
+                    .then(result => unwrap(result?.data));
+     {{/if}}
+}

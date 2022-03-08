@@ -1,0 +1,9 @@
+.blueprint {
+  min-height: 100%;
+}
+
+[class$='noPaddingContent'] {
+  main {
+    padding: 0;
+  }
+}

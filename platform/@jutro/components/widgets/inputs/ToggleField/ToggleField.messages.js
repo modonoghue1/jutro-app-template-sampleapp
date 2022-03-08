@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({yes:{id:"jutro-components.widgets.inputs.ToggleField.Yes",defaultMessage:"Yes"},no:{id:"jutro-components.widgets.inputs.ToggleField.No",defaultMessage:"No"},required:{id:"jutro-components.widgets.inputs.ToggleField.Required",defaultMessage:"This section is required"}});

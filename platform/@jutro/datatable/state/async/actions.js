@@ -1,0 +1,1 @@
+import{SET_ASYNC_DATA,SET_LOADING}from"./types";export const setAsyncData=(asyncData,numberOfRows)=>({type:SET_ASYNC_DATA,asyncData:asyncData,numberOfRows:numberOfRows});export const setLoading=loading=>({type:SET_LOADING,loading:loading});

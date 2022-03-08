@@ -1,0 +1,62 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.fileUploadField {
+  display: block; }
+
+.wrapper {
+  padding: var(--GW-SPACING-2);
+  border: var(--GW-FILE-UPLOAD-FIELD-BORDER);
+  border-radius: var(--GW-BORDER-RADIUS);
+  background-color: var(--GW-FILE-UPLOAD-WRAPPER-BACKGROUND-COLOR); }
+
+.wrapperLarge {
+  padding: var(--GW-SPACING-6);
+  display: grid;
+  grid-row-gap: var(--GW-SPACING-3);
+  align-items: center;
+  justify-items: center; }
+
+.wrapperThin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  min-height: var(--GW-FILE-UPLOAD-HEIGHT-THIN); }
+
+.wrapperThinWithUpload {
+  padding: 0;
+  background-color: var(--GW-FILE-UPLOAD-WRAPPER-BACKGROUND-COLOR);
+  border-style: solid;
+  border-color: var(--GW-FILE-UPLOAD-WRAPPER-BACKGROUND-COLOR); }
+
+.wrapperWithDragAndDropDisabled {
+  border: none;
+  min-height: 0;
+  padding: 0;
+  background-color: var(--GW-BACKGROUND-COLOR); }
+
+.dragOver {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+
+.valueText {
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  color: var(--GW-FIELD-COMPONENT-COLOR);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+.areaImage {
+  width: var(--GW-FILE-UPLOAD-IMAGE-WIDTH);
+  height: var(--GW-FILE-UPLOAD-IMAGE-HEIGHT);
+  pointer-events: none; }
+
+.paddedLeft {
+  padding-left: var(--GW-SPACING-3); }
+
+.deleteActionLink {
+  justify-self: flex-end;
+  margin-left: auto;
+  cursor: pointer; }
+
+/*# sourceMappingURL=FileUploadField.module.css.map */

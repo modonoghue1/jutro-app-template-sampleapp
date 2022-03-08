@@ -1,0 +1,8 @@
+@import '~@jutro/theme/assets/sass/helpers';
+
+.myModal {
+  > div[class*='grid'] {
+    max-height: 90vh;
+    height: 100%;
+  }
+}

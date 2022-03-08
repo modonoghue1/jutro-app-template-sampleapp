@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({incorrectInput:{id:"jutro-components.widgets.inputs.TimeField.incorrectInput",defaultMessage:"Incorrect input"}});

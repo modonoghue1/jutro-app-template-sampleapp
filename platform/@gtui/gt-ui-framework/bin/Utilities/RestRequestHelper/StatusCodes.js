@@ -1,0 +1,19 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.STATUS_CODE = void 0;
+var STATUS_CODE = {
+  OK_200: 200,
+  CREATED_201: 201,
+  NO_CONTENT_204: 204,
+  BAD_REQUEST_400: 400,
+  UNAUTHORIZED_401: 401,
+  FORBIDDEN_403: 403,
+  NOT_FOUND_404: 404,
+  METHOD_NOT_ALLOWED_405: 405,
+  CONFLICT_409: 409,
+  INTERNAL_SERVICE_ERROR_500: 500
+};
+exports.STATUS_CODE = STATUS_CODE;

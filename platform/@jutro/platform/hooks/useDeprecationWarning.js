@@ -1,0 +1,1 @@
+import{useEffect}from"react";import{logDeprecationMessage}from"../utils/logDeprecationMessage";export function useDeprecationWarning(componentName,alternativeComponent,extraMessage,dropTarget){useEffect((()=>{logDeprecationMessage(componentName,alternativeComponent,extraMessage,dropTarget)}))}

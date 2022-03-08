@@ -1,0 +1,7 @@
+.iconsBar {
+  padding: var(--GW-SPACING-6) var(--GW-SPACING-3); }
+
+.activeIcon {
+  background-color: var(--GW-RIGHT-SIDEBAR-ITEM-BACKGROUND-COLOR-ACTIVE); }
+
+/*# sourceMappingURL=IconsBar.module.css.map */

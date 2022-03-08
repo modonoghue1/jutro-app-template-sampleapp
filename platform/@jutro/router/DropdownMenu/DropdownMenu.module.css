@@ -1,0 +1,76 @@
+.dropdownMenuPosition {
+  position: relative;
+  display: inline-block; }
+
+.menu {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  z-index: var(--GW-Z-INDEX-2);
+  min-width: var(--GW-DROPDOWN-MENU-MIN-WIDTH);
+  max-width: var(--GW-DROPDOWN-MENU-MAX-WIDTH);
+  max-height: none;
+  text-align: left;
+  background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  box-shadow: var(--GW-SHADOW-2);
+  display: none;
+  transform: translateZ(0);
+  user-select: none;
+  padding-top: var(--GW-SPACING-2);
+  padding-bottom: var(--GW-SPACING-2);
+  margin-top: var(--GW-SPACING-1);
+  margin-bottom: var(--GW-SPACING-1); }
+  .menu .link, .menu .link:hover {
+    color: var(--GW-DROPDOWN-OPTION-COLOR);
+    text-decoration: none; }
+
+.dropdownSeparator {
+  border-top: var(--GW-DROPDOWN-MENU-SEPARATOR);
+  margin: var(--GW-SPACING-2) var(--GW-SPACING-6); }
+
+.menu-top {
+  top: auto;
+  bottom: calc(100% + 1px); }
+
+.menu-left {
+  left: auto;
+  right: 0; }
+
+.menu-active {
+  display: block; }
+
+.link {
+  position: relative;
+  color: var(--GW-DROPDOWN-OPTION-COLOR);
+  cursor: pointer;
+  text-decoration: none;
+  padding: var(--GW-SPACING-2) var(--GW-SPACING-6);
+  display: block;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis; }
+  .link:focus {
+    outline: none;
+    color: var(--GW-DROPDOWN-OPTION-COLOR);
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-HOVER); }
+  .link:hover {
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-HOVER); }
+  .link:active {
+    background-color: var(--GW-DROPDOWN-OPTION-BACKGROUND-COLOR-ACTIVE); }
+  .link:disabled, .link.disabled {
+    background-color: transparent;
+    color: var(--GW-DROPDOWN-OPTION-COLOR);
+    outline: none;
+    cursor: not-allowed;
+    opacity: var(--GW-OPACITY-DISABLED); }
+
+.dropdownHeaderTitle {
+  padding: var(--GW-SPACING-2) var(--GW-SPACING-6);
+  white-space: nowrap;
+  cursor: default; }
+
+.dropdownHeader .link {
+  padding-left: var(--GW-SPACING-8); }
+
+/*# sourceMappingURL=DropdownMenu.module.css.map */

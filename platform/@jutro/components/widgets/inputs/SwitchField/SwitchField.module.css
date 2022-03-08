@@ -1,0 +1,123 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.switch {
+  position: relative;
+  align-items: center;
+  display: flex; }
+  .switch input {
+    border: 0;
+    clip-path: inset(100%);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+    .switch input + span {
+      position: relative;
+      height: var(--GW-SWITCH-FIELD-HEIGHT);
+      width: var(--GW-SWITCH-FIELD-WIDTH);
+      border-radius: var(--GW-BORDER-RADIUS-FULL);
+      line-height: var(--GW-SWITCH-FIELD-HEIGHT);
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+      vertical-align: top;
+      text-indent: calc(var(--GW-SWITCH-FIELD-WIDTH) + var(--GW-SPACING-3));
+      flex-shrink: 1; }
+    .switch input + span::before,
+    .switch input + span::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: var(--GW-SWITCH-FIELD-WIDTH);
+      border-radius: var(--GW-BORDER-RADIUS-FULL); }
+    .switch input + span::before {
+      right: 0;
+      background-color: var(--GW-SWITCH-FIELD-BACKGROUND-COLOR);
+      transition: var(--GW-ANIMATION-DURATION) all; }
+    .switch input + span::after {
+      top: var(--GW-BORDER-WIDTH);
+      left: var(--GW-BORDER-WIDTH);
+      width: calc(var(--GW-SWITCH-FIELD-HEIGHT) - 2 * var(--GW-BORDER-WIDTH));
+      height: calc(var(--GW-SWITCH-FIELD-HEIGHT) - 2 * var(--GW-BORDER-WIDTH));
+      background-color: var(--GW-SWITCH-FIELD-THUMB-COLOR);
+      transition: var(--GW-ANIMATION-DURATION) margin; }
+    .switch input:hover + span::before,
+    .switch input + span:hover::before {
+      background-color: var(--GW-SWITCH-FIELD-BACKGROUND-COLOR-HOVER); }
+    .switch input:checked + span::before {
+      background-color: var(--GW-SWITCH-FIELD-BACKGROUND-COLOR-CHECKED); }
+    .switch input:checked:hover + span::before,
+    .switch input:checked + span:hover::before {
+      background-color: var(--GW-SWITCH-FIELD-BACKGROUND-COLOR-HOVER-CHECKED); }
+    .switch input:checked + span::after {
+      margin-left: calc( var(--GW-SWITCH-FIELD-WIDTH) - var(--GW-SWITCH-FIELD-HEIGHT)); }
+    .switch input:focus + span {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+    .switch input:disabled + span {
+      opacity: var(--GW-OPACITY-DISABLED);
+      cursor: not-allowed; }
+
+.labelSection {
+  flex: 1 1 0;
+  text-align: right;
+  margin-right: var(--GW-SPACING-2); }
+  .labelSection label {
+    margin-right: 0; }
+
+.controlSection {
+  flex: 2 2 0; }
+
+.switch.fullWidth {
+  justify-content: space-between; }
+  .switch.fullWidth .labelSection {
+    flex: 1;
+    text-align: left; }
+  .switch.fullWidth .controlSection {
+    flex: 0; }
+
+.switchLabelRight.fullWidth .labelSection {
+  flex: 0; }
+
+.switchLabelRight.fullWidth .controlSection {
+  flex: 1;
+  display: flex;
+  justify-content: space-between; }
+
+.label {
+  padding-top: 0;
+  margin-bottom: 0; }
+
+.switchElementWrapper {
+  padding-left: var(--GW-SPACING-2);
+  display: inline-block; }
+
+/* Switch next to switch */
+.switch + .switch {
+  margin-left: var(--GW-LAYOUT-4); }
+
+.detailVisible {
+  padding-top: var(--GW-SPACING-4); }
+
+.readOnly {
+  margin-left: var(--GW-SPACING-4);
+  flex-shrink: 100;
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR); }
+
+.inputLabel {
+  flex: 2 2 0; }
+
+.switchLabelTop {
+  flex-direction: column;
+  align-items: flex-start; }
+
+/*# sourceMappingURL=SwitchField.module.css.map */

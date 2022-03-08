@@ -1,0 +1,487 @@
+{
+    "$schema": "../../platform/@jutro/uimetadata/common/json-schema/metadata.schema.json",
+    "jutro": "6.5.0",
+    "floorplan.default": {
+        "type": "floorplan",
+        "scrollContent": false,
+        "showLeftSide": false,
+        "showRightSide": false,
+        "routes": [
+            {
+                "title": {
+                    "id": "jutro-app.Pages.Welcome.title",
+                    "defaultMessage": "Welcome"
+                },
+                "path": "/",
+                "exact": true,
+                "showOnNavBar": false,
+                "redirect": "/welcome"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.Welcome.title",
+                    "defaultMessage": "Welcome"
+                },
+                "path": "/welcome",
+                "exact": true,
+                "component": "Welcome"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.Dashboard.title",
+                    "defaultMessage": "Dashboard"
+                },
+                "path": "/dashboard",
+                "exact": true,
+                "showOnNavBar": true,
+                "redirect": "/dashboard/claims"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.Dashboard.title",
+                    "defaultMessage": "Dashboard"
+                },
+                "path": "/dashboard/:selection",
+                "showOnNavBar": false,
+                "component": "Dashboard"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.ClaimDetails.title",
+                    "defaultMessage": "Claim Details"
+                },
+                "path": "/claim/:claimid/details",
+                "exact": true,
+                "showOnNavBar": false,
+                "component": "ClaimDetailsPage"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.FNOLWizard.title",
+                    "defaultMessage": "FNOL Wizard"
+                },
+                "path": "/claim/fnol",
+                "showOnNavBar": false,
+                "component": "FNOLWizard"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.CodelessForm.FormsMenu",
+                    "defaultMessage": "Forms"
+                },
+                "id": "forms",
+                "path": "/forms",
+                "routes": [
+                    {
+                        "title": {
+                            "id": "jutro-app.Pages.CodelessForm.title",
+                            "defaultMessage": "Codeless Form"
+                        },
+                        "path": "/forms/codeless",
+                        "exact": true,
+                        "component": "CodelessForm"
+                    }
+                ]
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.CodelessForm.BusinessPatterns",
+                    "defaultMessage": "Business Patterns"
+                },
+                "id": "patterns",
+                "path": "/patterns",
+                "routes": [
+                    {
+                        "title": {
+                            "id": "jutro-app.Pages.AddVehiclePage.title",
+                            "defaultMessage": "Add Vehicle"
+                        },
+                        "path": "/patterns/AddVehiclePage",
+                        "exact": true,
+                        "component": "AddVehiclePage"
+                    }
+                ]
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.FloorPlanPage.title",
+                    "defaultMessage": "FloorPlan"
+                },
+                "path": "/floorplan",
+                "exact": true,
+                "component": "FloorPlanPage"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.Blueprints.title",
+                    "defaultMessage": "Blueprints"
+                },
+                "id": "blueprints",
+                "path": "/blueprints",
+                "routes": [
+                    {
+                        "title": {
+                            "id": "jutro-app.Pages.BillPaymentBlueprint.form.title",
+                            "defaultMessage": "Bill Payment"
+                        },
+                        "path": "/blueprints/bill",
+                        "exact": true,
+                        "component": "BillPaymentFormPanel"
+                    },
+                    {
+                        "title": {
+                            "id": "jutro-app.Pages.BillPaymentBlueprint.accountDetails.title",
+                            "defaultMessage": "Account details"
+                        },
+                        "path": "/blueprints/account/details",
+                        "exact": true,
+                        "component": "BillPaymentAccountDetailsPanel"
+                    }
+                ]
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.ApiExamplte.title",
+                    "defaultMessage": "3rd party API"
+                },
+                "path": "/apiExample",
+                "exact": true,
+                "showOnNavBar": true,
+                "component": "ApiExample"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.Settings.title",
+                    "defaultMessage": "Settings"
+                },
+                "path": "/settings",
+                "exact": true,
+                "component": "Settings"
+            }
+        ],
+        "header": {
+            "showAvatar": true,
+            "commonAvatarRoutes": [
+                {
+                    "title": {
+                        "id": "jutro-app.app.commonAvatar.welcomePage",
+                        "defaultMessage": "Go to Welcome Page"
+                    },
+                    "to": "/welcome",
+                    "onClick": "trackClick",
+                    "className": "sampleDropdownLink"
+                },
+                {
+                    "title": {
+                        "id": "jutro-app.Pages.Settings.title",
+                        "defaultMessage": "Settings"
+                    },
+                    "to": "/settings"
+                }
+            ],
+            "showNotifications": true,
+            "logoSrc": "./images/guidewire-logo-dark.svg",
+            "logoTitle": "Guidewire",
+            "showHelp": true,
+            "showAppSwitcher": false,
+            "helpPopoverItems": [
+                {
+                    "id": "heading",
+                    "component": "HelpHeading",
+                    "componentProps": {
+                        "content": {
+                            "id": "jutro.app.help.gwCloud",
+                            "defaultMessage": "Guidewire Cloud"
+                        }
+                    }
+                },
+                {
+                    "id": "paragraph",
+                    "component": "HelpParagraph",
+                    "componentProps": {
+                        "content": {
+                            "id": "jutro.app.help.gwCloudDescription",
+                            "defaultMessage": "Guidewire Cloud™ is the optimal way to experience the power of Guidewire InsurancePlatform™, combining Guidewire software, services, and ecosystem in a scalable SaaS model. It scales according to use, provides cost predictability, and transfers IT risk to Guidewire. Expert Guidewire teams and our SaaS-certified partners provide implementation services, security, ongoing management, and regular updates"
+                        }
+                    }
+                },
+                {
+                    "id": "link",
+                    "component": "HelpLink",
+                    "componentProps": {
+                        "content": {
+                            "id": "jutro.app.help.readMore",
+                            "defaultMessage": "Read more about GW Cloud"
+                        },
+                        "href": "https://docs.guidewire.com/"
+                    }
+                }
+            ]
+        },
+        "footer": {
+            "content": [
+                {
+                    "id": "footer-text",
+                    "type": "element",
+                    "component": "FooterText",
+                    "componentProps": {
+                        "text": {
+                            "id": "jutro.app.footer.legalNotice",
+                            "defaultMessage": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel augue enim. Sed at maximus urna. Integer ut massa non augue sodales lacinia. Integer vestibulum at mi ac fringilla. Aenean posuere sagittis pharetra. Nunc viverra, ex a eleifend faucibus, lorem leo laoreet lectus, consequat dapibus lacus diam non elit. Cras metus magna, lacinia ac ipsum pharetra, gravida amet."
+                        }
+                    }
+                },
+                {
+                    "id": "footer-nav-bar",
+                    "type": "container",
+                    "component": "FooterNavBar",
+                    "content": [
+                        {
+                            "id": "footer-nav-link-1",
+                            "type": "element",
+                            "component": "FooterNavLink",
+                            "componentProps": {
+                                "header": {
+                                    "id": "jutro.app.footer.privacyPolicy",
+                                    "defaultMessage": "Privacy Policy"
+                                },
+                                "key": "1"
+                            }
+                        },
+                        {
+                            "id": "footer-nav-link-2",
+                            "type": "element",
+                            "component": "FooterNavLink",
+                            "componentProps": {
+                                "header": {
+                                    "id": "jutro.app.footer.legalNotes",
+                                    "defaultMessage": "Legal Notes"
+                                },
+                                "key": "2"
+                            }
+                        },
+                        {
+                            "id": "footer-nav-link-2",
+                            "type": "element",
+                            "component": "FooterNavLink",
+                            "componentProps": {
+                                "header": {
+                                    "id": "jutro.app.footer.contactUs",
+                                    "defaultMessage": "Contact Us"
+                                },
+                                "key": "3"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "footer-copyright",
+                    "type": "element",
+                    "component": "FooterCopyright"
+                }
+            ]
+        }
+    },
+    "floorplan.welcome": {
+        "type": "floorplan",
+        "matches": ["/welcome"],
+        "showFooter": false,
+        "header": {
+            "logoSrc": "./images/guidewire-logo-dark.svg",
+            "showNotifications": false,
+            "showAppSwitcher": false
+        }
+    },
+    "floorplan.example": {
+        "type": "floorplan",
+        "matches": ["/floorplan"],
+        "showHeader": true,
+        "header": {
+            "logoSrc": "./images/guidewire-logo-dark.svg",
+            "logoTitle": "Guidewire",
+            "showNotifications": false,
+            "showAppSwitcher": false,
+            "showHelp": true,
+            "showAvatar": true,
+            "helpPopoverItems": [
+                {
+                    "id": "heading",
+                    "component": "HelpHeading",
+                    "componentProps": {
+                        "content": {
+                            "id": "jutro.app.help.gwCloud",
+                            "defaultMessage": "Guidewire Cloud"
+                        }
+                    }
+                },
+                {
+                    "id": "paragraph",
+                    "component": "HelpParagraph",
+                    "componentProps": {
+                        "content": {
+                            "id": "jutro.app.help.gwCloudDescription",
+                            "defaultMessage": "Guidewire Cloud™ is the optimal way to experience the power of Guidewire InsurancePlatform™, combining Guidewire software, services, and ecosystem in a scalable SaaS model. It scales according to use, provides cost predictability, and transfers IT risk to Guidewire. Expert Guidewire teams and our SaaS-certified partners provide implementation services, security, ongoing management, and regular updates"
+                        }
+                    }
+                },
+                {
+                    "id": "link",
+                    "component": "HelpLink",
+                    "componentProps": {
+                        "content": {
+                            "id": "jutro.app.help.readMore",
+                            "defaultMessage": "Read more about GW Cloud"
+                        },
+                        "href": "https://docs.guidewire.com/"
+                    }
+                }
+            ]
+        },
+        "showSubHeader": true,
+        "showLeftSide": true,
+        "leftSide": {
+            "collapsible": true
+        },
+        "sideRoutes": [
+            {
+                "title": {
+                    "id": "jutro-app.Pages.FloorPlanPage.title",
+                    "defaultMessage": "FloorPlan"
+                },
+                "path": "/floorplan",
+                "exact": true,
+                "component": "FloorPlanPage"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.Welcome.title",
+                    "defaultMessage": "Welcome"
+                },
+                "path": "/welcome",
+                "exact": true,
+                "component": "Welcome"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.Dashboard.title",
+                    "defaultMessage": "Dashboard"
+                },
+                "path": "/dashboard",
+                "exact": true,
+                "showOnNavBar": true,
+                "redirect": "/dashboard/claims"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.CodelessForm.FormsMenu",
+                    "defaultMessage": "Forms"
+                },
+                "id": "forms",
+                "path": "/forms",
+                "routes": [
+                    {
+                        "title": {
+                            "id": "jutro-app.Pages.CodelessForm.title",
+                            "defaultMessage": "Codeless Form"
+                        },
+                        "path": "/forms/codeless",
+                        "exact": true,
+                        "component": "CodelessForm"
+                    }
+                ]
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.CodelessForm.BusinessPatterns",
+                    "defaultMessage": "Business Patterns"
+                },
+                "id": "patterns",
+                "path": "/patterns",
+                "routes": [
+                    {
+                        "title": {
+                            "id": "jutro-app.Pages.AddVehiclePage.title",
+                            "defaultMessage": "Add Vehicle"
+                        },
+                        "path": "/patterns/AddVehiclePage",
+                        "exact": true,
+                        "component": "AddVehiclePage"
+                    }
+                ]
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.Blueprints.title",
+                    "defaultMessage": "Blueprints"
+                },
+                "id": "blueprints",
+                "path": "/blueprints",
+                "routes": [
+                    {
+                        "title": {
+                            "id": "jutro-app.Pages.BillPaymentBlueprint.form.title",
+                            "defaultMessage": "Bill Payment"
+                        },
+                        "path": "/blueprints/bill",
+                        "exact": true,
+                        "component": "BillPaymentFormPanel"
+                    },
+                    {
+                        "title": {
+                            "id": "jutro-app.Pages.BillPaymentBlueprint.accountDetails.title",
+                            "defaultMessage": "Account details"
+                        },
+                        "path": "/blueprints/account/details",
+                        "exact": true,
+                        "component": "BillPaymentAccountDetailsPanel"
+                    }
+                ]
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.ApiExamplte.title",
+                    "defaultMessage": "3rd party API"
+                },
+                "path": "/apiExample",
+                "exact": true,
+                "showOnNavBar": true,
+                "component": "ApiExample"
+            },
+            {
+                "title": {
+                    "id": "jutro-app.Pages.Settings.title",
+                    "defaultMessage": "Settings"
+                },
+                "path": "/settings",
+                "exact": true,
+                "component": "Settings"
+            }
+        ],
+        "showRightSide": true,
+        "rightSide": {
+            "collapsible": true,
+            "isInitiallyCollapsed": false,
+            "sides": [
+                {
+                    "icon": "info",
+                    "label": "info",
+                    "component": "Info"
+                },
+                {
+                    "icon": "list",
+                    "label": "table of contents",
+                    "component": "TableOfContents"
+                }
+            ]
+        },
+        "scrollContent": false,
+        "showFooter": true
+    },
+    "floorplan.blueprint": {
+        "type": "floorplan",
+        "matches": ["/blueprints"],
+        "showHeader": false,
+        "showFooter": false,
+        "className": "noPaddingContent"
+    }
+}

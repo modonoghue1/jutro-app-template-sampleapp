@@ -1,0 +1,10 @@
+.input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  cursor: inherit; }
+
+.readOnly {
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD); }
+
+/*# sourceMappingURL=TimeField.module.css.map */

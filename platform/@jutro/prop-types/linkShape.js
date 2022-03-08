@@ -1,0 +1,1 @@
+import PropTypes from"prop-types";import{intlMessageShape}from"./intlMessageShape";export const historyPropTypes=PropTypes.object;export const linkPropTypes={label:intlMessageShape.isRequired,onClick:PropTypes.func,href:intlMessageShape};export const linkShape=PropTypes.shape(linkPropTypes);

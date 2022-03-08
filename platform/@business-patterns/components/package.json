@@ -1,0 +1,49 @@
+{
+  "_from": "@business-patterns/components",
+  "_id": "@business-patterns/components@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-jEr41lm/NtTtBHaf9v+0juDE6Rg=",
+  "_location": "/@business-patterns/components",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@business-patterns/components",
+    "name": "@business-patterns/components",
+    "escapedName": "@business-patterns%2fcomponents",
+    "scope": "@business-patterns",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@business-patterns/components/-/@business-patterns/components-1.0.0.tgz",
+  "_shasum": "8c4af8d659bf36d4ed04769ff6ffb48ee0c4e918",
+  "_spec": "@business-patterns/components",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@business-patterns/helpers": "^1.0.0"
+  },
+  "deprecated": false,
+  "description": "Reusable @business-patterns components",
+  "license": "Guidewire proprietary",
+  "main": "./index.js",
+  "module": "./_esm/index.js",
+  "name": "@business-patterns/components",
+  "peerDependencies": {
+    "@jutro/components": "^6.0.0",
+    "@jutro/prop-types": "^6.0.0",
+    "@jutro/locale": "^6.0.0",
+    "react": "17.0.2",
+    "prop-types": "15.7.2"
+  },
+  "private": false,
+  "sideEffects": false,
+  "version": "1.0.0"
+}

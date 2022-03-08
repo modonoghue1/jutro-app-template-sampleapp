@@ -1,0 +1,91 @@
+// UI metadata file loaded and used in ClaimsList
+{
+  // ======================================================================
+  // UI metadata for the "ClaimsList" page
+  // ======================================================================
+  "jutro": "6.0.0",
+  "jutro-app.claimslist.columns": [
+    {
+          id: 'id',
+          type: 'element',
+          component: 'displaycolumn',
+          componentProps: {
+              header: 'ID',
+              path: 'id',
+              readOnly: true,
+      },
+    },
+    {
+          id: 'claimNumber',
+          type: 'element',
+          component: 'displaycolumn',
+          componentProps: {
+              header: 'Claim #',
+              path: 'claimNumber',
+      },
+    },
+    {
+          id: 'policyNumber',
+          type: 'element',
+          component: 'displaycolumn',
+          componentProps: {
+              header: 'Policy #',
+              path: 'policyNumber',
+      },
+    },
+    {
+          id: 'insured',
+          type: 'element',
+          component: 'displaycolumn',
+          componentProps: {
+              header: 'Insured',
+              path: 'insured.displayName',
+      },
+    },
+    {
+          id: 'mainContact',
+          type: 'element',
+          component: 'displaycolumn',
+          componentProps: {
+              header: 'Claimant',
+              path: 'mainContact.displayName',
+      },
+    },
+    {
+          id: 'lossType',
+          type: 'element',
+          component: 'displaycolumn',
+          componentProps: {
+              header: 'Loss Type',
+              path: 'lossType.name',
+      },
+    },
+    {
+          id: 'lossCause',
+          type: 'field',
+          component: 'displaycolumn',
+          componentProps: {
+              header: 'Loss Cause',
+              path: 'lossCause.name',
+      },
+    },
+    {
+          id: 'state',
+          type: 'field',
+          component: 'displaycolumn',
+          componentProps: {
+              header: 'State',
+              path: 'state.name',
+      },
+    },
+    {
+          id: 'jurisdiction',
+          type: 'field',
+          component: 'displaycolumn',
+          componentProps: {
+              header: 'State',
+              path: 'jurisdiction.name',
+      },
+    },
+  ]
+}

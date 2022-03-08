@@ -1,0 +1,456 @@
+{
+  "jutro": "5.0.0-next.0",
+  "page.bill.payment.form": {
+    "id": "billPaymentForm",
+    "type": "page",
+    "content": [
+      {
+        "id": "panel1",
+        "type": "container",
+        "component": "Panel",
+        "componentProps": {
+          "className": "app__BillPaymentForm__paymentPanel",
+          "title": "Upcoming Bill Payments",
+          "renderHeader": "renderPanelHeader",
+          "fluid": true
+        },
+        "content": [
+          {
+            "id": "upcomingBillsTable",
+            "type": "container",
+            "component": "div",
+            "contentLayout": {
+              "component": "Grid",
+              "componentProps": {
+                "gap": "medium",
+                "columns": [
+                  5,
+                  1
+                ],
+                "tablet": {
+                  "columns": [
+                    1
+                  ],
+                },
+                "className": "app__BillPaymentForm__upcomingBills"
+              }
+            },
+            "content": [
+              {
+                "id": "upcomingBillsTable",
+                "type": "container",
+                "component": "Table",
+                "componentProps": {
+                  "path": "upcomingBills",
+                  "columnsProportion": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ],
+                  "placeholder": "No bills.",
+                  "className": "app__BillPaymentForm__panelsTable",
+                },
+                "content": [
+                  {
+                    "id": "upcomingBillsBillNumber",
+                    "type": "element",
+                    "component": "DisplayColumn",
+                    "componentProps": {
+                      "header": "Bill Number",
+                      "path": "billNumber",
+                      "textAlign": "left"
+                    }
+                  },
+                  {
+                    "id": "upcomingBillsDueDate",
+                    "type": "element",
+                    "component": "DisplayColumn",
+                    "componentProps": {
+                      "header": "Due Date",
+                      "path": "dueDate",
+                      "textAlign": "left"
+                    }
+                  },
+                  {
+                    "id": "upcomingBillsPeriod",
+                    "type": "element",
+                    "component": "DisplayColumn",
+                    "componentProps": {
+                      "header": "Period",
+                      "path": "period",
+                      "textAlign": "left"
+                    }
+                  },
+                  {
+                    "id": "upcomingBillsStatus",
+                    "type": "element",
+                    "component": "DisplayColumn",
+                    "componentProps": {
+                      "header": "Status",
+                      "path": "status",
+                      "textAlign": "left"
+                    }
+                  },
+                  {
+                    "id": "upcomingBillsAmount",
+                    "type": "element",
+                    "component": "DisplayColumn",
+                    "componentProps": {
+                      "header": "Amount",
+                      "path": "amount",
+                      "textAlign": "left",
+                      "fieldDatatype": "currency"
+                    }
+                  },
+                ]
+              },
+              {
+                "id": "payNow",
+                "type": "action",
+                "component": "Button",
+                "content": "Pay Now",
+                "componentProps": {
+                  "onClick": "payNow",
+                }
+              }
+            ]
+          },
+        ]
+      },
+      {
+        "id": "panel2",
+        "type": "container",
+        "component": "Panel",
+        "componentProps": {
+          "className": "app__BillPaymentForm__paymentPanel",
+          "title": {
+            "id": "jutro-app.billpayment.Policy Details",
+            "defaultMessage": "Policy Details"
+          },
+          "fluid": true,
+          "renderHeader": "renderPanelHeader"
+        },
+        "content": [
+          {
+            "id": "policyDetails",
+            "type": "container",
+            "component": "div",
+            "contentLayout": {
+              "component": "Grid",
+              "componentProps": {
+                "gap": "medium",
+                "columns": [
+                  1,
+                  1,
+                  1,
+                  1
+                ],
+                "tablet": {
+                  "columns": [
+                    1
+                  ],
+                },
+                "className": "app__BillPaymentForm__policyDetails"
+              }
+            },
+            "content": [
+              {
+                "id": "policyDetailsItem1",
+                "type": "container",
+                "component": "div",
+                "componentProps": {
+                  "className": "app__BillPaymentForm__policyDetailsItem"
+                },
+                "content": [
+                  {
+                    "id": "policyDetailsTitle",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "b"
+                    },
+                    "content": "122432544307433"
+                  },
+                  {
+                    "id": "policyDetailsInfo",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "div"
+                    },
+                    "content": {
+                      "id": "jutro-app.billpayment.policyDetailsInfo",
+                      "defaultMessage": "Policy Number"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "policyDetailsItem2",
+                "type": "container",
+                "component": "div",
+                "componentProps": {
+                  "className": "app__BillPaymentForm__policyDetailsItem"
+                },
+                "content": [
+                  {
+                    "id": "policyDetailsTitle",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "b"
+                    },
+                    "content": "24 November 2020"
+                  },
+                  {
+                    "id": "policyDetailsInfo",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "div"
+                    },
+                    "content": {
+                      "id": "jutro-app.billpayment.RenewalDate",
+                      "defaultMessage": "Renewal Date"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "policyDetailsItem3",
+                "type": "container",
+                "component": "div",
+                "componentProps": {
+                  "className": "app__BillPaymentForm__policyDetailsItem"
+                },
+                "content": [
+                  {
+                    "id": "policyDetailsTitle",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "b"
+                    },
+                    "content": "$ 2400.00"
+                  },
+                  {
+                    "id": "policyDetailsInfo",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "div"
+                    },
+                    "content": {
+                      "id": "jutro-app.billpayment.TotalPremium",
+                      "defaultMessage": "Total Premium"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "policyDetailsItem5",
+                "type": "container",
+                "component": "div",
+                "componentProps": {
+                  "className": "app__BillPaymentForm__policyDetailsItem"
+                },
+                "content": [
+                  {
+                    "id": "policyDetailsTitle",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "b"
+                    },
+                    "content": "In Force"
+                  },
+                  {
+                    "id": "policyDetailsInfo",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "div"
+                    },
+                    "content": {
+                      "id": "jutro-app.billpayment.Status",
+                      "defaultMessage": "Status"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "policyDetailsItem6",
+                "type": "container",
+                "component": "div",
+                "componentProps": {
+                  "className": "app__BillPaymentForm__policyDetailsItem"
+                },
+                "content": [
+                  {
+                    "id": "policyDetailsTitle",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "b"
+                    },
+                    "content": {
+                      "id": "jutro-app.billpayment.Address",
+                      "defaultMessage": "Address"
+                    }
+                  },
+                  {
+                    "id": "policyDetailsInfo",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "div"
+                    },
+                    "content": "112 WB, Winstston Street, San Fransisco\nCalifornia, A 91402"
+                  },
+                ]
+              },
+              {
+                "id": "policyDetailsItem4",
+                "type": "container",
+                "component": "div",
+                "componentProps": {
+                  "className": "app__BillPaymentForm__policyDetailsItem"
+                },
+                "content": [
+                  {
+                    "id": "policyDetailsTitle",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "b"
+                    },
+                    "content": "Comprehensive car Policy"
+                  },
+                  {
+                    "id": "policyDetailsInfo",
+                    "type": "element",
+                    "component": "IntlElement",
+                    "componentProps": {
+                      "tag": "div"
+                    },
+                    "content": {
+                      "id": "jutro-app.billpayment.InsuranceType",
+                      "defaultMessage": "Insurance Type"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "panel3",
+        "type": "container",
+        "component": "Panel",
+        "componentProps": {
+          "className": "app__BillPaymentForm__paymentPanel",
+          "title": {
+            "id": "jutro-app.billpayment.Bill History",
+            "defaultMessage": "Bill History"
+          },
+          "renderHeader": "renderPanelHeader",
+          "fluid": true
+        },
+        "content": [
+          {
+            "id": "billHistory",
+            "type": "container",
+            "component": "Table",
+            "componentProps": {
+              "path": "billHistory",
+              "columnsProportion": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                0.3
+              ],
+              "placeholder": "No bills.",
+              "className": "app__BillPaymentForm__panelsTable"
+            },
+            "content": [
+              {
+                "id": "billHistoryBillNumber",
+                "type": "element",
+                "component": "DisplayColumn",
+                "componentProps": {
+                  "header": "Bill Number",
+                  "path": "billNumber",
+                  "textAlign": "left"
+                }
+              },
+              {
+                "id": "billHistoryDueDate",
+                "type": "element",
+                "component": "DisplayColumn",
+                "componentProps": {
+                  "header": "Due Date",
+                  "path": "dueDate",
+                  "textAlign": "left"
+                }
+              },
+              {
+                "id": "billHistoryPaymentDate",
+                "type": "element",
+                "component": "DisplayColumn",
+                "componentProps": {
+                  "header": "Payment Date",
+                  "path": "paymentDate",
+                  "textAlign": "left"
+                }
+              },
+              {
+                "id": "billHistoryAmount",
+                "type": "element",
+                "component": "DisplayColumn",
+                "componentProps": {
+                  "header": "Amount",
+                  "path": "amount",
+                  "textAlign": "left",
+                  "fieldDatatype": "currency"
+                }
+              },
+              {
+                "id": "billHistoryPaymentMethod",
+                "type": "element",
+                "component": "DisplayColumn",
+                "componentProps": {
+                  "header": "Payment Method",
+                  "path": "paymentMethod",
+                  "textAlign": "left"
+                }
+              },
+              {
+                "id": "table_actions",
+                "type": "container",
+                "component": "ActionColumn",
+                "content": [
+                  {
+                    "id": "download",
+                    "type": "action",
+                    "component": "ActionItem",
+                    "componentProps": {
+                      "icon": "mi-save-alt",
+                      "onClick": "downloadItem",
+                      "singleActionType": "link"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+  },
+  "$schema": "..\\..\\..\\node_modules\\@jutro\\uimetadata\\common\\json-schema\\metadata.schema.json"
+}

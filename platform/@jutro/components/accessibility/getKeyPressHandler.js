@@ -1,0 +1,1 @@
+export const getKeyPressHandler=(callback,keys=["Enter"," "],stopPropagation=!1)=>evt=>{keys.includes(evt.key)&&(evt.preventDefault(),stopPropagation&&evt.stopPropagation(),callback(evt))};

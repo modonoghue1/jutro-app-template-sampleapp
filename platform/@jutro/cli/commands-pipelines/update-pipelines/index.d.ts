@@ -1,0 +1,9 @@
+export { applyCodemods } from "./apply-codemods";
+export { clearDeprecated } from "./clear-deprecated";
+export { updateApp } from "./update-app";
+export { updateDependencies } from "./update-dependencies";
+export { updateMetadataSchema } from "./update-metadata-schema";
+export { updateModule } from "./update-module";
+export { updateScripts } from "./update-scripts";
+export { updateAppShell } from "./update-app-shell";
+export { updateCss } from "./update-css";

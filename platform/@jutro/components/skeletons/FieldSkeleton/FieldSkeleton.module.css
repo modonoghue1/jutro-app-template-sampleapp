@@ -1,0 +1,10 @@
+.item {
+  height: var(--GW-FONT-SIZE-BODY); }
+
+.label {
+  background-color: var(--GW-TEXT-COLOR-2); }
+
+.field {
+  background-color: #d1d9e2; }
+
+/*# sourceMappingURL=FieldSkeleton.module.css.map */

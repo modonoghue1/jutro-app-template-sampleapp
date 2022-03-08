@@ -1,0 +1,112 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.navBarItem {
+  position: relative;
+  padding: 0 0.5rem;
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+  .navBarItem:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .navBarItem:hover .titleWrapper, .navBarItem:focus .titleWrapper, .navBarItem:active .titleWrapper {
+    text-decoration: none; }
+  .navBarItem .titleWrapper {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none; }
+    .navBarItem .titleWrapper .title {
+      text-align: left;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+
+.topNavBarItem {
+  height: 2.25rem;
+  color: var(--GW-TOP-NAV-ITEM-COLOR);
+  background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR); }
+  .topNavBarItem:hover {
+    background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR-HOVER); }
+  .topNavBarItem:active {
+    background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR-ACTIVE);
+    color: var(--GW-TOP-NAV-ITEM-COLOR-ACTIVE); }
+  .topNavBarItem.activeTopNavBarItem {
+    background-color: var(--GW-TOP-NAV-ITEM-BACKGROUND-COLOR-ACTIVE);
+    color: var(--GW-TOP-NAV-ITEM-COLOR-ACTIVE); }
+
+.leftNavBarItem {
+  color: var(--GW-SIDE-NAV-ITEM-COLOR);
+  background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR);
+  justify-content: space-between;
+  height: 2.5rem;
+  width: 100%;
+  padding: var(--GW-SIDE-NAV-ITEM-PADDING); }
+  .leftNavBarItem:hover {
+    background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR-HOVER);
+    color: var(--GW-SIDE-NAV-ITEM-COLOR-HOVER); }
+  .leftNavBarItem[disabled], .leftNavBarItem:global(.disabled) {
+    background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR);
+    border-color: transparent;
+    box-shadow: none;
+    opacity: var(--GW-OPACITY-DISABLED);
+    font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+    cursor: not-allowed; }
+    .leftNavBarItem[disabled]:active:focus:hover, .leftNavBarItem:global(.disabled):active:focus:hover {
+      background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR);
+      font-weight: var(--GW-FONT-WEIGHT-REGULAR); }
+  .leftNavBarItem .titleContentWrapper {
+    min-width: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .leftNavBarItem .titleContentWrapper:not(:first-child) {
+      padding-left: var(--GW-SIDE-NAV-ITEM-LABEL-PADDING-LEFT); }
+  .leftNavBarItem .navBarItemChevron {
+    font-size: var(--GW-ICON-FONT-SIZE-2);
+    line-height: var(--GW-ICON-LINE-HEIGHT); }
+  .leftNavBarItem.activeLeftNavBarItem {
+    color: var(--GW-SIDE-NAV-ITEM-COLOR-ACTIVE);
+    background-color: var(--GW-SIDE-NAV-ITEM-BACKGROUND-COLOR-ACTIVE);
+    position: relative; }
+    .leftNavBarItem.activeLeftNavBarItem::after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 0.25rem;
+      height: 100%;
+      background-color: var(--GW-SIDE-NAV-BORDER-COLOR-SELECTED);
+      left: 0;
+      top: 0; }
+
+i.navBarItemChevron {
+  padding-left: 0.125rem;
+  font-size: var(--GW-ICON-FONT-SIZE-2);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+
+svg.navBarItemChevron {
+  margin-left: 0.125rem;
+  font-size: var(--GW-ICON-FONT-SIZE-2);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+
+.navBarItemIcon {
+  width: var(--GW-SIDE-NAV-ITEM-ICON-SIZE);
+  min-width: var(--GW-SIDE-NAV-ITEM-ICON-SIZE);
+  font-size: var(--GW-SIDE-NAV-ITEM-ICON-SIZE);
+  text-align: center; }
+
+.navBarDropdown {
+  align-self: stretch;
+  height: 100%; }
+
+/*# sourceMappingURL=NavBarItem.module.css.map */

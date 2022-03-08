@@ -1,0 +1,60 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.tag {
+  padding: var(--GW-SPACING-1) 0;
+  min-height: var(--GW-TAG-MIN-HEIGHT);
+  background-color: var(--GW-TAG-BACKGROUND-COLOR);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  border-radius: var(--GW-BORDER-RADIUS);
+  display: inline-flex;
+  align-items: center;
+  cursor: default; }
+  .tag:hover {
+    background-color: var(--GW-TAG-BACKGROUND-COLOR-HOVER); }
+  .tag:focus-within {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .tag:active, .tag:global(.active) {
+    background-color: var(--GW-TAG-BACKGROUND-COLOR-ACTIVE); }
+  .tag.disabled, .tag:global(.disabled) {
+    opacity: var(--GW-OPACITY-DISABLED);
+    cursor: not-allowed; }
+    .tag.disabled:hover, .tag.disabled:active, .tag:global(.disabled):hover, .tag:global(.disabled):active {
+      background-color: var(--GW-TAG-BACKGROUND-COLOR); }
+
+.label {
+  margin-left: var(--GW-SPACING-3);
+  max-width: var(--GW-TAG-LABEL-MAX-WIDTH);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.deleteButtonWrapper {
+  display: inline-flex;
+  margin: 0 var(--GW-SPACING-3) 0 var(--GW-SPACING-1); }
+  .deleteButtonWrapper.empty {
+    margin-left: 0; }
+
+.deleteButtonWrapper > div {
+  display: flex;
+  align-items: center; }
+
+.deleteButton {
+  padding: 0;
+  border: none;
+  width: var(--GW-TAG-BUTTON-SIZE);
+  height: var(--GW-TAG-BUTTON-SIZE); }
+  .deleteButton, .deleteButton:hover, .deleteButton:active {
+    background-color: transparent; }
+  .deleteButton:focus {
+    border: none;
+    outline: none;
+    box-shadow: none; }
+  .deleteButton i,
+  .deleteButton svg {
+    color: var(--GW-TAG-BUTTON-COLOR);
+    font-size: var(--GW-ICON-FONT-SIZE-1);
+    line-height: var(--GW-ICON-LINE-HEIGHT); }
+
+/*# sourceMappingURL=Tag.module.css.map */

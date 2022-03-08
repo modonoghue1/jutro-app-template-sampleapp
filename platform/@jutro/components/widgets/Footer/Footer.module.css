@@ -1,0 +1,51 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.footer {
+  background-color: var(--GW-FOOTER-BACKGROUND-COLOR);
+  color: var(--GW-FOOTER-COLOR);
+  font-size: var(--GW-FONT-SIZE-BODY);
+  padding: var(--GW-SPACING-4) 0; }
+
+.footerContent {
+  display: flex;
+  flex-direction: column; }
+
+.footerText {
+  white-space: pre-wrap;
+  padding: var(--GW-SPACING-4) 0;
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+.footerCopyright {
+  padding-top: var(--GW-SPACING-4);
+  padding-bottom: var(--GW-SPACING-4); }
+  @media (min-width: 1025px) {
+    .footerCopyright {
+      padding: var(--GW-SPACING-4) 0; } }
+  @media (max-width: 1024px) {
+    .footerCopyright {
+      padding: var(--GW-SPACING-2) 0; } }
+
+@media (min-width: 1025px) {
+  .footerContentBasic {
+    flex-direction: row; } }
+
+.footerCopyrightBasic {
+  font-size: var(--GW-FONT-SIZE-BODY); }
+  @media (min-width: 1025px) {
+    .footerCopyrightBasic {
+      margin-left: auto; } }
+
+.footerContainer {
+  margin: 0 var(--GW-SPACING-6); }
+  @media (max-width: 1024px) {
+    .footerContainer {
+      margin: 0 var(--GW-SPACING-5); } }
+  @media (max-width: 580px) {
+    .footerContainer {
+      margin: 0 var(--GW-SPACING-3); } }
+  .footerContainer.fluid {
+    margin: 0; }
+
+/*# sourceMappingURL=Footer.module.css.map */

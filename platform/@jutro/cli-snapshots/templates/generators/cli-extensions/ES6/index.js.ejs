@@ -1,0 +1,11 @@
+---
+to: "<%= `${path}/${name}/index.js` %>"
+---
+import template from './package-template.json';
+import * as uiMetadata from './uiMetadataMigration';
+import * as codemods from './codemods';
+import { cssMods } from './cssmods';
+
+const version = '<%= `${name}` %>';
+
+export { template, uiMetadata, codemods, cssMods, version };

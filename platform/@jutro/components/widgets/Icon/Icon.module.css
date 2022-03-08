@@ -1,0 +1,33 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.empty {
+  display: none !important;
+  margin: 0; }
+
+.svgIcon {
+  font-size: 1.25rem;
+  fill: currentColor;
+  height: calc(1em);
+  width: calc(1em);
+  box-sizing: content-box; }
+
+.iconSize1 {
+  min-height: calc(1em);
+  min-width: calc(1em);
+  font-size: var(--GW-ICON-FONT-SIZE-1);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+
+.iconSize2 {
+  min-height: calc(1em);
+  min-width: calc(1em);
+  font-size: var(--GW-ICON-FONT-SIZE-2);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+
+.iconSize3 {
+  min-height: calc(1em);
+  min-width: calc(1em);
+  font-size: var(--GW-ICON-FONT-SIZE-3);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+
+/*# sourceMappingURL=Icon.module.css.map */

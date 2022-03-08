@@ -1,0 +1,195 @@
+{
+    "jutro": "5.3",
+    "claim.vehicle.incident.view": {
+        "id": "claimVehicle",
+        "type": "page",
+        "contentLayout": {
+            "component": "Grid",
+            "componentProps": {
+                "hgap": "large",
+                "vgap": "large"
+            }
+        },
+        "content": [
+            {
+                "id": "damageDescription",
+                "type": "field",
+                "component": "Input",
+                "componentProps": {
+                    "maxLength": 255,
+                    "path": "damageDescription",
+                    "label": {
+                        "id": "vehicle.damageDescription.label",
+                        "defaultMessage": "Damage Description"
+                    }
+                }
+            },
+            {
+                "id": "collision",
+                "type": "field",
+                "component": "Toggle",
+                "componentProps": {
+                    "path": "collision",
+                    "label": {
+                        "id": "vehicle.collision.label",
+                        "defaultMessage": "Collision"
+                    },
+                    "controlClassName": "horizontalGrid"
+                }
+            },
+            {
+                "id": "vehicleSelect",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "dataType": "object",
+                    "path": "vehicle",
+                    "label": {
+                        "id": "vehicle.vehicleSelect.label",
+                        "defaultMessage": "Vehicle"
+                    },
+                    "controlClassName": "horizontalGrid"
+                }
+            },
+            {
+                "id": "severityType",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "dataType": "object",
+                    "availableValues": [
+                        {
+                            "code": "moderate-auto",
+                            "name": "Moderate"
+                        },
+                        {
+                            "code": "minor",
+                            "name": "Minor"
+                        },
+                        {
+                            "code": "major-auto",
+                            "name": "Major"
+                        },
+                        {
+                            "code": "severe-auto",
+                            "name": "Possible total loss"
+                        }
+                    ],
+                    "path": "severity",
+                    "label": {
+                        "id": "vehicle.severityType.label",
+                        "defaultMessage": "Severity Type"
+                    },
+                    "controlClassName": "horizontalGrid"
+                }
+            },
+            {
+                "id": "lossParty",
+                "type": "field",
+                "component": "Toggle",
+                "componentProps": {
+                    "dataType": "object",
+                    "availableValues": [
+                        {
+                            "code": "insured",
+                            "name": "Insured's loss"
+                        },
+                        {
+                            "code": "third_party",
+                            "name": "Third-party liability"
+                        }
+                    ],
+                    "path": "lossParty",
+                    "label": {
+                        "id": "vehicle.lossParty.label",
+                        "defaultMessage": "Loss Party"
+                    },
+                    "controlClassName": "horizontalGrid"
+                }
+            },
+            {
+                "id": "collisionPoint",
+                "type": "field",
+                "component": "DropdownSelect",
+                "componentProps": {
+                    "dataType": "object",
+                    "availableValues": [
+                        {
+                            "code": "03",
+                            "name": "Front bumper, grille, hood & radiator"
+                        },
+                        {
+                            "code": "04",
+                            "name": "Left fender - front (headlamp area)"
+                        },
+                        {
+                            "code": "05",
+                            "description": "Left fender - side & wheel area"
+                        },
+                        {
+                            "code": "06",
+                            "name": "Left front door"
+                        },
+                        {
+                            "code": "08",
+                            "name": "Left quarter panel"
+                        },
+                        {
+                            "code": "07",
+                            "name": "Left rear door"
+                        },
+                        {
+                            "code": "09",
+                            "name": "Rear bumper, rear body panel, trunk lid/ liftgate"
+                        },
+                        {
+                            "code": "02",
+                            "name": "Right fender - front (headlamp area)"
+                        },
+                        {
+                            "code": "01",
+                            "name": "Right fender - side & wheel area"
+                        },
+                        {
+                            "code": "12",
+                            "name": "Right front door"
+                        },
+                        {
+                            "code": "10",
+                            "name": "Right quarter panel"
+                        },
+                        {
+                            "code": "11",
+                            "name": "Right rear door"
+                        },
+                        {
+                            "code": "13",
+                            "name": "Roof panel"
+                        },
+                        {
+                            "code": "17",
+                            "name": "Undercarriage"
+                        },
+                        {
+                            "code": "14",
+                            "name": "Point of impact unknown (collision loss)"
+                        },
+                        {
+                            "code": "15",
+                            "name": "Total loss"
+                        },
+                        {
+                            "code": "16",
+                            "name": "Non-collision (comprehensive loss)"
+                        }
+                    ],
+                    "path": "collisionPoint",
+                    "label": {
+                        "id": "vehicle.collisionPoint.label",
+                        "defaultMessage": "Collision Point"
+                    }
+                }
+            }
+        ]
+    }
+}

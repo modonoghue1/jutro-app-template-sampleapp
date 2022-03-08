@@ -1,0 +1,76 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.popoverContainer {
+  background-color: var(--GW-BACKGROUND-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS);
+  width: var(--GW-POPOVER-CONTAINER-WIDTH);
+  box-shadow: var(--GW-SHADOW-2); }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--GW-POPOVER-HEADER-HEIGHT);
+  padding-left: var(--GW-POPOVER-HEADER-PADDING);
+  padding-right: var(--GW-POPOVER-HEADER-PADDING);
+  background-color: var(--GW-POPOVER-PANEL-BACKGROUND-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS) var(--GW-BORDER-RADIUS) 0 0;
+  box-shadow: var(--GW-SHADOW-2); }
+
+.title {
+  color: var(--GW-TEXT-COLOR-1);
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+.headerLink,
+.headerLink:link,
+.headerLink:visited,
+.headerLink:hover,
+.headerLink:active {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--GW-POPOVER-HEADER-LINK-COLOR);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+.body {
+  min-height: var(--GW-POPOVER-BODY-MIN-HEIGHT);
+  padding: var(--GW-POPOVER-BODY-SPACING-Y) var(--GW-SPACING-4);
+  overflow: auto;
+  height: calc( var(--GW-POPOVER-CONTAINER-HEIGHT) - var(--GW-POPOVER-HEADER-HEIGHT) - var(--GW-POPOVER-FOOTER-HEIGHT)); }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--GW-POPOVER-FOOTER-HEIGHT);
+  padding-left: var(--GW-POPOVER-FOOTER-PADDING);
+  padding-right: var(--GW-POPOVER-FOOTER-PADDING);
+  background-color: var(--GW-POPOVER-PANEL-BACKGROUND-COLOR);
+  border-radius: 0 0 var(--GW-BORDER-RADIUS) var(--GW-BORDER-RADIUS);
+  box-shadow: var(--GW-SHADOW-UP); }
+
+.footerLinkContainer {
+  width: 100%;
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+.footerLink {
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+.headerText,
+.footerText {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/*# sourceMappingURL=PopoverContainer.module.css.map */

@@ -1,0 +1,121 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.slider {
+  padding-top: var(--GW-SPACING-3);
+  height: var(--GW-SLIDER-FIELD-HEIGHT); }
+  .slider :global .rc-slider {
+    flex: 1;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: var(--GW-SLIDER-FIELD-RAIL-HEIGHT);
+    touch-action: none; }
+    .slider :global .rc-slider * {
+      box-sizing: border-box;
+      border-radius: var(--GW-SLIDER-FIELD-RAIL-HEIGHT); }
+    .slider :global .rc-slider-rail {
+      position: absolute;
+      width: 100%;
+      height: var(--GW-SLIDER-FIELD-RAIL-HEIGHT);
+      background-color: var(--GW-SLIDER-FIELD-RAIL-BACKGROUND-COLOR); }
+    .slider :global .rc-slider-track {
+      position: absolute;
+      left: 0;
+      height: var(--GW-SLIDER-FIELD-RAIL-HEIGHT);
+      background-color: var(--GW-SLIDER-FIELD-TRACK-BACKGROUND-COLOR); }
+    .slider :global .rc-slider-step {
+      position: absolute;
+      width: 100%;
+      height: var(--GW-SLIDER-FIELD-RAIL-HEIGHT);
+      background: transparent; }
+    .slider :global .rc-slider-dot {
+      position: absolute;
+      margin-left: calc(-1 * var(--GW-SLIDER-FIELD-RAIL-HEIGHT));
+      bottom: calc(var(--GW-SLIDER-FIELD-RAIL-HEIGHT) / -2);
+      width: calc(2 * var(--GW-SLIDER-FIELD-RAIL-HEIGHT));
+      height: calc(2 * var(--GW-SLIDER-FIELD-RAIL-HEIGHT));
+      border: 0;
+      background-color: var(--GW-SLIDER-FIELD-RAIL-BACKGROUND-COLOR);
+      cursor: pointer;
+      border-radius: var(--GW-BORDER-RADIUS-FULL);
+      vertical-align: middle; }
+      .slider :global .rc-slider-dot-active {
+        background-color: var(--GW-SLIDER-FIELD-TRACK-BACKGROUND-COLOR); }
+  .slider .handle {
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
+    position: absolute;
+    margin-left: calc(var(--GW-SLIDER-FIELD-HANDLE-DIAMETER) / -2);
+    margin-top: calc(var(--GW-SLIDER-FIELD-HANDLE-DIAMETER) / -2);
+    width: var(--GW-SLIDER-FIELD-HANDLE-DIAMETER);
+    height: var(--GW-SLIDER-FIELD-HANDLE-DIAMETER);
+    border: 0 none;
+    border-radius: var(--GW-BORDER-RADIUS-FULL);
+    background-color: var(--GW-SLIDER-FIELD-TRACK-BACKGROUND-COLOR);
+    box-shadow: var(--GW-SHADOW-1);
+    touch-action: pan-x;
+    text-align: center;
+    cursor: grab; }
+    .slider .handle:focus {
+      box-shadow: var(--GW-SLIDER-FIELD-HANDLE-BOX-SHADOW-FOCUS);
+      outline: none; }
+    .slider .handle:hover {
+      background-color: var(--GW-SLIDER-FIELD-HANDLE-BACKGROUND-COLOR-HOVER); }
+    .slider .handle:active {
+      box-shadow: none;
+      border: var(--GW-BORDER-WIDTH) solid var(--GW-SLIDER-FIELD-HANDLE-BORDER-COLOR-ACTIVE);
+      margin-left: calc( var(--GW-SLIDER-FIELD-HANDLE-DIAMETER) / -2 - var(--GW-BORDER-WIDTH));
+      margin-top: calc( var(--GW-SLIDER-FIELD-HANDLE-DIAMETER) / -2 - var(--GW-BORDER-WIDTH));
+      cursor: grabbing; }
+    .slider .handle .tooltip {
+      display: none;
+      user-select: auto;
+      position: relative;
+      top: 100%;
+      margin-top: var(--GW-SPACING-1);
+      color: var(--GW-SLIDER-FIELD-TOOLTIP-COLOR);
+      white-space: nowrap;
+      font-size: var(--GW-FONT-SIZE-LABEL);
+      line-height: var(--GW-LINE-HEIGHT-LABEL); }
+  .slider .indicators {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: var(--GW-SPACING-1); }
+    .slider .indicators .indicator {
+      max-width: 30%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--GW-SLIDER-FIELD-INDICATOR-COLOR);
+      user-select: auto;
+      font-size: var(--GW-FONT-SIZE-LABEL);
+      line-height: var(--GW-LINE-HEIGHT-LABEL); }
+  .slider.disabled :global .rc-slider {
+    opacity: var(--GW-OPACITY-DISABLED); }
+  .slider.disabled .handle {
+    cursor: not-allowed; }
+    .slider.disabled .handle:focus {
+      box-shadow: none; }
+    .slider.disabled .handle:hover {
+      background-color: var(--GW-SLIDER-FIELD-TRACK-BACKGROUND-COLOR); }
+    .slider.disabled .handle:active {
+      border: none;
+      margin-left: calc(var(--GW-SLIDER-FIELD-HANDLE-DIAMETER) / -2);
+      margin-top: calc(var(--GW-SLIDER-FIELD-HANDLE-DIAMETER) / -2); }
+    .slider.disabled .handle .tooltip {
+      display: block; }
+  .slider.disabled .indicators .indicator {
+    user-select: none; }
+  .slider.tooltipAlways .handle .tooltip {
+    display: block; }
+  .slider.tooltipOndrag:not(.disabled) .handle:active .tooltip {
+    display: block; }
+  .slider.tooltipOnfocus .handle:focus .tooltip {
+    display: block; }
+  .slider.tooltipOnblur .handle:not(:focus) .tooltip {
+    display: block; }
+
+/*# sourceMappingURL=Slider.module.css.map */

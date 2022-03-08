@@ -1,0 +1,75 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.accordion {
+  display: block; }
+  .accordion .accordionFrame {
+    outline: none;
+    border: 1px solid transparent;
+    border-bottom-color: var(--GW-SEPARATOR-COLOR); }
+    .accordion .accordionFrame:first-child:not(.isFocused) {
+      border-top-color: var(--GW-SEPARATOR-COLOR); }
+  .accordion.disabled {
+    opacity: var(--GW-OPACITY-DISABLED);
+    cursor: not-allowed; }
+    .accordion.disabled .cardHeading,
+    .accordion.disabled .cardBody {
+      pointer-events: none; }
+  .accordion .headerFocused {
+    border: var(--GW-ACCORDION-BORDER-FOCUS);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+    .accordion .headerFocused.headerError {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-ERROR-COLOR-LIGHT); }
+  .accordion .headerError {
+    border: var(--GW-ACCORDION-BORDER-ERROR); }
+
+.normalFont .cardTitle {
+  font-weight: var(--GW-FONT-WEIGHT-LIGHT); }
+
+.header {
+  flex-grow: 1; }
+  .header:not(:last-child) {
+    margin-right: var(--GW-SPACING-2); }
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  min-height: var(--GW-ACCORDION-MIN-HEIGHT);
+  outline: none;
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  border: 1px solid transparent;
+  padding-left: var(--GW-SPACING-4);
+  padding-right: var(--GW-SPACING-4); }
+
+.cardCollapse {
+  display: none; }
+
+.cardHeading {
+  display: block; }
+  .cardHeading:focus {
+    outline: none; }
+
+.cardBody {
+  margin: var(--GW-SPACING-6) var(--GW-SPACING-10);
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+
+.accordionToggle {
+  cursor: pointer; }
+
+.errorIcon {
+  color: var(--GW-COLOR-ERROR);
+  top: var(--GW-SPACING-3);
+  right: var(--GW-SPACING-3);
+  margin-right: var(--GW-SPACING-2);
+  font-size: var(--GW-ICON-FONT-SIZE-3);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+  .errorIcon:not(:last-child) {
+    margin-right: var(--GW-SPACING-2); }
+
+.chevron:not(:last-child) {
+  margin-right: var(--GW-SPACING-2); }
+
+/*# sourceMappingURL=Accordion.module.css.map */

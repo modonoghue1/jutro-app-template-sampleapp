@@ -1,0 +1,44 @@
+{
+  "_from": "@jutro/browserslist-config@6.5.0",
+  "_id": "@jutro/browserslist-config@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-TUH2qkGAHICp6Ii4OieqEnj9UD4=",
+  "_location": "/@jutro/browserslist-config",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/browserslist-config@6.5.0",
+    "name": "@jutro/browserslist-config",
+    "escapedName": "@jutro%2fbrowserslist-config",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/toolset-compilers"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/browserslist-config/-/@jutro/browserslist-config-6.5.0.tgz",
+  "_shasum": "4d41f6aa41801c80a9e888b83a27aa1278fd503e",
+  "_spec": "@jutro/browserslist-config@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Shared browsers list",
+  "license": "Guidewire proprietary",
+  "main": "./src/index",
+  "name": "@jutro/browserslist-config",
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "scripts": {
+    "link-root": "yarn link --link-folder ../../node_modules"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

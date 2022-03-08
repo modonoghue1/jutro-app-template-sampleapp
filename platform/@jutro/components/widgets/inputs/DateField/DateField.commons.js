@@ -1,0 +1,1 @@
+export const dateFormatMap={vshort:"P",short:"PP",long:"PPP",abbreviated:"PP",full:"PPPP"};export const timeFormat="p";export function getDateFormat(format){return dateFormatMap[format]||dateFormatMap.long}export function getTimeFormat(){return"p"}export const minDefaultYear=1900;export const maxDefaultYear=2100;

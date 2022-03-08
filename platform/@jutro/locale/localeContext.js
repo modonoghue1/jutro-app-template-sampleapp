@@ -1,0 +1,1 @@
+import React from"react";const defaultLocaleContext={locale:"",localeOnChangeCallback:void 0,dateLocale:{}},LocaleContext=React.createContext(defaultLocaleContext);export const LocaleContextProvider=LocaleContext.Provider;export const LocaleContextConsumer=LocaleContext.Consumer;export default LocaleContext;

@@ -1,0 +1,1 @@
+const hashCode=str=>{let hash=0;if(!str)return hash;for(const char of str){hash=(hash<<5)-hash+char.charCodeAt(0),hash|=0}return hash<0?-1*hash:hash};export default(prefix,...names)=>{if(!prefix)throw new Error("prefix has to be a defined, non-null value");return names.reduce(((map,name)=>({...map,[name]:`${prefix}_${hashCode(name)}`})),{})};

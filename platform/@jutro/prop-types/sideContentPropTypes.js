@@ -1,0 +1,1 @@
+import PropTypes from"prop-types";import{intlMessageShape}from"./intlMessageShape";export const sideContentPropTypes={id:PropTypes.string,label:intlMessageShape.isRequired,icon:PropTypes.string,component:PropTypes.elementType.isRequired,componentProps:PropTypes.shape({})};export const sideContentShape=PropTypes.shape(sideContentPropTypes);

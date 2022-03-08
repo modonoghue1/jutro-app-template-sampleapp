@@ -1,0 +1,19 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.fieldMessage {
+  font-weight: var(--GW-FONT-WEIGHT-LIGHT);
+  margin-top: var(--GW-SPACING-1);
+  display: inline-block;
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+  .fieldMessage:empty {
+    display: none; }
+
+.error {
+  color: var(--GW-COLOR-ERROR); }
+
+.success {
+  color: var(--GW-FIELD-COMPONENT-VALID-COLOR); }
+
+/*# sourceMappingURL=OldFieldMessage.module.css.map */

@@ -1,0 +1,1 @@
+import ServiceManager from"./ServiceManager";export default function service(id,options={}){return function(target){ServiceManager.register(id,target,options)}}

@@ -1,0 +1,20 @@
+.dateTimeZoneField {
+  grid-template-rows: min-content; }
+
+.fieldContainer {
+  display: contents; }
+
+.disabled {
+  opacity: var(--GW-OPACITY-DISABLED);
+  pointer-events: auto; }
+
+.timeZoneLabel {
+  grid-column: 3;
+  grid-row: 1; }
+
+.timeZoneField {
+  grid-column: 3;
+  grid-row: 2;
+  min-width: 10rem; }
+
+/*# sourceMappingURL=DateTimeZoneField.module.css.map */

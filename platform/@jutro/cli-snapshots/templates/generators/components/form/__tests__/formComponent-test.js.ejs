@@ -1,0 +1,31 @@
+---
+to: '<%= path %>/<%= h.capitalize(name) %>/__tests__/<%= h.capitalize(name) %>-test.js'
+---
+import React from 'react';
+import { axe, toHaveNoViolations } from 'jest-axe';
+import { <%= h.capitalize(name) %> } from '../<%= h.capitalize(name) %>';
+
+expect.extend(toHaveNoViolations);
+
+describe('<%= h.capitalize(name) %>', () => {
+    it('renders default component', () => {
+        const wrapper = mount(<<%= h.capitalize(name)%> />);
+        expect(wrapper).toBeDefined();
+    });
+
+    it('renders with custom prop value', () => {
+        const testClassName = 'testClassName';
+        const wrapper = mount(<<%= h.capitalize(name)%> className={testClassName} />);
+        expect(wrapper.props().className).toBe(testClassName);
+    });
+
+    it('has no a11y violations', async () => {
+        const wrapper = mount(
+            <main>
+                <<%= h.capitalize(name)%> />
+            </main>
+        );
+        const results = await axe(wrapper.getDOMNode());
+        expect(results).toHaveNoViolations();
+    });
+});

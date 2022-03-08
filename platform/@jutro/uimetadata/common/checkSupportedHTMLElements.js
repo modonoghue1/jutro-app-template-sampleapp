@@ -1,0 +1,1 @@
+const SUPPORTED_HTML_ELEMENTS=new Set(["a","br","code","h1","h2","h3","h4","h5","h6","hr","label","iframe","i","p","b","img","image","pre","span","div"]);export const isSupportedHTMLElement=component=>SUPPORTED_HTML_ELEMENTS.has(component);

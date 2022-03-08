@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/FileImage/index.js"],"names":["FileImage"],"mappings":"AAAA,SAASA,SAAT,QAA0B,aAA1B","sourcesContent":["export { FileImage } from './FileImage';\n"],"file":"index.js"}

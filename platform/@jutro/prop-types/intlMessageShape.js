@@ -1,0 +1,1 @@
+import PropTypes from"prop-types";export const intlMessageObject={id:PropTypes.string,defaultMessage:PropTypes.string,args:PropTypes.shape({})};export const intlMessageShape=PropTypes.oneOfType([PropTypes.string,PropTypes.shape(intlMessageObject)]);

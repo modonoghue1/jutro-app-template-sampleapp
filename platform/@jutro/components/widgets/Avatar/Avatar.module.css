@@ -1,0 +1,56 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.avatar {
+  position: relative;
+  padding: 0;
+  color: var(--GW-AVATAR-COLOR);
+  text-align: center;
+  border: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: var(--GW-BORDER-RADIUS-FULL);
+  width: var(--GW-AVATAR-SIZE);
+  min-width: var(--GW-AVATAR-SIZE);
+  height: var(--GW-AVATAR-SIZE);
+  font-size: var(--GW-ICON-FONT-SIZE-3);
+  line-height: var(--GW-ICON-LINE-HEIGHT); }
+  .avatar.withBackground {
+    background-color: var(--GW-AVATAR-BACKGROUND-COLOR); }
+    .avatar.withBackground:hover {
+      background-color: var(--GW-AVATAR-BACKGROUND-COLOR-HOVER); }
+    .avatar.withBackground:active {
+      background-color: var(--GW-AVATAR-BACKGROUND-COLOR-ACTIVE); }
+  .avatar:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+
+.border {
+  border: solid var(--GW-BORDER-WIDTH) var(--GW-AVATAR-BORDER-COLOR); }
+
+.image {
+  padding: 0; }
+  .image .userImage {
+    height: inherit;
+    width: inherit; }
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #28333f; }
+
+:not(:hover):not(:active) > .overlay {
+  display: none; }
+
+:hover > .overlay {
+  opacity: 0.1; }
+
+:active > .overlay {
+  opacity: 0.2; }
+
+/*# sourceMappingURL=Avatar.module.css.map */

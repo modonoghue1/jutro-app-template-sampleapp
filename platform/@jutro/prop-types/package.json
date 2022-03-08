@@ -1,0 +1,65 @@
+{
+  "_from": "@jutro/prop-types@6.5.0",
+  "_id": "@jutro/prop-types@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-Xk6bmglC4/7xQ8hcybc4Y1RVVgQ=",
+  "_location": "/@jutro/prop-types",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/prop-types@6.5.0",
+    "name": "@jutro/prop-types",
+    "escapedName": "@jutro%2fprop-types",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/app",
+    "/@jutro/components",
+    "/@jutro/datatable",
+    "/@jutro/floorplan",
+    "/@jutro/lab-preview-components",
+    "/@jutro/lab-preview-micro-app",
+    "/@jutro/layout",
+    "/@jutro/locale",
+    "/@jutro/platform",
+    "/@jutro/router",
+    "/@jutro/test",
+    "/@jutro/theme",
+    "/@jutro/uiconfig",
+    "/@jutro/uimetadata",
+    "/@jutro/validation",
+    "/@jutro/wizard-next"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/prop-types/-/@jutro/prop-types-6.5.0.tgz",
+  "_shasum": "5e4e9b9a0942e3fef143c85cc9b7386354555604",
+  "_spec": "@jutro/prop-types@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Provides propTypes used by Jutro",
+  "devDependencies": {
+    "@jutro/logger": "6.5.0",
+    "lodash": "4.17.21",
+    "prop-types": "15.7.2"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/prop-types",
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

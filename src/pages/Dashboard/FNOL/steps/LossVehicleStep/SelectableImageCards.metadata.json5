@@ -1,0 +1,75 @@
+{
+    "$schema": "../../../../../../node_modules/@jutro/uimetadata/common/json-schema/metadata.schema.json",
+    "jutro": "6.0.0-next-20210407102798",
+    "selectable.image.cards": {
+        "id": "selectable.image.cards",
+        "type": "container",
+        "content": [
+            {
+                "id": "cards",
+                "type": "iterable",
+                "component": "Flex",
+                "contentRepeat": {
+                    "path": "cards",
+                    "variableProps": [
+                        "src",
+                        "figcaption",
+                        "content",
+                        "visible",
+                        "onClick.callbackProps.code"
+                    ],
+                    "content": {
+                        "id": "cardEntry",
+                        "type": "element",
+                        "component": "div",
+                        "contentLayout": {
+                            "component": "FlexItem",
+                            "componentProps": {
+                                "className": "flexItem",
+                                "tabIndex": "0"
+                            }
+                        },
+                        "content": [
+                            {
+                                "id": "iconImageContainer",
+                                "type": "container",
+                                "component": "div",
+                                "componentProps": {
+                                    "className": "iconImageContainer"
+                                },
+                                "content": [
+                                    {
+                                        "id": "image",
+                                        "type": "element",
+                                        "component": "Image",
+                                        "componentProps": {
+                                            "src": "{path}",
+                                            "figcaption": "{label}",
+                                            "className": "selectableCard",
+                                            "onClick": {
+                                                "callback": "onCardClick",
+                                                "callbackProps": {
+                                                    "code": "{code}"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "id": "icon",
+                                        "type": "element",
+                                        "component": "Icon",
+                                        "componentProps": {
+                                            "visible": "{selected}",
+                                            "icon": "mi-check",
+                                            "className": "icon"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,80 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.table {
+  background-color: var(--GW-BACKGROUND-COLOR);
+  padding: var(--GW-SPACING-3) var(--GW-SPACING-4) var(--GW-SPACING-3) var(--GW-SPACING-4); }
+
+.tableElement {
+  width: 100%;
+  background-color: var(--GW-BACKGROUND-COLOR);
+  border-collapse: collapse;
+  color: var(--GW-TABLE-COLOR);
+  vertical-align: top; }
+
+.tableHeader {
+  background-color: var(--GW-BACKGROUND-COLOR);
+  font-weight: var(--GW-FONT-WEIGHT-BOLD);
+  border-bottom: solid 1px var(--GW-BORDER-COLOR);
+  padding: var(--GW-SPACING-3) var(--GW-SPACING-4);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+.hoverable {
+  cursor: pointer; }
+  .hoverable thead .row th:first-child {
+    padding-left: var(--GW-SPACING-8); }
+  .hoverable .row:hover {
+    color: var(--GW-TABLE-COLOR);
+    background-color: var(--GW-TABLE-ROW-COLOR-HOVER); }
+  .hoverable .card:hover {
+    background-color: var(--GW-TABLE-ROW-COLOR-HOVER); }
+
+.radioRow .tableCardElementHeader {
+  display: none; }
+
+.radioRow .tableCardElementContent {
+  width: 100%;
+  text-align: left;
+  font-weight: var(--GW-FONT-WEIGHT-REGULAR); }
+
+.radioRow ~ .tableCardRow .tableCardElementHeader {
+  padding-left: var(--GW-SPACING-6); }
+
+.card {
+  border: none;
+  padding: var(--GW-SPACING-2); }
+  .card:nth-child(odd) {
+    background-color: var(--GW-TABLE-CARD-ODD-ROW-BACKGROUND-COLOR); }
+  .card:nth-child(even) {
+    background-color: var(--GW-TABLE-CARD-EVEN-ROW-BACKGROUND-COLOR); }
+
+.placeholder {
+  text-align: center;
+  padding: var(--GW-SPACING-4) var(--GW-SPACING-4);
+  color: var(--GW-TABLE-NO-DATA-COLOR);
+  background-color: var(--GW-BACKGROUND-COLOR);
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+
+.tableCard {
+  width: 100%; }
+
+.tableCardRow > td {
+  width: 50%;
+  padding: var(--GW-SPACING-2);
+  vertical-align: top; }
+
+.tableCardElementHeader {
+  text-align: left;
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+
+.tableCardElementContent {
+  text-align: right;
+  font-weight: var(--GW-FONT-WEIGHT-SEMI-BOLD);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+
+/*# sourceMappingURL=Table_DEPRECATED.module.css.map */

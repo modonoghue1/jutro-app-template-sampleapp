@@ -1,0 +1,8 @@
+.cell {
+  height: var(--GW-FONT-SIZE-BODY);
+  background-color: #d1d9e2; }
+
+.header {
+  background-color: var(--GW-TEXT-COLOR-2); }
+
+/*# sourceMappingURL=TableSkeleton.module.css.map */

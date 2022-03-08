@@ -1,0 +1,34 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.inlineLoader {
+  display: block; }
+
+.withMessage {
+  display: inline;
+  margin-left: var(--GW-SPACING-2); }
+
+.withLoadingMessage {
+  color: var(--GW-INLINE-LOADER-SPINNER-COLOR); }
+
+.withSuccessMessage {
+  color: var(--GW-COLOR-SUCCESS); }
+
+.loaderIcon {
+  font-size: initial;
+  vertical-align: bottom;
+  line-height: inherit;
+  height: 1.5em; }
+
+.screenReaderOnly {
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*# sourceMappingURL=InlineLoader.module.css.map */

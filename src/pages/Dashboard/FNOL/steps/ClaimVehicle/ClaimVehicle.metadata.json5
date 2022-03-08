@@ -1,0 +1,171 @@
+{
+    "jutro": "5.3",
+    "claim.vehicle.view": {
+        "id": "claimVehicle",
+        "type": "page",
+        "contentLayout": {
+            "component": "Grid",
+            "componentProps": {
+                "hgap": "large",
+                "vgap": "large"
+            }
+        },
+        "content": [
+            {
+                "id": "vehiclesList",
+                "type": "iterable",
+                "component": "div",
+                "contentRepeat": {
+                    "variableProps": ["content"],
+                    "content": {
+                        "id": "vehicleEntry",
+                        "type": "element",
+                        "component": "div",
+                        "componentProps": {
+                            "className": "vehicleEntry"
+                        },
+                        "content": [
+                            {
+                                "id": "vehicleData",
+                                "type": "element",
+                                "component": "div",
+                                "content": [
+                                    {
+                                        "id": "registrationNumber",
+                                        "type": "element",
+                                        "component": "h4",
+                                        "content": "{registrationNumber}"
+                                    },
+                                    {
+                                        "id": "driverName",
+                                        "type": "element",
+                                        "component": "p",
+                                        "content": "{driverName}"
+                                    },
+                                    {
+                                        "id": "color",
+                                        "type": "element",
+                                        "component": "p",
+                                        "content": "{color}"
+                                    },
+                                    {
+                                        "id": "make",
+                                        "type": "element",
+                                        "component": "p",
+                                        "content": "{make}"
+                                    },
+                                    {
+                                        "id": "model",
+                                        "type": "element",
+                                        "component": "p",
+                                        "content": "{model}"
+                                    },
+                                    {
+                                        "id": "year",
+                                        "type": "element",
+                                        "component": "p",
+                                        "content": "{year}"
+                                    },
+                                    {
+                                        "id": "insuranceNumber ",
+                                        "type": "element",
+                                        "component": "p",
+                                        "content": "{insuranceNumber}"
+                                    }
+                                ],
+                                "contentLayout": {
+                                    "component": "Flex",
+                                    "componentProps": {
+                                        "direction": "column",
+                                        "gap": "none"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "removeVehicle",
+                                "type": "action",
+                                "component": "Button",
+                                "componentProps": {
+                                    "onClick": "onRemoveVehicle",
+                                    "type": "text",
+                                    "icon": "delete"
+                                }
+                            }
+                        ],
+                        "contentLayout": {
+                            "component": "Flex",
+                            "componentProps": {
+                                "justifyContent": "between",
+                                "alignItems": "center"
+                            }
+                        }
+                    }
+                },
+                "contentEmpty": [
+                    {
+                        "id": "test",
+                        "type": "element",
+                        "component": "p",
+                        "content": "No vehicles specified yet. Please add some."
+                    }
+                ]
+            },
+            {
+                "id": "addVehicle",
+                "type": "action",
+                "component": "Button",
+                "componentProps": {
+                    "onClick": "onAddVehicle",
+                    "type": "outlined",
+                    "icon": "add"
+                },
+                "content": {
+                    "id": "vehicles.add",
+                    "defaultMessage": "Add vehicle"
+                }
+            },
+            {
+                "id": "validationMessage",
+                "type": "element",
+                "component": "p",
+                "content": "The list above should include at least one vehicle.",
+                "componentProps": {
+                    "className": "vehiclesValidationMessage"
+                }
+            },
+            {
+                "id": "anyVehicleDamaged",
+                "type": "field",
+                "datatype": "checkbox",
+                "componentProps": {
+                    "path": "flow.anyVehicleDamaged",
+                    "label": "Was any vehicle damaged?",
+                    "showInlineLabel": true,
+                    "defaultValue": false
+                }
+            },
+            {
+                "id": "anyoneInjured",
+                "type": "field",
+                "datatype": "checkbox",
+                "componentProps": {
+                    "path": "flow.anyoneInjured",
+                    "label": "Was anyone injured?",
+                    "showInlineLabel": true,
+                    "defaultValue": false
+                }
+            },
+            {
+                "id": "anythingDamaged",
+                "type": "field",
+                "datatype": "checkbox",
+                "componentProps": {
+                    "path": "flow.anythingDamaged",
+                    "label": "Was any property damaged?",
+                    "showInlineLabel": true,
+                    "defaultValue": false
+                }
+            }
+        ]
+    }
+}

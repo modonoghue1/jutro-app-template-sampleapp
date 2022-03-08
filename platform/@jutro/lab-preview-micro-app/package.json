@@ -1,0 +1,62 @@
+{
+  "_from": "@jutro/lab-preview-micro-app@6.5.0",
+  "_id": "@jutro/lab-preview-micro-app@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-aBq/zgNMya8jd2dwEcGn9BWgOLM=",
+  "_location": "/@jutro/lab-preview-micro-app",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/lab-preview-micro-app@6.5.0",
+    "name": "@jutro/lab-preview-micro-app",
+    "escapedName": "@jutro%2flab-preview-micro-app",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/lab-preview-micro-app/-/@jutro/lab-preview-micro-app-6.5.0.tgz",
+  "_shasum": "681abfce034cc9af2377677011c1a7f415a038b3",
+  "_spec": "@jutro/lab-preview-micro-app@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/app": "6.5.0",
+    "@jutro/components": "6.5.0",
+    "@jutro/config": "6.5.0",
+    "@jutro/floorplan": "6.5.0",
+    "@jutro/logger": "6.5.0",
+    "@jutro/prop-types": "6.5.0",
+    "@jutro/uiconfig": "6.5.0",
+    "classnames": "2.2.6",
+    "lodash": "4.17.21",
+    "prop-types": "15.7.2",
+    "react-hot-loader": "4.13.0",
+    "react-loadable": "5.5.0"
+  },
+  "deprecated": false,
+  "description": "Provides an API for downloading remote apps source code and render it",
+  "devDependencies": {
+    "@jutro/overrides": "6.5.0",
+    "history": "4.10.1"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/lab-preview-micro-app",
+  "peerDependencies": {
+    "core-js": "3.10.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "5.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "version": "6.5.0"
+}

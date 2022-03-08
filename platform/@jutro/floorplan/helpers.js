@@ -1,0 +1,1 @@
+export function isFloorPlanOverride(floorPlan){return!!floorPlan&&Object.prototype.hasOwnProperty.call(floorPlan,"matches")}export function isFloorPlanDefault(floorPlan){return!floorPlan||!Object.prototype.hasOwnProperty.call(floorPlan,"matches")}

@@ -1,0 +1,23 @@
+export function Checkbox({ id, checked, label, required, controlClassName, hideLabel, showInlineLabel, onClick, onChange, onBlur, onFocus, onKeyDown, disabled, accessibilityProps, dataPathProps, renderInlineLabel, children, detailElement, value, "aria-label": ariaLabel, testId, }: {
+    id: any;
+    checked: any;
+    label: any;
+    required: any;
+    controlClassName: any;
+    hideLabel: any;
+    showInlineLabel: any;
+    onClick: any;
+    onChange: any;
+    onBlur: any;
+    onFocus: any;
+    onKeyDown: any;
+    disabled: any;
+    accessibilityProps: any;
+    dataPathProps: any;
+    renderInlineLabel: any;
+    children: any;
+    detailElement: any;
+    value: any;
+    "aria-label": any;
+    testId: any;
+}): JSX.Element;

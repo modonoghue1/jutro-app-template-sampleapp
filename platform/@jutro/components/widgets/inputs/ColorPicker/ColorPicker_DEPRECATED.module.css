@@ -1,0 +1,61 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.colorPicker {
+  --color-picker-preview-value: #4d00d4;
+  outline: none; }
+  .colorPicker:hover {
+    cursor: pointer; }
+  .colorPicker.disabled, .colorPicker:global(.disabled) {
+    cursor: not-allowed; }
+  .colorPicker.focusWithin {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT);
+    border-color: var(--GW-FIELD-COMPONENT-BORDER-COLOR-FOCUS); }
+    .colorPicker.focusWithin:global(.invalid) {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--GW-FOCUS-ERROR-COLOR-DARK); }
+
+.inputContainer {
+  display: inline-flex;
+  align-items: center; }
+
+.colorPickerInput {
+  color: var(--GW-FIELD-COMPONENT-COLOR);
+  background-color: var(--GW-FIELD-COMPONENT-BACKGROUND-COLOR);
+  border: none;
+  width: 100%;
+  outline: none;
+  padding-left: var(--GW-SPACING-2);
+  cursor: inherit;
+  line-height: var(--GW-LINE-HEIGHT-INPUT); }
+
+.openTyping {
+  cursor: text; }
+  .openTyping[disabled], .openTyping:global(.disabled) {
+    cursor: not-allowed; }
+
+.colorPreview {
+  height: 1.5rem;
+  width: 6rem;
+  border-radius: var(--GW-BORDER-RADIUS);
+  background-color: var(--color-picker-preview-value);
+  cursor: inherit; }
+  .colorPreview.previewSmall {
+    width: 1.5rem; }
+
+.popover {
+  z-index: var(--GW-Z-INDEX-2);
+  position: absolute; }
+  .popover input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+
+.top {
+  bottom: var(--GW-FIELD-COMPONENT-HEIGHT);
+  margin-bottom: var(--GW-SPACING-2); }
+
+.bottom {
+  margin-top: var(--GW-SPACING-2); }
+
+/*# sourceMappingURL=ColorPicker_DEPRECATED.module.css.map */

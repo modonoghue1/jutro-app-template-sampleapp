@@ -1,0 +1,111 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.imageRadioButton {
+  width: 100%;
+  display: grid;
+  justify-content: start;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  grid-auto-rows: auto;
+  grid-column-gap: var(--GW-SPACING-6);
+  grid-row-gap: var(--GW-SPACING-4);
+  margin-bottom: var(--GW-SPACING-2); }
+  @media (max-width: 580px) {
+    .imageRadioButton {
+      grid-template-columns: repeat(auto-fill, minmax(5.5rem, 1fr)); } }
+
+.label {
+  position: relative;
+  cursor: pointer;
+  display: grid;
+  justify-content: start;
+  grid-template-columns: minmax(9rem, 1fr);
+  grid-template-rows: minmax(5.75rem, 7rem) auto;
+  grid-row-gap: var(--GW-SPACING-2);
+  text-align: center;
+  vertical-align: top;
+  font-size: var(--GW-FONT-SIZE-SUBTEXT); }
+  @media (max-width: 580px) {
+    .label {
+      grid-template-columns: minmax(5.5rem, 1fr);
+      grid-template-rows: minmax(4rem, 4.5rem) auto; } }
+  .label:focus {
+    outline: none; }
+    .label:focus .image {
+      outline: none; }
+  .label:not(.disabled) input[type='radio']:focus + .contentWrapper .iconImageContainer:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .label:not(.disabled) input[type='radio']:focus + .contentWrapper .imageWrapper {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--GW-FOCUS-COLOR-LIGHT); }
+  .label:not(.disabled):hover .image,
+  .label:not(.disabled) input[type='radio']:focus + .contentWrapper .image {
+    opacity: var(--GW-IMAGE-RADIO-BUTTON-IMAGE-OPACITY-HOVER); }
+  .label input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    width: 100%; }
+    .label input[type='radio']:checked + .contentWrapper .imageWrapper {
+      position: relative;
+      display: inline-block; }
+      .label input[type='radio']:checked + .contentWrapper .imageWrapper::after {
+        content: '';
+        border-radius: var(--GW-BORDER-RADIUS);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; }
+
+.otherOption {
+  padding-top: 0; }
+
+.contentWrapper {
+  display: contents; }
+  input[type='radio']:checked + .contentWrapper .iconImageContainer::after {
+    opacity: 0; }
+  input[type='radio']:checked + .contentWrapper .icon {
+    opacity: 1; }
+
+.imageWrapper {
+  width: 100%;
+  height: 100%;
+  background-color: var(--GW-IMAGE-RADIO-BUTTON-IMAGE-BACKGROUND-COLOR);
+  border-radius: calc(var(--GW-BORDER-RADIUS) + 1px); }
+  .imageWrapper .image {
+    transition-property: opacity, box-shadow;
+    transition-duration: calc(2 * var(--GW-ANIMATION-DURATION));
+    border-radius: var(--GW-BORDER-RADIUS);
+    box-shadow: var(--GW-SHADOW-1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.text {
+  content: normal; }
+
+.iconImageContainer {
+  position: relative; }
+
+.icon {
+  opacity: 0;
+  position: absolute;
+  right: var(--GW-SPACING-1);
+  bottom: var(--GW-SPACING-1);
+  transition-property: opacity;
+  transition-duration: var(--GW-ANIMATION-DURATION);
+  color: var(--GW-SELECTOR-SELECTED-COLOR);
+  background-color: var(--GW-SELECTOR-SELECTED-BACKGROUND-COLOR);
+  border-radius: var(--GW-BORDER-RADIUS-FULL);
+  padding: 0.125rem;
+  border: var(--GW-IMAGE-RADIO-BUTTON-ICON-BORDER-SELECTED);
+  box-sizing: content-box; }
+
+.contentWrapper.disabled .imageWrapper,
+input[type='radio']:checked + .contentWrapper.disabled .icon {
+  opacity: var(--GW-OPACITY-DISABLED);
+  cursor: not-allowed; }
+
+/*# sourceMappingURL=ImageRadioButtonField.module.css.map */

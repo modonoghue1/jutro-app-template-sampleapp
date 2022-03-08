@@ -1,0 +1,31 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.contextSwitcherMenu {
+  margin: 0;
+  padding: 0.125rem 0;
+  width: var(--GW-CONTEXT-SWITCHER-WIDTH);
+  max-height: 288px;
+  overflow-y: auto;
+  font-size: var(--GW-FONT-SIZE-BODY);
+  line-height: var(--GW-LINE-HEIGHT-BODY); }
+
+.contextSwitcherButton {
+  align-items: center;
+  display: flex;
+  height: var(--GW-CONTEXT-SWITCHER-HEIGHT);
+  justify-content: space-between;
+  padding: 0 1rem 0;
+  width: var(--GW-CONTEXT-SWITCHER-WIDTH);
+  font-size: var(--GW-FONT-SIZE-SUBTEXT);
+  line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+  .contextSwitcherButton span {
+    max-width: calc(var(--GW-CONTEXT-SWITCHER-WIDTH) - 3.5rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
+.activeContext {
+  background-color: var(--GW-CONTEXT-SWITCHER-BACKGROUND-COLOR-ACTIVE); }
+
+/*# sourceMappingURL=ContextSwitcher.module.css.map */

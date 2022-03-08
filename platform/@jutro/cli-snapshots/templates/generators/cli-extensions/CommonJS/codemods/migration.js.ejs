@@ -1,0 +1,11 @@
+---
+to: "<%= `${path}/${name}/codemods/migration.js` %>"
+---
+module.exports = [
+    {
+        description: 'insert code mod here. see docs for more info: ... ',
+        execute: source => {
+            return source.toSource({ quote: 'single' });
+        },
+    },
+];

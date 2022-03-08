@@ -1,0 +1,1 @@
+import{consumerSpacing}from"./spacing-vars";import{consumerComponents}from"./components-vars";import{consumerTypography}from"./typography-vars";import{consumerFloorplans}from"./floorplans-vars";export const consumerThemeConfig={name:"Consumer",rootStyle:{...consumerSpacing,...consumerComponents,...consumerTypography,...consumerFloorplans}};

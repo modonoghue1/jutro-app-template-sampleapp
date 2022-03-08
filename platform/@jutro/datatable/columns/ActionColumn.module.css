@@ -1,0 +1,52 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.actionItem {
+  opacity: 0; }
+  .actionItem:disabled {
+    opacity: 0; }
+  .actionItem:focus {
+    opacity: 1; }
+
+.focusedActionItem {
+  opacity: 1; }
+
+.actionButton {
+  margin-left: var(--GW-SPACING-4);
+  padding: 0;
+  opacity: 0;
+  min-width: var(--GW-BUTTON-HEIGHT-SMALL); }
+
+:global(.ReactTable.-highlight .rt-tbody div.rt-tr-group:not(.-padRow):hover) .actionItem,
+:global(.ReactTable.-highlight .rt-tbody div.rt-tr-group:not(.-padRow):hover) .actionButton {
+  opacity: 1; }
+  :global(.ReactTable.-highlight .rt-tbody div.rt-tr-group:not(.-padRow):hover) .actionItem:disabled,
+  :global(.ReactTable.-highlight .rt-tbody div.rt-tr-group:not(.-padRow):hover) .actionButton:disabled {
+    opacity: var(--GW-OPACITY-DISABLED); }
+
+@media (max-width: 1024px) {
+  .actionItem,
+  .actionButton {
+    opacity: 1; }
+    .actionItem:disabled,
+    .actionButton:disabled {
+      opacity: var(--GW-OPACITY-DISABLED); } }
+
+.dropdownMenuWrapper {
+  width: calc(var(--GW-BUTTON-HEIGHT-SMALL) + var(--GW-SPACING-4));
+  height: var(--GW-BUTTON-HEIGHT-SMALL); }
+
+.dropdownMenu {
+  position: absolute; }
+  .dropdownMenu .menu {
+    margin-top: var(--GW-SPACING-1);
+    font-size: var(--GW-FONT-SIZE-SUBTEXT);
+    line-height: var(--GW-LINE-HEIGHT-SUBTEXT); }
+    .dropdownMenu .menu .menuItemLabel {
+      margin-left: 0.75rem; }
+
+.actionColumnCell {
+  justify-content: flex-end;
+  flex-wrap: wrap; }
+
+/*# sourceMappingURL=ActionColumn.module.css.map */

@@ -1,0 +1,52 @@
+{
+  "_from": "@jutro/services@6.5.0",
+  "_id": "@jutro/services@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-CsTmA8jJMR3jdUaXupjFCQPMl1k=",
+  "_location": "/@jutro/services",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/services@6.5.0",
+    "name": "@jutro/services",
+    "escapedName": "@jutro%2fservices",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/components",
+    "/@jutro/locale",
+    "/@jutro/platform",
+    "/@jutro/router"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/services/-/@jutro/services-6.5.0.tgz",
+  "_shasum": "0ac4e603c8c9311de3754697ba98c50903cc9759",
+  "_spec": "@jutro/services@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/contract": "6.5.0",
+    "@jutro/logger": "6.5.0",
+    "lodash": "4.17.21"
+  },
+  "deprecated": false,
+  "description": "Provides an API for managing services",
+  "devDependencies": {},
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/services",
+  "peerDependencies": {
+    "core-js": "3.10.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

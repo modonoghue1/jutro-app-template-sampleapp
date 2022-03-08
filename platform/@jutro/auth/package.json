@@ -1,0 +1,62 @@
+{
+  "_from": "@jutro/auth@6.5.0",
+  "_id": "@jutro/auth@6.5.0",
+  "_inBundle": false,
+  "_integrity": "sha1-TLresW3/saUUOdlUcrQfwWkbPM0=",
+  "_location": "/@jutro/auth",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@jutro/auth@6.5.0",
+    "name": "@jutro/auth",
+    "escapedName": "@jutro%2fauth",
+    "scope": "@jutro",
+    "rawSpec": "6.5.0",
+    "saveSpec": null,
+    "fetchSpec": "6.5.0"
+  },
+  "_requiredBy": [
+    "/",
+    "/@jutro/app",
+    "/@jutro/components",
+    "/@jutro/router",
+    "/@jutro/transport"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@jutro/auth/-/@jutro/auth-6.5.0.tgz",
+  "_shasum": "4cbadeb16dffb1a51439d95472b41fc1691b3ccd",
+  "_spec": "@jutro/auth@6.5.0",
+  "author": {
+    "name": "Guidewire"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@jutro/config": "6.5.0",
+    "@jutro/logger": "6.5.0",
+    "@jutro/platform": "6.5.0",
+    "@okta/okta-auth-js": "4.8.0",
+    "lodash": "4.17.21",
+    "prop-types": "15.7.2"
+  },
+  "deprecated": false,
+  "description": "Provides authentication components and context",
+  "devDependencies": {
+    "tiny-emitter": "1.1.0"
+  },
+  "license": "Guidewire proprietary",
+  "module": "./index.js",
+  "name": "@jutro/auth",
+  "peerDependencies": {
+    "@jutro/config": "6.5.0",
+    "history": "4.10.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "core-js": "3.10.0",
+    "react-router-dom": "5.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/jutro-npm-dev"
+  },
+  "sideEffects": false,
+  "version": "6.5.0"
+}

@@ -1,0 +1,8 @@
+.settingsCard.settingsCardContainer {
+  border: none;
+  box-shadow: var(--GW-SHADOW-2); }
+
+.settingsCard .settingsCardContent {
+  padding-top: var(--GW-LAYOUT-3); }
+
+/*# sourceMappingURL=SettingsCard.module.css.map */

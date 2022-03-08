@@ -1,0 +1,5 @@
+{
+  "process": false,
+  "customBuildCommand": "node ./bundle-module.js --modulePath=.",
+  "useTypes": false
+}

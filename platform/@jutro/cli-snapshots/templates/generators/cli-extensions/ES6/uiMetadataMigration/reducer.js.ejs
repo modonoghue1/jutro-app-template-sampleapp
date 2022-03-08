@@ -1,0 +1,15 @@
+---
+to: "<%= `${path}/${name}/uiMetadataMigration/reducer.js` %>"
+---
+import { createReducer } from '@jutro/cli-snapshot-tools';
+import { actionTypes } from './actions';
+
+const migrationAction = metadata => metadata;
+
+const handlers = {
+    [actionTypes.migrationAction]: migrationAction,
+};
+
+const reducer = createReducer(handlers);
+
+export { reducer };

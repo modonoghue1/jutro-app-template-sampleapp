@@ -1,0 +1,73 @@
+/* ------------------------------------*\
+   CSS Custom Properties to define base breakpoints
+\*------------------------------------ */
+.appSwitcher {
+  max-height: var(--GW-APP-SWITCHER-POPOVER-MAX-HEIGHT);
+  width: var(--GW-APP-SWITCHER-POPOVER-WIDTH); }
+
+.appSwitcherPopoverContainer {
+  width: var(--GW-APP-SWITCHER-POPOVER-WIDTH); }
+
+.appSwitcherPopoverBody {
+  padding: 0;
+  height: unset;
+  min-height: unset; }
+
+.appSwitcherPopoverFooter {
+  height: var(--GW-APP-SWITCHER-FOOTER-HEIGHT);
+  text-align: center; }
+
+.appSwitcherContent {
+  padding: var(--GW-SPACING-3) 0; }
+  .appSwitcherContent .appSwitcherItems {
+    max-height: calc( var(--GW-APP-SWITCHER-POPOVER-MAX-HEIGHT) - var(--GW-APP-SWITCHER-FOOTER-HEIGHT) - var(--GW-FIELD-COMPONENT-HEIGHT) - 2 * var(--GW-SPACING-3));
+    overflow-y: auto; }
+  .appSwitcherContent > .appSwitcherSearch {
+    padding: 0 var(--GW-SPACING-4);
+    padding-bottom: var(--GW-SPACING-2); }
+
+.accordionCard {
+  margin: 0; }
+
+.separator {
+  margin: var(--GW-SPACING-3) var(--GW-SPACING-4);
+  border-top: 1px solid var(--GW-BORDER-COLOR); }
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: var(--GW-SPACING-3) var(--GW-SPACING-4); }
+
+.itemIcon {
+  width: 1rem;
+  height: 1rem; }
+
+.itemLabel {
+  max-width: var(--GW-APP-SWITCHER-LABEL-WIDTH);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: var(--GW-FONT-SIZE-LABEL);
+  line-height: var(--GW-LINE-HEIGHT-LABEL); }
+
+.itemIcon + .itemLabel {
+  margin-left: var(--GW-SPACING-4); }
+
+.appSwitcherModal {
+  width: var(--GW-APP-SWITCHER-MODAL-WIDTH); }
+
+.footerModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--GW-APP-SWITCHER-FOOTER-HEIGHT);
+  background-color: var(--GW-APP-SWITCHER-FOOTER-BACKGROUND-COLOR);
+  box-shadow: var(--GW-SHADOW-UP);
+  overflow: hidden;
+  border-bottom-left-radius: var(--GW-BORDER-RADIUS);
+  border-bottom-right-radius: var(--GW-BORDER-RADIUS); }
+
+.groupHeading {
+  color: var(--GW-APP-SWITCHER-GROUP-HEADING); }
+
+/*# sourceMappingURL=AppSwitcher.module.css.map */

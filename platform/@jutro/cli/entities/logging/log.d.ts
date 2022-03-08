@@ -1,0 +1,15 @@
+export function log(message: any): void;
+export function logBlueBright(message: any): void;
+export function logBold(message: any): void;
+export function logGreen(message: any): void;
+export function logInverse(message: any): void;
+export function logObjectWithTitle(title: any, object: any): void;
+export function logRed(message: any): void;
+export function logYellow(message: any): void;
+export function logAnnouncement(message: any): void;
+export function logBlueBrightAnnouncement(message: any): void;
+export function logGreenAnnouncement(message: any): void;
+export function logYellowAnnouncement(message: any): void;
+export function logRedAnnouncement(message: any): void;
+export function logEmptyLine(): void;
+export function logUpToDate(currentVersion: any): void;

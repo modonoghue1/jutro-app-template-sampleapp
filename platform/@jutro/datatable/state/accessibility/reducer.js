@@ -1,0 +1,1 @@
+import{SET_FOCUSED}from"./types";export const reducer=(state,{type:type,...payload})=>{switch(type){case SET_FOCUSED:{const focused=payload.focused;return{...state,focused:focused}}default:return state}};

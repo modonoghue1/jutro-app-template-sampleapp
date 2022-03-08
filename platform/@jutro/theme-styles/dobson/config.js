@@ -1,0 +1,1 @@
+import{dobsonColors}from"./colors-vars";import{dobsonFloorplans}from"./floorplans-vars";export const dobsonThemeConfig={name:"Dobson",rootStyle:{...dobsonColors,...dobsonFloorplans}};

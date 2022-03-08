@@ -1,0 +1,1 @@
+import{defineMessages}from"react-intl";export const messages=defineMessages({loading:{id:"jutro-components.widgets.CubeLoader.loading",defaultMessage:"Loading"}});

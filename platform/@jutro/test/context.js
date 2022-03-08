@@ -1,0 +1,1 @@
+import React from"react";import{ShallowWrapper}from"enzyme";export function shallowContextConsumer(node,newContext,oldContext){const contexts=Array.isArray(newContext)?newContext:[newContext],children=shallow(node,oldContext).props().children(...contexts);return shallow(children||React.createElement("div",null),oldContext)}

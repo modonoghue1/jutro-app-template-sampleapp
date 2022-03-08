@@ -1,0 +1,2224 @@
+{
+  "af": {
+    "date": {
+      "vshort": "2021-03-29",
+      "vshortWithTime": "2021-03-29 15:38",
+      "short": "29 Mrt. 2021",
+      "shortWithTime": "29 Mrt. 2021 15:38",
+      "abbreviated": "Ma. 29 Mrt. 2021",
+      "abbreviatedWithTime": "Ma. 29 Mrt. 2021 15:38",
+      "long": "29 Maart 2021",
+      "longWithTime": "29 Maart 2021 15:38",
+      "full": "Maandag 29 Maart 2021",
+      "fullWithTime": "Maandag 29 Maart 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "USD 1 000 000,34",
+      "jpy": "JP¥1 000 000",
+      "aud": "A$1 000 000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34",
+        "code": "USD",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": "1 000 000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1 000 000,34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "af-NA": {
+    "date": {
+      "vshort": "2021-03-29",
+      "vshortWithTime": "2021-03-29 3:38 nm.",
+      "short": "29 Mrt. 2021",
+      "shortWithTime": "29 Mrt. 2021 3:38 nm.",
+      "abbreviated": "Ma. 29 Mrt. 2021",
+      "abbreviatedWithTime": "Ma. 29 Mrt. 2021 3:38 nm.",
+      "long": "29 Maart 2021",
+      "longWithTime": "29 Maart 2021 3:38 nm.",
+      "full": "Maandag 29 Maart 2021",
+      "fullWithTime": "Maandag 29 Maart 2021 3:38 nm.",
+      "time": "3:38 nm."
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "USD 1 000 000,34",
+      "jpy": "JP¥1 000 000",
+      "aud": "A$1 000 000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1 000 000,34",
+        "code": "USD",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": "1 000 000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1 000 000,34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "af-ZA": {
+    "date": {
+      "vshort": "2021-03-29",
+      "vshortWithTime": "2021-03-29 15:38",
+      "short": "29 Mrt. 2021",
+      "shortWithTime": "29 Mrt. 2021 15:38",
+      "abbreviated": "Ma. 29 Mrt. 2021",
+      "abbreviatedWithTime": "Ma. 29 Mrt. 2021 15:38",
+      "long": "29 Maart 2021",
+      "longWithTime": "29 Maart 2021 15:38",
+      "full": "Maandag 29 Maart 2021",
+      "fullWithTime": "Maandag 29 Maart 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "USD 1 000 000,34",
+      "jpy": "JP¥1 000 000",
+      "aud": "A$1 000 000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1 000 000,34",
+        "code": "USD",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": "1 000 000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1 000 000,34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "bg": {
+    "date": {
+      "vshort": "29.03.2021 г.",
+      "vshortWithTime": "29.03.2021 г., 15:38",
+      "short": "29.03.2021 г.",
+      "shortWithTime": "29.03.2021 г., 15:38",
+      "abbreviated": "пн, 29.03.2021 г.",
+      "abbreviatedWithTime": "пн, 29.03.2021 г., 15:38",
+      "long": "29 март 2021 г.",
+      "longWithTime": "29 март 2021 г., 15:38",
+      "full": "понеделник, 29 март 2021 г.",
+      "fullWithTime": "понеделник, 29 март 2021 г., 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1000000,34 щ.д.",
+      "jpy": "1000000 JPY",
+      "aud": "1000000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1000000,34 ",
+        "code": "щ.д.",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1000000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": { "value": "1000000,34 ", "code": "AUD", "hasCodeFirst": "false" }
+    }
+  },
+  "bg-BG": {
+    "date": {
+      "vshort": "29.03.2021 г.",
+      "vshortWithTime": "29.03.2021 г., 15:38",
+      "short": "29.03.2021 г.",
+      "shortWithTime": "29.03.2021 г., 15:38",
+      "abbreviated": "пн, 29.03.2021 г.",
+      "abbreviatedWithTime": "пн, 29.03.2021 г., 15:38",
+      "long": "29 март 2021 г.",
+      "longWithTime": "29 март 2021 г., 15:38",
+      "full": "понеделник, 29 март 2021 г.",
+      "fullWithTime": "понеделник, 29 март 2021 г., 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1000000,34 щ.д.",
+      "jpy": "1000000 JPY",
+      "aud": "1000000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1000000,34 ",
+        "code": "щ.д.",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1000000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": { "value": "1000000,34 ", "code": "AUD", "hasCodeFirst": "false" }
+    }
+  },
+  "da": {
+    "date": {
+      "vshort": "29.3.2021",
+      "vshortWithTime": "29.3.2021 15.38",
+      "short": "29. mar. 2021",
+      "shortWithTime": "29. mar. 2021 15.38",
+      "abbreviated": "man. 29. mar. 2021",
+      "abbreviatedWithTime": "man. 29. mar. 2021 15.38",
+      "long": "29. marts 2021",
+      "longWithTime": "29. marts 2021 15.38",
+      "full": "mandag den 29. marts 2021",
+      "fullWithTime": "mandag den 29. marts 2021 15.38",
+      "time": "15.38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "1.000.000,34 US$",
+      "jpy": "1.000.000 JP¥",
+      "aud": "1.000.000,34 AU$"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1.000.000,34 ",
+        "code": "US$",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1.000.000 ", "code": "JP¥", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1.000.000,34 ",
+        "code": "AU$",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "da-DK": {
+    "date": {
+      "vshort": "29.3.2021",
+      "vshortWithTime": "29.3.2021 15.38",
+      "short": "29. mar. 2021",
+      "shortWithTime": "29. mar. 2021 15.38",
+      "abbreviated": "man. 29. mar. 2021",
+      "abbreviatedWithTime": "man. 29. mar. 2021 15.38",
+      "long": "29. marts 2021",
+      "longWithTime": "29. marts 2021 15.38",
+      "full": "mandag den 29. marts 2021",
+      "fullWithTime": "mandag den 29. marts 2021 15.38",
+      "time": "15.38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "1.000.000,34 US$",
+      "jpy": "1.000.000 JP¥",
+      "aud": "1.000.000,34 AU$"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1.000.000,34 ",
+        "code": "US$",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1.000.000 ", "code": "JP¥", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1.000.000,34 ",
+        "code": "AU$",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "de": {
+    "date": {
+      "vshort": "29.3.2021",
+      "vshortWithTime": "29.3.2021, 15:38",
+      "short": "29. März 2021",
+      "shortWithTime": "29. März 2021, 15:38",
+      "abbreviated": "Mo., 29. März 2021",
+      "abbreviatedWithTime": "Mo., 29. März 2021, 15:38",
+      "long": "29. März 2021",
+      "longWithTime": "29. März 2021, 15:38",
+      "full": "Montag, 29. März 2021",
+      "fullWithTime": "Montag, 29. März 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "1.000.000,34 $",
+      "jpy": "1.000.000 ¥",
+      "aud": "1.000.000,34 AU$"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1.000.000,34 ", "code": "$", "hasCodeFirst": "false" },
+      "jpy": { "value": "1.000.000 ", "code": "¥", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1.000.000,34 ",
+        "code": "AU$",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "de-AT": {
+    "date": {
+      "vshort": "29.3.2021",
+      "vshortWithTime": "29.3.2021, 15:38",
+      "short": "29. März 2021",
+      "shortWithTime": "29. März 2021, 15:38",
+      "abbreviated": "Mo., 29. März 2021",
+      "abbreviatedWithTime": "Mo., 29. März 2021, 15:38",
+      "long": "29. März 2021",
+      "longWithTime": "29. März 2021, 15:38",
+      "full": "Montag, 29. März 2021",
+      "fullWithTime": "Montag, 29. März 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "$ 1.000.000,34",
+      "jpy": "¥ 1.000.000",
+      "aud": "AU$ 1.000.000,34"
+    },
+    "currencyEditable": {
+      "usd": { "value": " 1.000.000,34", "code": "$", "hasCodeFirst": "true" },
+      "jpy": { "value": " 1.000.000", "code": "¥", "hasCodeFirst": "true" },
+      "aud": { "value": " 1.000.000,34", "code": "AU$", "hasCodeFirst": "true" }
+    }
+  },
+  "de-CH": {
+    "date": {
+      "vshort": "29.3.2021",
+      "vshortWithTime": "29.3.2021, 15:38",
+      "short": "29. März 2021",
+      "shortWithTime": "29. März 2021, 15:38",
+      "abbreviated": "Mo., 29. März 2021",
+      "abbreviatedWithTime": "Mo., 29. März 2021, 15:38",
+      "long": "29. März 2021",
+      "longWithTime": "29. März 2021, 15:38",
+      "full": "Montag, 29. März 2021",
+      "fullWithTime": "Montag, 29. März 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1’000’000.34" },
+    "currency": {
+      "usd": "$ 1’000’000.34",
+      "jpy": "¥ 1’000’000",
+      "aud": "AU$ 1’000’000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": " 1’000’000.34", "code": "$", "hasCodeFirst": "true" },
+      "jpy": { "value": " 1’000’000", "code": "¥", "hasCodeFirst": "true" },
+      "aud": { "value": " 1’000’000.34", "code": "AU$", "hasCodeFirst": "true" }
+    }
+  },
+  "de-DE": {
+    "date": {
+      "vshort": "29.3.2021",
+      "vshortWithTime": "29.3.2021, 15:38",
+      "short": "29. März 2021",
+      "shortWithTime": "29. März 2021, 15:38",
+      "abbreviated": "Mo., 29. März 2021",
+      "abbreviatedWithTime": "Mo., 29. März 2021, 15:38",
+      "long": "29. März 2021",
+      "longWithTime": "29. März 2021, 15:38",
+      "full": "Montag, 29. März 2021",
+      "fullWithTime": "Montag, 29. März 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "1.000.000,34 $",
+      "jpy": "1.000.000 ¥",
+      "aud": "1.000.000,34 AU$"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1.000.000,34 ", "code": "$", "hasCodeFirst": "false" },
+      "jpy": { "value": "1.000.000 ", "code": "¥", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1.000.000,34 ",
+        "code": "AU$",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "en": {
+    "date": {
+      "vshort": "3/29/2021",
+      "vshortWithTime": "3/29/2021, 3:38 PM",
+      "short": "Mar 29, 2021",
+      "shortWithTime": "Mar 29, 2021, 3:38 PM",
+      "abbreviated": "Mon, Mar 29, 2021",
+      "abbreviatedWithTime": "Mon, Mar 29, 2021, 3:38 PM",
+      "long": "March 29, 2021",
+      "longWithTime": "March 29, 2021, 3:38 PM",
+      "full": "Monday, March 29, 2021",
+      "fullWithTime": "Monday, March 29, 2021, 3:38 PM",
+      "time": "3:38 PM"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "$1,000,000.34",
+      "jpy": "¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-AU": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021, 3:38 pm",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021, 3:38 pm",
+      "abbreviated": "Mon, 29 Mar 2021",
+      "abbreviatedWithTime": "Mon, 29 Mar 2021, 3:38 pm",
+      "long": "29 March 2021",
+      "longWithTime": "29 March 2021, 3:38 pm",
+      "full": "Monday, 29 March 2021",
+      "fullWithTime": "Monday, 29 March 2021, 3:38 pm",
+      "time": "3:38 pm"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "USD 1,000,000.34",
+      "jpy": "JPY 1,000,000",
+      "aud": "$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1,000,000.34",
+        "code": "USD",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1,000,000", "code": "JPY", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-CA": {
+    "date": {
+      "vshort": "2021-03-29",
+      "vshortWithTime": "2021-03-29, 3:38 p.m.",
+      "short": "Mar. 29, 2021",
+      "shortWithTime": "Mar. 29, 2021, 3:38 p.m.",
+      "abbreviated": "Mon., Mar. 29, 2021",
+      "abbreviatedWithTime": "Mon., Mar. 29, 2021, 3:38 p.m.",
+      "long": "March 29, 2021",
+      "longWithTime": "March 29, 2021, 3:38 p.m.",
+      "full": "Monday, March 29, 2021",
+      "fullWithTime": "Monday, March 29, 2021, 3:38 p.m.",
+      "time": "3:38 p.m."
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "US$1,000,000.34",
+      "jpy": "JP¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-CH": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021, 15:38",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021, 15:38",
+      "abbreviated": "Mon, 29 Mar 2021",
+      "abbreviatedWithTime": "Mon, 29 Mar 2021, 15:38",
+      "long": "29 March 2021",
+      "longWithTime": "29 March 2021, 15:38",
+      "full": "Monday, 29 March 2021",
+      "fullWithTime": "Monday, 29 March 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1’000’000.34" },
+    "currency": {
+      "usd": "US$ 1’000’000.34",
+      "jpy": "JP¥ 1’000’000",
+      "aud": "A$ 1’000’000.34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1’000’000.34",
+        "code": "US$",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1’000’000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": " 1’000’000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-GB": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021, 15:38",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021, 15:38",
+      "abbreviated": "Mon, 29 Mar 2021",
+      "abbreviatedWithTime": "Mon, 29 Mar 2021, 15:38",
+      "long": "29 March 2021",
+      "longWithTime": "29 March 2021, 15:38",
+      "full": "Monday, 29 March 2021",
+      "fullWithTime": "Monday, 29 March 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "US$1,000,000.34",
+      "jpy": "JP¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-HK": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021, 3:38 pm",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021, 3:38 pm",
+      "abbreviated": "Mon, 29 Mar 2021",
+      "abbreviatedWithTime": "Mon, 29 Mar 2021, 3:38 pm",
+      "long": "29 March 2021",
+      "longWithTime": "29 March 2021, 3:38 pm",
+      "full": "Monday, 29 March 2021",
+      "fullWithTime": "Monday, 29 March 2021, 3:38 pm",
+      "time": "3:38 pm"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "US$1,000,000.34",
+      "jpy": "JP¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-IN": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021, 3:38 pm",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021, 3:38 pm",
+      "abbreviated": "Mon, 29 Mar, 2021",
+      "abbreviatedWithTime": "Mon, 29 Mar, 2021, 3:38 pm",
+      "long": "29 March 2021",
+      "longWithTime": "29 March 2021, 3:38 pm",
+      "full": "Monday, 29 March, 2021",
+      "fullWithTime": "Monday, 29 March, 2021, 3:38 pm",
+      "time": "3:38 pm"
+    },
+    "number": { "general": "10,00,000.34" },
+    "currency": {
+      "usd": "US$10,00,000.34",
+      "jpy": "JP¥10,00,000",
+      "aud": "A$10,00,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "10,00,000.34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "10,00,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "10,00,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-MT": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021, 15:38",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021, 15:38",
+      "abbreviated": "Mon, 29 Mar 2021",
+      "abbreviatedWithTime": "Mon, 29 Mar 2021, 15:38",
+      "long": "29 March 2021",
+      "longWithTime": "29 March 2021, 15:38",
+      "full": "Monday, 29 March 2021",
+      "fullWithTime": "Monday, 29 March 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "US$1,000,000.34",
+      "jpy": "JP¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-NA": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021, 3:38 pm",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021, 3:38 pm",
+      "abbreviated": "Mon, 29 Mar 2021",
+      "abbreviatedWithTime": "Mon, 29 Mar 2021, 3:38 pm",
+      "long": "29 March 2021",
+      "longWithTime": "29 March 2021, 3:38 pm",
+      "full": "Monday, 29 March 2021",
+      "fullWithTime": "Monday, 29 March 2021, 3:38 pm",
+      "time": "3:38 pm"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "US$1,000,000.34",
+      "jpy": "JP¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-NZ": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021, 3:38 pm",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021, 3:38 pm",
+      "abbreviated": "Mon, 29 Mar 2021",
+      "abbreviatedWithTime": "Mon, 29 Mar 2021, 3:38 pm",
+      "long": "29 March 2021",
+      "longWithTime": "29 March 2021, 3:38 pm",
+      "full": "Monday, 29 March 2021",
+      "fullWithTime": "Monday, 29 March 2021, 3:38 pm",
+      "time": "3:38 pm"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "US$1,000,000.34",
+      "jpy": "JP¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-PH": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021, 3:38 pm",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021, 3:38 pm",
+      "abbreviated": "Mon, 29 Mar 2021",
+      "abbreviatedWithTime": "Mon, 29 Mar 2021, 3:38 pm",
+      "long": "29 March 2021",
+      "longWithTime": "29 March 2021, 3:38 pm",
+      "full": "Monday, 29 March 2021",
+      "fullWithTime": "Monday, 29 March 2021, 3:38 pm",
+      "time": "3:38 pm"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "US$1,000,000.34",
+      "jpy": "JP¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-SG": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021, 3:38 pm",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021, 3:38 pm",
+      "abbreviated": "Mon, 29 Mar 2021",
+      "abbreviatedWithTime": "Mon, 29 Mar 2021, 3:38 pm",
+      "long": "29 March 2021",
+      "longWithTime": "29 March 2021, 3:38 pm",
+      "full": "Monday, 29 March 2021",
+      "fullWithTime": "Monday, 29 March 2021, 3:38 pm",
+      "time": "3:38 pm"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "US$1,000,000.34",
+      "jpy": "JP¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-US": {
+    "date": {
+      "vshort": "3/29/2021",
+      "vshortWithTime": "3/29/2021, 3:38 PM",
+      "short": "Mar 29, 2021",
+      "shortWithTime": "Mar 29, 2021, 3:38 PM",
+      "abbreviated": "Mon, Mar 29, 2021",
+      "abbreviatedWithTime": "Mon, Mar 29, 2021, 3:38 PM",
+      "long": "March 29, 2021",
+      "longWithTime": "March 29, 2021, 3:38 PM",
+      "full": "Monday, March 29, 2021",
+      "fullWithTime": "Monday, March 29, 2021, 3:38 PM",
+      "time": "3:38 PM"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "$1,000,000.34",
+      "jpy": "¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "en-ZA": {
+    "date": {
+      "vshort": "2021/03/29",
+      "vshortWithTime": "2021/03/29, 15:38",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021, 15:38",
+      "abbreviated": "Mon, 29 Mar 2021",
+      "abbreviatedWithTime": "Mon, 29 Mar 2021, 15:38",
+      "long": "29 March 2021",
+      "longWithTime": "29 March 2021, 15:38",
+      "full": "Monday, 29 March 2021",
+      "fullWithTime": "Monday, 29 March 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "US$1 000 000,34",
+      "jpy": "JP¥1 000 000",
+      "aud": "A$1 000 000,34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1 000 000,34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1 000 000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1 000 000,34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "es": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021 15:38",
+      "short": "29 mar. 2021",
+      "shortWithTime": "29 mar. 2021 15:38",
+      "abbreviated": "lun., 29 mar. 2021",
+      "abbreviatedWithTime": "lun., 29 mar. 2021 15:38",
+      "long": "29 de marzo de 2021",
+      "longWithTime": "29 de marzo de 2021 15:38",
+      "full": "lunes, 29 de marzo de 2021",
+      "fullWithTime": "lunes, 29 de marzo de 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "1.000.000,34 US$",
+      "jpy": "1.000.000 JPY",
+      "aud": "1.000.000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1.000.000,34 ",
+        "code": "US$",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1.000.000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1.000.000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "es-419": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021 15:38",
+      "short": "29 de marzo de 2021",
+      "shortWithTime": "29 de marzo de 2021 15:38",
+      "abbreviated": "lun., 29 de mar. de 2021",
+      "abbreviatedWithTime": "lun., 29 de mar. de 2021 15:38",
+      "long": "29 de marzo de 2021",
+      "longWithTime": "29 de marzo de 2021 15:38",
+      "full": "lunes, 29 de marzo de 2021",
+      "fullWithTime": "lunes, 29 de marzo de 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "USD 1,000,000.34",
+      "jpy": "JPY 1,000,000",
+      "aud": "AUD 1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1,000,000.34",
+        "code": "USD",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1,000,000", "code": "JPY", "hasCodeFirst": "true" },
+      "aud": { "value": " 1,000,000.34", "code": "AUD", "hasCodeFirst": "true" }
+    }
+  },
+  "es-AR": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021 15:38",
+      "short": "29 de mar. de 2021",
+      "shortWithTime": "29 de mar. de 2021 15:38",
+      "abbreviated": "lun., 29 mar. 2021",
+      "abbreviatedWithTime": "lun., 29 mar. 2021 15:38",
+      "long": "29 de marzo de 2021",
+      "longWithTime": "29 de marzo de 2021 15:38",
+      "full": "lunes, 29 de marzo de 2021",
+      "fullWithTime": "lunes, 29 de marzo de 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "US$ 1.000.000,34",
+      "jpy": "JPY 1.000.000",
+      "aud": "AUD 1.000.000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1.000.000,34",
+        "code": "US$",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1.000.000", "code": "JPY", "hasCodeFirst": "true" },
+      "aud": { "value": " 1.000.000,34", "code": "AUD", "hasCodeFirst": "true" }
+    }
+  },
+  "es-CO": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021, 3:38 p. m.",
+      "short": "29 de mar. de 2021",
+      "shortWithTime": "29 de mar. de 2021, 3:38 p. m.",
+      "abbreviated": "lun., 29 de mar. de 2021",
+      "abbreviatedWithTime": "lun., 29 de mar. de 2021, 3:38 p. m.",
+      "long": "29 de marzo de 2021",
+      "longWithTime": "29 de marzo de 2021, 3:38 p. m.",
+      "full": "lunes, 29 de marzo de 2021",
+      "fullWithTime": "lunes, 29 de marzo de 2021, 3:38 p. m.",
+      "time": "3:38 p. m."
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "US$ 1.000.000,34",
+      "jpy": "JPY 1.000.000",
+      "aud": "AUD 1.000.000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1.000.000,34",
+        "code": "US$",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1.000.000", "code": "JPY", "hasCodeFirst": "true" },
+      "aud": { "value": " 1.000.000,34", "code": "AUD", "hasCodeFirst": "true" }
+    }
+  },
+  "es-ES": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021 15:38",
+      "short": "29 mar. 2021",
+      "shortWithTime": "29 mar. 2021 15:38",
+      "abbreviated": "lun., 29 mar. 2021",
+      "abbreviatedWithTime": "lun., 29 mar. 2021 15:38",
+      "long": "29 de marzo de 2021",
+      "longWithTime": "29 de marzo de 2021 15:38",
+      "full": "lunes, 29 de marzo de 2021",
+      "fullWithTime": "lunes, 29 de marzo de 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "1.000.000,34 US$",
+      "jpy": "1.000.000 JPY",
+      "aud": "1.000.000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1.000.000,34 ",
+        "code": "US$",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1.000.000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1.000.000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "es-MX": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021 15:38",
+      "short": "29 de marzo de 2021",
+      "shortWithTime": "29 de marzo de 2021 15:38",
+      "abbreviated": "lun., 29 de marzo de 2021",
+      "abbreviatedWithTime": "lun., 29 de marzo de 2021 15:38",
+      "long": "29 de marzo de 2021",
+      "longWithTime": "29 de marzo de 2021 15:38",
+      "full": "lunes, 29 de marzo de 2021",
+      "fullWithTime": "lunes, 29 de marzo de 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "USD 1,000,000.34",
+      "jpy": "JPY 1,000,000",
+      "aud": "AUD 1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1,000,000.34",
+        "code": "USD",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1,000,000", "code": "JPY", "hasCodeFirst": "true" },
+      "aud": { "value": " 1,000,000.34", "code": "AUD", "hasCodeFirst": "true" }
+    }
+  },
+  "es-US": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021 3:38 p. m.",
+      "short": "29 de marzo de 2021",
+      "shortWithTime": "29 de marzo de 2021 3:38 p. m.",
+      "abbreviated": "lun., 29 de marzo de 2021",
+      "abbreviatedWithTime": "lun., 29 de marzo de 2021 3:38 p. m.",
+      "long": "29 de marzo de 2021",
+      "longWithTime": "29 de marzo de 2021 3:38 p. m.",
+      "full": "lunes, 29 de marzo de 2021",
+      "fullWithTime": "lunes, 29 de marzo de 2021 3:38 p. m.",
+      "time": "3:38 p. m."
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "$1,000,000.34",
+      "jpy": "¥1,000,000",
+      "aud": "AUD 1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "¥", "hasCodeFirst": "true" },
+      "aud": { "value": " 1,000,000.34", "code": "AUD", "hasCodeFirst": "true" }
+    }
+  },
+  "es-UY": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021 15:38",
+      "short": "29 de marzo de 2021",
+      "shortWithTime": "29 de marzo de 2021 15:38",
+      "abbreviated": "lun., 29 de mar. de 2021",
+      "abbreviatedWithTime": "lun., 29 de mar. de 2021 15:38",
+      "long": "29 de marzo de 2021",
+      "longWithTime": "29 de marzo de 2021 15:38",
+      "full": "lunes, 29 de marzo de 2021",
+      "fullWithTime": "lunes, 29 de marzo de 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "US$ 1.000.000,34",
+      "jpy": "JPY 1.000.000",
+      "aud": "AUD 1.000.000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1.000.000,34",
+        "code": "US$",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1.000.000", "code": "JPY", "hasCodeFirst": "true" },
+      "aud": { "value": " 1.000.000,34", "code": "AUD", "hasCodeFirst": "true" }
+    }
+  },
+  "fi": {
+    "date": {
+      "vshort": "29.3.2021",
+      "vshortWithTime": "29.3.2021 klo 15.38",
+      "short": "29. maalisk. 2021",
+      "shortWithTime": "29. maalisk. 2021 klo 15.38",
+      "abbreviated": "ma 29. maalisk. 2021",
+      "abbreviatedWithTime": "ma 29. maalisk. 2021 klo 15.38",
+      "long": "29. maaliskuuta 2021",
+      "longWithTime": "29. maaliskuuta 2021 klo 15.38",
+      "full": "maanantaina 29. maaliskuuta 2021",
+      "fullWithTime": "maanantaina 29. maaliskuuta 2021 klo 15.38",
+      "time": "15.38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 $",
+      "jpy": "1 000 000 ¥",
+      "aud": "1 000 000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1 000 000,34 ", "code": "$", "hasCodeFirst": "false" },
+      "jpy": { "value": "1 000 000 ", "code": "¥", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "fi-FI": {
+    "date": {
+      "vshort": "29.3.2021",
+      "vshortWithTime": "29.3.2021 klo 15.38",
+      "short": "29. maalisk. 2021",
+      "shortWithTime": "29. maalisk. 2021 klo 15.38",
+      "abbreviated": "ma 29. maalisk. 2021",
+      "abbreviatedWithTime": "ma 29. maalisk. 2021 klo 15.38",
+      "long": "29. maaliskuuta 2021",
+      "longWithTime": "29. maaliskuuta 2021 klo 15.38",
+      "full": "maanantaina 29. maaliskuuta 2021",
+      "fullWithTime": "maanantaina 29. maaliskuuta 2021 klo 15.38",
+      "time": "15.38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 $",
+      "jpy": "1 000 000 ¥",
+      "aud": "1 000 000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1 000 000,34 ", "code": "$", "hasCodeFirst": "false" },
+      "jpy": { "value": "1 000 000 ", "code": "¥", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "fil": {
+    "date": {
+      "vshort": "3/29/2021",
+      "vshortWithTime": "3/29/2021, 3:38 PM",
+      "short": "Mar 29, 2021",
+      "shortWithTime": "Mar 29, 2021, 3:38 PM",
+      "abbreviated": "Lun, Mar 29, 2021",
+      "abbreviatedWithTime": "Lun, Mar 29, 2021, 3:38 PM",
+      "long": "Marso 29, 2021",
+      "longWithTime": "Marso 29, 2021, 3:38 PM",
+      "full": "Lunes, Marso 29, 2021",
+      "fullWithTime": "Lunes, Marso 29, 2021, 3:38 PM",
+      "time": "3:38 PM"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "$1,000,000.34",
+      "jpy": "¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "fil-PH": {
+    "date": {
+      "vshort": "3/29/2021",
+      "vshortWithTime": "3/29/2021, 3:38 PM",
+      "short": "Mar 29, 2021",
+      "shortWithTime": "Mar 29, 2021, 3:38 PM",
+      "abbreviated": "Lun, Mar 29, 2021",
+      "abbreviatedWithTime": "Lun, Mar 29, 2021, 3:38 PM",
+      "long": "Marso 29, 2021",
+      "longWithTime": "Marso 29, 2021, 3:38 PM",
+      "full": "Lunes, Marso 29, 2021",
+      "fullWithTime": "Lunes, Marso 29, 2021, 3:38 PM",
+      "time": "3:38 PM"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "$1,000,000.34",
+      "jpy": "¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "fr": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021 à 15:38",
+      "short": "29 mars 2021",
+      "shortWithTime": "29 mars 2021 à 15:38",
+      "abbreviated": "lun. 29 mars 2021",
+      "abbreviatedWithTime": "lun. 29 mars 2021 à 15:38",
+      "long": "29 mars 2021",
+      "longWithTime": "29 mars 2021 à 15:38",
+      "full": "lundi 29 mars 2021",
+      "fullWithTime": "lundi 29 mars 2021 à 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 $US",
+      "jpy": "1 000 000 JPY",
+      "aud": "1 000 000,34 $AU"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "$US",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "$AU",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "fr-BE": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021 à 15:38",
+      "short": "29 mars 2021",
+      "shortWithTime": "29 mars 2021 à 15:38",
+      "abbreviated": "lun. 29 mars 2021",
+      "abbreviatedWithTime": "lun. 29 mars 2021 à 15:38",
+      "long": "29 mars 2021",
+      "longWithTime": "29 mars 2021 à 15:38",
+      "full": "lundi 29 mars 2021",
+      "fullWithTime": "lundi 29 mars 2021 à 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 $US",
+      "jpy": "1 000 000 JPY",
+      "aud": "1 000 000,34 $AU"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "$US",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "$AU",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "fr-CA": {
+    "date": {
+      "vshort": "2021-03-29",
+      "vshortWithTime": "2021-03-29 15 h 38",
+      "short": "29 mars 2021",
+      "shortWithTime": "29 mars 2021 15 h 38",
+      "abbreviated": "lun. 29 mars 2021",
+      "abbreviatedWithTime": "lun. 29 mars 2021 15 h 38",
+      "long": "29 mars 2021",
+      "longWithTime": "29 mars 2021 15 h 38",
+      "full": "lundi 29 mars 2021",
+      "fullWithTime": "lundi 29 mars 2021 15 h 38",
+      "time": "15 h 38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 $ US",
+      "jpy": "1 000 000 ¥",
+      "aud": "1 000 000,34 $ AU"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "$ US",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "¥", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "$ AU",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "fr-CH": {
+    "date": {
+      "vshort": "29.03.2021",
+      "vshortWithTime": "29.03.2021 à 15:38",
+      "short": "29 mars 2021",
+      "shortWithTime": "29 mars 2021 à 15:38",
+      "abbreviated": "lun. 29 mars 2021",
+      "abbreviatedWithTime": "lun. 29 mars 2021 à 15:38",
+      "long": "29 mars 2021",
+      "longWithTime": "29 mars 2021 à 15:38",
+      "full": "lundi, 29 mars 2021",
+      "fullWithTime": "lundi, 29 mars 2021 à 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000.34 $US",
+      "jpy": "1 000 000 JPY",
+      "aud": "1 000 000.34 $AU"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000.34 ",
+        "code": "$US",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000.34 ",
+        "code": "$AU",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "fr-FR": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021 à 15:38",
+      "short": "29 mars 2021",
+      "shortWithTime": "29 mars 2021 à 15:38",
+      "abbreviated": "lun. 29 mars 2021",
+      "abbreviatedWithTime": "lun. 29 mars 2021 à 15:38",
+      "long": "29 mars 2021",
+      "longWithTime": "29 mars 2021 à 15:38",
+      "full": "lundi 29 mars 2021",
+      "fullWithTime": "lundi 29 mars 2021 à 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 $US",
+      "jpy": "1 000 000 JPY",
+      "aud": "1 000 000,34 $AU"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "$US",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "$AU",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "hi": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021, 3:38 pm",
+      "short": "29 मार्च 2021",
+      "shortWithTime": "29 मार्च 2021, 3:38 pm",
+      "abbreviated": "सोम, 29 मार्च 2021",
+      "abbreviatedWithTime": "सोम, 29 मार्च 2021, 3:38 pm",
+      "long": "29 मार्च 2021",
+      "longWithTime": "29 मार्च 2021, 3:38 pm",
+      "full": "सोमवार, 29 मार्च 2021",
+      "fullWithTime": "सोमवार, 29 मार्च 2021, 3:38 pm",
+      "time": "3:38 pm"
+    },
+    "number": { "general": "10,00,000.34" },
+    "currency": {
+      "usd": "$10,00,000.34",
+      "jpy": "JP¥10,00,000",
+      "aud": "A$10,00,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "10,00,000.34", "code": "$", "hasCodeFirst": "true" },
+      "jpy": { "value": "10,00,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "10,00,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "hi-IN": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021, 3:38 pm",
+      "short": "29 मार्च 2021",
+      "shortWithTime": "29 मार्च 2021, 3:38 pm",
+      "abbreviated": "सोम, 29 मार्च 2021",
+      "abbreviatedWithTime": "सोम, 29 मार्च 2021, 3:38 pm",
+      "long": "29 मार्च 2021",
+      "longWithTime": "29 मार्च 2021, 3:38 pm",
+      "full": "सोमवार, 29 मार्च 2021",
+      "fullWithTime": "सोमवार, 29 मार्च 2021, 3:38 pm",
+      "time": "3:38 pm"
+    },
+    "number": { "general": "10,00,000.34" },
+    "currency": {
+      "usd": "$10,00,000.34",
+      "jpy": "JP¥10,00,000",
+      "aud": "A$10,00,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "10,00,000.34", "code": "$", "hasCodeFirst": "true" },
+      "jpy": { "value": "10,00,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "10,00,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "hu": {
+    "date": {
+      "vshort": "2021. 03. 29.",
+      "vshortWithTime": "2021. 03. 29. 15:38",
+      "short": "2021. márc. 29.",
+      "shortWithTime": "2021. márc. 29. 15:38",
+      "abbreviated": "2021. márc. 29., H",
+      "abbreviatedWithTime": "2021. márc. 29., H 15:38",
+      "long": "2021. március 29.",
+      "longWithTime": "2021. március 29. 15:38",
+      "full": "2021. március 29., hétfő",
+      "fullWithTime": "2021. március 29., hétfő 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 USD",
+      "jpy": "1 000 000 ¥",
+      "aud": "1 000 000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "USD",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "¥", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "hu-HU": {
+    "date": {
+      "vshort": "2021. 03. 29.",
+      "vshortWithTime": "2021. 03. 29. 15:38",
+      "short": "2021. márc. 29.",
+      "shortWithTime": "2021. márc. 29. 15:38",
+      "abbreviated": "2021. márc. 29., H",
+      "abbreviatedWithTime": "2021. márc. 29., H 15:38",
+      "long": "2021. március 29.",
+      "longWithTime": "2021. március 29. 15:38",
+      "full": "2021. március 29., hétfő",
+      "fullWithTime": "2021. március 29., hétfő 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 USD",
+      "jpy": "1 000 000 ¥",
+      "aud": "1 000 000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "USD",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "¥", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "id": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021 15.38",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021 15.38",
+      "abbreviated": "Sen, 29 Mar 2021",
+      "abbreviatedWithTime": "Sen, 29 Mar 2021 15.38",
+      "long": "29 Maret 2021",
+      "longWithTime": "29 Maret 2021 15.38",
+      "full": "Senin, 29 Maret 2021",
+      "fullWithTime": "Senin, 29 Maret 2021 15.38",
+      "time": "15.38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "US$1.000.000,34",
+      "jpy": "JP¥1.000.000",
+      "aud": "AU$1.000.000,34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1.000.000,34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1.000.000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1.000.000,34", "code": "AU$", "hasCodeFirst": "true" }
+    }
+  },
+  "id-ID": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021 15.38",
+      "short": "29 Mar 2021",
+      "shortWithTime": "29 Mar 2021 15.38",
+      "abbreviated": "Sen, 29 Mar 2021",
+      "abbreviatedWithTime": "Sen, 29 Mar 2021 15.38",
+      "long": "29 Maret 2021",
+      "longWithTime": "29 Maret 2021 15.38",
+      "full": "Senin, 29 Maret 2021",
+      "fullWithTime": "Senin, 29 Maret 2021 15.38",
+      "time": "15.38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "US$1.000.000,34",
+      "jpy": "JP¥1.000.000",
+      "aud": "AU$1.000.000,34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1.000.000,34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1.000.000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1.000.000,34", "code": "AU$", "hasCodeFirst": "true" }
+    }
+  },
+  "it": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021, 15:38",
+      "short": "29 mar 2021",
+      "shortWithTime": "29 mar 2021, 15:38",
+      "abbreviated": "lun 29 mar 2021",
+      "abbreviatedWithTime": "lun 29 mar 2021, 15:38",
+      "long": "29 marzo 2021",
+      "longWithTime": "29 marzo 2021, 15:38",
+      "full": "lunedì 29 marzo 2021",
+      "fullWithTime": "lunedì 29 marzo 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "1.000.000,34 USD",
+      "jpy": "1.000.000 JPY",
+      "aud": "1.000.000,34 A$"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1.000.000,34 ",
+        "code": "USD",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1.000.000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": { "value": "1.000.000,34 ", "code": "A$", "hasCodeFirst": "false" }
+    }
+  },
+  "it-CH": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021, 15:38",
+      "short": "29 mar 2021",
+      "shortWithTime": "29 mar 2021, 15:38",
+      "abbreviated": "lun 29 mar 2021",
+      "abbreviatedWithTime": "lun 29 mar 2021, 15:38",
+      "long": "29 marzo 2021",
+      "longWithTime": "29 marzo 2021, 15:38",
+      "full": "lunedì, 29 marzo 2021",
+      "fullWithTime": "lunedì, 29 marzo 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1’000’000.34" },
+    "currency": {
+      "usd": "USD 1’000’000.34",
+      "jpy": "JPY 1’000’000",
+      "aud": "A$ 1’000’000.34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1’000’000.34",
+        "code": "USD",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1’000’000", "code": "JPY", "hasCodeFirst": "true" },
+      "aud": { "value": " 1’000’000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "it-IT": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021, 15:38",
+      "short": "29 mar 2021",
+      "shortWithTime": "29 mar 2021, 15:38",
+      "abbreviated": "lun 29 mar 2021",
+      "abbreviatedWithTime": "lun 29 mar 2021, 15:38",
+      "long": "29 marzo 2021",
+      "longWithTime": "29 marzo 2021, 15:38",
+      "full": "lunedì 29 marzo 2021",
+      "fullWithTime": "lunedì 29 marzo 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "1.000.000,34 USD",
+      "jpy": "1.000.000 JPY",
+      "aud": "1.000.000,34 A$"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1.000.000,34 ",
+        "code": "USD",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1.000.000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": { "value": "1.000.000,34 ", "code": "A$", "hasCodeFirst": "false" }
+    }
+  },
+  "ja": {
+    "date": {
+      "vshort": "2021/3/29",
+      "vshortWithTime": "2021/3/29 15:38",
+      "short": "2021年3月29日",
+      "shortWithTime": "2021年3月29日 15:38",
+      "abbreviated": "2021年3月29日(月)",
+      "abbreviatedWithTime": "2021年3月29日(月) 15:38",
+      "long": "2021年3月29日",
+      "longWithTime": "2021年3月29日 15:38",
+      "full": "2021年3月29日月曜日",
+      "fullWithTime": "2021年3月29日月曜日 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "$1,000,000.34",
+      "jpy": "￥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "￥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "ja-JP": {
+    "date": {
+      "vshort": "2021/3/29",
+      "vshortWithTime": "2021/3/29 15:38",
+      "short": "2021年3月29日",
+      "shortWithTime": "2021年3月29日 15:38",
+      "abbreviated": "2021年3月29日(月)",
+      "abbreviatedWithTime": "2021年3月29日(月) 15:38",
+      "long": "2021年3月29日",
+      "longWithTime": "2021年3月29日 15:38",
+      "full": "2021年3月29日月曜日",
+      "fullWithTime": "2021年3月29日月曜日 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "$1,000,000.34",
+      "jpy": "￥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "￥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "ms": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021, 3:38 PTG",
+      "short": "29 Mac 2021",
+      "shortWithTime": "29 Mac 2021, 3:38 PTG",
+      "abbreviated": "Isn, 29 Mac 2021",
+      "abbreviatedWithTime": "Isn, 29 Mac 2021, 3:38 PTG",
+      "long": "29 Mac 2021",
+      "longWithTime": "29 Mac 2021, 3:38 PTG",
+      "full": "Isnin, 29 Mac 2021",
+      "fullWithTime": "Isnin, 29 Mac 2021, 3:38 PTG",
+      "time": "3:38 PTG"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "USD 1,000,000.34",
+      "jpy": "JP¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1,000,000.34",
+        "code": "USD",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": "1,000,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "ms-MY": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021, 3:38 PTG",
+      "short": "29 Mac 2021",
+      "shortWithTime": "29 Mac 2021, 3:38 PTG",
+      "abbreviated": "Isn, 29 Mac 2021",
+      "abbreviatedWithTime": "Isn, 29 Mac 2021, 3:38 PTG",
+      "long": "29 Mac 2021",
+      "longWithTime": "29 Mac 2021, 3:38 PTG",
+      "full": "Isnin, 29 Mac 2021",
+      "fullWithTime": "Isnin, 29 Mac 2021, 3:38 PTG",
+      "time": "3:38 PTG"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "USD 1,000,000.34",
+      "jpy": "JP¥1,000,000",
+      "aud": "A$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1,000,000.34",
+        "code": "USD",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": "1,000,000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "A$", "hasCodeFirst": "true" }
+    }
+  },
+  "nb": {
+    "date": {
+      "vshort": "29.3.2021",
+      "vshortWithTime": "29.3.2021, 15:38",
+      "short": "29. mar. 2021",
+      "shortWithTime": "29. mar. 2021, 15:38",
+      "abbreviated": "man. 29. mar. 2021",
+      "abbreviatedWithTime": "man. 29. mar. 2021, 15:38",
+      "long": "29. mars 2021",
+      "longWithTime": "29. mars 2021, 15:38",
+      "full": "mandag 29. mars 2021",
+      "fullWithTime": "mandag 29. mars 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "USD 1 000 000,34",
+      "jpy": "JPY 1 000 000",
+      "aud": "AUD 1 000 000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1 000 000,34",
+        "code": "USD",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1 000 000", "code": "JPY", "hasCodeFirst": "true" },
+      "aud": { "value": " 1 000 000,34", "code": "AUD", "hasCodeFirst": "true" }
+    }
+  },
+  "nb-NO": {
+    "date": {
+      "vshort": "29.3.2021",
+      "vshortWithTime": "29.3.2021, 15:38",
+      "short": "29. mar. 2021",
+      "shortWithTime": "29. mar. 2021, 15:38",
+      "abbreviated": "man. 29. mar. 2021",
+      "abbreviatedWithTime": "man. 29. mar. 2021, 15:38",
+      "long": "29. mars 2021",
+      "longWithTime": "29. mars 2021, 15:38",
+      "full": "mandag 29. mars 2021",
+      "fullWithTime": "mandag 29. mars 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "USD 1 000 000,34",
+      "jpy": "JPY 1 000 000",
+      "aud": "AUD 1 000 000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1 000 000,34",
+        "code": "USD",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1 000 000", "code": "JPY", "hasCodeFirst": "true" },
+      "aud": { "value": " 1 000 000,34", "code": "AUD", "hasCodeFirst": "true" }
+    }
+  },
+  "nl": {
+    "date": {
+      "vshort": "29-3-2021",
+      "vshortWithTime": "29-3-2021 15:38",
+      "short": "29 mrt. 2021",
+      "shortWithTime": "29 mrt. 2021 15:38",
+      "abbreviated": "ma 29 mrt. 2021",
+      "abbreviatedWithTime": "ma 29 mrt. 2021 15:38",
+      "long": "29 maart 2021",
+      "longWithTime": "29 maart 2021 15:38",
+      "full": "maandag 29 maart 2021",
+      "fullWithTime": "maandag 29 maart 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "US$ 1.000.000,34",
+      "jpy": "JP¥ 1.000.000",
+      "aud": "AU$ 1.000.000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1.000.000,34",
+        "code": "US$",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1.000.000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": " 1.000.000,34", "code": "AU$", "hasCodeFirst": "true" }
+    }
+  },
+  "nl-BE": {
+    "date": {
+      "vshort": "29/3/2021",
+      "vshortWithTime": "29/3/2021 15:38",
+      "short": "29 mrt. 2021",
+      "shortWithTime": "29 mrt. 2021 15:38",
+      "abbreviated": "ma 29 mrt. 2021",
+      "abbreviatedWithTime": "ma 29 mrt. 2021 15:38",
+      "long": "29 maart 2021",
+      "longWithTime": "29 maart 2021 15:38",
+      "full": "maandag 29 maart 2021",
+      "fullWithTime": "maandag 29 maart 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "US$ 1.000.000,34",
+      "jpy": "JP¥ 1.000.000",
+      "aud": "AU$ 1.000.000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1.000.000,34",
+        "code": "US$",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1.000.000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": " 1.000.000,34", "code": "AU$", "hasCodeFirst": "true" }
+    }
+  },
+  "nl-NL": {
+    "date": {
+      "vshort": "29-3-2021",
+      "vshortWithTime": "29-3-2021 15:38",
+      "short": "29 mrt. 2021",
+      "shortWithTime": "29 mrt. 2021 15:38",
+      "abbreviated": "ma 29 mrt. 2021",
+      "abbreviatedWithTime": "ma 29 mrt. 2021 15:38",
+      "long": "29 maart 2021",
+      "longWithTime": "29 maart 2021 15:38",
+      "full": "maandag 29 maart 2021",
+      "fullWithTime": "maandag 29 maart 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "US$ 1.000.000,34",
+      "jpy": "JP¥ 1.000.000",
+      "aud": "AU$ 1.000.000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1.000.000,34",
+        "code": "US$",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1.000.000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": " 1.000.000,34", "code": "AU$", "hasCodeFirst": "true" }
+    }
+  },
+  "pl": {
+    "date": {
+      "vshort": "29.03.2021",
+      "vshortWithTime": "29.03.2021, 15:38",
+      "short": "29 mar 2021",
+      "shortWithTime": "29 mar 2021, 15:38",
+      "abbreviated": "pon., 29 mar 2021",
+      "abbreviatedWithTime": "pon., 29 mar 2021, 15:38",
+      "long": "29 marca 2021",
+      "longWithTime": "29 marca 2021, 15:38",
+      "full": "poniedziałek, 29 marca 2021",
+      "fullWithTime": "poniedziałek, 29 marca 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 USD",
+      "jpy": "1 000 000 JPY",
+      "aud": "1 000 000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "USD",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "pl-PL": {
+    "date": {
+      "vshort": "29.03.2021",
+      "vshortWithTime": "29.03.2021, 15:38",
+      "short": "29 mar 2021",
+      "shortWithTime": "29 mar 2021, 15:38",
+      "abbreviated": "pon., 29 mar 2021",
+      "abbreviatedWithTime": "pon., 29 mar 2021, 15:38",
+      "long": "29 marca 2021",
+      "longWithTime": "29 marca 2021, 15:38",
+      "full": "poniedziałek, 29 marca 2021",
+      "fullWithTime": "poniedziałek, 29 marca 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 USD",
+      "jpy": "1 000 000 JPY",
+      "aud": "1 000 000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "USD",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "pt": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021 15:38",
+      "short": "29 de mar. de 2021",
+      "shortWithTime": "29 de mar. de 2021 15:38",
+      "abbreviated": "seg., 29 de mar. de 2021",
+      "abbreviatedWithTime": "seg., 29 de mar. de 2021 15:38",
+      "long": "29 de março de 2021",
+      "longWithTime": "29 de março de 2021 15:38",
+      "full": "segunda-feira, 29 de março de 2021",
+      "fullWithTime": "segunda-feira, 29 de março de 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "US$ 1.000.000,34",
+      "jpy": "JP¥ 1.000.000",
+      "aud": "AU$ 1.000.000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1.000.000,34",
+        "code": "US$",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1.000.000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": " 1.000.000,34", "code": "AU$", "hasCodeFirst": "true" }
+    }
+  },
+  "pt-BR": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021 15:38",
+      "short": "29 de mar. de 2021",
+      "shortWithTime": "29 de mar. de 2021 15:38",
+      "abbreviated": "seg., 29 de mar. de 2021",
+      "abbreviatedWithTime": "seg., 29 de mar. de 2021 15:38",
+      "long": "29 de março de 2021",
+      "longWithTime": "29 de março de 2021 15:38",
+      "full": "segunda-feira, 29 de março de 2021",
+      "fullWithTime": "segunda-feira, 29 de março de 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "US$ 1.000.000,34",
+      "jpy": "JP¥ 1.000.000",
+      "aud": "AU$ 1.000.000,34"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": " 1.000.000,34",
+        "code": "US$",
+        "hasCodeFirst": "true"
+      },
+      "jpy": { "value": " 1.000.000", "code": "JP¥", "hasCodeFirst": "true" },
+      "aud": { "value": " 1.000.000,34", "code": "AU$", "hasCodeFirst": "true" }
+    }
+  },
+  "pt-PT": {
+    "date": {
+      "vshort": "29/03/2021",
+      "vshortWithTime": "29/03/2021, 15:38",
+      "short": "29/03/2021",
+      "shortWithTime": "29/03/2021, 15:38",
+      "abbreviated": "segunda, 29/03/2021",
+      "abbreviatedWithTime": "segunda, 29/03/2021, 15:38",
+      "long": "29 de março de 2021",
+      "longWithTime": "29 de março de 2021, 15:38",
+      "full": "segunda-feira, 29 de março de 2021",
+      "fullWithTime": "segunda-feira, 29 de março de 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 US$",
+      "jpy": "1 000 000 JP¥",
+      "aud": "1 000 000,34 AU$"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "US$",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "JP¥", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "AU$",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "ro": {
+    "date": {
+      "vshort": "29.03.2021",
+      "vshortWithTime": "29.03.2021, 15:38",
+      "short": "29 mar. 2021",
+      "shortWithTime": "29 mar. 2021, 15:38",
+      "abbreviated": "lun., 29 mar. 2021",
+      "abbreviatedWithTime": "lun., 29 mar. 2021, 15:38",
+      "long": "29 martie 2021",
+      "longWithTime": "29 martie 2021, 15:38",
+      "full": "luni, 29 martie 2021",
+      "fullWithTime": "luni, 29 martie 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "1.000.000,34 USD",
+      "jpy": "1.000.000 JPY",
+      "aud": "1.000.000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1.000.000,34 ",
+        "code": "USD",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1.000.000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1.000.000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "ro-RO": {
+    "date": {
+      "vshort": "29.03.2021",
+      "vshortWithTime": "29.03.2021, 15:38",
+      "short": "29 mar. 2021",
+      "shortWithTime": "29 mar. 2021, 15:38",
+      "abbreviated": "lun., 29 mar. 2021",
+      "abbreviatedWithTime": "lun., 29 mar. 2021, 15:38",
+      "long": "29 martie 2021",
+      "longWithTime": "29 martie 2021, 15:38",
+      "full": "luni, 29 martie 2021",
+      "fullWithTime": "luni, 29 martie 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1.000.000,34" },
+    "currency": {
+      "usd": "1.000.000,34 USD",
+      "jpy": "1.000.000 JPY",
+      "aud": "1.000.000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1.000.000,34 ",
+        "code": "USD",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1.000.000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1.000.000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "ru": {
+    "date": {
+      "vshort": "29.03.2021",
+      "vshortWithTime": "29.03.2021, 15:38",
+      "short": "29 мар. 2021 г.",
+      "shortWithTime": "29 мар. 2021 г., 15:38",
+      "abbreviated": "пн, 29 мар. 2021 г.",
+      "abbreviatedWithTime": "пн, 29 мар. 2021 г., 15:38",
+      "long": "29 марта 2021 г.",
+      "longWithTime": "29 марта 2021 г., 15:38",
+      "full": "понедельник, 29 марта 2021 г.",
+      "fullWithTime": "понедельник, 29 марта 2021 г., 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 $",
+      "jpy": "1 000 000 ¥",
+      "aud": "1 000 000,34 A$"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1 000 000,34 ", "code": "$", "hasCodeFirst": "false" },
+      "jpy": { "value": "1 000 000 ", "code": "¥", "hasCodeFirst": "false" },
+      "aud": { "value": "1 000 000,34 ", "code": "A$", "hasCodeFirst": "false" }
+    }
+  },
+  "ru-RU": {
+    "date": {
+      "vshort": "29.03.2021",
+      "vshortWithTime": "29.03.2021, 15:38",
+      "short": "29 мар. 2021 г.",
+      "shortWithTime": "29 мар. 2021 г., 15:38",
+      "abbreviated": "пн, 29 мар. 2021 г.",
+      "abbreviatedWithTime": "пн, 29 мар. 2021 г., 15:38",
+      "long": "29 марта 2021 г.",
+      "longWithTime": "29 марта 2021 г., 15:38",
+      "full": "понедельник, 29 марта 2021 г.",
+      "fullWithTime": "понедельник, 29 марта 2021 г., 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 $",
+      "jpy": "1 000 000 ¥",
+      "aud": "1 000 000,34 A$"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1 000 000,34 ", "code": "$", "hasCodeFirst": "false" },
+      "jpy": { "value": "1 000 000 ", "code": "¥", "hasCodeFirst": "false" },
+      "aud": { "value": "1 000 000,34 ", "code": "A$", "hasCodeFirst": "false" }
+    }
+  },
+  "sk": {
+    "date": {
+      "vshort": "29. 3. 2021",
+      "vshortWithTime": "29. 3. 2021, 15:38",
+      "short": "29. 3. 2021",
+      "shortWithTime": "29. 3. 2021, 15:38",
+      "abbreviated": "po 29. 3. 2021",
+      "abbreviatedWithTime": "po 29. 3. 2021, 15:38",
+      "long": "29. marca 2021",
+      "longWithTime": "29. marca 2021, 15:38",
+      "full": "pondelok 29. marca 2021",
+      "fullWithTime": "pondelok 29. marca 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 USD",
+      "jpy": "1 000 000 JPY",
+      "aud": "1 000 000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "USD",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "sk-SK": {
+    "date": {
+      "vshort": "29. 3. 2021",
+      "vshortWithTime": "29. 3. 2021, 15:38",
+      "short": "29. 3. 2021",
+      "shortWithTime": "29. 3. 2021, 15:38",
+      "abbreviated": "po 29. 3. 2021",
+      "abbreviatedWithTime": "po 29. 3. 2021, 15:38",
+      "long": "29. marca 2021",
+      "longWithTime": "29. marca 2021, 15:38",
+      "full": "pondelok 29. marca 2021",
+      "fullWithTime": "pondelok 29. marca 2021, 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 USD",
+      "jpy": "1 000 000 JPY",
+      "aud": "1 000 000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "USD",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "sv": {
+    "date": {
+      "vshort": "2021-03-29",
+      "vshortWithTime": "2021-03-29 15:38",
+      "short": "29 mars 2021",
+      "shortWithTime": "29 mars 2021 15:38",
+      "abbreviated": "mån 29 mars 2021",
+      "abbreviatedWithTime": "mån 29 mars 2021 15:38",
+      "long": "29 mars 2021",
+      "longWithTime": "29 mars 2021 15:38",
+      "full": "måndag 29 mars 2021",
+      "fullWithTime": "måndag 29 mars 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 US$",
+      "jpy": "1 000 000 JPY",
+      "aud": "1 000 000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "US$",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "sv-SE": {
+    "date": {
+      "vshort": "2021-03-29",
+      "vshortWithTime": "2021-03-29 15:38",
+      "short": "29 mars 2021",
+      "shortWithTime": "29 mars 2021 15:38",
+      "abbreviated": "mån 29 mars 2021",
+      "abbreviatedWithTime": "mån 29 mars 2021 15:38",
+      "long": "29 mars 2021",
+      "longWithTime": "29 mars 2021 15:38",
+      "full": "måndag 29 mars 2021",
+      "fullWithTime": "måndag 29 mars 2021 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1 000 000,34" },
+    "currency": {
+      "usd": "1 000 000,34 US$",
+      "jpy": "1 000 000 JPY",
+      "aud": "1 000 000,34 AUD"
+    },
+    "currencyEditable": {
+      "usd": {
+        "value": "1 000 000,34 ",
+        "code": "US$",
+        "hasCodeFirst": "false"
+      },
+      "jpy": { "value": "1 000 000 ", "code": "JPY", "hasCodeFirst": "false" },
+      "aud": {
+        "value": "1 000 000,34 ",
+        "code": "AUD",
+        "hasCodeFirst": "false"
+      }
+    }
+  },
+  "th": {
+    "date": {
+      "vshort": "29/3/2564",
+      "vshortWithTime": "29/3/2564 15:38",
+      "short": "29 มี.ค. 2564",
+      "shortWithTime": "29 มี.ค. 2564 15:38",
+      "abbreviated": "จ. 29 มี.ค. 2564",
+      "abbreviatedWithTime": "จ. 29 มี.ค. 2564 15:38",
+      "long": "29 มีนาคม 2564",
+      "longWithTime": "29 มีนาคม 2564 15:38",
+      "full": "วันจันทร์ที่ 29 มีนาคม 2564",
+      "fullWithTime": "วันจันทร์ที่ 29 มีนาคม 2564 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "US$1,000,000.34",
+      "jpy": "¥1,000,000",
+      "aud": "AU$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "AU$", "hasCodeFirst": "true" }
+    }
+  },
+  "th-TH": {
+    "date": {
+      "vshort": "29/3/2564",
+      "vshortWithTime": "29/3/2564 15:38",
+      "short": "29 มี.ค. 2564",
+      "shortWithTime": "29 มี.ค. 2564 15:38",
+      "abbreviated": "จ. 29 มี.ค. 2564",
+      "abbreviatedWithTime": "จ. 29 มี.ค. 2564 15:38",
+      "long": "29 มีนาคม 2564",
+      "longWithTime": "29 มีนาคม 2564 15:38",
+      "full": "วันจันทร์ที่ 29 มีนาคม 2564",
+      "fullWithTime": "วันจันทร์ที่ 29 มีนาคม 2564 15:38",
+      "time": "15:38"
+    },
+    "number": { "general": "1,000,000.34" },
+    "currency": {
+      "usd": "US$1,000,000.34",
+      "jpy": "¥1,000,000",
+      "aud": "AU$1,000,000.34"
+    },
+    "currencyEditable": {
+      "usd": { "value": "1,000,000.34", "code": "US$", "hasCodeFirst": "true" },
+      "jpy": { "value": "1,000,000", "code": "¥", "hasCodeFirst": "true" },
+      "aud": { "value": "1,000,000.34", "code": "AU$", "hasCodeFirst": "true" }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.stickyFooter {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--GW-STICKY-FOOTER-BACKGROUND-COLOR);
+  box-shadow: var(--GW-SHADOW-UP); }
+
+.fullWidth {
+  position: fixed;
+  left: 0;
+  right: 0; }
+
+/*# sourceMappingURL=StickyFooter.module.css.map */

@@ -1,0 +1,10 @@
+.wizardActionBar {
+  width: 100%;
+  text-align: right;
+  margin-top: var(--GW-LAYOUT-10); }
+
+.separator {
+  border-top: var(--GW-BORDER-WIDTH) solid var(--GW-SEPARATOR-COLOR);
+  margin-bottom: var(--GW-LAYOUT-10); }
+
+/*# sourceMappingURL=WizardActionBarNext.module.css.map */

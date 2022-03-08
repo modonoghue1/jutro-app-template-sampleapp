@@ -1,0 +1,102 @@
+{
+  "_from": "@gtui/gt-ui-framework@2021.9.0",
+  "_id": "@gtui/gt-ui-framework@2021.9.0",
+  "_inBundle": false,
+  "_integrity": "sha1-/Nqh2Nn0MecITW96EdNXHbMVGJc=",
+  "_location": "/@gtui/gt-ui-framework",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@gtui/gt-ui-framework@2021.9.0",
+    "name": "@gtui/gt-ui-framework",
+    "escapedName": "@gtui%2fgt-ui-framework",
+    "scope": "@gtui",
+    "rawSpec": "2021.9.0",
+    "saveSpec": null,
+    "fetchSpec": "2021.9.0"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://artifactory.guidewire.com/api/npm/jutro-suite-npm-dev/@gtui/gt-ui-framework/-/@gtui/gt-ui-framework-2021.9.0.tgz",
+  "_shasum": "fcdaa1d8d9f431e7084d6f7a11d3571db3151897",
+  "_spec": "@gtui/gt-ui-framework@2021.9.0",
+  "author": "",
+  "bin": {
+    "gt-ui-tests": "bin/scripts/test-runners/cucumber-runner.js",
+    "gt-ui-dev-tests": "bin/scripts/test-runners/dev-tests-runner.js",
+    "gt-ui-ignite": "bin/scripts/runtime/runIgnite.js",
+    "gt-ui-bdd-html-report-generator": "bin/scripts/reporter/report-generator.js"
+  },
+  "bundleDependencies": [],
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/runtime": "^7.9.6",
+    "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "@gtui/ignite": "2021.9.0",
+    "cross-spawn": "7.0.3",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "file-content-update": "^1.0.2",
+    "fs-extra": "^9.0.1",
+    "glob": "^7.1.6",
+    "minimist": "^1.2.5",
+    "ms": "^2.1.3",
+    "multiple-cucumber-html-reporter": "^1.16.1",
+    "testcafe-cucumber-steps": "^1.20.0",
+    "testcafe-reporter-cucumber-json": "^5.1.0",
+    "testcafe-reporter-html": "^1.4.6",
+    "testcafe-reporter-junit": "^3.0.2",
+    "testcafe-reporter-teamcity": "^1.0.12"
+  },
+  "deprecated": false,
+  "description": "GT UI framework",
+  "devDependencies": {
+    "@cucumber/cucumber": "7.3.0",
+    "gherkin-testcafe": "^5.0.1",
+    "json5": "^2.2.0",
+    "moment": "^2.22.2",
+    "npm-force-resolutions": "0.0.3",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "semver": "^5.4.1",
+    "testcafe": "1.14.2"
+  },
+  "files": [
+    "bin/*"
+  ],
+  "license": "ISC",
+  "main": "bin/index.js",
+  "name": "@gtui/gt-ui-framework",
+  "peerDependencies": {
+    "@cucumber/cucumber": "7.3.0",
+    "testcafe": "1.14.2",
+    "gherkin-testcafe": "^5.0.1"
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.guidewire.com/api/npm/portfoliomunster-npm-dev/"
+  },
+  "resolutions": {
+    "kind-of": "6.0.3",
+    "lodash": "4.17.21",
+    "debug": "4.3.2",
+    "inflight": "1.0.6",
+    "commander": "8.0.0-1",
+    "glob-parent": "6.0.0"
+  },
+  "scripts": {
+    "build": "babel src --out-dir bin",
+    "cleanBuildDirectory": "rimraf bin",
+    "forceResolutions": "npx npm-force-resolutions",
+    "integration-tests": "testcafe chrome:headless test/integration/**/ --app \"cd test/resources/IntegrationTestApp && npm start\"",
+    "postpack": "npm-run-all cleanBuildDirectory",
+    "prepack": "npm-run-all cleanBuildDirectory build",
+    "prepublishOnly": "node publish-version-timestamp.js",
+    "unit-tests": "testcafe chrome:headless test/unit/** "
+  },
+  "version": "2021.9.0"
+}
